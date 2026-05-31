@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -17,7 +21,7 @@
         <div class="logo">E-Portofolio PPG</div>
 
         <ul class="menu">
-          <li><a href="index.html">Beranda</a></li>
+          <li><a href="index.html" class="active">Beranda</a></li>
           <li><a href="tentang.html">Tentang</a></li>
           <li class="dropdown">
             <a href="#">PPL ▾</a>
@@ -62,19 +66,25 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="tentang.html" class="btn"> Lihat Profil </a>
+          <a href="tentang.html" class="btn">
+            <i class="fas fa-user"></i> Lihat Profil
+          </a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container">
-        <p>
-          © 2026 Arjun Yuda Firwanda | Calon Guru Informatika PPG UPI | All
-          Rights Reserved.
+        <p class="copyright">
+          © <span id="year"></span> Arjun Yuda Firwanda | E-Portofolio PPG
+          Informatika UPI
         </p>
       </div>
     </footer>
+
+    <button id="scrollTopBtn" title="Kembali ke Atas">
+      <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="js/script.js"></script>
   </body>
