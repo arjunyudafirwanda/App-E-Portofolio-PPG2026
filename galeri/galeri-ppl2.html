@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Galeri PPL 2 | Arjun Yuda Firwanda</title>
     <link rel="icon" type="image/png" href="../assets/img/pages.png" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
-    <!-- Navbar -->
     <header>
       <nav class="navbar">
         <div class="logo">E-Portofolio PPG</div>
@@ -39,7 +39,7 @@
 
             <ul class="dropdown-menu">
               <li><a href="galeri-ppl1.html">PPL 1</a></li>
-              <li><a href="galeri-ppl2.html">PPL 2</a></li>
+              <li><a href="galeri-ppl2.html" class="active">PPL 2</a></li>
             </ul>
           </li>
         </ul>
@@ -48,7 +48,6 @@
       </nav>
     </header>
 
-    <!-- Header -->
     <section class="page-header">
       <div class="container">
         <h1>Galeri Dokumentasi PPL 2</h1>
@@ -62,7 +61,6 @@
       </div>
     </section>
 
-    <!-- Coming Soon -->
     <section class="coming-soon-section">
       <div class="container">
         <div class="coming-soon-card">
@@ -77,20 +75,25 @@
             diperbarui secara berkala pada halaman ini.
           </p>
 
-          <a href="../index.html" class="btn"> Kembali ke Beranda </a>
+          <a href="../index.html" class="btn">
+            <i class="fas fa-home"></i> Kembali ke Beranda
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>
-          © 2026 Arjun Yuda Firwanda | Calon Guru Informatika PPG UPI | All
-          Rights Reserved.
+        <p class="copyright">
+          © <span id="year"></span> Arjun Yuda Firwanda | E-Portofolio PPG
+          Informatika UPI
         </p>
       </div>
     </footer>
+
+    <button id="scrollTopBtn" title="Kembali ke Atas">
+      <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="../js/script.js"></script>
   </body>
