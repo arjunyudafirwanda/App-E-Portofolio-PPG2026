@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galeri PPL 1 | Arjun Yuda Firwanda</title>
     <link rel="icon" type="image/png" href="../assets/img/pages.png" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
@@ -34,7 +36,7 @@
           <li class="dropdown">
             <a href="#">Galeri ▾</a>
             <ul class="dropdown-menu">
-              <li><a href="galeri-ppl1.html">PPL 1</a></li>
+              <li><a href="galeri-ppl1.html" class="active">PPL 1</a></li>
               <li><a href="galeri-ppl2.html">PPL 2</a></li>
             </ul>
           </li>
@@ -76,12 +78,13 @@
         <div class="gallery-grid">
           <div class="gallery-card">
             <img
-              src="../assets/galeri/ppl1/obervasi.png"
+              src="../assets/galeri/ppl1/observasi.png"
               alt="Observasi Sekolah"
+              onclick="openModal(this.src, this.alt)"
             />
             <div class="gallery-overlay">
               <h3>Observasi Sekolah</h3>
-              <p>Kegiatan observasi lingkungan sekolah.</p>
+              <p>Observasi lingkungan, budaya, dan sarana prasarana sekolah.</p>
             </div>
           </div>
 
@@ -89,10 +92,14 @@
             <img
               src="../assets/galeri/ppl1/penerimaan-ppl.png"
               alt="Penerimaan PPL"
+              onclick="openModal(this.src, this.alt)"
             />
             <div class="gallery-overlay">
               <h3>Penerimaan PPL</h3>
-              <p>Penerimaan PPL.</p>
+              <p>
+                Penerimaan mahasiswa PPL oleh pihak sekolah sebagai awal
+                kegiatan praktik lapangan.
+              </p>
             </div>
           </div>
 
@@ -100,10 +107,11 @@
             <img
               src="../assets/galeri/ppl1/mengajar.png"
               alt="Praktik Mengajar"
+              onclick="openModal(this.src, this.alt)"
             />
             <div class="gallery-overlay">
               <h3>Praktik Mengajar</h3>
-              <p>Praktik Mengajar.</p>
+              <p>Pelaksanaan pembelajaran Informatika bersama peserta didik.</p>
             </div>
           </div>
 
@@ -111,18 +119,25 @@
             <img
               src="../assets/galeri/ppl1/pjj.png"
               alt="Praktik Mengajar Jarak Jauh"
+              onclick="openModal(this.src, this.alt)"
             />
             <div class="gallery-overlay">
               <h3>Praktik Mengajar Jarak Jauh</h3>
-              <p>Praktik Mengajar Jauh.</p>
+              <p>Pembelajaran daring menggunakan media dan platform digital.</p>
             </div>
           </div>
 
           <div class="gallery-card">
-            <img src="../assets/galeri/ppl1/foto-kelas.png" alt="Foto Kelas" />
+            <img
+              src="../assets/galeri/ppl1/foto-kelas.png"
+              alt="Foto Kelas"
+              onclick="openModal(this.src, this.alt)"
+            />
             <div class="gallery-overlay">
               <h3>Foto Kelas</h3>
-              <p>Foto Kelas.</p>
+              <p>
+                Dokumentasi bersama peserta didik setelah kegiatan pembelajaran.
+              </p>
             </div>
           </div>
 
@@ -130,10 +145,11 @@
             <img
               src="../assets/galeri/ppl1/fun-match-futsal.png"
               alt="Fun Match Futsal"
+              onclick="openModal(this.src, this.alt)"
             />
             <div class="gallery-overlay">
               <h3>Fun Match Futsal</h3>
-              <p>Fun Match Futsal.</p>
+              <p>Kegiatan olahraga dan kebersamaan bersama warga sekolah.</p>
             </div>
           </div>
 
@@ -141,10 +157,11 @@
             <img
               src="../assets/galeri/ppl1/upacara.png"
               alt="Upacara Bendera"
+              onclick="openModal(this.src, this.alt)"
             />
             <div class="gallery-overlay">
               <h3>Upacara Bendera</h3>
-              <p>Upacara Bendera.</p>
+              <p>Partisipasi dalam kegiatan upacara bendera sekolah.</p>
             </div>
           </div>
 
@@ -152,37 +169,47 @@
             <img
               src="../assets/galeri/ppl1/ujian-akhir.png"
               alt="Ujian Akhir"
+              onclick="openModal(this.src, this.alt)"
             />
             <div class="gallery-overlay">
               <h3>Ujian Akhir</h3>
-              <p>Ujian Akhir.</p>
-            </div>
-          </div>
-
-          <div class="gallery-card">
-            <img src="../assets/galeri/ppl1/sapa-pagi.png" alt="Sapa Pagi" />
-            <div class="gallery-overlay">
-              <h3>Kegiatan Sapa Pagi</h3>
-              <p>Kegiatan Sapa Pagi.</p>
-            </div>
-          </div>
-
-          <div class="gallery-card">
-            <img src="../assets/galeri/ppl1/piket-kbm.png" alt="Piket KBM" />
-            <div class="gallery-overlay">
-              <h3>Kegiatan Piker KBM</h3>
-              <p>Kegiatan Piker KBM.</p>
+              <p>Pelaksanaan evaluasi pembelajaran peserta didik.</p>
             </div>
           </div>
 
           <div class="gallery-card">
             <img
-              src="../assets/galeri//ppl1/sholat-duha.png"
-              alt="Sholat Duha Berjamaah"
+              src="../assets/galeri/ppl1/sapa-pagi.png"
+              alt="Sapa Pagi"
+              onclick="openModal(this.src, this.alt)"
             />
             <div class="gallery-overlay">
-              <h3>Kegiatan Sholat Duha Berjamaah</h3>
-              <p>Kegiatan Sholat Duha Berjamaah.</p>
+              <h3>Sapa Pagi</h3>
+              <p>Penyambutan peserta didik sebelum kegiatan belajar.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img
+              src="../assets/galeri/ppl1/piket-kbm.png"
+              alt="Piket KBM"
+              onclick="openModal(this.src, this.alt)"
+            />
+            <div class="gallery-overlay">
+              <h3>Piket KBM</h3>
+              <p>Pendampingan dan pengawasan kegiatan belajar mengajar.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img
+              src="../assets/galeri/ppl1/sholat-duha.png"
+              alt="Sholat Duha Berjamaah"
+              onclick="openModal(this.src, this.alt)"
+            />
+            <div class="gallery-overlay">
+              <h3>Sholat Duha Berjamaah</h3>
+              <p>Kegiatan pembiasaan karakter religius di sekolah.</p>
             </div>
           </div>
 
@@ -190,10 +217,11 @@
             <img
               src="../assets/galeri/ppl1/motivasi-pagi.png"
               alt="Motivasi Pagi"
+              onclick="openModal(this.src, this.alt)"
             />
             <div class="gallery-overlay">
-              <h3>Kegiatan Motivasi Pagi</h3>
-              <p>Kegiatan Motivasi Pagi.</p>
+              <h3>Motivasi Pagi</h3>
+              <p>Pemberian motivasi dan penguatan karakter peserta didik.</p>
             </div>
           </div>
         </div>
@@ -202,13 +230,25 @@
 
     <footer class="footer">
       <div class="container">
-        <p>
-          © 2026 Arjun Yuda Firwanda | Calon Guru Informatika PPG UPI | All
-          Rights Reserved.
+        <p class="copyright">
+          © <span id="year"></span> Arjun Yuda Firwanda | E-Portofolio PPG
+          Informatika UPI
         </p>
       </div>
     </footer>
 
+    <button id="scrollTopBtn" title="Kembali ke Atas">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
     <script src="../js/script.js"></script>
+
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+
+      <img class="modal-content" id="modalImg" />
+
+      <div id="caption"></div>
+    </div>
   </body>
 </html>
