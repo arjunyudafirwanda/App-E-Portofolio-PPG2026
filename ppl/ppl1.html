@@ -3,23 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>PPL1 | Arjun Yuda Firwanda</title>
     <link rel="icon" type="image/png" href="../assets/img/pages.png" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
-    <!-- ==========================
-         NAVBAR
-    =========================== -->
-
     <header>
       <nav class="navbar">
         <div class="logo">E-Portofolio PPG</div>
@@ -31,7 +28,7 @@
             <a href="#">PPL ▾</a>
 
             <ul class="dropdown-menu">
-              <li><a href="ppl1.html">PPL 1</a></li>
+              <li><a href="ppl1.html" class="active">PPL 1</a></li>
               <li><a href="ppl2.html">PPL 2</a></li>
             </ul>
           </li>
@@ -49,10 +46,6 @@
       </nav>
     </header>
 
-    <!-- ==========================
-         PAGE HEADER
-    =========================== -->
-
     <section class="page-header">
       <div class="container">
         <h1>Pembelajaran Praktik Pengalaman Lapangan 1</h1>
@@ -65,10 +58,6 @@
         </p>
       </div>
     </section>
-
-    <!-- ==========================
-         DESKRIPSI
-    =========================== -->
 
     <section class="info-section">
       <div class="container">
@@ -86,10 +75,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ==========================
-         REFLEKSI PEMBELAJARAN
-    =========================== -->
 
     <section class="timeline-section">
       <div class="container">
@@ -116,17 +101,19 @@
 
             <div class="module-buttons">
               <a
-                href="../assets/modul_siklus/LK.4.PPLT - Refleksi Pembelajaran Praktik Terbimbing Siklus 1 - Arjun Yuda Firwanda.pdf"
+                href="viewer/refleksi-siklus1.html"
                 target="_blank"
-                class="btn"
+                class="btn btn-reflection"
               >
-                Lihat Refleksi
+                <i class="fas fa-book-open"></i>
+                Lihat Modul
               </a>
               <a
-                href="../assets/media_siklus/MEDIA PEMBELAJARAN - Siklus 1.pdf"
+                href="viewer/media-siklus1.html"
                 target="_blank"
-                class="btn"
+                class="btn btn-media"
               >
+                <i class="fas fa-chalkboard-user"></i>
                 Lihat Media
               </a>
             </div>
@@ -145,17 +132,19 @@
 
             <div class="module-buttons">
               <a
-                href="../assets/modul_siklus/LK.4.PPLT - Refleksi Pembelajaran Praktik Terbimbing Siklus 2 - Arjun Yuda Firwanda.pdf"
+                href="viewer/refleksi-siklus2.html"
                 target="_blank"
-                class="btn"
+                class="btn btn-reflection"
               >
-                Lihat Refleksi
+                <i class="fas fa-book-open"></i>
+                Lihat Modul
               </a>
               <a
-                href="../assets/media_siklus/MEDIA PEMBELAJARAN - Siklus 2.pdf"
+                href="viewer/media-siklus2.html"
                 target="_blank"
-                class="btn"
+                class="btn btn-media"
               >
+                <i class="fas fa-chalkboard-user"></i>
                 Lihat Media
               </a>
             </div>
@@ -173,17 +162,19 @@
 
             <div class="module-buttons">
               <a
-                href="../assets/modul_siklus/LK.4.PPLT - Refleksi Pembelajaran Praktik Terbimbing Siklus 3 - Arjun Yuda Firwanda.pdf"
+                href="viewer/refleksi-siklus3.html"
                 target="_blank"
-                class="btn"
+                class="btn btn-reflection"
               >
-                Lihat Refleksi
+                <i class="fas fa-book-open"></i>
+                Lihat Modul
               </a>
               <a
-                href="../assets/media_siklus/MEDIA PEMBELAJARAN - Siklus 3.pdf"
+                href="viewer/media-siklus3.html"
                 target="_blank"
-                class="btn"
+                class="btn btn-media"
               >
+                <i class="fas fa-chalkboard-user"></i>
                 Lihat Media
               </a>
             </div>
@@ -192,16 +183,14 @@
       </div>
     </section>
 
-    <!-- ==========================
-         MEDIA PEMBELAJARAN
-    =========================== -->
-
     <section class="vision-section">
       <div class="container">
         <h2 class="section-title">Media Pembelajaran</h2>
 
         <div class="module-grid">
           <div class="module-card">
+            <i class="fas fa-file-powerpoint module-icon"></i>
+
             <h3>Presentasi Interaktif</h3>
 
             <p>
@@ -211,6 +200,8 @@
           </div>
 
           <div class="module-card">
+            <i class="fas fa-circle-play module-icon"></i>
+
             <h3>Video Pembelajaran</h3>
 
             <p>
@@ -220,6 +211,8 @@
           </div>
 
           <div class="module-card">
+            <i class="fas fa-clipboard-check module-icon"></i>
+
             <h3>Quiz Digital</h3>
 
             <p>
@@ -229,10 +222,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ==========================
-         PENUTUP
-    =========================== -->
 
     <section class="vision-section">
       <div class="container">
@@ -251,18 +240,18 @@
       </div>
     </section>
 
-    <!-- ==========================
-         FOOTER
-    =========================== -->
-
     <footer class="footer">
       <div class="container">
-        <p>
-          © 2026 Arjun Yuda Firwanda | Calon Guru Informatika PPG UPI | All
-          Rights Reserved.
+        <p class="copyright">
+          © <span id="year"></span> Arjun Yuda Firwanda | E-Portofolio PPG
+          Informatika UPI
         </p>
       </div>
     </footer>
+
+    <button id="scrollTopBtn" title="Kembali ke Atas">
+      <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="../js/script.js"></script>
   </body>
