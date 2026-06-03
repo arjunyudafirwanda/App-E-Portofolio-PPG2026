@@ -8,7 +8,6 @@ Website portofolio pribadi untuk dokumentasi kegiatan Pendidikan Profesi Guru (P
 - Modul Ajar
 - Proyek Informatika
 - Galeri Kegiatan PPG
-- Sertifikat
 - Dark Mode
 - Responsive Design
 
