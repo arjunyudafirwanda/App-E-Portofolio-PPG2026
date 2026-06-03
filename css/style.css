@@ -839,3 +839,29 @@ td {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
 }
+
+.profile-story-section {
+  padding: 80px 0;
+}
+
+.profile-story-section h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.profile-story-section p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.profile-story-section blockquote {
+  margin-top: 25px;
+  padding: 20px;
+  border-left: 4px solid var(--primary);
+  font-style: italic;
+  background: rgba(37, 99, 235, 0.05);
+  border-radius: 8px;
+}
+
+
+
