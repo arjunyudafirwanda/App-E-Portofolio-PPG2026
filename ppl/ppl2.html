@@ -3,43 +3,1266 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PPL 2 | Arjun Yuda Firwanda</title>
+
+    <title>PPL 2 | E-Portofolio PPG - Arjun Yuda Firwanda</title>
+
     <link rel="icon" type="image/png" href="../assets/img/pages.png" />
+
+    <!-- Google Font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <!-- CSS Utama Project -->
     <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- =====================================================
+         CSS KHUSUS HALAMAN PPL 2
+    ====================================================== -->
+    <style>
+      :root {
+        --ppl2-blue: #2563eb;
+        --ppl2-indigo: #4f46e5;
+        --ppl2-green: #059669;
+        --ppl2-orange: #d97706;
+        --ppl2-red: #dc2626;
+        --ppl2-purple: #7c3aed;
+        --ppl2-soft: #eff6ff;
+        --ppl2-border: rgba(37, 99, 235, 0.14);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* =====================================================
+         HERO
+      ====================================================== */
+
+      .ppl2-hero {
+        padding: 75px 0 55px;
+
+        background:
+          radial-gradient(
+            circle at 85% 15%,
+            rgba(96, 165, 250, 0.2),
+            transparent 32%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.1),
+            rgba(79, 70, 229, 0.06)
+          );
+      }
+
+      .ppl2-hero-inner {
+        display: grid;
+        grid-template-columns: 1.45fr 0.75fr;
+        gap: 35px;
+        align-items: center;
+      }
+
+      .ppl2-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 8px 14px;
+
+        border-radius: 999px;
+
+        background: rgba(37, 99, 235, 0.1);
+
+        color: var(--ppl2-blue);
+
+        font-size: 13px;
+        font-weight: 700;
+
+        margin-bottom: 18px;
+      }
+
+      .ppl2-hero h1 {
+        margin: 0 0 16px;
+
+        font-size: clamp(2rem, 4vw, 3.2rem);
+
+        line-height: 1.15;
+      }
+
+      .ppl2-hero h1 span {
+        color: var(--ppl2-blue);
+      }
+
+      .ppl2-hero p {
+        line-height: 1.8;
+
+        max-width: 850px;
+      }
+
+      .ppl2-hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        margin: 22px 0 26px;
+      }
+
+      .ppl2-chip {
+        padding: 9px 13px;
+
+        border-radius: 10px;
+
+        background: var(--card);
+
+        border: 1px solid var(--ppl2-border);
+
+        font-size: 13px;
+
+        font-weight: 600;
+      }
+
+      .ppl2-hero-card {
+        position: relative;
+        overflow: hidden;
+
+        background: var(--card);
+
+        border-radius: 22px;
+
+        padding: 28px;
+
+        box-shadow: 0 15px 40px rgba(30, 64, 175, 0.12);
+
+        border: 1px solid var(--ppl2-border);
+
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease,
+          border-color 0.35s ease;
+      }
+
+      .ppl2-hero-card::before {
+        content: "";
+
+        position: absolute;
+
+        width: 160px;
+        height: 160px;
+
+        top: -80px;
+        right: -80px;
+
+        border-radius: 50%;
+
+        background: rgba(37, 99, 235, 0.06);
+
+        transition:
+          transform 0.5s ease,
+          background 0.5s ease;
+      }
+
+      .ppl2-hero-card:hover {
+        transform: translateY(-7px);
+
+        border-color: rgba(37, 99, 235, 0.3);
+
+        box-shadow:
+          0 22px 50px rgba(30, 64, 175, 0.17),
+          0 5px 15px rgba(15, 23, 42, 0.05);
+      }
+
+      .ppl2-hero-card:hover::before {
+        transform: scale(1.4);
+
+        background: rgba(37, 99, 235, 0.09);
+      }
+
+      .ppl2-hero-card .icon {
+        width: 62px;
+        height: 62px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 18px;
+
+        background: rgba(37, 99, 235, 0.1);
+
+        color: var(--ppl2-blue);
+
+        font-size: 27px;
+
+        margin-bottom: 18px;
+      }
+
+      .ppl2-hero-card h3 {
+        margin-bottom: 8px;
+      }
+
+      .ppl2-hero-card p {
+        font-size: 14px;
+
+        line-height: 1.7;
+      }
+
+      /* =====================================================
+         NAVIGASI PPL 2
+      ====================================================== */
+
+      .ppl2-nav-wrap {
+        position: sticky;
+
+        top: 0;
+
+        z-index: 50;
+
+        background: rgba(255, 255, 255, 0.94);
+
+        backdrop-filter: blur(12px);
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .dark .ppl2-nav-wrap {
+        background: rgba(15, 23, 42, 0.94);
+      }
+
+      .ppl2-nav {
+        display: flex;
+
+        gap: 8px;
+
+        overflow-x: auto;
+
+        padding: 12px 0;
+
+        scrollbar-width: thin;
+      }
+
+      .ppl2-nav a {
+        white-space: nowrap;
+
+        padding: 9px 13px;
+
+        border-radius: 9px;
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        text-decoration: none;
+
+        color: inherit;
+
+        background: rgba(100, 116, 139, 0.08);
+      }
+
+      .ppl2-nav a:hover {
+        background: rgba(37, 99, 235, 0.12);
+
+        color: var(--ppl2-blue);
+      }
+
+      .ppl2-nav a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .ppl2-nav a i {
+        font-size: 0.9rem;
+        opacity: 0.85;
+        transition:
+          transform 0.25s ease,
+          opacity 0.25s ease;
+      }
+
+      .ppl2-nav a:hover i {
+        transform: translateY(-2px);
+        opacity: 1;
+      }
+
+      /* =====================================================
+         SECTION
+      ====================================================== */
+
+      .ppl2-section {
+        padding: 62px 0;
+      }
+
+      .ppl2-section.alt {
+        background: rgba(37, 99, 235, 0.035);
+      }
+
+      .ppl2-section-head {
+        max-width: 850px;
+
+        margin: 0 auto 30px;
+
+        text-align: center;
+      }
+
+      .ppl2-section-head .number {
+        color: var(--ppl2-blue);
+
+        font-size: 13px;
+
+        font-weight: 800;
+
+        letter-spacing: 0.08em;
+
+        text-transform: uppercase;
+      }
+
+      .ppl2-section-head h2 {
+        margin: 7px 0 10px;
+
+        font-size: clamp(1.55rem, 3vw, 2.15rem);
+      }
+
+      .ppl2-section-head p {
+        line-height: 1.75;
+
+        margin: 0;
+      }
+
+      /* =====================================================
+         CARD
+      ====================================================== */
+
+      .ppl2-card-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        gap: 20px;
+      }
+
+      .ppl2-card {
+        position: relative;
+        overflow: hidden;
+
+        background: var(--card);
+
+        border: 1px solid var(--ppl2-border);
+
+        border-radius: 18px;
+
+        padding: 23px;
+
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease,
+          background 0.3s ease;
+      }
+
+      /* Garis aksen bagian atas card */
+      .ppl2-card::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+
+        background: linear-gradient(
+          90deg,
+          var(--ppl2-blue),
+          var(--ppl2-indigo)
+        );
+
+        transform: scaleX(0);
+
+        transform-origin: left;
+
+        transition: transform 0.35s ease;
+      }
+
+      /* Hover utama */
+      .ppl2-card:hover {
+        transform: translateY(-7px);
+
+        border-color: rgba(37, 99, 235, 0.35);
+
+        box-shadow:
+          0 18px 40px rgba(37, 99, 235, 0.13),
+          0 5px 15px rgba(15, 23, 42, 0.06);
+      }
+
+      /* Garis atas muncul saat hover */
+      .ppl2-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .ppl2-card .card-icon {
+        width: 45px;
+        height: 45px;
+
+        display: grid;
+
+        place-items: center;
+
+        border-radius: 13px;
+
+        background: rgba(37, 99, 235, 0.1);
+
+        color: var(--ppl2-blue);
+
+        margin-bottom: 15px;
+
+        transition:
+          transform 0.3s ease,
+          background 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .ppl2-card:hover .card-icon {
+        transform: translateY(-3px) scale(1.08);
+
+        background: var(--ppl2-blue);
+
+        color: #ffffff;
+      }
+
+      .ppl2-card h3,
+      .ppl2-card h4 {
+        margin-bottom: 10px;
+      }
+
+      .ppl2-card p,
+      .ppl2-card li {
+        font-size: 14px;
+
+        line-height: 1.75;
+      }
+
+      .ppl2-card ul {
+        padding-left: 19px;
+
+        margin-bottom: 0;
+      }
+
+      /* =====================================================
+         ANALYSIS BOX
+      ====================================================== */
+
+      .ppl2-analysis {
+        margin-top: 28px;
+
+        padding: 27px;
+
+        border-radius: 18px;
+
+        background: var(--card);
+
+        border: 1px solid var(--ppl2-border);
+
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+      }
+
+      .ppl2-analysis-title {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        color: var(--ppl2-blue);
+
+        margin-bottom: 20px;
+      }
+
+      .ppl2-analysis-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+        gap: 16px;
+      }
+
+      .ppl2-analysis-item {
+        padding: 18px;
+
+        border-radius: 13px;
+
+        background: rgba(100, 116, 139, 0.055);
+
+        border: 1px solid transparent;
+
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease,
+          background 0.3s ease;
+      }
+
+      .ppl2-analysis-item:hover {
+        transform: translateY(-4px);
+
+        border-color: rgba(37, 99, 235, 0.2);
+
+        background: rgba(37, 99, 235, 0.045);
+
+        box-shadow: 0 12px 25px rgba(37, 99, 235, 0.08);
+      }
+
+      .ppl2-analysis-item h4 {
+        font-size: 14px;
+
+        margin-bottom: 8px;
+      }
+
+      .ppl2-analysis-item p {
+        margin: 0;
+
+        font-size: 13px;
+
+        line-height: 1.75;
+
+        text-align: justify;
+      }
+
+      /* =====================================================
+         EVIDENCE
+      ====================================================== */
+
+      .ppl2-evidence {
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .ppl2-evidence:hover {
+        transform: translateY(-2px);
+
+        background: rgba(37, 99, 235, 0.09);
+
+        border-color: rgba(37, 99, 235, 0.4);
+      }
+
+      .ppl2-mini-btn {
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          opacity 0.25s ease;
+      }
+
+      .ppl2-mini-btn:hover {
+        opacity: 1;
+
+        transform: translateY(-2px);
+
+        box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+      }
+
+      .ppl2-evidence strong {
+        font-size: 13px;
+      }
+
+      .ppl2-mini-btn {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 7px;
+
+        padding: 9px 13px;
+
+        border-radius: 9px;
+
+        background: var(--ppl2-blue);
+
+        color: white !important;
+
+        text-decoration: none;
+
+        font-size: 12px;
+
+        font-weight: 700;
+      }
+
+      .ppl2-mini-btn:hover {
+        opacity: 0.9;
+      }
+
+      /* =====================================================
+         FLOW
+      ====================================================== */
+
+      .ppl2-flow {
+        display: grid;
+
+        grid-template-columns: repeat(6, 1fr);
+
+        gap: 10px;
+
+        margin-top: 25px;
+      }
+
+      .ppl2-flow-item {
+        position: relative;
+
+        text-align: center;
+
+        padding: 18px 10px;
+
+        border-radius: 15px;
+
+        background: var(--card);
+
+        border: 1px solid var(--ppl2-border);
+
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease,
+          background 0.3s ease;
+      }
+
+      .ppl2-flow-item:hover {
+        transform: translateY(-5px);
+
+        border-color: rgba(37, 99, 235, 0.3);
+
+        box-shadow: 0 14px 30px rgba(37, 99, 235, 0.1);
+
+        background: rgba(37, 99, 235, 0.035);
+      }
+
+      .ppl2-flow-item i {
+        color: var(--ppl2-blue);
+
+        font-size: 20px;
+
+        margin-bottom: 9px;
+
+        transition:
+          transform 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .ppl2-flow-item:hover i {
+        transform: scale(1.15) translateY(-2px);
+
+        color: var(--ppl2-indigo);
+      }
+
+      .ppl2-flow-item i {
+        color: var(--ppl2-blue);
+
+        font-size: 20px;
+
+        margin-bottom: 9px;
+      }
+
+      .ppl2-flow-item strong {
+        display: block;
+
+        font-size: 12px;
+      }
+
+      .ppl2-flow-item span {
+        display: block;
+
+        font-size: 11px;
+
+        margin-top: 5px;
+
+        opacity: 0.72;
+      }
+
+      /* =====================================================
+         TIMELINE VIDEO
+      ====================================================== */
+
+      .ppl2-timeline {
+        position: relative;
+
+        max-width: 900px;
+
+        margin: auto;
+      }
+
+      .ppl2-timeline::before {
+        content: "";
+
+        position: absolute;
+
+        left: 17px;
+
+        top: 10px;
+
+        bottom: 10px;
+
+        width: 2px;
+
+        background: rgba(37, 99, 235, 0.2);
+      }
+
+      .ppl2-timeline-item {
+        position: relative;
+
+        padding-left: 55px;
+
+        margin-bottom: 28px;
+      }
+
+      .ppl2-timeline-dot {
+        position: absolute;
+
+        left: 7px;
+
+        top: 5px;
+
+        width: 22px;
+
+        height: 22px;
+
+        border-radius: 50%;
+
+        background: var(--ppl2-blue);
+
+        border: 5px solid var(--card);
+
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+      }
+
+      .ppl2-timeline-item h3 {
+        margin-bottom: 7px;
+
+        color: var(--ppl2-blue);
+      }
+
+      .ppl2-timeline-item p {
+        line-height: 1.75;
+
+        margin: 0;
+      }
+
+      /* =====================================================
+         TABLE ASESMEN
+      ====================================================== */
+
+      .ppl2-assessment-table {
+        width: 100%;
+
+        border-collapse: collapse;
+
+        background: var(--card);
+
+        border-radius: 15px;
+
+        overflow: hidden;
+
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+      }
+
+      .ppl2-assessment-table th,
+      .ppl2-assessment-table td {
+        padding: 14px;
+
+        border-bottom: 1px solid rgba(100, 116, 139, 0.13);
+
+        text-align: left;
+
+        vertical-align: top;
+
+        font-size: 13px;
+
+        line-height: 1.65;
+      }
+
+      .ppl2-assessment-table th {
+        background: rgba(37, 99, 235, 0.08);
+
+        color: var(--ppl2-blue);
+      }
+
+      /* =====================================================
+         REFLECTION
+      ====================================================== */
+
+      .ppl2-reflection {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 18px;
+      }
+
+      .ppl2-reflection-card {
+        background: var(--card);
+
+        border-radius: 16px;
+
+        padding: 23px;
+
+        border-left: 4px solid var(--ppl2-blue);
+
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-left-width 0.3s ease;
+      }
+
+      .ppl2-reflection-card:hover {
+        transform: translateY(-5px);
+
+        box-shadow:
+          0 16px 35px rgba(37, 99, 235, 0.1),
+          0 5px 15px rgba(15, 23, 42, 0.05);
+
+        border-left-width: 6px;
+      }
+
+      .ppl2-reflection-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .ppl2-reflection-card p {
+        margin: 0;
+
+        line-height: 1.8;
+
+        font-size: 14px;
+
+        text-align: justify;
+      }
+
+      /* =====================================================
+         QUOTE
+      ====================================================== */
+
+      .ppl2-quote {
+        margin-top: 28px;
+
+        padding: 25px 28px;
+
+        border-radius: 17px;
+
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.1),
+          rgba(124, 58, 237, 0.08)
+        );
+
+        border: 1px solid rgba(37, 99, 235, 0.15);
+
+        text-align: center;
+      }
+
+      .ppl2-quote i {
+        color: var(--ppl2-blue);
+
+        font-size: 23px;
+      }
+
+      .ppl2-quote p {
+        max-width: 850px;
+
+        margin: 12px auto 0;
+
+        font-size: 17px;
+
+        font-weight: 600;
+
+        line-height: 1.7;
+      }
+
+      /* =====================================================
+         CHECKLIST
+      ====================================================== */
+
+      .ppl2-checklist {
+        display: grid;
+
+        gap: 11px;
+      }
+
+      .ppl2-check {
+        display: flex;
+
+        gap: 11px;
+
+        align-items: flex-start;
+
+        padding: 13px 15px;
+
+        border-radius: 11px;
+
+        background: rgba(100, 116, 139, 0.055);
+      }
+
+      .ppl2-check i {
+        color: var(--ppl2-green);
+
+        margin-top: 4px;
+      }
+
+      .ppl2-check span {
+        font-size: 13px;
+
+        line-height: 1.65;
+      }
+
+      /* =====================================================
+         GALLERY LINK
+      ====================================================== */
+
+      .ppl2-gallery-note {
+        text-align: center;
+
+        margin-top: 25px;
+      }
+
+      .ppl2-gallery-note a {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 8px;
+      }
+
+      /* =====================================================
+         DARK MODE
+      ====================================================== */
+
+      .dark .ppl2-analysis-item,
+      .dark .ppl2-check {
+        background: rgba(148, 163, 184, 0.07);
+      }
+
+      .dark .ppl2-assessment-table th {
+        background: rgba(96, 165, 250, 0.12);
+      }
+
+      /* =====================================================
+         RESPONSIVE
+      ====================================================== */
+
+      @media (max-width: 900px) {
+        .ppl2-hero-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .ppl2-flow {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .ppl2-reflection {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .ppl2-section {
+          padding: 45px 0;
+        }
+
+        .ppl2-flow {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .ppl2-analysis,
+        .ppl2-card,
+        .ppl2-reflection-card {
+          padding: 18px;
+        }
+
+        .ppl2-assessment-table {
+          display: block;
+
+          overflow-x: auto;
+
+          white-space: normal;
+        }
+      }
+
+      /* =====================================================
+   TEXT ALIGNMENT - PPL 2
+   Membuat seluruh paragraf analisis rata kanan-kiri
+===================================================== */
+
+      .ppl2-section p,
+      .ppl2-card p,
+      .ppl2-analysis-item p,
+      .ppl2-reflection-card p,
+      .ppl2-timeline-item p,
+      .ppl2-quote p {
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.8;
+      }
+
+      /* Paragraf pada hero tetap justify */
+      .ppl2-hero p {
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.8;
+      }
+
+      /* Judul dan heading jangan justify */
+      .ppl2-section-head,
+      .ppl2-section-head h2,
+      .ppl2-section-head p {
+        text-align: center;
+      }
+
+      /* Judul card tetap rata kiri */
+      .ppl2-card h3,
+      .ppl2-card h4,
+      .ppl2-analysis-title,
+      .ppl2-analysis-item h4,
+      .ppl2-reflection-card h3,
+      .ppl2-timeline-item h3 {
+        text-align: left;
+      }
+
+      /* Tabel tetap rata kiri agar mudah dibaca */
+      .ppl2-assessment-table th,
+      .ppl2-assessment-table td {
+        text-align: left;
+      }
+
+      /* Checklist tetap rata kiri */
+      .ppl2-check span {
+        text-align: left;
+      }
+
+      /* Quote tetap rata tengah */
+      .ppl2-quote p {
+        text-align: center;
+      }
+
+      /* =====================================================
+   PPL 2 - EVIDENCE FILES
+===================================================== */
+
+      .ppl2-evidence-header {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 18px;
+      }
+
+      .ppl2-evidence-header strong {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 15px;
+      }
+
+      .ppl2-evidence-header strong i {
+        font-size: 16px;
+      }
+
+      .ppl2-evidence-files {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .ppl2-file-link {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+
+        padding: 14px 16px;
+
+        text-decoration: none;
+        color: inherit;
+
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+
+        background: rgba(255, 255, 255, 0.65);
+
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .ppl2-file-link:hover {
+        transform: translateY(-2px);
+
+        border-color: rgba(220, 38, 38, 0.25);
+
+        background: #ffffff;
+
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+      }
+
+      .ppl2-file-icon {
+        width: 42px;
+        height: 42px;
+
+        flex: 0 0 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+
+        background: rgba(220, 38, 38, 0.1);
+
+        font-size: 20px;
+      }
+
+      .ppl2-file-info {
+        min-width: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        flex: 1;
+      }
+
+      .ppl2-file-info strong {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .ppl2-file-info span {
+        font-size: 11px;
+        opacity: 0.65;
+      }
+
+      .ppl2-file-action {
+        width: 30px;
+        height: 30px;
+
+        flex: 0 0 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 8px;
+
+        opacity: 0.55;
+
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .ppl2-file-link:hover .ppl2-file-action {
+        opacity: 1;
+        transform: translate(2px, -2px);
+      }
+
+      /* =====================================================
+   RESPONSIVE
+===================================================== */
+
+      @media (max-width: 768px) {
+        .ppl2-evidence-files {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .ppl2-file-link {
+          padding: 12px;
+        }
+
+        .ppl2-file-icon {
+          width: 38px;
+          height: 38px;
+          flex-basis: 38px;
+          font-size: 18px;
+        }
+
+        .ppl2-file-info strong {
+          font-size: 13px;
+        }
+      }
+    </style>
   </head>
 
   <body>
+    <!-- =====================================================
+         HEADER / NAVBAR
+    ====================================================== -->
+
     <header>
       <nav class="navbar">
         <div class="logo">E-Portofolio PPG</div>
 
         <ul class="menu">
-          <li><a href="../index.html">Beranda</a></li>
-          <li><a href="../tentang.html">Tentang</a></li>
+          <li>
+            <a href="../index.html"><i class="fas fa-home"></i> Beranda </a>
+          </li>
 
+          <li>
+            <a href="../tentang.html"
+              ><i class="fas fa-user-friends"></i> Tentang
+            </a>
+          </li>
+
+          <!-- PPL -->
           <li class="dropdown">
-            <a href="#">PPL ▾</a>
+            <a href="#"><i class="fas fa-laptop-code"></i> PPL ▾ </a>
 
             <ul class="dropdown-menu">
-              <li><a href="ppl1.html">PPL 1</a></li>
-              <li><a href="ppl2.html" class="active">PPL 2</a></li>
+              <li>
+                <a href="ppl1.html"
+                  ><i class="fas fa-code-branch"></i> PPL 1
+                </a>
+              </li>
+
+              <li>
+                <a href="ppl2.html" class="active"
+                  ><i class="fas fa-code-branch"></i> PPL 2
+                </a>
+              </li>
             </ul>
           </li>
 
+          <li>
+            <a href="../seminar.html">
+              <i class="fas fa-graduation-cap"></i> Seminar
+            </a>
+          </li>
+
           <li class="dropdown">
-            <a href="#">Galeri ▾</a>
+            <a href="#"><i class="fas fa-images"></i> Galeri ▾ </a>
 
             <ul class="dropdown-menu">
-              <li><a href="../galeri/galeri-ppl1.html">PPL 1</a></li>
-              <li><a href="../galeri/galeri-ppl2.html">PPL 2</a></li>
+              <li>
+                <a href="../galeri/galeri-ppl1.html"
+                  ><i class="fas fa-image"></i> PPL 1
+                </a>
+              </li>
+
+              <li>
+                <a href="../galeri/galeri-ppl2.html"
+                  ><i class="fas fa-image"></i> PPL 2
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -48,52 +1271,1637 @@
       </nav>
     </header>
 
-    <section class="page-header">
-      <div class="container">
-        <h1>Pembelajaran Praktik Pengalaman Lapangan 2</h1>
+    <!-- =====================================================
+         HERO PPL 2
+    ====================================================== -->
 
-        <p>
-          Halaman ini akan memuat dokumentasi kegiatan Praktik Pengalaman
-          Lapangan (PPL) 2, meliputi perangkat pembelajaran, refleksi,
-          dokumentasi kegiatan, media pembelajaran, dan berbagai kegiatan
-          pendukung lainnya.
-        </p>
+    <section class="ppl2-hero">
+      <div class="container ppl2-hero-inner">
+        <div>
+          <div class="ppl2-eyebrow">
+            <i class="fas fa-graduation-cap"></i>
+
+            E-PORTFOLIO PPG 2026 · PPL 2
+          </div>
+
+          <h1>
+            Praktik Mengajar
+            <span>Mandiri</span>
+          </h1>
+
+          <p>
+            Dokumentasi dan analisis reflektif pelaksanaan Praktik Pengalaman
+            Lapangan 2 pada pembelajaran Informatika di SMA Negeri 12 Bandung.
+            Portofolio ini menyajikan keterkaitan antara perencanaan, materi,
+            media, pelaksanaan, asesmen, kegiatan nonmengajar, refleksi, dan
+            tindak lanjut pengembangan profesional guru.
+          </p>
+
+          <div class="ppl2-hero-meta">
+            <div class="ppl2-chip">
+              <i class="fas fa-user-tie"></i>
+
+              Arjun Yuda Firwanda
+            </div>
+
+            <div class="ppl2-chip">
+              <i class="fas fa-school"></i>
+
+              SMA Negeri 12 Bandung
+            </div>
+
+            <div class="ppl2-chip">
+              <i class="fas fa-users"></i>
+
+              Kelas XII-3 IPA
+            </div>
+
+            <div class="ppl2-chip">
+              <i class="fas fa-laptop-code"></i>
+
+              Informatika
+            </div>
+          </div>
+
+          <a href="#gambaran" class="btn">
+            <i class="fas fa-arrow-down"></i>
+
+            Jelajahi PPL 2
+          </a>
+        </div>
+
+        <!-- HERO CARD -->
+
+        <div class="ppl2-hero-card">
+          <div class="icon">
+            <i class="fas fa-chalkboard-user"></i>
+          </div>
+
+          <h3>Fokus PPL 2</h3>
+
+          <p>
+            Pembelajaran Informatika yang aktif, kontekstual, berbasis praktik,
+            memanfaatkan teknologi, serta menggunakan asesmen sebagai bagian
+            dari proses belajar.
+          </p>
+
+          <div class="ppl2-checklist">
+            <div class="ppl2-check">
+              <i class="fas fa-check-circle"></i>
+
+              <span>
+                Perencanaan pembelajaran berbasis kebutuhan peserta didik.
+              </span>
+            </div>
+
+            <div class="ppl2-check">
+              <i class="fas fa-check-circle"></i>
+
+              <span> Pemanfaatan media digital dan praktik pemrograman. </span>
+            </div>
+
+            <div class="ppl2-check">
+              <i class="fas fa-check-circle"></i>
+
+              <span>
+                Asesmen untuk mengetahui dan menindaklanjuti proses belajar.
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="coming-soon-section">
-      <div class="container">
-        <div class="coming-soon-card">
-          <div class="coming-icon">🚀</div>
+    <!-- =====================================================
+         NAVIGASI PPL 2
+    ====================================================== -->
 
-          <h2>Konten Sedang Dipersiapkan</h2>
+    <div class="ppl2-nav-wrap">
+      <div class="container">
+        <nav class="ppl2-nav" aria-label="Navigasi PPL 2">
+          <a href="#gambaran">
+            <i class="fas fa-compass"></i>
+            <span>Gambaran</span>
+          </a>
+
+          <a href="#rancangan">
+            <i class="fas fa-pen-ruler"></i>
+            <span>Rancangan</span>
+          </a>
+
+          <a href="#materi">
+            <i class="fas fa-book-open"></i>
+            <span>Materi</span>
+          </a>
+
+          <a href="#media">
+            <i class="fas fa-photo-film"></i>
+            <span>Media</span>
+          </a>
+
+          <a href="#video">
+            <i class="fas fa-circle-play"></i>
+            <span>Video</span>
+          </a>
+
+          <a href="#nonmengajar">
+            <i class="fas fa-people-arrows"></i>
+            <span>Nonmengajar</span>
+          </a>
+
+          <a href="#asesmen">
+            <i class="fas fa-clipboard-check"></i>
+            <span>Asesmen</span>
+          </a>
+
+          <a href="#refleksi">
+            <i class="fas fa-comments"></i>
+            <span>Refleksi</span>
+          </a>
+
+          <a href="#tindak-lanjut">
+            <i class="fas fa-arrow-trend-up"></i>
+            <span>Tindak Lanjut</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         01 GAMBARAN UMUM
+    ====================================================== -->
+
+    <section class="ppl2-section" id="gambaran">
+      <div class="container">
+        <div class="ppl2-section-head">
+          <div class="number">01 · Gambaran Umum</div>
+
+          <h2>Konteks Praktik Mengajar Mandiri</h2>
 
           <p>
-            Dokumentasi PPL 2 akan ditambahkan setelah pelaksanaan kegiatan.
-            Seluruh kegiatan pembelajaran, refleksi praktik mengajar, media
-            pembelajaran, dan dokumentasi kegiatan akan diperbarui secara
-            berkala pada halaman ini.
+            PPL 2 menjadi tahap penguatan kemampuan saya sebagai calon guru
+            untuk mengintegrasikan kompetensi pedagogik, profesional, sosial,
+            dan reflektif dalam situasi pembelajaran nyata.
           </p>
+        </div>
 
-          <a href="../index.html" class="btn">
-            <i class="fas fa-home"></i> Kembali ke Beranda
+        <div class="ppl2-card-grid">
+          <!-- Card 1 -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-school"></i>
+            </div>
+
+            <h3>Konteks Sekolah</h3>
+
+            <p>
+              Praktik dilaksanakan di SMA Negeri 12 Bandung dalam lingkungan
+              pembelajaran Informatika yang mendorong peserta didik untuk
+              memahami konsep sekaligus menerapkannya melalui aktivitas
+              pemecahan masalah dan praktik teknologi.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-users"></i>
+            </div>
+
+            <h3>Karakteristik Kelas</h3>
+
+            <p>
+              Peserta didik kelas XII-3 IPA memiliki tingkat kesiapan,
+              pengalaman, dan kecepatan belajar yang beragam. Kondisi tersebut
+              menjadi pertimbangan dalam pemilihan aktivitas, media, instruksi,
+              dan bentuk asesmen.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+
+            <h3>Fokus Pengembangan</h3>
+
+            <p>
+              Fokus PPL 2 diarahkan pada pembelajaran yang lebih aktif,
+              kontekstual, adaptif, dan memberikan pengalaman langsung kepada
+              peserta didik melalui teknologi serta aktivitas praktik.
+            </p>
+          </div>
+        </div>
+
+        <!-- FLOW -->
+
+        <div class="ppl2-flow">
+          <div class="ppl2-flow-item">
+            <i class="fas fa-pen-ruler"></i>
+
+            <strong> Perencanaan </strong>
+
+            <span> Merancang pembelajaran </span>
+          </div>
+
+          <div class="ppl2-flow-item">
+            <i class="fas fa-book-open"></i>
+
+            <strong> Materi </strong>
+
+            <span> Menyiapkan bahan ajar </span>
+          </div>
+
+          <div class="ppl2-flow-item">
+            <i class="fas fa-display"></i>
+
+            <strong> Media </strong>
+
+            <span> Memilih media sesuai tujuan </span>
+          </div>
+
+          <div class="ppl2-flow-item">
+            <i class="fas fa-person-chalkboard"></i>
+
+            <strong> Pelaksanaan </strong>
+
+            <span> Mengajar secara mandiri </span>
+          </div>
+
+          <div class="ppl2-flow-item">
+            <i class="fas fa-clipboard-check"></i>
+
+            <strong> Asesmen </strong>
+
+            <span> Mengumpulkan bukti belajar </span>
+          </div>
+
+          <div class="ppl2-flow-item">
+            <i class="fas fa-arrows-rotate"></i>
+
+            <strong> Refleksi </strong>
+
+            <span> Memperbaiki praktik </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         02 RANCANGAN PEMBELAJARAN
+    ====================================================== -->
+
+    <section class="ppl2-section alt" id="rancangan">
+      <div class="container">
+        <div class="ppl2-section-head">
+          <div class="number">02 · Produk Rancangan</div>
+
+          <h2>Analisis Rancangan / Perencanaan Pembelajaran</h2>
+
+          <p>
+            Rancangan pembelajaran diposisikan sebagai peta kerja yang
+            menghubungkan tujuan, aktivitas, media, asesmen, dan kebutuhan
+            peserta didik.
+          </p>
+        </div>
+
+        <div class="ppl2-card-grid">
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-file-lines"></i>
+            </div>
+
+            <h3>Modul Ajar</h3>
+
+            <p>
+              Modul ajar digunakan sebagai pedoman utama untuk memastikan
+              kegiatan pembelajaran memiliki tujuan, langkah kegiatan, media,
+              asesmen, dan tindak lanjut yang jelas.
+            </p>
+          </div>
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-route"></i>
+            </div>
+
+            <h3>Model & Sintaks</h3>
+
+            <p>
+              Aktivitas pembelajaran disusun agar peserta didik tidak hanya
+              menerima informasi, tetapi mengamati, mencoba, berdiskusi,
+              menyelesaikan masalah, dan menyimpulkan hasil belajar.
+            </p>
+          </div>
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+
+            <h3>Tujuan Pembelajaran</h3>
+
+            <p>
+              Tujuan diarahkan pada keseimbangan antara pemahaman konsep dan
+              kemampuan menerapkan konsep Informatika dalam aktivitas praktik.
+            </p>
+          </div>
+        </div>
+
+        <!-- ANALISIS -->
+        <div class="ppl2-analysis">
+          <h3 class="ppl2-analysis-title">
+            <i class="fas fa-magnifying-glass-chart"></i>
+
+            Analisis Produk Rancangan
+          </h3>
+
+          <div class="ppl2-analysis-grid">
+            <div class="ppl2-analysis-item">
+              <h4>✓ Kesesuaian dengan peserta didik</h4>
+
+              <p>
+                Rancangan mempertimbangkan perbedaan kesiapan belajar peserta
+                didik. Aktivitas dibuat bertahap agar peserta didik dapat
+                mengikuti pembelajaran dari pemahaman dasar menuju penerapan.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>✓ Keterkaitan tujuan dan aktivitas</h4>
+
+              <p>
+                Aktivitas tidak berhenti pada penjelasan konsep. Peserta didik
+                diarahkan untuk mencoba dan melihat hubungan antara konsep
+                Informatika dengan hasil yang muncul pada media praktik.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>✓ Student-centered learning</h4>
+
+              <p>
+                Perencanaan memberi ruang kepada peserta didik untuk bertanya,
+                mencoba, berdiskusi, dan memperbaiki hasil. Guru berperan
+                sebagai fasilitator yang mengarahkan proses berpikir.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>⚠ Tantangan</h4>
+
+              <p>
+                Aktivitas praktik membutuhkan manajemen waktu yang lebih ketat.
+                Perbedaan kecepatan belajar juga dapat menyebabkan sebagian
+                peserta didik selesai lebih cepat sementara peserta didik lain
+                masih membutuhkan pendampingan.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>→ Perbaikan</h4>
+
+              <p>
+                Pada pelaksanaan berikutnya, instruksi kerja perlu dibuat lebih
+                ringkas dan bertahap, disertai contoh hasil yang diharapkan dan
+                latihan bertingkat untuk mengakomodasi perbedaan kemampuan.
+              </p>
+            </div>
+          </div>
+
+          <!-- BUKTI -->
+          <div class="ppl2-evidence">
+            <div class="ppl2-evidence-header">
+              <strong>
+                <i class="fas fa-paperclip"></i>
+                Bukti Produk: Modul Ajar / RPP / Perangkat Pembelajaran PPL 2
+              </strong>
+
+              <span style="font-size: 12px; opacity: 0.75">
+                Dokumen pembelajaran yang digunakan selama pelaksanaan PPL 2.
+              </span>
+            </div>
+
+            <div class="ppl2-evidence-files">
+              <!-- Modul 1 -->
+              <a
+                href="../assets/modul_ajar_ppl2/1. Modul_Ajar_SMAN12_Bandung_XII3_Informatika Sekarang dan Dimasa Depan.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-file-link"
+                title="Buka Modul Ajar PPL 2 - Modul 1"
+              >
+                <div class="ppl2-file-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+
+                <div class="ppl2-file-info">
+                  <strong>Modul Ajar PPL 2 — Modul 1</strong>
+                  <span>PDF · Perangkat Pembelajaran</span>
+                </div>
+
+                <div class="ppl2-file-action">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </div>
+              </a>
+
+              <!-- Modul 2 -->
+              <a
+                href="../assets/modul_ajar_ppl2/2. Modul_Ajar_SMAN12_Bandung_XII3_Sistem Komputer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-file-link"
+                title="Buka Modul Ajar PPL 2 - Modul 2"
+              >
+                <div class="ppl2-file-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+
+                <div class="ppl2-file-info">
+                  <strong>Modul Ajar PPL 2 — Modul 2</strong>
+                  <span>PDF · Perangkat Pembelajaran</span>
+                </div>
+
+                <div class="ppl2-file-action">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         03 MATERI
+    ====================================================== -->
+
+    <section class="ppl2-section" id="materi">
+      <div class="container">
+        <div class="ppl2-section-head">
+          <div class="number">03 · Materi Pembelajaran</div>
+
+          <h2>Materi Informatika yang Diterapkan</h2>
+
+          <p>
+            Materi dipilih dengan mempertimbangkan capaian pembelajaran,
+            karakteristik peserta didik, serta peluang untuk menghubungkan
+            konsep abstrak dengan pengalaman praktik.
+          </p>
+        </div>
+
+        <div class="ppl2-card-grid">
+          <!-- Informatika Sekarang dan Masa Depan -->
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>Informatika Sekarang & Masa Depan</h3>
+            <p>
+              Materi perkembangan Informatika memberikan landasan kontekstual
+              agar peserta didik memahami perubahan teknologi dan pengaruhnya
+              terhadap kehidupan. Pembahasan Revolusi Industri 4.0, Big Data,
+              Cloud Computing, 5G, AI, IoT, Blockchain, Cryptocurrency, dan
+              Extended Reality (XR) membantu peserta didik melihat keterkaitan
+              antara perkembangan teknologi dengan kebutuhan masa depan.
+            </p>
+          </div>
+
+          <!-- Arduino -->
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-microchip"></i>
+            </div>
+
+            <h3>Arduino Uno</h3>
+
+            <p>
+              Materi Arduino Uno digunakan untuk memperkenalkan konsep
+              mikrokontroler melalui pendekatan yang lebih konkret. Peserta
+              didik mempelajari bagian Arduino, fungsi pin, jenis sensor,
+              komponen pendukung, serta hubungan antara perangkat keras dan
+              program sehingga dapat memahami bagaimana instruksi digital
+              digunakan untuk mengendalikan perangkat elektronik.
+            </p>
+          </div>
+
+          <!-- Coding -->
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-code"></i>
+            </div>
+
+            <h3>Pemrograman Arduino</h3>
+
+            <p>
+              Materi pemrograman Arduino menjadi dasar untuk melatih kemampuan
+              peserta didik dalam menulis dan memahami kode program. Konsep
+              variabel, tipe data, operator, input-output, percabangan
+              <b>if</b> dan <b>else</b>, serta perulangan <b>for</b> dan
+              <b>while</b> dipelajari secara bertahap melalui program sederhana
+              yang menghasilkan keluaran yang dapat diamati.
+            </p>
+          </div>
+
+          <!-- Algoritma -->
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-diagram-project"></i>
+            </div>
+
+            <h3>Berpikir Algoritmik</h3>
+
+            <p>
+              Materi berpikir algoritmik diarahkan untuk membangun kemampuan
+              peserta didik dalam menyusun langkah penyelesaian masalah secara
+              sistematis. Peserta didik belajar menghubungkan masalah dengan
+              algoritma, kondisi, instruksi, proses, dan keluaran sehingga mampu
+              memahami bahwa program merupakan implementasi dari algoritma untuk
+              menyelesaikan suatu masalah.
+            </p>
+          </div>
+
+          <!-- Jaringan Komputer -->
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-route"></i>
+            </div>
+            <h3>Jaringan Komputer</h3>
+            <p>
+              Materi jaringan komputer memberikan pemahaman mengenai bagaimana
+              perangkat dapat saling terhubung dan berkomunikasi. Konsep
+              topologi jaringan dan IP address diperkuat melalui praktik
+              menggunakan Cisco Packet Tracer sehingga peserta didik dapat
+              mengamati konfigurasi dan hubungan antarperangkat secara virtual.
+            </p>
+          </div>
+
+          <!-- Dampak Sosial Informatika -->
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-users-gear"></i>
+            </div>
+            <h3>Dampak Sosial Informatika</h3>
+            <p>
+              Materi dampak sosial Informatika mengembangkan kesadaran peserta
+              didik terhadap konsekuensi penggunaan teknologi dalam kehidupan
+              sehari-hari. Pembahasan etika digital, keamanan data pribadi,
+              serta informasi hoaks membantu peserta didik memahami pentingnya
+              menggunakan teknologi secara bijak, aman, kritis, dan bertanggung
+              jawab.
+            </p>
+          </div>
+
+          <!-- Simulator -->
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-sim-card"></i>
+            </div>
+
+            <h3>Praktik Simulasi</h3>
+
+            <p>
+              Praktik simulasi berfungsi sebagai penghubung antara konsep teori
+              dan pengalaman langsung. Penggunaan simulator seperti Wokwi untuk
+              Arduino dan Cisco Packet Tracer untuk jaringan memungkinkan
+              peserta didik melakukan eksperimen, menguji program atau
+              konfigurasi, mengamati hasil, menemukan kesalahan, dan melakukan
+              perbaikan tanpa selalu bergantung pada perangkat fisik.
+            </p>
+          </div>
+        </div>
+
+        <!-- ANALISIS MATERI -->
+        <div class="ppl2-analysis">
+          <h3 class="ppl2-analysis-title">
+            <i class="fas fa-book-open-reader"></i>
+            Analisis Materi
+          </h3>
+
+          <div class="ppl2-analysis-grid">
+            <!-- Relevansi -->
+            <div class="ppl2-analysis-item">
+              <h4>Relevansi</h4>
+
+              <p>
+                Materi Informatika yang diterapkan relevan dengan perkembangan
+                teknologi dan kebutuhan kompetensi peserta didik di era digital.
+                Pembahasan AI, IoT, Big Data, Arduino, pemrograman, jaringan
+                komputer, serta dampak sosial Informatika memberikan pengalaman
+                belajar yang menghubungkan konsep Informatika dengan teknologi
+                yang dekat dengan kehidupan sehari-hari dan kebutuhan masa
+                depan.
+              </p>
+            </div>
+
+            <!-- Karakteristik Materi -->
+            <div class="ppl2-analysis-item">
+              <h4>Karakteristik Materi</h4>
+
+              <p>
+                Materi memiliki karakteristik yang memadukan pengetahuan
+                konseptual dengan keterampilan praktik. Materi perkembangan
+                teknologi dan dampak sosial lebih banyak membutuhkan pemahaman
+                konsep serta kemampuan menganalisis, sedangkan Arduino,
+                pemrograman, algoritma, dan jaringan membutuhkan latihan,
+                eksperimen, serta kemampuan pemecahan masalah.
+              </p>
+            </div>
+
+            <!-- Konkretisasi Konsep -->
+            <div class="ppl2-analysis-item">
+              <h4>Konkretisasi Konsep</h4>
+
+              <p>
+                Konsep abstrak seperti algoritma, variabel, operator,
+                percabangan, dan perulangan dikonkretkan melalui praktik dan
+                simulasi. Peserta didik dapat melihat hubungan antara kode
+                program dengan keluaran LED atau perilaku komponen pada Wokwi,
+                serta mengamati hubungan antarperangkat melalui Cisco Packet
+                Tracer.
+              </p>
+            </div>
+
+            <!-- Tingkat Kesulitan -->
+            <div class="ppl2-analysis-item">
+              <h4>Tingkat Kesulitan</h4>
+
+              <p>
+                Tingkat kesulitan materi bersifat bertahap. Materi perkembangan
+                Informatika dan dampak sosial relatif lebih mudah dikaitkan
+                dengan pengalaman sehari-hari, sedangkan algoritma, pemrograman,
+                dan jaringan membutuhkan kemampuan berpikir logis serta latihan
+                berulang. Oleh karena itu, pembelajaran diarahkan dari konsep
+                dasar menuju praktik dan pemecahan masalah yang lebih kompleks.
+              </p>
+            </div>
+
+            <!-- Keterkaitan Antar Materi -->
+            <div class="ppl2-analysis-item">
+              <h4>Keterkaitan Antar Materi</h4>
+
+              <p>
+                Materi tidak berdiri sendiri, tetapi saling mendukung dalam
+                membangun kompetensi Informatika. Pemahaman algoritma menjadi
+                dasar pemrograman, pemrograman diterapkan pada Arduino, jaringan
+                digunakan untuk memahami komunikasi antarperangkat, sedangkan
+                perkembangan teknologi dan dampak sosial memberikan konteks
+                mengenai manfaat serta konsekuensi penggunaan teknologi.
+              </p>
+            </div>
+
+            <!-- Pengembangan Materi -->
+            <div class="ppl2-analysis-item">
+              <h4>Pengembangan Materi</h4>
+
+              <p>
+                Pengembangan materi selanjutnya dapat dilakukan melalui kasus
+                yang lebih kontekstual dengan lingkungan peserta didik. Latihan
+                debugging, modifikasi kode, eksplorasi sensor, simulasi
+                jaringan, dan proyek sederhana berbasis masalah dapat
+                ditambahkan agar peserta didik tidak hanya mengikuti contoh,
+                tetapi mampu menerapkan, menguji, mengevaluasi, dan menghasilkan
+                solusi Informatika secara mandiri.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         04 MEDIA
+    ====================================================== -->
+
+    <section class="ppl2-section alt" id="media">
+      <div class="container">
+        <div class="ppl2-section-head">
+          <div class="number">04 · Media Pembelajaran</div>
+
+          <h2>Analisis Media yang Digunakan</h2>
+
+          <p>
+            Media dipilih berdasarkan fungsinya dalam membantu peserta didik
+            melihat, mencoba, dan memperoleh umpan balik terhadap konsep yang
+            dipelajari.
+          </p>
+        </div>
+
+        <div class="ppl2-card-grid">
+          <!-- Wokwi -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+
+            <h3>Wokwi</h3>
+
+            <p>
+              Simulator Arduino yang memungkinkan peserta didik menulis,
+              menjalankan, mengamati, dan memperbaiki program secara langsung.
+            </p>
+          </div>
+
+          <!-- Arduino -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-microchip"></i>
+            </div>
+
+            <h3>Arduino Uno</h3>
+
+            <p>
+              Digunakan untuk menghubungkan konsep pemrograman dengan
+              mikrokontroler dan komponen input-output.
+            </p>
+          </div>
+
+          <!-- Infografis -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-images"></i>
+            </div>
+
+            <h3>Infografis</h3>
+
+            <p>
+              Infografis digunakan untuk menyederhanakan informasi teknis,
+              misalnya bagian Arduino Uno, tipe data, array, operator, serta
+              kelebihan dan kekurangan Arduino.
+            </p>
+          </div>
+        </div>
+
+        <!-- BUKTI -->
+        <div class="ppl2-evidence">
+          <div class="ppl2-evidence-header">
+            <strong>
+              <i class="fas fa-paperclip"></i>
+              Bukti Produk: Media Ajar PPL 2
+            </strong>
+
+            <span style="font-size: 12px; opacity: 0.75">
+              Dokumen pembelajaran yang digunakan selama pelaksanaan PPL 2.
+            </span>
+          </div>
+
+          <div class="ppl2-evidence-files">
+            <!-- Media Ajar 1 -->
+            <a
+              href="../assets/media_ajar_ppl2/BAB 1 - Informatika Sekarang & Di Masa Depan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ppl2-file-link"
+              title="Buka Media Ajar PPL 2 - Media Ajar 1"
+            >
+              <div class="ppl2-file-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+
+              <div class="ppl2-file-info">
+                <strong>Media Ajar PPL 2 — Media 1</strong>
+                <span>PDF · Media Ajar</span>
+              </div>
+
+              <div class="ppl2-file-action">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </div>
+            </a>
+
+            <!-- Media Ajar 2 -->
+            <a
+              href="../assets/media_ajar_ppl2/BAB 2 - Sistem Komputer - Arduino.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ppl2-file-link"
+              title="Buka Media Ajar PPL 2 - Media Ajar 2"
+            >
+              <div class="ppl2-file-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+
+              <div class="ppl2-file-info">
+                <strong>Modul Ajar PPL 2 — Media 2</strong>
+                <span>PDF · Media Ajar</span>
+              </div>
+
+              <div class="ppl2-file-action">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- ANALISIS MEDIA -->
+
+        <div class="ppl2-analysis">
+          <h3 class="ppl2-analysis-title">
+            <i class="fas fa-display"></i>
+
+            Analisis Media
+          </h3>
+
+          <div class="ppl2-analysis-grid">
+            <div class="ppl2-analysis-item">
+              <h4>Kelebihan</h4>
+
+              <p>
+                Media praktik memberikan umpan balik langsung sehingga peserta
+                didik dapat melihat akibat dari perubahan kode. Hal ini
+                mendukung pembelajaran berbasis pengalaman.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>Keterlibatan peserta didik</h4>
+
+              <p>
+                Simulator memberi kesempatan kepada peserta didik untuk mencoba
+                berulang kali, melakukan kesalahan, kemudian memperbaiki program
+                tanpa takut merusak komponen fisik.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>Keterbatasan</h4>
+
+              <p>
+                Penggunaan media digital membutuhkan perangkat dan koneksi yang
+                memadai. Selain itu, peserta didik yang belum terbiasa dengan
+                lingkungan pemrograman membutuhkan panduan langkah demi langkah.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>Perbaikan</h4>
+
+              <p>
+                Media perlu dilengkapi panduan visual, contoh program bertahap,
+                serta tantangan lanjutan agar peserta didik yang lebih cepat
+                memahami materi tetap memperoleh pengayaan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- GALERI -->
+
+        <div class="ppl2-gallery-note">
+          <a href="../galeri/galeri-ppl2.html" class="btn btn-media">
+            <i class="fas fa-images"></i>
+
+            Lihat Galeri PPL 2
           </a>
         </div>
       </div>
     </section>
 
+    <!-- =====================================================
+         05 VIDEO PRAKTIK
+    ====================================================== -->
+
+    <section class="ppl2-section" id="video">
+      <div class="container">
+        <div class="ppl2-section-head">
+          <div class="number">05 · Video Praktik</div>
+
+          <h2>Analisis Video Pelaksanaan Praktik Mengajar Mandiri</h2>
+
+          <p>
+            Video digunakan sebagai bukti autentik untuk melakukan refleksi
+            terhadap pembukaan, kegiatan inti, interaksi, pengelolaan kelas,
+            pemanfaatan media, dan penutupan pembelajaran.
+          </p>
+        </div>
+
+        <div class="ppl2-timeline">
+          <!-- 1 -->
+
+          <div class="ppl2-timeline-item">
+            <div class="ppl2-timeline-dot"></div>
+
+            <h3>01. Pembukaan</h3>
+
+            <p>
+              Pembelajaran diarahkan untuk membangun kesiapan peserta didik,
+              menghubungkan materi dengan pengetahuan sebelumnya, menyampaikan
+              tujuan, serta memberikan konteks kegiatan yang akan dilakukan.
+            </p>
+          </div>
+
+          <!-- 2 -->
+
+          <div class="ppl2-timeline-item">
+            <div class="ppl2-timeline-dot"></div>
+
+            <h3>02. Penyampaian Konsep</h3>
+
+            <p>
+              Konsep dijelaskan secara bertahap dengan bantuan media visual.
+              Penjelasan diarahkan pada alasan penggunaan setiap bagian program,
+              bukan hanya pada penulisan kode.
+            </p>
+          </div>
+
+          <!-- 3 -->
+
+          <div class="ppl2-timeline-item">
+            <div class="ppl2-timeline-dot"></div>
+
+            <h3>03. Praktik dan Pendampingan</h3>
+
+            <p>
+              Peserta didik diberi kesempatan mencoba. Guru berkeliling,
+              memberikan arahan, mengajukan pertanyaan pemantik, dan membantu
+              ketika peserta didik menemukan kesulitan.
+            </p>
+          </div>
+
+          <!-- 4 -->
+
+          <div class="ppl2-timeline-item">
+            <div class="ppl2-timeline-dot"></div>
+
+            <h3>04. Refleksi Pelaksanaan</h3>
+
+            <p>
+              Dari pengamatan terhadap video, aspek yang perlu diperbaiki
+              terutama adalah pengelolaan waktu, pemerataan pendampingan,
+              kejelasan instruksi praktik, dan penguatan refleksi di akhir.
+            </p>
+          </div>
+        </div>
+
+        <!-- ANALISIS VIDEO -->
+
+        <div class="ppl2-analysis">
+          <h3 class="ppl2-analysis-title">
+            <i class="fas fa-video"></i>
+
+            Catatan Reflektif dari Video
+          </h3>
+
+          <div class="ppl2-analysis-grid">
+            <div class="ppl2-analysis-item">
+              <h4>Yang sudah baik</h4>
+
+              <p>
+                Pembelajaran memiliki alur yang jelas dan media praktik membantu
+                mengubah konsep pemrograman menjadi pengalaman yang dapat
+                diamati peserta didik.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>Yang perlu diperbaiki</h4>
+
+              <p>
+                Instruksi kerja perlu lebih ringkas. Waktu antara penjelasan dan
+                praktik perlu diatur agar peserta didik memiliki waktu cukup
+                untuk mencoba dan melakukan debugging.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>Insight profesional</h4>
+
+              <p>
+                Penguasaan materi saja belum cukup. Guru perlu mampu membaca
+                respons peserta didik, mengelola ritme kelas, serta menyesuaikan
+                bantuan berdasarkan kebutuhan masing-masing peserta didik.
+              </p>
+            </div>
+          </div>
+
+          <!-- VIDEO EVIDENCE -->
+
+          <div class="ppl2-evidence">
+            <strong>
+              <i class="fas fa-video"></i>
+
+              Bukti video praktik mengajar mandiri
+            </strong>
+
+            <span style="font-size: 12px; opacity: 0.75">
+              Tambahkan file/link video PPL 2 pada bagian ini.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         06 KEGIATAN NONMENGAJAR
+    ====================================================== -->
+
+    <section class="ppl2-section alt" id="nonmengajar">
+      <div class="container">
+        <div class="ppl2-section-head">
+          <div class="number">06 · Kegiatan Nonmengajar</div>
+
+          <h2>Kontribusi di Lingkungan Sekolah</h2>
+
+          <p>
+            Kegiatan nonmengajar menjadi bagian dari pengalaman profesional
+            selama PPL 2. Keterlibatan dalam piket dan dukungan terhadap
+            aktivitas sekolah memberikan pengalaman dalam membangun
+            kedisiplinan, komunikasi, koordinasi, tanggung jawab, serta
+            kemampuan beradaptasi dengan berbagai situasi di lingkungan sekolah.
+          </p>
+        </div>
+
+        <div class="ppl2-card-grid">
+          <!-- Piket -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-user-clock"></i>
+            </div>
+
+            <h3>Piket KBM</h3>
+
+            <p>
+              Membantu memastikan kegiatan belajar mengajar berjalan tertib,
+              memantau kondisi kelas, serta berkoordinasi ketika terdapat
+              kebutuhan selama proses pembelajaran berlangsung.
+            </p>
+          </div>
+
+          <!-- Piket Lobby -->
+          <div class="ppl2-card">
+            <div class="card-icon"><i class="fas fa-door-open"></i></div>
+            <h3>Piket Lobby</h3>
+            <p>
+              Membantu menjaga ketertiban area lobby dan memberikan dukungan
+              dalam pelayanan informasi serta koordinasi dengan peserta didik,
+              guru, maupun warga sekolah yang membutuhkan bantuan.
+            </p>
+          </div>
+          <!-- Piket Perpustakaan -->
+          <div class="ppl2-card">
+            <div class="card-icon"><i class="fas fa-book-open"></i></div>
+            <h3>Piket Perpustakaan</h3>
+            <p>
+              Membantu menjaga keteraturan aktivitas di perpustakaan serta
+              mendukung terciptanya lingkungan belajar yang nyaman bagi peserta
+              didik yang memanfaatkan fasilitas perpustakaan.
+            </p>
+          </div>
+          <!-- Backup Kelas Kosong -->
+          <div class="ppl2-card">
+            <div class="card-icon"><i class="fas fa-chalkboard-user"></i></div>
+            <h3>Backup Kelas Kosong</h3>
+            <p>
+              Membantu mengondisikan beberapa kelas yang tidak dapat
+              melaksanakan pembelajaran bersama guru mata pelajaran. Kegiatan
+              dilakukan dengan menjaga ketertiban kelas, memberikan
+              pendampingan, dan memastikan peserta didik tetap melakukan
+              aktivitas pembelajaran.
+            </p>
+          </div>
+        </div>
+
+        <!-- ANALISIS -->
+        <div class="ppl2-analysis">
+          <h3 class="ppl2-analysis-title">
+            <i class="fas fa-person-circle-check"></i>
+            Analisis Kegiatan Nonmengajar
+          </h3>
+
+          <div class="ppl2-analysis-grid">
+            <!-- Kompetensi Sosial -->
+            <div class="ppl2-analysis-item">
+              <h4>Kompetensi Sosial</h4>
+
+              <p>
+                Keterlibatan dalam piket KBM, lobby, perpustakaan, dan backup
+                kelas memberikan pengalaman berinteraksi dengan berbagai warga
+                sekolah. Situasi tersebut melatih komunikasi profesional,
+                koordinasi, kemampuan bekerja sama, serta kemampuan menyesuaikan
+                komunikasi sesuai dengan kondisi dan kebutuhan di lingkungan
+                sekolah.
+              </p>
+            </div>
+
+            <!-- Kompetensi Kepribadian -->
+            <div class="ppl2-analysis-item">
+              <h4>Kompetensi Kepribadian</h4>
+
+              <p>
+                Kegiatan nonmengajar melatih kedisiplinan, tanggung jawab,
+                kepedulian, kesiapan menjalankan tugas, serta konsistensi dalam
+                melaksanakan amanah yang diberikan. Pengalaman tersebut menjadi
+                bagian dari pembentukan sikap profesional sebagai calon guru.
+              </p>
+            </div>
+
+            <!-- Adaptasi & Manajemen Kelas -->
+            <div class="ppl2-analysis-item">
+              <h4>Adaptasi & Manajemen Kelas</h4>
+
+              <p>
+                Pengalaman melakukan backup pada beberapa kelas kosong
+                memberikan pengalaman menghadapi karakteristik peserta didik dan
+                situasi kelas yang berbeda. Kondisi tersebut melatih kemampuan
+                mengondisikan kelas, memberikan instruksi secara jelas, serta
+                mengambil keputusan secara tepat sesuai situasi yang dihadapi.
+              </p>
+            </div>
+
+            <!-- Kolaborasi -->
+            <div class="ppl2-analysis-item">
+              <h4>Kolaborasi</h4>
+
+              <p>
+                Piket menjadi kesempatan untuk berkoordinasi dengan guru dan
+                warga sekolah dalam mendukung kelancaran aktivitas harian.
+                Pengalaman ini menunjukkan bahwa tugas guru merupakan bagian
+                dari ekosistem sekolah yang membutuhkan kerja sama dan
+                komunikasi antarpihak.
+              </p>
+            </div>
+
+            <!-- Refleksi -->
+            <div class="ppl2-analysis-item">
+              <h4>Refleksi</h4>
+
+              <p>
+                Kegiatan nonmengajar memberikan pemahaman bahwa profesionalisme
+                guru tidak hanya ditunjukkan melalui kemampuan menyampaikan
+                materi di kelas, tetapi juga melalui kesiapan berkontribusi,
+                menjaga ketertiban, membangun hubungan profesional, dan membantu
+                menyelesaikan kebutuhan yang muncul dalam lingkungan sekolah.
+              </p>
+            </div>
+
+            <!-- Pengembangan -->
+            <div class="ppl2-analysis-item">
+              <h4>Pengembangan Profesional</h4>
+
+              <p>
+                Pengalaman tersebut menjadi dasar untuk meningkatkan kemampuan
+                komunikasi, manajemen kelas, koordinasi, dan pengambilan
+                keputusan. Ke depan, pengalaman nonmengajar dapat dikembangkan
+                melalui keterlibatan yang lebih aktif dalam kegiatan sekolah dan
+                kolaborasi dengan guru untuk mendukung lingkungan belajar yang
+                positif.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         07 ASESMEN
+    ====================================================== -->
+
+    <section class="ppl2-section" id="asesmen">
+      <div class="container">
+        <div class="ppl2-section-head">
+          <div class="number">07 · Instrumen Penilaian</div>
+
+          <h2>Asesmen sebagai Bagian dari Proses Belajar</h2>
+
+          <p>
+            Penilaian digunakan bukan hanya untuk menghasilkan nilai, tetapi
+            untuk memperoleh informasi tentang proses dan ketercapaian belajar
+            peserta didik serta menentukan tindak lanjut.
+          </p>
+        </div>
+
+        <!-- TABLE -->
+
+        <table class="ppl2-assessment-table">
+          <thead>
+            <tr>
+              <th>Instrumen</th>
+
+              <th>Fungsi</th>
+
+              <th>Bukti yang Dikumpulkan</th>
+
+              <th>Analisis</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- KEAKTIFAN -->
+
+            <tr>
+              <td>
+                <b> Poin Keaktifan </b>
+              </td>
+
+              <td>
+                Memantau partisipasi dan keterlibatan selama pembelajaran.
+              </td>
+
+              <td>Catatan partisipasi, pertanyaan, respons, dan kontribusi.</td>
+
+              <td>
+                Membantu melihat peserta didik yang aktif maupun yang masih
+                membutuhkan stimulus untuk berpartisipasi.
+              </td>
+            </tr>
+
+            <!-- KUIS -->
+
+            <tr>
+              <td>
+                <b> Kuis </b>
+              </td>
+
+              <td>Mengecek pemahaman konsep secara cepat.</td>
+
+              <td>Jawaban kuis dan skor pemahaman.</td>
+
+              <td>
+                Digunakan sebagai umpan balik awal sebelum peserta didik masuk
+                ke aktivitas yang lebih kompleks.
+              </td>
+            </tr>
+
+            <!-- LKPD -->
+
+            <tr>
+              <td>
+                <b> LKPD </b>
+              </td>
+
+              <td>Menilai proses penerapan konsep dan pemecahan masalah.</td>
+
+              <td>Hasil kerja dan proses penyelesaian tugas.</td>
+
+              <td>
+                Memberikan informasi tentang kemampuan menerapkan konsep,
+                mengikuti instruksi, dan melakukan analisis.
+              </td>
+            </tr>
+
+            <!-- ULANGAN -->
+
+            <tr>
+              <td>
+                <b> Ulangan Harian </b>
+              </td>
+
+              <td>Mengetahui ketercapaian pemahaman setelah pembelajaran.</td>
+
+              <td>Skor tes dan analisis jawaban.</td>
+
+              <td>
+                Hasil digunakan sebagai dasar menentukan penguatan, remedial,
+                atau pengayaan.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ANALISIS ASESMEN -->
+
+        <div class="ppl2-analysis">
+          <h3 class="ppl2-analysis-title">
+            <i class="fas fa-chart-column"></i>
+
+            Analisis Sistem Asesmen
+          </h3>
+
+          <div class="ppl2-analysis-grid">
+            <div class="ppl2-analysis-item">
+              <h4>Kekuatan</h4>
+
+              <p>
+                Penggunaan beberapa instrumen memberikan gambaran lebih utuh
+                dibandingkan hanya mengandalkan satu bentuk tes. Proses,
+                partisipasi, penerapan, dan hasil belajar dapat diamati dari
+                sumber yang berbeda.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>Tantangan</h4>
+
+              <p>
+                Pencatatan dan analisis hasil asesmen membutuhkan konsistensi
+                agar data yang diperoleh benar-benar dapat digunakan untuk
+                menentukan tindak lanjut pembelajaran.
+              </p>
+            </div>
+
+            <div class="ppl2-analysis-item">
+              <h4>Tindak lanjut</h4>
+
+              <p>
+                Peserta didik yang belum mencapai tujuan pembelajaran diberikan
+                penguatan dan remedial, sedangkan peserta didik yang telah
+                menguasai kompetensi dapat memperoleh pengayaan.
+              </p>
+            </div>
+          </div>
+
+          <div class="ppl2-evidence">
+            <strong>
+              <i class="fas fa-file-signature"></i>
+
+              Bukti instrumen: Kuis · LKPD · Rubrik · Ulangan Harian
+            </strong>
+
+            <span style="font-size: 12px; opacity: 0.75">
+              Tambahkan tautan dokumen asesmen PPL 2 setelah file tersedia.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         08 REFLEKSI DIRI
+    ====================================================== -->
+
+    <section class="ppl2-section alt" id="refleksi">
+      <div class="container">
+        <div class="ppl2-section-head">
+          <div class="number">08 · Refleksi Diri</div>
+
+          <h2>Apa yang Saya Pelajari dari PPL 2?</h2>
+
+          <p>
+            Refleksi menjadi bagian penting untuk mengubah pengalaman praktik
+            menjadi pembelajaran profesional yang dapat diterapkan pada
+            pembelajaran berikutnya.
+          </p>
+        </div>
+
+        <div class="ppl2-reflection">
+          <!-- SEBELUM -->
+
+          <div class="ppl2-reflection-card">
+            <h3>
+              <i class="fas fa-lightbulb"></i>
+
+              Sebelum Praktik
+            </h3>
+
+            <p>
+              Saya memandang perencanaan terutama sebagai pedoman agar kegiatan
+              pembelajaran berjalan sesuai alur. Dalam PPL 2, saya semakin
+              memahami bahwa perencanaan harus fleksibel dan mampu
+              mengantisipasi variasi kebutuhan peserta didik.
+            </p>
+          </div>
+
+          <!-- SAAT -->
+
+          <div class="ppl2-reflection-card">
+            <h3>
+              <i class="fas fa-person-chalkboard"></i>
+
+              Saat Praktik
+            </h3>
+
+            <p>
+              Pelaksanaan menunjukkan bahwa kondisi kelas tidak selalu berjalan
+              persis seperti yang direncanakan. Respons peserta didik, kecepatan
+              menyelesaikan praktik, dan kebutuhan bantuan dapat berbeda
+              sehingga guru perlu mengambil keputusan secara situasional.
+            </p>
+          </div>
+
+          <!-- PEMBELAJARAN -->
+
+          <div class="ppl2-reflection-card">
+            <h3>
+              <i class="fas fa-brain"></i>
+
+              Pembelajaran bagi Saya
+            </h3>
+
+            <p>
+              Keberhasilan pembelajaran Informatika tidak hanya ditentukan oleh
+              penguasaan materi dan kemampuan menjelaskan. Guru perlu mengelola
+              aktivitas, media, waktu, interaksi, umpan balik, dan asesmen
+              secara terpadu.
+            </p>
+          </div>
+
+          <!-- PERBAIKAN -->
+
+          <div class="ppl2-reflection-card">
+            <h3>
+              <i class="fas fa-arrows-to-circle"></i>
+
+              Hal yang Perlu Diperbaiki
+            </h3>
+
+            <p>
+              Saya perlu memperkuat pengelolaan waktu praktik, menyederhanakan
+              instruksi, meningkatkan pemerataan pendampingan, serta menyediakan
+              aktivitas remedial dan pengayaan berdasarkan hasil asesmen.
+            </p>
+          </div>
+        </div>
+
+        <!-- QUOTE -->
+
+        <div class="ppl2-quote">
+          <i class="fas fa-quote-left"></i>
+
+          <p>
+            “PPL 2 bagi saya bukan hanya pengalaman mengajar, tetapi proses
+            belajar untuk menjadi guru yang mampu merancang, melaksanakan,
+            menilai, merefleksikan, dan terus memperbaiki pembelajaran.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         09 TINDAK LANJUT
+    ====================================================== -->
+
+    <section class="ppl2-section" id="tindak-lanjut">
+      <div class="container">
+        <div class="ppl2-section-head">
+          <div class="number">09 · Rencana Tindak Lanjut</div>
+
+          <h2>Dari Refleksi Menuju Perbaikan</h2>
+
+          <p>
+            Hasil refleksi PPL 2 diterjemahkan menjadi langkah perbaikan yang
+            dapat diterapkan pada pembelajaran Informatika berikutnya.
+          </p>
+        </div>
+
+        <div class="ppl2-card-grid">
+          <!-- Waktu -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+
+            <h3>Manajemen Waktu</h3>
+
+            <p>
+              Membagi waktu pembukaan, penjelasan, praktik, pendampingan,
+              presentasi hasil, dan refleksi secara lebih terukur.
+            </p>
+          </div>
+
+          <!-- Instruksi -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-list-check"></i>
+            </div>
+
+            <h3>Instruksi Praktik</h3>
+
+            <p>
+              Menyediakan langkah kerja singkat dan visual agar peserta didik
+              dapat bekerja lebih mandiri.
+            </p>
+          </div>
+
+          <!-- Diferensiasi -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+
+            <h3>Diferensiasi</h3>
+
+            <p>
+              Menyiapkan latihan dasar, latihan inti, dan tantangan pengayaan
+              sesuai kesiapan peserta didik.
+            </p>
+          </div>
+
+          <!-- Asesmen -->
+
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+
+            <h3>Analisis Asesmen</h3>
+
+            <p>
+              Menggunakan hasil kuis, LKPD, keaktifan, dan ulangan untuk
+              menentukan remedial, pengayaan, serta penguatan materi.
+            </p>
+          </div>
+        </div>
+
+        <!-- SIKLUS -->
+
+        <div class="ppl2-analysis">
+          <h3 class="ppl2-analysis-title">
+            <i class="fas fa-rotate"></i>
+
+            Siklus Pengembangan Profesional
+          </h3>
+
+          <div class="ppl2-flow">
+            <!-- Praktik -->
+
+            <div class="ppl2-flow-item">
+              <i class="fas fa-person-chalkboard"></i>
+
+              <strong> Praktik </strong>
+
+              <span> Melaksanakan pembelajaran </span>
+            </div>
+
+            <!-- Observasi -->
+
+            <div class="ppl2-flow-item">
+              <i class="fas fa-eye"></i>
+
+              <strong> Observasi </strong>
+
+              <span> Mengumpulkan bukti </span>
+            </div>
+
+            <!-- Analisis -->
+
+            <div class="ppl2-flow-item">
+              <i class="fas fa-chart-simple"></i>
+
+              <strong> Analisis </strong>
+
+              <span> Membaca hasil </span>
+            </div>
+
+            <!-- Refleksi -->
+
+            <div class="ppl2-flow-item">
+              <i class="fas fa-comments"></i>
+
+              <strong> Refleksi </strong>
+
+              <span> Menemukan pembelajaran </span>
+            </div>
+
+            <!-- Perbaikan -->
+
+            <div class="ppl2-flow-item">
+              <i class="fas fa-wrench"></i>
+
+              <strong> Perbaikan </strong>
+
+              <span> Menyusun strategi baru </span>
+            </div>
+
+            <!-- Praktik baru -->
+
+            <div class="ppl2-flow-item">
+              <i class="fas fa-arrow-rotate-right"></i>
+
+              <strong> Praktik Baru </strong>
+
+              <span> Menguji perbaikan </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer class="footer">
       <div class="container">
         <p class="copyright">
-          © <span id="year"></span> Arjun Yuda Firwanda | E-Portofolio PPG
-          Informatika UPI
+          ©
+          <span id="year"></span>
+
+          Arjun Yuda Firwanda | E-Portofolio PPG Informatika UPI
         </p>
       </div>
     </footer>
 
+    <!-- =====================================================
+         SCROLL TOP
+    ====================================================== -->
+
     <button id="scrollTopBtn" title="Kembali ke Atas">
       <i class="fas fa-chevron-up"></i>
     </button>
+
+    <!-- =====================================================
+         JAVASCRIPT PROJECT
+    ====================================================== -->
 
     <script src="../js/script.js"></script>
   </body>
