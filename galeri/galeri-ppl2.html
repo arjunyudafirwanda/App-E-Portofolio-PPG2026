@@ -2,18 +2,775 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Galeri PPL 2 | Arjun Yuda Firwanda</title>
+
     <link rel="icon" type="image/png" href="../assets/img/pages.png" />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
     <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+      :root {
+        --gallery-blue: #2563eb;
+        --gallery-indigo: #4f46e5;
+        --gallery-green: #059669;
+        --gallery-orange: #d97706;
+        --gallery-purple: #7c3aed;
+        --gallery-red: #dc2626;
+        --gallery-border: rgba(37, 99, 235, 0.14);
+        --gallery-shadow: 0 12px 35px rgba(15, 23, 42, 0.07);
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 85px;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      .gallery-section p,
+      .gallery-hero p,
+      .gallery-info p,
+      .gallery-cta p,
+      .gallery-caption p {
+        text-align: justify;
+      }
+
+      .gallery-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 78px 0 65px;
+        background:
+          radial-gradient(
+            circle at 85% 15%,
+            rgba(96, 165, 250, 0.22),
+            transparent 32%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.1),
+            rgba(79, 70, 229, 0.06)
+          );
+      }
+
+      .gallery-hero::before {
+        content: "";
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        right: -100px;
+        bottom: -130px;
+        border-radius: 50%;
+        background: rgba(37, 99, 235, 0.07);
+      }
+
+      .gallery-hero::after {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        left: -90px;
+        top: -80px;
+        border-radius: 50%;
+        border: 1px solid rgba(37, 99, 235, 0.08);
+      }
+
+      .gallery-hero-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns:
+          minmax(0, 1.4fr)
+          minmax(260px, 0.7fr);
+        gap: 40px;
+        align-items: center;
+      }
+
+      .gallery-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--gallery-blue);
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .gallery-hero h1 {
+        margin: 0 0 15px;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        line-height: 1.15;
+      }
+
+      .gallery-hero h1 span {
+        color: var(--gallery-blue);
+      }
+
+      .gallery-hero p {
+        max-width: 850px;
+        margin: 0;
+        line-height: 1.8;
+      }
+
+      .gallery-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 23px;
+      }
+
+      .gallery-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 9px 13px;
+        border-radius: 10px;
+        background: var(--card);
+        border: 1px solid var(--gallery-border);
+        font-size: 12px;
+        font-weight: 600;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .gallery-chip:hover {
+        transform: translateY(-3px);
+        border-color: rgba(37, 99, 235, 0.3);
+        box-shadow: 0 8px 22px rgba(37, 99, 235, 0.08);
+      }
+
+      .gallery-hero-card {
+        position: relative;
+        background: var(--card);
+        border: 1px solid var(--gallery-border);
+        border-radius: 22px;
+        padding: 28px;
+        box-shadow: 0 18px 45px rgba(30, 64, 175, 0.12);
+        overflow: hidden;
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease,
+          border-color 0.35s ease;
+      }
+
+      .gallery-hero-card::before {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        right: -70px;
+        top: -70px;
+        border-radius: 50%;
+        background: rgba(37, 99, 235, 0.07);
+        transition:
+          transform 0.45s ease,
+          background 0.35s ease;
+      }
+
+      .gallery-hero-card::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        left: -40px;
+        bottom: -40px;
+        border-radius: 50%;
+        background: rgba(124, 58, 237, 0.05);
+        transition: transform 0.45s ease;
+      }
+
+      .gallery-hero-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(37, 99, 235, 0.3);
+        box-shadow:
+          0 25px 55px rgba(37, 99, 235, 0.14),
+          0 8px 20px rgba(15, 23, 42, 0.06);
+      }
+
+      .gallery-hero-card:hover::before {
+        transform: scale(1.35);
+        background: rgba(37, 99, 235, 0.1);
+      }
+
+      .gallery-hero-card:hover::after {
+        transform: scale(1.4);
+      }
+
+      .gallery-hero-card .icon {
+        position: relative;
+        z-index: 1;
+        width: 62px;
+        height: 62px;
+        display: grid;
+        place-items: center;
+        border-radius: 18px;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--gallery-blue);
+        font-size: 27px;
+        margin-bottom: 18px;
+        transition:
+          transform 0.35s ease,
+          background 0.35s ease;
+      }
+
+      .gallery-hero-card:hover .icon {
+        transform: rotate(-5deg) scale(1.08);
+        background: rgba(37, 99, 235, 0.15);
+      }
+
+      .gallery-hero-card h3,
+      .gallery-hero-card p {
+        position: relative;
+        z-index: 1;
+      }
+
+      .gallery-hero-card h3 {
+        margin-bottom: 9px;
+      }
+
+      .gallery-hero-card p {
+        font-size: 14px;
+        line-height: 1.75;
+        margin: 0;
+      }
+
+      .gallery-nav-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .dark .gallery-nav-wrap {
+        background: rgba(15, 23, 42, 0.94);
+      }
+
+      .gallery-nav {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding: 12px 0;
+        scrollbar-width: thin;
+      }
+
+      .gallery-nav a {
+        position: relative;
+        min-width: 155px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        white-space: nowrap;
+        padding: 13px 15px;
+        border-radius: 13px;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        color: inherit;
+        background: var(--card);
+        border: 1px solid rgba(37, 99, 235, 0.15);
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease,
+          color 0.25s ease,
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .gallery-nav a strong {
+        color: var(--gallery-blue);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .gallery-nav a small {
+        font-size: 9px;
+        opacity: 0.65;
+        font-weight: 500;
+      }
+
+      .gallery-nav a:hover {
+        transform: translateY(-3px);
+        background: rgba(37, 99, 235, 0.06);
+        color: var(--gallery-blue);
+        border-color: rgba(37, 99, 235, 0.35);
+        box-shadow: 0 8px 22px rgba(37, 99, 235, 0.1);
+      }
+
+      .gallery-nav a.nonmengajar {
+        min-width: 145px;
+      }
+
+      .gallery-nav a.refleksi {
+        min-width: 125px;
+      }
+
+      .gallery-section {
+        padding: 62px 0;
+        scroll-margin-top: 75px;
+      }
+
+      .gallery-section.alt {
+        background: rgba(37, 99, 235, 0.035);
+      }
+
+      .gallery-section-head {
+        max-width: 850px;
+        margin: 0 auto 32px;
+        text-align: center;
+      }
+
+      .gallery-section-head .number {
+        color: var(--gallery-blue);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .gallery-section-head h2 {
+        margin: 7px 0 10px;
+        font-size: clamp(1.55rem, 3vw, 2.15rem);
+      }
+
+      .gallery-section-head p {
+        margin: 0;
+        line-height: 1.75;
+      }
+
+      .gallery-section-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: 14px;
+        padding: 7px 11px;
+        border-radius: 8px;
+        background: rgba(37, 99, 235, 0.08);
+        color: var(--gallery-blue);
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .gallery-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        gap: 20px;
+
+        align-items: stretch;
+      }
+
+      .gallery-item {
+        position: relative;
+
+        overflow: hidden;
+
+        background: var(--card);
+
+        border: 1px solid var(--gallery-border);
+
+        border-radius: 18px;
+
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-6px);
+        border-color: rgba(37, 99, 235, 0.35);
+        box-shadow: 0 18px 40px rgba(37, 99, 235, 0.12);
+      }
+
+      .gallery-image {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.12),
+          rgba(79, 70, 229, 0.08)
+        );
+      }
+
+      .gallery-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.45s ease;
+      }
+
+      .gallery-item:hover .gallery-image img {
+        transform: scale(1.06);
+      }
+
+      .gallery-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        color: var(--gallery-blue);
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.09),
+          rgba(124, 58, 237, 0.07)
+        );
+      }
+
+      .gallery-placeholder i {
+        font-size: 30px;
+        opacity: 0.8;
+        transition:
+          transform 0.35s ease,
+          opacity 0.35s ease;
+      }
+
+      .gallery-item:hover .gallery-placeholder i {
+        transform: scale(1.12) translateY(-2px);
+        opacity: 1;
+      }
+
+      .gallery-placeholder span {
+        font-size: 12px;
+        font-weight: 600;
+        opacity: 0.75;
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(15, 23, 42, 0.55);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-overlay button {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border: 0;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--gallery-blue);
+        cursor: pointer;
+        font-size: 17px;
+        transform: scale(0.8);
+        transition:
+          transform 0.3s ease,
+          background 0.25s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay button {
+        transform: scale(1);
+      }
+
+      .gallery-overlay button:hover {
+        transform: scale(1.1) !important;
+        background: #eff6ff;
+      }
+
+      .gallery-caption {
+        padding: 17px 18px;
+
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      .gallery-caption h3 {
+        margin: 0 0 8px;
+
+        font-size: 15px;
+
+        line-height: 1.45;
+      }
+
+      .gallery-caption p {
+        margin: 0;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+        opacity: 0.78;
+
+        text-align: justify;
+
+        /* Membuat paragraf mengisi ruang yang tersedia */
+        flex: 1;
+      }
+
+      .gallery-tag {
+        display: inline-flex;
+        align-items: center;
+
+        width: fit-content;
+
+        margin-top: 14px;
+
+        padding: 5px 9px;
+
+        border-radius: 7px;
+
+        background: rgba(37, 99, 235, 0.09);
+
+        color: var(--gallery-blue);
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        line-height: 1.4;
+
+        /* KUNCI: selalu berada di bagian bawah */
+        margin-top: auto;
+      }
+
+      .gallery-info {
+        display: flex;
+        align-items: flex-start;
+        gap: 13px;
+        margin-top: 28px;
+        padding: 17px 19px;
+        border-radius: 14px;
+        background: rgba(37, 99, 235, 0.06);
+        border: 1px dashed rgba(37, 99, 235, 0.25);
+      }
+
+      .gallery-info i {
+        color: var(--gallery-blue);
+        margin-top: 3px;
+      }
+
+      .gallery-info p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      .gallery-cta {
+        margin-top: 38px;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.1),
+          rgba(124, 58, 237, 0.08)
+        );
+        border: 1px solid rgba(37, 99, 235, 0.14);
+      }
+
+      .gallery-cta i {
+        color: var(--gallery-blue);
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .gallery-cta h3 {
+        margin: 0 0 7px;
+      }
+
+      .gallery-cta p {
+        max-width: 700px;
+        margin: 0 auto 18px;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .gallery-cta .btn-group {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .gallery-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        background: rgba(2, 6, 23, 0.88);
+      }
+
+      .gallery-lightbox.show {
+        display: flex;
+      }
+
+      .lightbox-content {
+        position: relative;
+        max-width: 1050px;
+        width: 100%;
+      }
+
+      .lightbox-content img {
+        width: 100%;
+        max-height: 78vh;
+        object-fit: contain;
+        display: block;
+        border-radius: 12px;
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: -48px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        border-radius: 50%;
+        background: #fff;
+        color: #111827;
+        cursor: pointer;
+        font-size: 18px;
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease;
+      }
+
+      .lightbox-close:hover {
+        transform: rotate(90deg);
+        background: #eff6ff;
+      }
+
+      .lightbox-caption {
+        margin-top: 12px;
+        text-align: center;
+        color: #fff;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .dark .gallery-nav a {
+        background: rgba(30, 41, 59, 0.85);
+        border-color: rgba(96, 165, 250, 0.15);
+      }
+
+      .dark .gallery-nav a:hover {
+        background: rgba(37, 99, 235, 0.15);
+        border-color: rgba(96, 165, 250, 0.3);
+      }
+
+      @media (max-width: 900px) {
+        .gallery-hero-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-nav a {
+          min-width: 130px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .gallery-section {
+          padding: 45px 0;
+        }
+
+        .gallery-hero {
+          padding: 55px 0 45px;
+        }
+
+        .gallery-hero-card {
+          padding: 21px;
+        }
+
+        .gallery-caption {
+          padding: 15px;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-lightbox {
+          padding: 15px;
+        }
+
+        .gallery-nav {
+          gap: 7px;
+        }
+
+        .gallery-nav a {
+          min-width: 115px;
+          padding: 11px 10px;
+        }
+
+        .gallery-nav a strong {
+          font-size: 12px;
+        }
+
+        .gallery-nav a small {
+          font-size: 8px;
+        }
+      }
+
+      .gallery-image {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        background: #e5e7eb;
+      }
+
+      .gallery-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.45s ease;
+      }
+
+      .gallery-item:hover .gallery-image img {
+        transform: scale(1.06);
+      }
+    </style>
   </head>
 
   <body>
@@ -22,24 +779,55 @@
         <div class="logo">E-Portofolio PPG</div>
 
         <ul class="menu">
-          <li><a href="../index.html">Beranda</a></li>
-          <li><a href="../tentang.html">Tentang</a></li>
+          <li>
+            <a href="../index.html"> <i class="fas fa-home"></i> Beranda </a>
+          </li>
 
-          <li class="dropdown">
-            <a href="#">PPL ▾</a>
-
-            <ul class="dropdown-menu">
-              <li><a href="../ppl/ppl1.html">PPL 1</a></li>
-              <li><a href="../ppl/ppl2.html">PPL 2</a></li>
-            </ul>
+          <li>
+            <a href="../tentang.html">
+              <i class="fas fa-user-friends"></i> Tentang
+            </a>
           </li>
 
           <li class="dropdown">
-            <a href="#">Galeri ▾</a>
+            <a href="#"> <i class="fas fa-laptop-code"></i> PPL ▾ </a>
 
             <ul class="dropdown-menu">
-              <li><a href="galeri-ppl1.html">PPL 1</a></li>
-              <li><a href="galeri-ppl2.html" class="active">PPL 2</a></li>
+              <li>
+                <a href="../ppl/ppl1.html">
+                  <i class="fas fa-code-branch"></i> PPL 1
+                </a>
+              </li>
+
+              <li>
+                <a href="../ppl/ppl2.html">
+                  <i class="fas fa-code-branch"></i> PPL 2
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="../seminar.html">
+              <i class="fas fa-graduation-cap"></i> Seminar
+            </a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"> <i class="fas fa-images"></i> Galeri ▾ </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="galeri-ppl1.html">
+                  <i class="fas fa-image"></i> PPL 1
+                </a>
+              </li>
+
+              <li>
+                <a href="galeri-ppl2.html" class="active">
+                  <i class="fas fa-image"></i> PPL 2
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -48,45 +836,1940 @@
       </nav>
     </header>
 
-    <section class="page-header">
-      <div class="container">
-        <h1>Galeri Dokumentasi PPL 2</h1>
+    <section class="gallery-hero">
+      <div class="container gallery-hero-inner">
+        <div>
+          <div class="gallery-eyebrow">
+            <i class="fas fa-images"></i>
+            E-PORTFOLIO PPG 2026 · PPL 2
+          </div>
 
-        <p>
-          Halaman ini akan memuat dokumentasi kegiatan Praktik Pengalaman
-          Lapangan (PPL) 2 yang meliputi kegiatan pembelajaran, refleksi praktik
-          mengajar, media pembelajaran, serta berbagai aktivitas akademik selama
-          pelaksanaan PPL.
-        </p>
-      </div>
-    </section>
-
-    <section class="coming-soon-section">
-      <div class="container">
-        <div class="coming-soon-card">
-          <div class="coming-icon">📸</div>
-
-          <h2>Galeri Sedang Dipersiapkan</h2>
+          <h1>
+            Galeri Dokumentasi
+            <span>PPL 2</span>
+          </h1>
 
           <p>
-            Dokumentasi kegiatan PPL 2 akan ditambahkan setelah pelaksanaan
-            kegiatan berlangsung. Foto pembelajaran, refleksi, kegiatan sekolah,
-            kolaborasi bersama guru pamong, dan berbagai aktivitas lainnya akan
-            diperbarui secara berkala pada halaman ini.
+            Dokumentasi visual pelaksanaan Praktik Pengalaman Lapangan 2 pada
+            pembelajaran Informatika di SMA Negeri 12 Bandung. Galeri ini memuat
+            bukti pelaksanaan pembelajaran, penggunaan media dan teknologi,
+            kegiatan praktik, aktivitas nonmengajar, refleksi, serta berbagai
+            kegiatan pendukung selama pelaksanaan PPL 2.
           </p>
 
-          <a href="../index.html" class="btn">
-            <i class="fas fa-home"></i> Kembali ke Beranda
-          </a>
+          <div class="gallery-meta">
+            <div class="gallery-chip">
+              <i class="fas fa-user-tie"></i>
+              Arjun Yuda Firwanda
+            </div>
+
+            <div class="gallery-chip">
+              <i class="fas fa-school"></i>
+              SMA Negeri 12 Bandung
+            </div>
+
+            <div class="gallery-chip">
+              <i class="fas fa-users"></i>
+              XII-3 IPA
+            </div>
+
+            <div class="gallery-chip">
+              <i class="fas fa-laptop-code"></i>
+              Informatika
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-hero-card">
+          <div class="icon">
+            <i class="fas fa-camera-retro"></i>
+          </div>
+
+          <h3>Dokumentasi Autentik</h3>
+
+          <p>
+            Foto dan dokumentasi kegiatan digunakan sebagai bukti visual untuk
+            memperlihatkan keterlaksanaan praktik pembelajaran, penggunaan
+            media, keterlibatan peserta didik, kegiatan praktik, aktivitas
+            nonmengajar, serta proses refleksi dan pengembangan profesional
+            selama PPL 2.
+          </p>
         </div>
       </div>
     </section>
 
+    <div class="gallery-nav-wrap">
+      <div class="container">
+        <nav class="gallery-nav" aria-label="Navigasi Galeri PPL 2">
+          <a href="#bab1">
+            <strong>Bab 1</strong>
+            <small>Informatika Sekarang</small>
+          </a>
+
+          <a href="#bab2">
+            <strong>Bab 2</strong>
+            <small>Sistem Komputer</small>
+          </a>
+
+          <a href="#bab3">
+            <strong>Bab 3</strong>
+            <small>Berpikir Komputasional</small>
+          </a>
+
+          <a href="#bab4">
+            <strong>Bab 4</strong>
+            <small>Jaringan Komputer</small>
+          </a>
+
+          <a href="#bab5">
+            <strong>Bab 5</strong>
+            <small>Dampak Sosial</small>
+          </a>
+
+          <a href="#nonmengajar" class="nonmengajar">
+            <strong>
+              <i class="fas fa-people-group"></i>
+              Nonmengajar
+            </strong>
+            <small>Kegiatan Sekolah</small>
+          </a>
+
+          <a href="#refleksi" class="refleksi">
+            <strong>
+              <i class="fas fa-comments"></i>
+              Refleksi
+            </strong>
+            <small>Evaluasi</small>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="gallery-section" id="bab1">
+      <div class="container">
+        <div class="gallery-section-head">
+          <div class="number">01 · Bab 1</div>
+
+          <h2>Informatika Sekarang dan di Masa Depan</h2>
+
+          <p>
+            Dokumentasi pelaksanaan pembelajaran Bab 1 yang membahas
+            perkembangan informatika, pemanfaatan teknologi dalam kehidupan
+            sehari-hari, serta keterkaitannya dengan perkembangan teknologi dan
+            kebutuhan masa depan.
+          </p>
+
+          <div class="gallery-section-badge">
+            <i class="fas fa-book-open"></i>
+            Dokumentasi Pembelajaran Bab 1
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab1-pembelajaran-01.jpg"
+                alt="Pelaksanaan Pembelajaran Informatika Sekarang dan di Masa Depan"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab1-pembelajaran-01.jpg"
+                  data-title="Pelaksanaan Pembelajaran Informatika Sekarang dan di Masa Depan"
+                  aria-label="Lihat foto pembelajaran Bab 1"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Pelaksanaan Pembelajaran</h3>
+
+              <p>
+                Dokumentasi pelaksanaan pembelajaran Informatika pada Bab 1 yang
+                membahas peran informatika dalam kehidupan sehari-hari,
+                perkembangan teknologi, serta gambaran pemanfaatan informatika
+                pada masa depan.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-book-open"></i>
+                Bab 1
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab1-aktivitas-01.jpg"
+                alt="Aktivitas Peserta Didik pada Pembelajaran Bab 1"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab1-aktivitas-01.jpg"
+                  data-title="Aktivitas Peserta Didik pada Pembelajaran Bab 1"
+                  aria-label="Lihat foto aktivitas peserta didik"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Aktivitas Peserta Didik</h3>
+
+              <p>
+                Dokumentasi keterlibatan peserta didik dalam mengikuti proses
+                pembelajaran melalui kegiatan menyimak materi, menjawab
+                pertanyaan, menyampaikan pendapat, berdiskusi, serta
+                menghubungkan materi informatika dengan kehidupan sehari-hari.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-users"></i>
+                Aktivitas
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab1-diskusi-01.jpg"
+                alt="Diskusi dan Tanya Jawab Pembelajaran Bab 1"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab1-diskusi-01.jpg"
+                  data-title="Diskusi dan Tanya Jawab Pembelajaran Bab 1"
+                  aria-label="Lihat foto diskusi pembelajaran"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Diskusi dan Tanya Jawab</h3>
+
+              <p>
+                Dokumentasi kegiatan diskusi dan tanya jawab sebagai bagian dari
+                pembelajaran aktif. Peserta didik diberikan kesempatan untuk
+                mengemukakan pendapat, memberikan tanggapan, serta mengaitkan
+                konsep informatika dengan pengalaman dalam kehidupan
+                sehari-hari.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-comments"></i>
+                Diskusi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab1-ulangan-harian-01.jpg"
+                alt="Ulangan Harian Informatika Sekarang dan di Masa Depan"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab1-ulangan-harian-01.jpg"
+                  data-title="Ulangan Harian Informatika Sekarang dan di Masa Depan"
+                  aria-label="Lihat foto ulangan harian Bab 1"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Ulangan Harian · Bab 1</h3>
+
+              <p>
+                Dokumentasi pelaksanaan ulangan harian pada materi Informatika
+                Sekarang dan di Masa Depan sebagai bagian dari asesmen untuk
+                mengukur pemahaman peserta didik terhadap perkembangan
+                informatika, pemanfaatan teknologi dalam kehidupan sehari-hari,
+                serta dampak dan peluang perkembangan teknologi di masa depan.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-clipboard-check"></i>
+                Asesmen
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-info">
+          <i class="fas fa-circle-info"></i>
+
+          <p>
+            Dokumentasi Bab 1 dapat terus diperbarui seiring perkembangan
+            pembelajaran. Dokumentasi dapat mencakup kegiatan pengenalan
+            perkembangan informatika, pemanfaatan teknologi dalam kehidupan
+            sehari-hari, aktivitas dan keterlibatan peserta didik, diskusi dan
+            tanya jawab, penyampaian pendapat, pengaitan materi dengan
+            pengalaman nyata, asesmen pembelajaran, serta hasil ulangan harian
+            sebagai bagian dari evaluasi pemahaman peserta didik terhadap materi
+            Informatika Sekarang dan di Masa Depan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section alt" id="bab2">
+      <div class="container">
+        <div class="gallery-section-head">
+          <div class="number">02 · Bab 2</div>
+
+          <h2>Sistem Komputer</h2>
+
+          <p>
+            Dokumentasi pelaksanaan pembelajaran Sistem Komputer yang
+            mengintegrasikan pemahaman perangkat keras, mikrokontroler,
+            pemrograman, input-output, serta praktik menggunakan Arduino Uno dan
+            Arduino Nano.
+          </p>
+
+          <div class="gallery-section-badge">
+            <i class="fas fa-microchip"></i>
+            Arduino Uno · Arduino Nano · Praktikum
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab2-arduino-uno-01.jpg"
+                alt="Praktik Arduino Uno pada Pembelajaran Sistem Komputer"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab2-arduino-uno-01.jpg"
+                  data-title="Praktik Arduino Uno pada Pembelajaran Sistem Komputer"
+                  aria-label="Lihat foto praktik Arduino Uno"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Praktik Arduino Uno</h3>
+
+              <p>
+                Dokumentasi kegiatan pembelajaran menggunakan Arduino Uno
+                sebagai media praktik untuk menghubungkan konsep sistem komputer
+                dengan pemrograman, input-output, serta pengendalian perangkat
+                secara langsung.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-microchip"></i>
+                Arduino Uno
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab2-coding-arduino-uno-01.jpg"
+                alt="Praktik Pemrograman Arduino Uno"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab2-coding-arduino-uno-01.jpg"
+                  data-title="Praktik Pemrograman Arduino Uno"
+                  aria-label="Lihat foto pemrograman Arduino Uno"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Pemrograman Arduino Uno</h3>
+
+              <p>
+                Dokumentasi peserta didik dalam menyusun dan menguji program
+                Arduino Uno dengan menerapkan struktur kode, logika percabangan,
+                input-output, serta memahami hubungan antara program dan respons
+                perangkat.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-code"></i>
+                Pemrograman
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab2-pemenang-arduino-uno-01.jpg"
+                alt="Pemenang Praktikum Tercepat Arduino Uno"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab2-pemenang-arduino-uno-01.jpg"
+                  data-title="Pemenang Praktikum Tercepat Arduino Uno"
+                  aria-label="Lihat foto pemenang praktikum Arduino Uno"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Pemenang Praktikum Tercepat · Arduino Uno</h3>
+
+              <p>
+                Dokumentasi apresiasi kepada peserta didik yang berhasil
+                menyelesaikan tantangan pemrograman Arduino Uno dengan waktu
+                penyelesaian tercepat. Kegiatan ini menjadi bentuk penghargaan
+                sekaligus motivasi untuk meningkatkan ketelitian, kreativitas,
+                dan kemampuan pemecahan masalah.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-trophy"></i>
+                Apresiasi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab2-arduino-nano-01.jpg"
+                alt="Praktik Arduino Nano pada Pembelajaran Sistem Komputer"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab2-arduino-nano-01.jpg"
+                  data-title="Praktik Arduino Nano pada Pembelajaran Sistem Komputer"
+                  aria-label="Lihat foto praktik Arduino Nano"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Praktik Arduino Nano</h3>
+
+              <p>
+                Dokumentasi kegiatan pembelajaran menggunakan Arduino Nano untuk
+                memperluas pengalaman peserta didik dalam memahami
+                mikrokontroler, struktur program, koneksi perangkat, serta
+                penerapan konsep sistem komputer melalui kegiatan praktik.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-microchip"></i>
+                Arduino Nano
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab2-coding-arduino-nano-01.jpg"
+                alt="Praktik Pemrograman Arduino Nano"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab2-coding-arduino-nano-01.jpg"
+                  data-title="Praktik Pemrograman Arduino Nano"
+                  aria-label="Lihat foto pemrograman Arduino Nano"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Pemrograman Arduino Nano</h3>
+
+              <p>
+                Dokumentasi peserta didik dalam menyusun, menguji, dan melakukan
+                debugging program pada Arduino Nano melalui kegiatan praktikum.
+                Peserta didik belajar menemukan kesalahan kode dan memperbaiki
+                program berdasarkan hasil pengujian.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-laptop-code"></i>
+                Praktikum
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab2-pemenang-arduino-nano-01.jpg"
+                alt="Pemenang Praktikum Tercepat Arduino Nano"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab2-pemenang-arduino-nano-01.jpg"
+                  data-title="Pemenang Praktikum Tercepat Arduino Nano"
+                  aria-label="Lihat foto pemenang praktikum Arduino Nano"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Pemenang Praktikum Tercepat · Arduino Nano</h3>
+
+              <p>
+                Dokumentasi apresiasi kepada peserta didik yang berhasil
+                menyelesaikan tantangan pemrograman Arduino Nano dengan waktu
+                penyelesaian tercepat. Apresiasi diberikan sebagai motivasi
+                untuk meningkatkan keterampilan pemrograman, ketelitian, dan
+                kemampuan menyelesaikan masalah.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-trophy"></i>
+                Apresiasi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab2-wokwi-01.jpg"
+                alt="Simulasi Arduino Menggunakan Wokwi"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab2-wokwi-01.jpg"
+                  data-title="Simulasi Arduino Menggunakan Wokwi"
+                  aria-label="Lihat foto simulasi Wokwi"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Simulasi Arduino dengan Wokwi</h3>
+
+              <p>
+                Dokumentasi penggunaan simulator Wokwi sebagai media
+                pembelajaran untuk merancang rangkaian, menulis program,
+                melakukan pengujian, serta mengamati keluaran Arduino sebelum
+                diterapkan pada perangkat fisik.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-display"></i>
+                Simulasi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab2-ulangan-harian-01.jpg"
+                alt="Ulangan Harian Sistem Komputer"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab2-ulangan-harian-01.jpg"
+                  data-title="Ulangan Harian Sistem Komputer"
+                  aria-label="Lihat foto ulangan harian Sistem Komputer"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Ulangan Harian · Sistem Komputer</h3>
+
+              <p>
+                Dokumentasi pelaksanaan ulangan harian pada materi Sistem
+                Komputer sebagai bagian dari asesmen untuk mengukur pemahaman
+                peserta didik terhadap konsep perangkat keras, mikrokontroler,
+                input-output, pemrograman, serta penerapan sistem komputer yang
+                telah dipelajari.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-clipboard-check"></i>
+                Asesmen
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-info">
+          <i class="fas fa-circle-info"></i>
+
+          <p>
+            Dokumentasi Bab 2 dapat terus diperbarui seiring perkembangan
+            praktikum. Dokumentasi dapat mencakup proses pengenalan perangkat,
+            perakitan rangkaian, penulisan kode, pengujian, debugging,
+            penggunaan Arduino Uno dan Arduino Nano, simulasi Wokwi, hasil kerja
+            peserta didik, serta pemberian apresiasi kepada peserta didik yang
+            berhasil menyelesaikan tantangan praktikum.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="bab3">
+      <div class="container">
+        <div class="gallery-section-head">
+          <div class="number">03 · Bab 3</div>
+
+          <h2>Berpikir Komputasional dan Algoritma Pemrograman</h2>
+
+          <p>
+            Dokumentasi pelaksanaan pembelajaran Bab 3 yang membahas berpikir
+            komputasional, algoritma, pemecahan masalah, serta penerapan konsep
+            pemrograman untuk menyelesaikan permasalahan secara sistematis,
+            logis, dan terstruktur.
+          </p>
+
+          <div class="gallery-section-badge">
+            <i class="fas fa-code"></i>
+            Algoritma · Pemrograman · Problem Solving
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab3-berpikir-komputasional-01.jpg"
+                alt="Pembelajaran Berpikir Komputasional"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab3-berpikir-komputasional-01.jpg"
+                  data-title="Pembelajaran Berpikir Komputasional"
+                  aria-label="Lihat foto pembelajaran berpikir komputasional"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Berpikir Komputasional</h3>
+
+              <p>
+                Dokumentasi kegiatan pembelajaran peserta didik dalam memahami
+                konsep berpikir komputasional melalui proses mengidentifikasi
+                masalah, melakukan dekomposisi, menemukan pola, melakukan
+                abstraksi, serta menyusun solusi secara sistematis.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-brain"></i>
+                Computational Thinking
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab3-algoritma-01.jpg"
+                alt="Penyusunan Algoritma"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab3-algoritma-01.jpg"
+                  data-title="Penyusunan Algoritma"
+                  aria-label="Lihat foto penyusunan algoritma"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Penyusunan Algoritma</h3>
+
+              <p>
+                Dokumentasi peserta didik dalam menyusun langkah-langkah
+                penyelesaian masalah menggunakan algoritma yang logis,
+                terstruktur, dan sistematis. Kegiatan ini melatih kemampuan
+                berpikir runtut sebelum solusi diterapkan ke dalam program.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-diagram-project"></i>
+                Algoritma
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab3-pemrograman-01.jpg"
+                alt="Praktik Algoritma dan Pemrograman"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab3-pemrograman-01.jpg"
+                  data-title="Praktik Algoritma dan Pemrograman"
+                  aria-label="Lihat foto praktik algoritma dan pemrograman"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Praktik Algoritma dan Pemrograman</h3>
+
+              <p>
+                Dokumentasi penerapan algoritma ke dalam kode program melalui
+                kegiatan praktik pemrograman. Peserta didik belajar
+                menerjemahkan langkah-langkah penyelesaian masalah menjadi
+                program serta melakukan pengujian dan perbaikan terhadap kode
+                yang dibuat.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-laptop-code"></i>
+                Pemrograman
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab3-ulangan-harian-01.jpg"
+                alt="Ulangan Harian Berpikir Komputasional dan Algoritma Pemrograman"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab3-ulangan-harian-01.jpg"
+                  data-title="Ulangan Harian Berpikir Komputasional dan Algoritma Pemrograman"
+                  aria-label="Lihat foto ulangan harian Bab 3"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Ulangan Harian · Bab 3</h3>
+
+              <p>
+                Dokumentasi pelaksanaan ulangan harian pada materi Berpikir
+                Komputasional dan Algoritma Pemrograman sebagai bagian dari
+                asesmen untuk mengukur pemahaman peserta didik dalam
+                menganalisis masalah, menyusun algoritma, menerapkan logika
+                pemrograman, serta menentukan langkah penyelesaian masalah
+                secara sistematis.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-clipboard-check"></i>
+                Asesmen
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-info">
+          <i class="fas fa-circle-info"></i>
+
+          <p>
+            Dokumentasi Bab 3 dapat terus diperbarui seiring perkembangan
+            pembelajaran. Dokumentasi dapat mencakup kegiatan berpikir
+            komputasional, identifikasi dan dekomposisi masalah, penyusunan
+            algoritma, pembuatan flowchart atau pseudocode, praktik pemrograman,
+            pengujian program, debugging, penyelesaian studi kasus, serta hasil
+            kerja peserta didik.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section alt" id="bab4">
+      <div class="container">
+        <div class="gallery-section-head">
+          <div class="number">04 · Bab 4</div>
+
+          <h2>Jaringan Komputer dan Internet</h2>
+
+          <p>
+            Dokumentasi pelaksanaan pembelajaran Bab 4 yang membahas konsep
+            jaringan komputer dan internet, komunikasi data, perangkat jaringan,
+            alamat IP, topologi jaringan, serta simulasi dan praktik konfigurasi
+            jaringan menggunakan perangkat lunak.
+          </p>
+
+          <div class="gallery-section-badge">
+            <i class="fas fa-network-wired"></i>
+            IP Address · Topologi · Simulasi Jaringan
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab4-jaringan-01.jpg"
+                alt="Pembelajaran Jaringan Komputer"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab4-jaringan-01.jpg"
+                  data-title="Pembelajaran Jaringan Komputer"
+                  aria-label="Lihat foto pembelajaran jaringan komputer"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Pembelajaran Jaringan Komputer</h3>
+
+              <p>
+                Dokumentasi kegiatan pembelajaran mengenai konsep jaringan
+                komputer, komunikasi data, perangkat jaringan, serta pemanfaatan
+                internet. Peserta didik mempelajari bagaimana perangkat dapat
+                saling terhubung dan bertukar data dalam sebuah jaringan.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-network-wired"></i>
+                Jaringan
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab4-ip-address-01.jpg"
+                alt="Praktik IP Address"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab4-ip-address-01.jpg"
+                  data-title="Praktik IP Address"
+                  aria-label="Lihat foto praktik IP Address"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Praktik IP Address</h3>
+
+              <p>
+                Dokumentasi peserta didik dalam memahami dan menerapkan konsep
+                alamat IP pada jaringan komputer. Kegiatan dilakukan melalui
+                praktik untuk mengenali fungsi alamat IP serta memahami
+                penggunaannya dalam komunikasi antarperangkat.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-location-crosshairs"></i>
+                IP Address
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/packet-tracer-01.jpg"
+                alt="Simulasi Jaringan Cisco Packet Tracer"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/packet-tracer-01.jpg"
+                  data-title="Simulasi Jaringan Cisco Packet Tracer"
+                  aria-label="Lihat foto simulasi Cisco Packet Tracer"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Cisco Packet Tracer</h3>
+
+              <p>
+                Dokumentasi kegiatan simulasi jaringan menggunakan Cisco Packet
+                Tracer sebagai media pembelajaran. Peserta didik merancang
+                topologi, menghubungkan perangkat, melakukan konfigurasi, serta
+                menguji komunikasi antarperangkat dalam jaringan.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-diagram-project"></i>
+                Simulasi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab4-topologi-01.jpg"
+                alt="Praktik Topologi Jaringan"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab4-topologi-01.jpg"
+                  data-title="Praktik Topologi Jaringan"
+                  aria-label="Lihat foto praktik topologi jaringan"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Topologi Jaringan</h3>
+
+              <p>
+                Dokumentasi kegiatan peserta didik dalam memahami berbagai
+                bentuk topologi jaringan serta karakteristik dan penerapannya.
+                Peserta didik menghubungkan konsep topologi dengan kebutuhan
+                komunikasi antarperangkat pada jaringan komputer.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-sitemap"></i>
+                Topologi
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-info">
+          <i class="fas fa-circle-info"></i>
+
+          <p>
+            Dokumentasi Bab 4 dapat terus diperbarui seiring perkembangan
+            pembelajaran. Dokumentasi dapat mencakup pengenalan jaringan
+            komputer, perangkat jaringan, komunikasi data, konfigurasi IP
+            Address, praktik berbagai topologi jaringan, simulasi menggunakan
+            Cisco Packet Tracer, pengujian konektivitas, penyelesaian studi
+            kasus jaringan, serta hasil kerja peserta didik.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="bab5">
+      <div class="container">
+        <div class="gallery-section-head">
+          <div class="number">05 · Bab 5</div>
+
+          <h2>Dampak Sosial Informatika</h2>
+
+          <p>
+            Dokumentasi pelaksanaan pembelajaran Bab 5 yang membahas dampak
+            perkembangan informatika terhadap kehidupan sosial, etika, keamanan,
+            privasi, budaya, serta tanggung jawab dalam memanfaatkan teknologi
+            digital secara bijak dan bertanggung jawab.
+          </p>
+
+          <div class="gallery-section-badge">
+            <i class="fas fa-globe"></i>
+            Etika Digital · Keamanan · Dampak Sosial
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab5-diskusi-01.jpg"
+                alt="Diskusi Dampak Sosial Informatika"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab5-diskusi-01.jpg"
+                  data-title="Diskusi Dampak Sosial Informatika"
+                  aria-label="Lihat foto diskusi dampak sosial informatika"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Diskusi Dampak Sosial Informatika</h3>
+
+              <p>
+                Dokumentasi kegiatan diskusi peserta didik dalam menganalisis
+                berbagai pengaruh perkembangan teknologi informasi terhadap
+                kehidupan masyarakat. Peserta didik diajak mengidentifikasi
+                manfaat, tantangan, serta perubahan perilaku yang muncul akibat
+                perkembangan teknologi digital.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-users"></i>
+                Diskusi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab5-etika-digital-01.jpg"
+                alt="Pembelajaran Etika Digital"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab5-etika-digital-01.jpg"
+                  data-title="Pembelajaran Etika Digital"
+                  aria-label="Lihat foto pembelajaran etika digital"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Etika dalam Pemanfaatan Teknologi</h3>
+
+              <p>
+                Dokumentasi pembelajaran mengenai pentingnya etika, tanggung
+                jawab, keamanan, privasi, dan perilaku bijak dalam memanfaatkan
+                teknologi digital. Peserta didik memahami pentingnya menjadi
+                pengguna teknologi yang kritis, aman, dan bertanggung jawab.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-scale-balanced"></i>
+                Etika Digital
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab5-presentasi-01.jpg"
+                alt="Presentasi Dampak Sosial Informatika"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab5-presentasi-01.jpg"
+                  data-title="Presentasi Dampak Sosial Informatika"
+                  aria-label="Lihat foto presentasi dampak sosial informatika"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Presentasi dan Argumentasi</h3>
+
+              <p>
+                Dokumentasi peserta didik dalam menyampaikan hasil analisis,
+                pendapat, argumentasi, dan solusi terhadap berbagai permasalahan
+                sosial yang berkaitan dengan perkembangan informatika. Kegiatan
+                ini melatih kemampuan komunikasi, berpikir kritis, dan
+                penyampaian gagasan secara bertanggung jawab.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-person-chalkboard"></i>
+                Presentasi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/bab5-ulangan-harian-01.jpg"
+                alt="Ulangan Harian Dampak Sosial Informatika"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/bab5-ulangan-harian-01.jpg"
+                  data-title="Ulangan Harian Dampak Sosial Informatika"
+                  aria-label="Lihat foto ulangan harian Bab 5"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Ulangan Harian · Bab 5</h3>
+
+              <p>
+                Dokumentasi pelaksanaan ulangan harian pada materi Dampak Sosial
+                Informatika sebagai bagian dari asesmen untuk mengukur pemahaman
+                peserta didik mengenai dampak perkembangan teknologi, etika
+                digital, keamanan, privasi, budaya digital, serta tanggung jawab
+                dalam memanfaatkan teknologi secara bijak dan bertanggung jawab.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-clipboard-check"></i>
+                Asesmen
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-info">
+          <i class="fas fa-circle-info"></i>
+
+          <p>
+            Dokumentasi Bab 5 dapat terus diperbarui seiring perkembangan
+            pembelajaran. Dokumentasi dapat mencakup kegiatan diskusi mengenai
+            dampak sosial informatika, etika digital, keamanan dan privasi data,
+            budaya digital, analisis kasus, presentasi peserta didik,
+            penyampaian argumentasi, serta refleksi mengenai penggunaan
+            teknologi secara bijak dan bertanggung jawab.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section alt" id="nonmengajar">
+      <div class="container">
+        <div class="gallery-section-head">
+          <div class="number">06 · Kegiatan Nonmengajar</div>
+
+          <h2>Kontribusi di Lingkungan Sekolah dan Pengembangan Profesional</h2>
+
+          <p>
+            Dokumentasi kegiatan nonmengajar yang dilakukan selama pelaksanaan
+            PPL 2, meliputi kontribusi dalam mendukung aktivitas sekolah,
+            pendampingan peserta didik, kegiatan keagamaan dan kedisiplinan,
+            koordinasi dengan guru pamong dan dosen pembimbing lapangan,
+            kolaborasi bersama rekan PPL, serta kegiatan perkuliahan dan
+            pengembangan kebersamaan.
+          </p>
+
+          <div class="gallery-section-badge">
+            <i class="fas fa-school"></i>
+            Piket · Pendampingan · Kolaborasi · Pengembangan Profesional
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/piket-kbm-01.jpg"
+                alt="Piket KBM di Lingkungan Sekolah"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/piket-kbm-01.jpg"
+                  data-title="Piket KBM"
+                  aria-label="Lihat foto piket KBM"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Piket KBM</h3>
+
+              <p>
+                Dokumentasi keterlibatan dalam kegiatan piket untuk mendukung
+                ketertiban, kedisiplinan, dan kelancaran kegiatan belajar
+                mengajar di lingkungan sekolah selama pelaksanaan PPL 2.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-user-clock"></i>
+                Piket KBM
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/piket-perpustakaan-01.jpg"
+                alt="Piket Perpustakaan"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/piket-perpustakaan-01.jpg"
+                  data-title="Piket Perpustakaan"
+                  aria-label="Lihat foto piket perpustakaan"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Piket Perpustakaan</h3>
+
+              <p>
+                Dokumentasi keterlibatan dalam mendukung keteraturan aktivitas
+                di perpustakaan serta menciptakan lingkungan belajar yang nyaman
+                dan tertib bagi warga sekolah.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-book-open"></i>
+                Perpustakaan
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/piket-lobby-01.jpg"
+                alt="Piket Lobby Sekolah"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/piket-lobby-01.jpg"
+                  data-title="Piket Lobby"
+                  aria-label="Lihat foto piket lobby"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Piket Lobby</h3>
+
+              <p>
+                Dokumentasi keterlibatan dalam menjaga keteraturan aktivitas dan
+                membantu kelancaran pelayanan di area lobby sekolah sebagai
+                bagian dari kontribusi terhadap lingkungan sekolah.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-door-open"></i>
+                Piket Lobby
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/piket-gerbang-01.jpg"
+                alt="Piket Gerbang Sekolah"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/piket-gerbang-01.jpg"
+                  data-title="Piket Gerbang"
+                  aria-label="Lihat foto piket gerbang"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Piket Gerbang</h3>
+
+              <p>
+                Dokumentasi kegiatan piket di area gerbang sekolah dalam
+                mendukung kedisiplinan, ketertiban, dan kelancaran aktivitas
+                warga sekolah pada saat kedatangan maupun kepulangan.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-door-closed"></i>
+                Piket Gerbang
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/backup-kelas-01.jpg"
+                alt="Pendampingan Kelas Kosong"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/backup-kelas-01.jpg"
+                  data-title="Backup Kelas Kosong"
+                  aria-label="Lihat foto pendampingan kelas kosong"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Backup Kelas Kosong</h3>
+
+              <p>
+                Dokumentasi pendampingan kelas ketika guru berhalangan hadir.
+                Kegiatan dilakukan untuk memastikan peserta didik tetap tertib,
+                berada dalam suasana belajar yang kondusif, dan melakukan
+                aktivitas yang sesuai selama jam pembelajaran.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-chalkboard-user"></i>
+                Pendampingan
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/motivasi-pagi-01.jpg"
+                alt="Kegiatan Motivasi Pagi"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/motivasi-pagi-01.jpg"
+                  data-title="Kegiatan Motivasi Pagi"
+                  aria-label="Lihat foto kegiatan motivasi pagi"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Kegiatan Motivasi Pagi</h3>
+
+              <p>
+                Dokumentasi kegiatan motivasi pagi sebagai bagian dari
+                pembiasaan positif untuk membangun semangat, kedisiplinan,
+                kesiapan, dan motivasi peserta didik sebelum memulai aktivitas
+                pembelajaran.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-sun"></i>
+                Motivasi Pagi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/sholat-duha-01.jpg"
+                alt="Kegiatan Sholat Duha"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/sholat-duha-01.jpg"
+                  data-title="Kegiatan Sholat Duha"
+                  aria-label="Lihat foto kegiatan sholat duha"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Sholat Duha</h3>
+
+              <p>
+                Dokumentasi keterlibatan dalam kegiatan pembiasaan keagamaan
+                melalui pelaksanaan sholat Duha sebagai bagian dari aktivitas
+                positif dan pembentukan kebiasaan baik di lingkungan sekolah.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-mosque"></i>
+                Kegiatan Keagamaan
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/upacara-bendera-01.jpg"
+                alt="Upacara Bendera"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/upacara-bendera-01.jpg"
+                  data-title="Upacara Bendera"
+                  aria-label="Lihat foto upacara bendera"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Upacara Bendera</h3>
+
+              <p>
+                Dokumentasi keikutsertaan dalam kegiatan upacara bendera sebagai
+                bagian dari pembiasaan kedisiplinan, tanggung jawab,
+                nasionalisme, dan penghormatan terhadap nilai-nilai kebangsaan
+                di lingkungan sekolah.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-flag"></i>
+                Upacara
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/diskusi-guru-pamong-01.jpg"
+                alt="Diskusi Bersama Guru Pamong"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/diskusi-guru-pamong-01.jpg"
+                  data-title="Diskusi Bersama Guru Pamong"
+                  aria-label="Lihat foto diskusi bersama guru pamong"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Diskusi Bersama Guru Pamong</h3>
+
+              <p>
+                Dokumentasi kegiatan diskusi dan koordinasi bersama guru pamong
+                mengenai pelaksanaan pembelajaran, pengelolaan kelas, evaluasi
+                kegiatan PPL, serta refleksi untuk meningkatkan kualitas praktik
+                mengajar.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-chalkboard-teacher"></i>
+                Guru Pamong
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/diskusi-dpl-01.jpg"
+                alt="Diskusi Bersama Dosen Pembimbing Lapangan"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/diskusi-dpl-01.jpg"
+                  data-title="Diskusi Bersama Dosen Pembimbing Lapangan"
+                  aria-label="Lihat foto diskusi bersama dosen pembimbing lapangan"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Diskusi Bersama Dosen Pembimbing Lapangan</h3>
+
+              <p>
+                Dokumentasi kegiatan diskusi dan konsultasi bersama dosen
+                pembimbing lapangan mengenai perkembangan PPL, pelaksanaan
+                pembelajaran, refleksi praktik mengajar, serta pengembangan
+                kompetensi sebagai calon guru profesional.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-user-tie"></i>
+                Dosen Pembimbing
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/diskusi-rekan-ppl-01.jpg"
+                alt="Diskusi Bersama Rekan Sesama PPL"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/diskusi-rekan-ppl-01.jpg"
+                  data-title="Diskusi Bersama Rekan Sesama PPL"
+                  aria-label="Lihat foto diskusi bersama rekan sesama PPL"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Diskusi Bersama Rekan Sesama PPL</h3>
+
+              <p>
+                Dokumentasi kegiatan diskusi dan berbagi pengalaman bersama
+                rekan sesama PPL dalam membahas pelaksanaan kegiatan di sekolah,
+                permasalahan pembelajaran, pengelolaan kelas, serta saling
+                memberikan masukan dan dukungan.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-users"></i>
+                Kolaborasi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/perkuliahan-01.jpg"
+                alt="Kegiatan Perkuliahan PPG"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/perkuliahan-01.jpg"
+                  data-title="Kegiatan Perkuliahan PPG"
+                  aria-label="Lihat foto kegiatan perkuliahan"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Perkuliahan</h3>
+
+              <p>
+                Dokumentasi kegiatan perkuliahan sebagai bagian dari proses
+                pengembangan kompetensi akademik dan profesional dalam mengikuti
+                program Pendidikan Profesi Guru serta memperluas wawasan
+                kependidikan.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-graduation-cap"></i>
+                Perkuliahan
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/fun-match-futsal-perkuliahan-01.jpg"
+                alt="Fun Match Futsal Perkuliahan"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/fun-match-futsal-perkuliahan-01.jpg"
+                  data-title="Fun Match Futsal Perkuliahan"
+                  aria-label="Lihat foto fun match futsal perkuliahan"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Fun Match Futsal · Perkuliahan</h3>
+
+              <p>
+                Dokumentasi kegiatan fun match futsal dalam lingkungan
+                perkuliahan sebagai sarana membangun kebersamaan, kerja sama,
+                komunikasi, dan menjaga keseimbangan antara kegiatan akademik
+                dan aktivitas pengembangan diri.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-futbol"></i>
+                Kebersamaan
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/fun-match-futsal-sekolah-01.jpg"
+                alt="Fun Match Futsal Guru dan Peserta Didik"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/fun-match-futsal-sekolah-01.jpg"
+                  data-title="Fun Match Futsal Guru dan Peserta Didik"
+                  aria-label="Lihat foto fun match futsal guru dan peserta didik"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Fun Match Futsal · Guru dan Peserta Didik</h3>
+
+              <p>
+                Dokumentasi kegiatan fun match futsal bersama guru dan peserta
+                didik sebagai kegiatan kebersamaan di lingkungan sekolah.
+                Kegiatan ini menjadi sarana membangun interaksi positif,
+                sportivitas, komunikasi, kerja sama, dan hubungan yang harmonis
+                antara guru dan peserta didik.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-futbol"></i>
+                Sportivitas
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-info">
+          <i class="fas fa-circle-info"></i>
+
+          <p>
+            Dokumentasi kegiatan nonmengajar menggambarkan keterlibatan dalam
+            berbagai aktivitas di luar pembelajaran sebagai bagian dari
+            pengalaman profesional selama PPL 2. Kegiatan tersebut mencakup
+            piket KBM, perpustakaan, lobby, dan gerbang; pendampingan kelas
+            kosong; kegiatan motivasi pagi, sholat Duha, dan upacara bendera;
+            diskusi dan koordinasi bersama guru pamong, dosen pembimbing
+            lapangan, serta rekan sesama PPL; kegiatan perkuliahan; dan
+            aktivitas kebersamaan melalui fun match futsal di lingkungan
+            perkuliahan maupun sekolah.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="refleksi">
+      <div class="container">
+        <div class="gallery-section-head">
+          <div class="number">07 · Refleksi dan Evaluasi</div>
+
+          <h2>Dokumentasi Proses Reflektif</h2>
+
+          <p>
+            Dokumentasi proses refleksi dan evaluasi terhadap pelaksanaan
+            pembelajaran selama PPL 2 sebagai bagian dari upaya mengidentifikasi
+            kekuatan, kendala, perkembangan peserta didik, serta menentukan
+            tindak lanjut untuk meningkatkan kualitas pembelajaran berikutnya.
+          </p>
+
+          <div class="gallery-section-badge">
+            <i class="fas fa-clipboard-check"></i>
+            Refleksi · Evaluasi · Tindak Lanjut
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/refleksi-01.jpg"
+                alt="Refleksi Pembelajaran Bersama Guru Pamong"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/refleksi-01.jpg"
+                  data-title="Refleksi Pembelajaran Bersama Guru Pamong"
+                  aria-label="Lihat foto refleksi pembelajaran bersama Guru Pamong"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Refleksi Pembelajaran Bersama Guru Pamong</h3>
+
+              <p>
+                Dokumentasi kegiatan refleksi bersama Guru Pamong setelah
+                pelaksanaan pembelajaran. Kegiatan ini dilakukan untuk membahas
+                proses pembelajaran, keterlibatan peserta didik, kesiapan
+                belajar, respons peserta didik, pengelolaan kelas, serta
+                berbagai kendala dan hal-hal yang sudah berjalan baik selama
+                kegiatan pembelajaran.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-comments"></i>
+                Refleksi
+              </span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="../assets/galeri/ppl2/evaluasi-01.jpg"
+                alt="Review Hasil LKPD Peserta Didik melalui LMS Pembelajaran"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <button
+                  type="button"
+                  class="gallery-open"
+                  data-image="../assets/galeri/ppl2/evaluasi-01.jpg"
+                  data-title="Review Hasil LKPD Peserta Didik melalui LMS Pembelajaran"
+                  aria-label="Lihat foto review hasil LKPD peserta didik melalui LMS"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-caption">
+              <h3>Review Hasil LKPD melalui LMS</h3>
+
+              <p>
+                Dokumentasi kegiatan mereview hasil Lembar Kerja Peserta Didik
+                (LKPD) yang telah dikerjakan dan dikumpulkan melalui LMS
+                pembelajaran. Hasil pekerjaan peserta didik ditinjau untuk
+                mengetahui tingkat pemahaman, kualitas penyelesaian tugas,
+                kesalahan yang ditemukan, serta kebutuhan tindak lanjut dalam
+                pembelajaran.
+              </p>
+
+              <span class="gallery-tag">
+                <i class="fas fa-laptop-code"></i>
+                Evaluasi
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-info">
+          <i class="fas fa-circle-info"></i>
+
+          <p>
+            Dokumentasi refleksi dan evaluasi menjadi bagian penting dalam
+            proses pengembangan profesional selama PPL 2. Refleksi bersama Guru
+            Pamong digunakan untuk meninjau pelaksanaan pembelajaran,
+            keterlibatan dan kesiapan peserta didik, serta menentukan aspek yang
+            perlu diperbaiki. Sementara itu, hasil LKPD yang direview melalui
+            LMS digunakan untuk mengevaluasi pemahaman dan ketercapaian peserta
+            didik, mengidentifikasi kesalahan atau kesulitan belajar, serta
+            merancang tindak lanjut berupa perbaikan pembelajaran, remedial,
+            pengayaan, dan penyesuaian strategi pembelajaran pada pertemuan
+            berikutnya.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+      <div class="lightbox-content">
+        <button
+          class="lightbox-close"
+          id="lightboxClose"
+          type="button"
+          aria-label="Tutup"
+        >
+          <i class="fas fa-xmark"></i>
+        </button>
+
+        <img id="lightboxImage" src="" alt="" />
+
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container">
         <p class="copyright">
-          © <span id="year"></span> Arjun Yuda Firwanda | E-Portofolio PPG
-          Informatika UPI
+          ©
+          <span id="year"></span>
+
+          Arjun Yuda Firwanda | E-Portofolio PPG Informatika UPI
         </p>
       </div>
     </footer>
@@ -96,5 +2779,56 @@
     </button>
 
     <script src="../js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lightbox = document.getElementById("galleryLightbox");
+        const lightboxImage = document.getElementById("lightboxImage");
+        const lightboxCaption = document.getElementById("lightboxCaption");
+        const lightboxClose = document.getElementById("lightboxClose");
+        const openButtons = document.querySelectorAll(".gallery-open");
+        openButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            const image = this.dataset.image;
+            const title = this.dataset.title;
+            lightboxImage.src = image;
+            lightboxImage.alt = title;
+            lightboxCaption.textContent = title;
+            lightbox.classList.add("show");
+            lightbox.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+          });
+        });
+
+        function closeLightbox() {
+          lightbox.classList.remove("show");
+          lightbox.setAttribute("aria-hidden", "true");
+          lightboxImage.src = "";
+          lightboxImage.alt = "";
+          lightboxCaption.textContent = "";
+          document.body.style.overflow = "";
+        }
+
+        lightboxClose.addEventListener("click", closeLightbox);
+
+        lightbox.addEventListener("click", function (event) {
+          if (event.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && lightbox.classList.contains("show")) {
+            closeLightbox();
+          }
+        });
+
+        const year = document.getElementById("year");
+
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
   </body>
 </html>
