@@ -1,0 +1,3871 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Seminar | E-Portofolio PPG - Arjun Yuda Firwanda</title>
+
+    <link rel="icon" type="image/png" href="assets/img/pages.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .seminar-page {
+        --sem-primary: #2563eb;
+        --sem-primary-dark: #1d4ed8;
+        --sem-indigo: #4f46e5;
+        --sem-purple: #7c3aed;
+        --sem-green: #059669;
+        --sem-green-dark: #047857;
+        --sem-orange: #d97706;
+        --sem-red: #dc2626;
+        --sem-pink: #db2777;
+        --sem-text: #0f172a;
+        --sem-text-soft: #334155;
+        --sem-muted: #64748b;
+        --sem-light: #94a3b8;
+        --sem-bg: #ffffff;
+        --sem-bg-soft: #f8fafc;
+        --sem-bg-alt: #f1f5f9;
+        --sem-border: rgba(148, 163, 184, 0.2);
+        --sem-border-strong: rgba(148, 163, 184, 0.28);
+        --sem-primary-soft: rgba(37, 99, 235, 0.07);
+        --sem-indigo-soft: rgba(79, 70, 229, 0.07);
+        --sem-purple-soft: rgba(124, 58, 237, 0.07);
+        --sem-green-soft: rgba(5, 150, 105, 0.07);
+        --sem-orange-soft: rgba(217, 119, 6, 0.07);
+        --sem-red-soft: rgba(220, 38, 38, 0.07);
+        --sem-pink-soft: rgba(219, 39, 119, 0.07);
+        --sem-shadow-xs: 0 2px 8px rgba(15, 23, 42, 0.04);
+        --sem-shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.055);
+        --sem-shadow: 0 12px 35px rgba(15, 23, 42, 0.075);
+        --sem-shadow-lg: 0 22px 60px rgba(15, 23, 42, 0.11);
+        --sem-radius-sm: 12px;
+        --sem-radius: 18px;
+        --sem-radius-lg: 24px;
+        --sem-ease: cubic-bezier(0.22, 1, 0.36, 1);
+        --sem-transition:
+          transform 0.45s var(--sem-ease), box-shadow 0.45s var(--sem-ease),
+          border-color 0.35s ease, background-color 0.35s ease, color 0.3s ease,
+          opacity 0.35s ease;
+      }
+
+      .seminar-page p,
+      .seminar-page li,
+      .seminar-page .artifact-item span,
+      .seminar-page .topic-card-body,
+      .seminar-page .seminar-course li,
+      .seminar-page .four-c p,
+      .seminar-page .reflection-note p,
+      .seminar-page .practice-box p,
+      .seminar-page .innovation-step p,
+      .seminar-page .semester-banner p,
+      .seminar-page .seminar-head > p,
+      .seminar-page .seminar-hero-content > p,
+      .seminar-page .seminar-hero-card p {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+      }
+
+      .seminar-page p,
+      .seminar-page li {
+        line-height: 1.8;
+      }
+
+      .seminar-page h1,
+      .seminar-page h2,
+      .seminar-page h3,
+      .seminar-page h4,
+      .seminar-page h5,
+      .seminar-page h6,
+      .seminar-page .seminar-eyebrow,
+      .seminar-page .seminar-chip,
+      .seminar-page .seminar-card-badge,
+      .seminar-page .seminar-nav a,
+      .seminar-page .seminar-nav span,
+      .seminar-page .seminar-nav small,
+      .seminar-page .label,
+      .seminar-page .supporting-label,
+      .seminar-page .topic-number,
+      .seminar-page .course-number,
+      .seminar-page .letter,
+      .seminar-page .step-number,
+      .seminar-page button,
+      .seminar-page .btn {
+        text-align: center;
+      }
+
+      .seminar-page .seminar-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 92px 0 88px;
+        background:
+          radial-gradient(
+            circle at 7% 15%,
+            rgba(37, 99, 235, 0.15),
+            transparent 31%
+          ),
+          radial-gradient(
+            circle at 93% 18%,
+            rgba(79, 70, 229, 0.13),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 70% 95%,
+            rgba(124, 58, 237, 0.08),
+            transparent 32%
+          ),
+          linear-gradient(135deg, #ffffff 0%, #f8fbff 52%, #f5f7ff 100%);
+        border-bottom: 1px solid var(--sem-border);
+      }
+
+      .seminar-page .seminar-hero::before {
+        content: "";
+        position: absolute;
+        width: 480px;
+        height: 480px;
+        top: -280px;
+        right: -180px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.11),
+          transparent 68%
+        );
+        pointer-events: none;
+      }
+
+      .seminar-page .seminar-hero::after {
+        content: "";
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        left: -180px;
+        bottom: -230px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(124, 58, 237, 0.08),
+          transparent 68%
+        );
+        pointer-events: none;
+      }
+
+      .seminar-page .seminar-hero-grid {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns:
+          minmax(0, 1.45fr)
+          minmax(310px, 0.75fr);
+        align-items: center;
+        gap: 60px;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .seminar-page .seminar-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 20px;
+        padding: 9px 15px;
+        border: 1px solid rgba(37, 99, 235, 0.14);
+        border-radius: 999px;
+        background: rgba(37, 99, 235, 0.055);
+        color: var(--sem-primary);
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .seminar-page .seminar-eyebrow i {
+        font-size: 0.85rem;
+      }
+
+      .seminar-page .seminar-hero h1 {
+        max-width: 850px;
+        margin: 0 0 22px;
+        color: var(--sem-text);
+        font-size: clamp(2.35rem, 5vw, 4.25rem);
+        line-height: 1.06;
+        font-weight: 800;
+        letter-spacing: -0.045em;
+      }
+
+      .seminar-page .seminar-hero h1 span {
+        background: linear-gradient(
+          135deg,
+          var(--sem-primary),
+          var(--sem-indigo)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .seminar-page .seminar-hero-content > p {
+        max-width: 850px;
+        margin: 0;
+        color: var(--sem-text-soft);
+        font-size: 0.98rem;
+        line-height: 1.9;
+        text-align: justify;
+      }
+
+      .seminar-page .seminar-hero-content > p strong {
+        color: var(--sem-primary);
+        font-weight: 800;
+      }
+
+      .seminar-page .seminar-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 28px;
+      }
+
+      .seminar-page .seminar-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 13px;
+        border: 1px solid var(--sem-border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.78);
+        color: var(--sem-text-soft);
+        font-size: 0.77rem;
+        font-weight: 700;
+        box-shadow: var(--sem-shadow-xs);
+        backdrop-filter: blur(12px);
+        transition: var(--sem-transition);
+      }
+
+      .seminar-page .seminar-chip i {
+        color: var(--sem-primary);
+        transition: transform 0.4s var(--sem-ease);
+      }
+
+      .seminar-page .seminar-chip:hover {
+        transform: translateY(-3px);
+        border-color: rgba(37, 99, 235, 0.22);
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
+      }
+
+      .seminar-page .seminar-chip:hover i {
+        transform: scale(1.13);
+      }
+
+      .seminar-page .seminar-hero-card {
+        position: relative;
+        overflow: hidden;
+        padding: 30px;
+        border: 1px solid var(--sem-border);
+        border-radius: var(--sem-radius-lg);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(248, 250, 252, 0.91)
+        );
+        box-shadow: var(--sem-shadow);
+        backdrop-filter: blur(18px);
+        transition: var(--sem-transition);
+      }
+
+      .seminar-page .seminar-hero-card::before {
+        content: "";
+        position: absolute;
+        width: 210px;
+        height: 210px;
+        top: -125px;
+        right: -100px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.12),
+          transparent 70%
+        );
+        transition: transform 0.7s var(--sem-ease);
+      }
+
+      .seminar-page .seminar-hero-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(37, 99, 235, 0.22);
+        box-shadow: var(--sem-shadow-lg);
+      }
+
+      .seminar-page .seminar-hero-card:hover::before {
+        transform: scale(1.3);
+      }
+
+      .seminar-page .seminar-hero-card-top {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .seminar-page .seminar-hero-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 62px;
+        height: 62px;
+        border-radius: 18px;
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.12),
+          rgba(79, 70, 229, 0.1)
+        );
+        color: var(--sem-primary);
+        font-size: 1.4rem;
+        box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.07);
+        transition:
+          transform 0.5s var(--sem-ease),
+          box-shadow 0.4s ease;
+      }
+
+      .seminar-page .seminar-hero-card:hover .seminar-hero-icon {
+        transform: translateY(-3px) rotate(-4deg) scale(1.06);
+        box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
+      }
+
+      .seminar-page .seminar-card-badge {
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: var(--sem-primary-soft);
+        color: var(--sem-primary);
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .seminar-page .seminar-hero-card h3 {
+        position: relative;
+        z-index: 2;
+        margin: 0 0 10px;
+        color: var(--sem-text);
+        font-size: 1.18rem;
+        font-weight: 800;
+      }
+
+      .seminar-page .seminar-hero-card p {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        color: var(--sem-muted);
+        font-size: 0.87rem;
+        line-height: 1.8;
+        text-align: justify;
+      }
+
+      .seminar-page .seminar-card-line {
+        width: 100%;
+        height: 1px;
+        margin: 22px 0 17px;
+        background: linear-gradient(90deg, rgba(37, 99, 235, 0.2), transparent);
+      }
+
+      .seminar-page .seminar-card-footer {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--sem-primary);
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      .seminar-page .seminar-nav-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 90;
+        border-bottom: 1px solid var(--sem-border);
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+      }
+
+      .seminar-page .seminar-nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 8px 20px;
+        gap: 7px;
+      }
+
+      .seminar-page .seminar-nav a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        min-height: 48px;
+        padding: 7px 10px;
+        border: 1px solid transparent;
+        border-radius: 12px;
+        color: var(--sem-muted);
+        text-decoration: none;
+        font-size: 0.78rem;
+        font-weight: 750;
+        text-align: center;
+        transition: var(--sem-transition);
+      }
+
+      .seminar-page .seminar-nav a i {
+        color: var(--sem-light);
+        transition:
+          color 0.3s ease,
+          transform 0.4s var(--sem-ease);
+      }
+
+      .seminar-page .seminar-nav a span {
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .seminar-page .seminar-nav a small {
+        color: inherit;
+        font-size: 0.69rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .seminar-page .seminar-nav a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 2px;
+        width: 0;
+        height: 2px;
+        border-radius: 999px;
+        background: linear-gradient(
+          90deg,
+          var(--sem-primary),
+          var(--sem-indigo)
+        );
+        transform: translateX(-50%);
+        transition: width 0.4s var(--sem-ease);
+      }
+
+      .seminar-page .seminar-nav a:hover {
+        transform: translateY(-2px);
+        color: var(--sem-primary);
+        background: rgba(37, 99, 235, 0.045);
+        border-color: rgba(37, 99, 235, 0.08);
+      }
+
+      .seminar-page .seminar-nav a:hover i {
+        color: var(--sem-primary);
+        transform: translateY(-1px);
+      }
+
+      .seminar-page .seminar-nav a.active {
+        color: var(--sem-primary);
+        background: rgba(37, 99, 235, 0.075);
+        border-color: rgba(37, 99, 235, 0.1);
+      }
+
+      .seminar-page .seminar-nav a.active i {
+        color: var(--sem-primary);
+      }
+
+      .seminar-page .seminar-nav a.active::after {
+        width: 28px;
+      }
+
+      .seminar-page .seminar-section {
+        position: relative;
+        padding: 88px 0;
+        background: var(--sem-bg);
+      }
+
+      .seminar-page .seminar-section.alt {
+        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      }
+
+      .seminar-page .seminar-section[id] {
+        scroll-margin-top: 82px;
+      }
+
+      .seminar-page .seminar-head {
+        max-width: 850px;
+        margin: 0 auto 42px;
+        text-align: center;
+      }
+
+      .seminar-page .seminar-head .label {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 13px;
+        color: var(--sem-primary);
+        font-size: 0.73rem;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .seminar-page .seminar-head .label span {
+        opacity: 0.65;
+      }
+
+      .seminar-page .seminar-head .label b {
+        padding: 5px 9px;
+        border-radius: 7px;
+        background: var(--sem-primary-soft);
+        color: var(--sem-primary);
+        font-size: 0.68rem;
+      }
+
+      .seminar-page .seminar-head h2 {
+        margin: 0 0 14px;
+        color: var(--sem-text);
+        font-size: clamp(1.85rem, 4vw, 2.65rem);
+        line-height: 1.18;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+      }
+
+      .seminar-page .seminar-head > p {
+        max-width: 760px;
+        margin: 0 auto;
+        color: var(--sem-muted);
+        font-size: 0.91rem;
+        line-height: 1.85;
+        text-align: justify;
+      }
+
+      .seminar-page .topic-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+
+      .seminar-page .topic-card-wide {
+        grid-column: 1 / -1;
+      }
+
+      .seminar-page .topic-card {
+        position: relative;
+        overflow: hidden;
+        padding: 28px;
+        border: 1px solid var(--sem-border);
+        border-radius: var(--sem-radius);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: var(--sem-shadow-sm);
+        transition: var(--sem-transition);
+        isolation: isolate;
+      }
+
+      .seminar-page .topic-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--sem-primary),
+          var(--sem-indigo),
+          var(--sem-purple)
+        );
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.55s var(--sem-ease);
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .seminar-page .topic-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(37, 99, 235, 0.18);
+        box-shadow: var(--sem-shadow);
+      }
+
+      .seminar-page .topic-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .seminar-page .topic-card-header {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 22px;
+      }
+
+      .seminar-page .topic-icon {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        background: var(--sem-primary-soft);
+        color: var(--sem-primary);
+        font-size: 1.15rem;
+        transition:
+          transform 0.45s var(--sem-ease),
+          box-shadow 0.4s ease;
+      }
+
+      .seminar-page .topic-card:hover .topic-icon {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 9px 22px rgba(37, 99, 235, 0.1);
+      }
+
+      .seminar-page .topic-icon.indigo {
+        background: var(--sem-indigo-soft);
+        color: var(--sem-indigo);
+      }
+
+      .seminar-page .topic-icon.purple {
+        background: var(--sem-purple-soft);
+        color: var(--sem-purple);
+      }
+
+      .seminar-page .topic-icon.green {
+        background: var(--sem-green-soft);
+        color: var(--sem-green);
+      }
+
+      .seminar-page .topic-icon.orange {
+        background: var(--sem-orange-soft);
+        color: var(--sem-orange);
+      }
+
+      .seminar-page .topic-icon.red {
+        background: var(--sem-red-soft);
+        color: var(--sem-red);
+      }
+
+      .seminar-page .topic-icon.pink {
+        background: var(--sem-pink-soft);
+        color: var(--sem-pink);
+      }
+
+      .seminar-page .topic-number {
+        display: block;
+        margin-bottom: 3px;
+        color: var(--sem-light);
+        font-size: 0.63rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .seminar-page .topic-card h3 {
+        margin: 0;
+        color: var(--sem-text);
+        font-size: 1.02rem;
+        line-height: 1.4;
+        font-weight: 800;
+        transition: color 0.3s ease;
+      }
+
+      .seminar-page .topic-card:hover h3 {
+        color: var(--sem-primary);
+      }
+
+      .seminar-page .supporting-label {
+        display: inline-block;
+        margin-top: 5px;
+        color: var(--sem-muted);
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .seminar-page .topic-card-body {
+        position: relative;
+        z-index: 3;
+      }
+
+      .seminar-page .topic-card-body > p {
+        margin: 0 0 15px;
+        color: var(--sem-text-soft);
+        font-size: 0.88rem;
+        line-height: 1.85;
+        text-align: justify;
+      }
+
+      .seminar-page .topic-card-body > p:last-child {
+        margin-bottom: 0;
+      }
+
+      .seminar-page .action-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+      }
+
+      .seminar-page .action-item {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        padding: 13px;
+        border: 1px solid var(--sem-border);
+        border-radius: 12px;
+        background: var(--sem-bg-soft);
+        transition: var(--sem-transition);
+      }
+
+      .seminar-page .action-item:hover {
+        transform: translateY(-2px);
+        border-color: rgba(37, 99, 235, 0.16);
+        background: #ffffff;
+        box-shadow: var(--sem-shadow-xs);
+      }
+
+      .seminar-page .action-item > span {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 29px;
+        height: 29px;
+        border-radius: 8px;
+        background: var(--sem-primary-soft);
+        color: var(--sem-primary);
+        font-size: 0.65rem;
+        font-weight: 800;
+      }
+
+      .seminar-page .action-item p {
+        margin: 0;
+        color: var(--sem-text-soft);
+        font-size: 0.78rem;
+        line-height: 1.65;
+        text-align: justify;
+      }
+
+      .seminar-page .semester-banner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        max-width: 1180px;
+        margin: 0 auto 28px;
+        padding: 24px 27px;
+        border: 1px solid rgba(37, 99, 235, 0.12);
+        border-radius: var(--sem-radius);
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.065),
+          rgba(79, 70, 229, 0.045)
+        );
+      }
+
+      .seminar-page .semester-banner .num {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 17px;
+        background: linear-gradient(
+          135deg,
+          var(--sem-primary),
+          var(--sem-indigo)
+        );
+        color: #ffffff;
+        font-size: 1.4rem;
+        font-weight: 800;
+        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.17);
+      }
+
+      .seminar-page .semester-banner span {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--sem-primary);
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .seminar-page .semester-banner h3 {
+        margin: 0 0 6px;
+        color: var(--sem-text);
+        font-size: 1.05rem;
+        font-weight: 800;
+      }
+
+      .seminar-page .semester-banner p {
+        margin: 0;
+        color: var(--sem-muted);
+        font-size: 0.82rem;
+        line-height: 1.65;
+        text-align: justify;
+      }
+
+      .seminar-page .semester-course-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .seminar-page .four-c-grid {
+        position: relative;
+        z-index: 3;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 13px;
+        margin-top: 5px;
+      }
+
+      .seminar-page .four-c {
+        position: relative;
+        overflow: hidden;
+        min-width: 0;
+        padding: 20px;
+        border: 1px solid var(--sem-border);
+        border-radius: 15px;
+        background: var(--sem-bg-soft);
+        transition: var(--sem-transition);
+        isolation: isolate;
+      }
+
+      .seminar-page .four-c:hover {
+        transform: translateY(-4px);
+        border-color: rgba(37, 99, 235, 0.17);
+        background: #ffffff;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.065);
+      }
+
+      .seminar-page .four-c .letter {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 13px;
+        border-radius: 10px;
+        background: var(--sem-primary-soft);
+        color: var(--sem-primary);
+        font-size: 0.85rem;
+        font-weight: 800;
+      }
+
+      .seminar-page .four-c > span:not(.letter) {
+        position: relative;
+        z-index: 3;
+        display: block;
+        margin-bottom: 3px;
+        color: var(--sem-light);
+        font-size: 0.6rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .seminar-page .four-c h4 {
+        position: relative;
+        z-index: 3;
+        margin: 0 0 9px;
+        color: var(--sem-text);
+        font-size: 0.87rem;
+        font-weight: 800;
+      }
+
+      .seminar-page .four-c p {
+        position: relative;
+        z-index: 3;
+        margin: 0;
+        color: var(--sem-muted);
+        font-size: 0.76rem;
+        line-height: 1.72;
+        text-align: justify;
+      }
+
+      .seminar-page .four-c.connection .letter {
+        background: rgba(37, 99, 235, 0.09);
+        color: var(--sem-primary);
+      }
+
+      .seminar-page .four-c.challenge .letter {
+        background: rgba(217, 119, 6, 0.09);
+        color: var(--sem-orange);
+      }
+
+      .seminar-page .four-c.concept .letter {
+        background: rgba(124, 58, 237, 0.09);
+        color: var(--sem-purple);
+      }
+
+      .seminar-page .four-c.change .letter {
+        background: rgba(5, 150, 105, 0.09);
+        color: var(--sem-green);
+      }
+
+      .seminar-page .reflection-note {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 18px;
+        padding: 17px 19px;
+        border-left: 3px solid var(--sem-primary);
+        border-radius: 0 13px 13px 0;
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.055),
+          rgba(79, 70, 229, 0.025)
+        );
+      }
+
+      .seminar-page .reflection-note > i {
+        flex-shrink: 0;
+        margin-top: 4px;
+        color: var(--sem-primary);
+        font-size: 0.8rem;
+      }
+
+      .seminar-page .reflection-note p {
+        margin: 0;
+        color: var(--sem-text-soft);
+        font-size: 0.78rem;
+        line-height: 1.75;
+        text-align: justify;
+      }
+
+      .seminar-page .reflection-note strong {
+        color: var(--sem-primary);
+        font-weight: 800;
+      }
+
+      .seminar-page .artifact-box {
+        position: relative;
+        z-index: 1;
+        max-width: 1180px;
+        margin: 30px auto 0;
+        padding: 27px;
+        border: 1px solid rgba(37, 99, 235, 0.12);
+        border-radius: var(--sem-radius);
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.045),
+          rgba(79, 70, 229, 0.025)
+        );
+        isolation: isolate;
+      }
+
+      .seminar-page .artifact-title {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin-bottom: 19px;
+      }
+
+      .seminar-page .artifact-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 13px;
+        background: var(--sem-primary-soft);
+        color: var(--sem-primary);
+        font-size: 1rem;
+      }
+
+      .seminar-page .artifact-title span {
+        display: block;
+        margin-bottom: 3px;
+        color: var(--sem-primary);
+        font-size: 0.61rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .seminar-page .artifact-title h3 {
+        margin: 0;
+        color: var(--sem-text);
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .seminar-page .artifact-list {
+        position: relative;
+        z-index: 3;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+      }
+
+      .seminar-page .artifact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px;
+        border: 1px solid var(--sem-border);
+        border-radius: 13px;
+        background: rgba(255, 255, 255, 0.76);
+        transition: var(--sem-transition);
+      }
+
+      .seminar-page .artifact-item > i {
+        flex-shrink: 0;
+        margin-top: 3px;
+        color: var(--sem-primary);
+        transition: transform 0.4s var(--sem-ease);
+      }
+
+      .seminar-page .artifact-item:hover {
+        transform: translateY(-3px);
+        border-color: rgba(37, 99, 235, 0.17);
+        background: #ffffff;
+        box-shadow: var(--sem-shadow-xs);
+      }
+
+      .seminar-page .artifact-item:hover > i {
+        transform: scale(1.12);
+      }
+
+      .seminar-page .artifact-item strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--sem-text);
+        font-size: 0.79rem;
+        font-weight: 800;
+      }
+
+      .seminar-page .artifact-item span {
+        display: block;
+        color: var(--sem-muted);
+        font-size: 0.73rem;
+        line-height: 1.65;
+        text-align: justify;
+      }
+
+      .seminar-page .practice-box {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        max-width: 1180px;
+        margin: 22px auto 0;
+        padding: 25px;
+        border: 1px solid rgba(5, 150, 105, 0.14);
+        border-radius: var(--sem-radius);
+        background: linear-gradient(
+          135deg,
+          rgba(5, 150, 105, 0.055),
+          rgba(16, 185, 129, 0.025)
+        );
+        isolation: isolate;
+      }
+
+      .seminar-page .practice-icon {
+        position: relative;
+        z-index: 3;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 43px;
+        height: 43px;
+        border-radius: 12px;
+        background: var(--sem-green-soft);
+        color: var(--sem-green);
+      }
+
+      .seminar-page .practice-box > div:last-child {
+        position: relative;
+        z-index: 3;
+        flex: 1;
+      }
+
+      .seminar-page .practice-box > div:last-child > span {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--sem-green);
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .seminar-page .practice-box h3 {
+        margin: 0 0 9px;
+        color: var(--sem-text);
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .seminar-page .practice-box p {
+        margin: 0;
+        color: var(--sem-text-soft);
+        font-size: 0.8rem;
+        line-height: 1.8;
+        text-align: justify;
+      }
+
+      .seminar-page .commitment-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+        margin: 15px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .seminar-page .commitment-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        color: var(--sem-text-soft);
+        font-size: 0.78rem;
+        line-height: 1.65;
+        text-align: justify;
+      }
+
+      .seminar-page .commitment-list li i {
+        flex-shrink: 0;
+        margin-top: 4px;
+        color: var(--sem-green);
+        font-size: 0.7rem;
+      }
+
+      .seminar-page .seminar-course-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+
+      .seminar-page .seminar-course {
+        position: relative;
+        overflow: hidden;
+        min-width: 0;
+        padding: 25px;
+        border: 1px solid var(--sem-border);
+        border-radius: var(--sem-radius);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: var(--sem-shadow-sm);
+        transition:
+          transform 0.45s var(--sem-ease),
+          box-shadow 0.45s var(--sem-ease),
+          border-color 0.35s ease;
+        isolation: isolate;
+      }
+
+      .seminar-page .seminar-course::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--sem-primary),
+          var(--sem-indigo),
+          var(--sem-purple)
+        );
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.55s var(--sem-ease);
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .seminar-page .seminar-course:hover {
+        transform: translateY(-7px) scale(1.008);
+        border-color: rgba(37, 99, 235, 0.18);
+        box-shadow: var(--sem-shadow);
+      }
+
+      .seminar-page .seminar-course:hover::before {
+        transform: scaleX(1);
+      }
+
+      .seminar-page .course-icon {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        background: var(--sem-primary-soft);
+        color: var(--sem-primary);
+        font-size: 1.1rem;
+        transition:
+          transform 0.45s var(--sem-ease),
+          box-shadow 0.4s ease;
+      }
+
+      .seminar-page .seminar-course:hover .course-icon {
+        transform: translateY(-3px) scale(1.07);
+        box-shadow: 0 9px 22px rgba(37, 99, 235, 0.1);
+      }
+
+      .seminar-page .course-icon.indigo {
+        background: var(--sem-indigo-soft);
+        color: var(--sem-indigo);
+      }
+
+      .seminar-page .course-icon.purple {
+        background: var(--sem-purple-soft);
+        color: var(--sem-purple);
+      }
+
+      .seminar-page .course-icon.green {
+        background: var(--sem-green-soft);
+        color: var(--sem-green);
+      }
+
+      .seminar-page .course-icon.orange {
+        background: var(--sem-orange-soft);
+        color: var(--sem-orange);
+      }
+
+      .seminar-page .course-icon.red {
+        background: var(--sem-red-soft);
+        color: var(--sem-red);
+      }
+
+      .seminar-page .course-icon.pink {
+        background: var(--sem-pink-soft);
+        color: var(--sem-pink);
+      }
+
+      .seminar-page .course-number {
+        position: relative;
+        z-index: 3;
+        display: block;
+        margin-bottom: 3px;
+        color: var(--sem-light);
+        font-size: 0.61rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .seminar-page .seminar-course h3 {
+        position: relative;
+        z-index: 3;
+        margin: 0 0 15px;
+        color: var(--sem-text);
+        font-size: 0.98rem;
+        line-height: 1.45;
+        font-weight: 800;
+        transition: color 0.3s ease;
+      }
+
+      .seminar-page .seminar-course:hover h3 {
+        color: var(--sem-primary);
+      }
+
+      .seminar-page .seminar-course ul {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .seminar-page .seminar-course li {
+        position: relative;
+        padding-left: 17px;
+        color: var(--sem-muted);
+        font-size: 0.75rem;
+        line-height: 1.7;
+        text-align: justify;
+      }
+
+      .seminar-page .seminar-course li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.65em;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--sem-primary);
+      }
+
+      .seminar-page .seminar-course li strong {
+        color: var(--sem-text-soft);
+        font-weight: 800;
+      }
+
+      .seminar-page .innovation-wrapper {
+        position: relative;
+        max-width: 1180px;
+        margin: 30px auto 0;
+      }
+
+      .seminar-page .innovation-steps {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .seminar-page .innovation-line {
+        position: absolute;
+        top: 42px;
+        left: 9%;
+        right: 9%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          rgba(37, 99, 235, 0.1),
+          rgba(79, 70, 229, 0.22),
+          rgba(37, 99, 235, 0.1)
+        );
+        z-index: 0;
+      }
+
+      .seminar-page .innovation-step {
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        padding: 24px 22px;
+        border: 1px solid var(--sem-border);
+        border-radius: var(--sem-radius);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: var(--sem-shadow-sm);
+        transition: var(--sem-transition);
+        isolation: isolate;
+      }
+
+      .seminar-page .innovation-step:hover {
+        transform: translateY(-6px);
+        border-color: rgba(37, 99, 235, 0.18);
+        box-shadow: var(--sem-shadow);
+      }
+
+      .seminar-page .innovation-step .step-number {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 43px;
+        height: 43px;
+        margin-bottom: 14px;
+        border-radius: 13px;
+        background: linear-gradient(
+          135deg,
+          var(--sem-primary),
+          var(--sem-indigo)
+        );
+        color: #ffffff;
+        font-size: 0.82rem;
+        font-weight: 800;
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.16);
+        transition:
+          transform 0.45s var(--sem-ease),
+          box-shadow 0.4s ease;
+      }
+
+      .seminar-page .innovation-step:hover .step-number {
+        transform: translateY(-3px) rotate(-4deg) scale(1.06);
+        box-shadow: 0 12px 25px rgba(37, 99, 235, 0.22);
+      }
+
+      .seminar-page .innovation-step > span {
+        position: relative;
+        z-index: 3;
+        display: block;
+        margin-bottom: 5px;
+        color: var(--sem-primary);
+        font-size: 0.59rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .seminar-page .innovation-step h4 {
+        position: relative;
+        z-index: 3;
+        margin: 0 0 8px;
+        color: var(--sem-text);
+        font-size: 0.87rem;
+        line-height: 1.4;
+        font-weight: 800;
+      }
+
+      .seminar-page .innovation-step p {
+        position: relative;
+        z-index: 3;
+        margin: 0;
+        color: var(--sem-muted);
+        font-size: 0.73rem;
+        line-height: 1.7;
+        text-align: justify;
+      }
+
+      .seminar-page .innovation-project-card {
+        margin-top: 22px;
+      }
+
+      .seminar-page .innovation-project-card .topic-card-body {
+        max-width: 1050px;
+      }
+
+      .seminar-page .innovation-final {
+        margin-top: 22px;
+      }
+
+      .seminar-page .cursor-bubble {
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        left: var(--mouse-x, 50%);
+        top: var(--mouse-y, 50%);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at center,
+          rgba(59, 130, 246, 0.2) 0%,
+          rgba(79, 70, 229, 0.14) 22%,
+          rgba(99, 102, 241, 0.09) 40%,
+          rgba(139, 92, 246, 0.04) 58%,
+          transparent 76%
+        );
+        filter: blur(10px);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1;
+        transition:
+          opacity 0.22s ease,
+          left 0.06s linear,
+          top 0.06s linear;
+      }
+
+      .seminar-page .has-cursor-bubble .cursor-bubble {
+        opacity: 1;
+      }
+
+      .seminar-page .topic-card > *,
+      .seminar-page .seminar-course > *,
+      .seminar-page .four-c > *,
+      .seminar-page .artifact-box > *,
+      .seminar-page .practice-box > *,
+      .seminar-page .innovation-step > * {
+        position: relative;
+        z-index: 3;
+      }
+
+      .dark.seminar-page {
+        --sem-text: #f8fafc;
+        --sem-text-soft: #cbd5e1;
+        --sem-muted: #94a3b8;
+        --sem-light: #64748b;
+        --sem-bg: #0f172a;
+        --sem-bg-soft: #111827;
+        --sem-bg-alt: #1e293b;
+        --sem-border: rgba(148, 163, 184, 0.14);
+      }
+
+      .dark.seminar-page .seminar-hero {
+        background:
+          radial-gradient(
+            circle at 7% 15%,
+            rgba(37, 99, 235, 0.2),
+            transparent 31%
+          ),
+          radial-gradient(
+            circle at 93% 18%,
+            rgba(79, 70, 229, 0.18),
+            transparent 30%
+          ),
+          linear-gradient(135deg, #0f172a, #111827 55%, #172033);
+      }
+
+      .dark.seminar-page .seminar-hero-content > p {
+        color: #cbd5e1;
+      }
+
+      .dark.seminar-page .seminar-chip {
+        background: rgba(15, 23, 42, 0.7);
+        border-color: rgba(148, 163, 184, 0.14);
+        color: #cbd5e1;
+      }
+
+      .dark.seminar-page .seminar-chip:hover {
+        background: rgba(30, 41, 59, 0.95);
+      }
+
+      .dark.seminar-page .seminar-hero-card,
+      .dark.seminar-page .topic-card,
+      .dark.seminar-page .seminar-course,
+      .dark.seminar-page .four-c,
+      .dark.seminar-page .innovation-step {
+        background: rgba(15, 23, 42, 0.82);
+        border-color: rgba(148, 163, 184, 0.14);
+      }
+
+      .dark.seminar-page .seminar-hero-card:hover,
+      .dark.seminar-page .topic-card:hover,
+      .dark.seminar-page .seminar-course:hover,
+      .dark.seminar-page .four-c:hover,
+      .dark.seminar-page .innovation-step:hover {
+        background: rgba(15, 23, 42, 0.96);
+        border-color: rgba(96, 165, 250, 0.22);
+      }
+
+      .dark.seminar-page .seminar-hero-card h3,
+      .dark.seminar-page .topic-card h3,
+      .dark.seminar-page .seminar-course h3,
+      .dark.seminar-page .four-c h4,
+      .dark.seminar-page .innovation-step h4,
+      .dark.seminar-page .artifact-title h3,
+      .dark.seminar-page .practice-box h3,
+      .dark.seminar-page .semester-banner h3 {
+        color: #f8fafc;
+      }
+
+      .dark.seminar-page .seminar-hero-card p,
+      .dark.seminar-page .topic-card-body > p,
+      .dark.seminar-page .seminar-course li,
+      .dark.seminar-page .four-c p,
+      .dark.seminar-page .innovation-step p,
+      .dark.seminar-page .artifact-item span,
+      .dark.seminar-page .practice-box p,
+      .dark.seminar-page .semester-banner p,
+      .dark.seminar-page .reflection-note p,
+      .dark.seminar-page .commitment-list li,
+      .dark.seminar-page .action-item p,
+      .dark.seminar-page .seminar-head > p {
+        color: #94a3b8;
+        text-align: justify;
+      }
+
+      .dark.seminar-page .seminar-nav-wrap {
+        background: rgba(15, 23, 42, 0.88);
+        border-bottom-color: rgba(148, 163, 184, 0.13);
+      }
+
+      .dark.seminar-page .seminar-nav a {
+        color: #94a3b8;
+      }
+
+      .dark.seminar-page .seminar-nav a:hover,
+      .dark.seminar-page .seminar-nav a.active {
+        color: #60a5fa;
+        background: rgba(37, 99, 235, 0.1);
+      }
+
+      .dark.seminar-page .seminar-section {
+        background: #0f172a;
+      }
+
+      .dark.seminar-page .seminar-section.alt {
+        background: linear-gradient(180deg, #111827, #0f172a);
+      }
+
+      .dark.seminar-page .semester-banner {
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.1),
+          rgba(79, 70, 229, 0.07)
+        );
+        border-color: rgba(96, 165, 250, 0.14);
+      }
+
+      .dark.seminar-page .action-item,
+      .dark.seminar-page .artifact-item {
+        background: rgba(15, 23, 42, 0.68);
+        border-color: rgba(148, 163, 184, 0.12);
+      }
+
+      .dark.seminar-page .action-item:hover,
+      .dark.seminar-page .artifact-item:hover {
+        background: rgba(30, 41, 59, 0.92);
+      }
+
+      .dark.seminar-page .reflection-note {
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.1),
+          rgba(79, 70, 229, 0.06)
+        );
+      }
+
+      .dark.seminar-page .artifact-box {
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.08),
+          rgba(79, 70, 229, 0.045)
+        );
+      }
+
+      .dark.seminar-page .practice-box {
+        background: linear-gradient(
+          135deg,
+          rgba(5, 150, 105, 0.1),
+          rgba(16, 185, 129, 0.055)
+        );
+        border-color: rgba(52, 211, 153, 0.14);
+      }
+
+      .dark.seminar-page .seminar-course li strong {
+        color: #cbd5e1;
+      }
+
+      .dark.seminar-page .commitment-list li {
+        color: #cbd5e1;
+        text-align: justify;
+      }
+
+      .dark.seminar-page .cursor-bubble {
+        background: radial-gradient(
+          circle at center,
+          rgba(96, 165, 250, 0.24) 0%,
+          rgba(129, 140, 248, 0.17) 22%,
+          rgba(139, 92, 246, 0.09) 42%,
+          rgba(167, 139, 250, 0.04) 60%,
+          transparent 78%
+        );
+      }
+
+      @media (max-width: 1050px) {
+        .seminar-page .seminar-hero-grid {
+          grid-template-columns: 1fr;
+          gap: 35px;
+        }
+
+        .seminar-page .seminar-hero-card {
+          max-width: 700px;
+          margin: 0 auto;
+        }
+
+        .seminar-page .seminar-course-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .seminar-page .four-c-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .seminar-page .innovation-steps {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .seminar-page .innovation-line {
+          display: none;
+        }
+      }
+
+      @media (max-width: 850px) {
+        .seminar-page .seminar-nav {
+          grid-template-columns: repeat(5, minmax(120px, 1fr));
+          overflow-x: auto;
+          justify-content: start;
+          scrollbar-width: none;
+        }
+
+        .seminar-page .seminar-nav::-webkit-scrollbar {
+          display: none;
+        }
+
+        .seminar-page .seminar-nav a {
+          min-width: 120px;
+        }
+
+        .seminar-page .topic-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .seminar-page .topic-card-wide {
+          grid-column: auto;
+        }
+
+        .seminar-page .artifact-list {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .seminar-page .seminar-hero {
+          padding: 62px 0 58px;
+        }
+
+        .seminar-page .seminar-hero-grid {
+          padding: 0 18px;
+        }
+
+        .seminar-page .seminar-eyebrow {
+          font-size: 0.65rem;
+          padding: 8px 11px;
+        }
+
+        .seminar-page .seminar-hero h1 {
+          font-size: clamp(2rem, 10vw, 3rem);
+        }
+
+        .seminar-page .seminar-hero-content > p {
+          font-size: 0.88rem;
+          line-height: 1.8;
+          text-align: justify;
+        }
+
+        .seminar-page .seminar-meta {
+          gap: 7px;
+        }
+
+        .seminar-page .seminar-chip {
+          padding: 8px 10px;
+          font-size: 0.69rem;
+        }
+
+        .seminar-page .seminar-hero-card {
+          padding: 24px;
+        }
+
+        .seminar-page .seminar-nav {
+          display: flex;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          padding: 8px 14px;
+          gap: 7px;
+          scrollbar-width: none;
+        }
+
+        .seminar-page .seminar-nav::-webkit-scrollbar {
+          display: none;
+        }
+
+        .seminar-page .seminar-nav a {
+          flex: 0 0 auto;
+          min-width: 125px;
+          justify-content: flex-start;
+          padding: 7px 11px;
+          text-align: center;
+        }
+
+        .seminar-page .seminar-section {
+          padding: 65px 0;
+        }
+
+        .seminar-page .seminar-head {
+          margin-bottom: 32px;
+          padding: 0 18px;
+        }
+
+        .seminar-page .seminar-head h2 {
+          font-size: 1.72rem;
+        }
+
+        .seminar-page .seminar-head > p {
+          font-size: 0.84rem;
+          text-align: justify;
+        }
+
+        .seminar-page .topic-grid,
+        .seminar-page .seminar-course-grid,
+        .seminar-page .innovation-steps {
+          padding: 0 18px;
+        }
+
+        .seminar-page .seminar-course-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .seminar-page .four-c-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .seminar-page .action-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .seminar-page .semester-banner {
+          margin-left: 18px;
+          margin-right: 18px;
+          padding: 21px;
+        }
+
+        .seminar-page .artifact-box,
+        .seminar-page .practice-box {
+          margin-left: 18px;
+          margin-right: 18px;
+        }
+
+        .seminar-page .commitment-list {
+          grid-template-columns: 1fr;
+        }
+
+        .seminar-page .cursor-bubble {
+          width: 190px;
+          height: 190px;
+          filter: blur(8px);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .seminar-page .seminar-hero {
+          padding: 52px 0 48px;
+        }
+
+        .seminar-page .seminar-hero h1 {
+          font-size: 2rem;
+          letter-spacing: -0.035em;
+        }
+
+        .seminar-page .seminar-hero-card {
+          padding: 21px;
+        }
+
+        .seminar-page .seminar-hero-icon {
+          width: 55px;
+          height: 55px;
+          border-radius: 16px;
+        }
+
+        .seminar-page .topic-card {
+          padding: 21px;
+        }
+
+        .seminar-page .topic-card-header {
+          align-items: flex-start;
+        }
+
+        .seminar-page .topic-icon {
+          width: 46px;
+          height: 46px;
+        }
+
+        .seminar-page .semester-banner {
+          align-items: flex-start;
+          gap: 14px;
+        }
+
+        .seminar-page .semester-banner .num {
+          width: 50px;
+          height: 50px;
+          border-radius: 14px;
+        }
+
+        .seminar-page .semester-banner h3 {
+          font-size: 0.91rem;
+        }
+
+        .seminar-page .artifact-box,
+        .seminar-page .practice-box {
+          padding: 21px;
+        }
+
+        .seminar-page .practice-box {
+          flex-direction: column;
+        }
+
+        .seminar-page .reflection-note {
+          padding: 15px;
+        }
+
+        .seminar-page .innovation-step {
+          padding: 21px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .seminar-page *,
+        .seminar-page *::before,
+        .seminar-page *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+
+        .seminar-page .topic-card:hover,
+        .seminar-page .seminar-course:hover,
+        .seminar-page .four-c:hover,
+        .seminar-page .innovation-step:hover,
+        .seminar-page .seminar-hero-card:hover,
+        .seminar-page .seminar-chip:hover,
+        .seminar-page .artifact-item:hover,
+        .seminar-page .action-item:hover {
+          transform: none !important;
+        }
+
+        .seminar-page .cursor-bubble {
+          display: none !important;
+        }
+      }
+
+      .seminar-page .footer {
+        text-align: center;
+      }
+
+      .seminar-page .footer .copyright {
+        width: 100%;
+        margin: 0;
+        text-align: center !important;
+        text-justify: auto;
+      }
+    </style>
+  </head>
+
+  <body class="seminar-page">
+    <header>
+      <nav class="navbar">
+        <div class="logo">E-Portofolio PPG</div>
+
+        <ul class="menu">
+          <li>
+            <a href="index.html">
+              <i class="fas fa-house"></i>
+              Beranda
+            </a>
+          </li>
+
+          <li>
+            <a href="tentang.html">
+              <i class="fas fa-user-friends"></i>
+              Tentang
+            </a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">
+              <i class="fas fa-laptop-code"></i>
+              PPL ▾
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="ppl/ppl1.html">
+                  <i class="fas fa-code-branch"></i>
+                  PPL 1
+                </a>
+              </li>
+
+              <li>
+                <a href="ppl/ppl2.html">
+                  <i class="fas fa-code-branch"></i>
+                  PPL 2
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="seminar.html" class="active">
+              <i class="fas fa-graduation-cap"></i>
+              Seminar
+            </a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">
+              <i class="fas fa-images"></i>
+              Galeri ▾
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="galeri/galeri-ppl1.html">
+                  <i class="fas fa-image"></i>
+                  PPL 1
+                </a>
+              </li>
+
+              <li>
+                <a href="galeri/galeri-ppl2.html">
+                  <i class="fas fa-image"></i>
+                  PPL 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <button id="theme-toggle" type="button" aria-label="Ubah tema">
+          🌙
+        </button>
+      </nav>
+    </header>
+
+    <section class="seminar-hero">
+      <div class="container seminar-hero-grid">
+        <div class="seminar-hero-content">
+          <div class="seminar-eyebrow">
+            <i class="fas fa-book-open"></i>
+            MATA KULIAH SEMINAR PPG CALON GURU
+          </div>
+
+          <h1>
+            Refleksi Perjalanan Menjadi
+            <span>Guru Informatika</span>
+          </h1>
+
+          <p>
+            Halaman ini mendokumentasikan proses refleksi selama mengikuti
+            Pendidikan Profesi Guru (PPG). Isi halaman mencakup identifikasi
+            diri, refleksi pengalaman belajar pada semester I dan II, refleksi
+            perjalanan mengikuti PPG, serta tahapan penyusunan karya inovasi
+            pendidikan. Pola refleksi menggunakan 4C:
+            <strong>Connection, Challenge, Concept, dan Change</strong>.
+          </p>
+
+          <div class="seminar-meta">
+            <span class="seminar-chip">
+              <i class="fas fa-user"></i>
+              Arjun Yuda Firwanda
+            </span>
+
+            <span class="seminar-chip">
+              <i class="fas fa-id-card"></i>
+              NIM 2530809
+            </span>
+
+            <span class="seminar-chip">
+              <i class="fas fa-laptop-code"></i>
+              Bidang Studi Informatika
+            </span>
+
+            <span class="seminar-chip">
+              <i class="fas fa-school"></i>
+              PPG UPI 2026
+            </span>
+          </div>
+        </div>
+
+        <div class="seminar-hero-card">
+          <div class="seminar-hero-card-top">
+            <div class="seminar-hero-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+
+            <span class="seminar-card-badge">REFLEKSI</span>
+          </div>
+
+          <h3>Makna Refleksi</h3>
+
+          <p>
+            Bagi saya, refleksi bukan sekadar menceritakan kegiatan yang telah
+            dilakukan. Refleksi merupakan proses melihat kembali pengalaman,
+            menemukan pembelajaran, mengenali kekurangan, dan menentukan
+            perubahan nyata yang akan diterapkan sebagai calon guru.
+          </p>
+
+          <div class="seminar-card-line"></div>
+          <div class="seminar-card-footer">
+            <i class="fas fa-arrow-trend-up"></i>
+            <span>Belajar • Merefleksi • Bertumbuh</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="seminar-nav-wrap">
+      <div class="container seminar-nav">
+        <a href="#lk1" class="active">
+          <i class="fas fa-compass"></i>
+          <span>LK 1</span>
+          <small>Identifikasi Diri</small>
+        </a>
+
+        <a href="#lk2">
+          <i class="fas fa-layer-group"></i>
+          <span>LK 2</span>
+          <small>Semester I</small>
+        </a>
+
+        <a href="#lk3">
+          <i class="fas fa-arrows-rotate"></i>
+          <span>LK 3</span>
+          <small>Semester II</small>
+        </a>
+
+        <a href="#lk4">
+          <i class="fas fa-route"></i>
+          <span>LK 4</span>
+          <small>Perjalanan PPG</small>
+        </a>
+
+        <a href="#lk5">
+          <i class="fas fa-rocket"></i>
+          <span>LK 5</span>
+          <small>Karya Inovasi</small>
+        </a>
+      </div>
+    </div>
+
+    <section id="lk1" class="seminar-section">
+      <div class="container">
+        <div class="seminar-head">
+          <div class="label">
+            <span>Topik 1</span>
+            <b>LK 1</b>
+          </div>
+
+          <h2>Identifikasi Diri dan Visi Pribadi</h2>
+
+          <p>
+            Visi menjadi arah bagi saya dalam menjalani proses pendidikan
+            profesi dan mempersiapkan diri sebagai guru Informatika yang
+            profesional.
+          </p>
+        </div>
+
+        <div class="topic-grid">
+          <article class="topic-card">
+            <div class="topic-card-header">
+              <div class="topic-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">01</span>
+                <h3>Visi Pribadi untuk Pendidikan di Indonesia</h3>
+              </div>
+            </div>
+
+            <div class="topic-card-body">
+              <p>
+                Visi pribadi saya adalah ikut mewujudkan pendidikan Indonesia
+                yang berkualitas, inklusif, adaptif terhadap perkembangan zaman,
+                dan mampu memberikan pengalaman belajar yang bermakna bagi
+                setiap peserta didik. Pendidikan menurut saya tidak hanya
+                berorientasi pada nilai, tetapi juga pada pembentukan karakter,
+                kemampuan berpikir, keterampilan, kreativitas, kolaborasi, dan
+                kemampuan menggunakan teknologi secara bertanggung jawab.
+              </p>
+
+              <p>
+                Perkembangan teknologi digital membuat pendidikan perlu terus
+                beradaptasi. Teknologi seharusnya tidak hanya digunakan sebagai
+                alat penyampaian materi, tetapi menjadi sarana untuk membuat
+                pembelajaran lebih interaktif, kontekstual, dan sesuai kebutuhan
+                peserta didik.
+              </p>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-card-header">
+              <div class="topic-icon indigo">
+                <i class="fas fa-chalkboard-user"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">02</span>
+                <h3>Visi sebagai Calon Guru Informatika</h3>
+              </div>
+            </div>
+
+            <div class="topic-card-body">
+              <p>
+                Saya ingin menjadi guru Informatika yang kompeten, adaptif,
+                inspiratif, dan mampu menghadirkan pembelajaran yang dekat
+                dengan kehidupan peserta didik. Saya ingin menguasai materi
+                Informatika sekaligus mampu menjelaskan konsep dengan bahasa
+                sederhana dan strategi yang sesuai dengan karakteristik serta
+                kesiapan belajar peserta didik.
+              </p>
+
+              <p>
+                Saya juga ingin membangun budaya belajar yang membuat peserta
+                didik berani mencoba, bertanya, berdiskusi, memecahkan masalah,
+                dan tidak takut melakukan kesalahan. Dengan demikian,
+                pembelajaran Informatika tidak berhenti pada kemampuan
+                menggunakan teknologi, tetapi berkembang menjadi kemampuan
+                berpikir komputasional dan kemampuan menyelesaikan masalah
+                secara kreatif.
+              </p>
+            </div>
+          </article>
+
+          <article class="topic-card topic-card-wide">
+            <div class="topic-card-header">
+              <div class="topic-icon green">
+                <i class="fas fa-list-check"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">03</span>
+                <h3>Langkah Konkret</h3>
+              </div>
+            </div>
+
+            <div class="topic-card-body">
+              <div class="action-grid">
+                <div class="action-item">
+                  <span>01</span>
+                  <p>
+                    Meningkatkan kompetensi Informatika melalui belajar mandiri,
+                    pelatihan, seminar, dan praktik.
+                  </p>
+                </div>
+
+                <div class="action-item">
+                  <span>02</span>
+                  <p>
+                    Meningkatkan kemampuan pedagogik dalam merancang
+                    pembelajaran yang aktif, kontekstual, dan berpihak pada
+                    peserta didik.
+                  </p>
+                </div>
+
+                <div class="action-item">
+                  <span>03</span>
+                  <p>
+                    Melakukan asesmen awal untuk mengenali kesiapan, kebutuhan,
+                    dan karakteristik peserta didik.
+                  </p>
+                </div>
+
+                <div class="action-item">
+                  <span>04</span>
+                  <p>
+                    Mengembangkan media dan aktivitas pembelajaran berbasis
+                    teknologi yang relevan.
+                  </p>
+                </div>
+
+                <div class="action-item">
+                  <span>05</span>
+                  <p>
+                    Menghubungkan materi Informatika dengan masalah nyata
+                    melalui proyek, praktik, dan studi kasus.
+                  </p>
+                </div>
+
+                <div class="action-item">
+                  <span>06</span>
+                  <p>
+                    Melakukan refleksi dan evaluasi setelah pembelajaran untuk
+                    memperbaiki praktik mengajar.
+                  </p>
+                </div>
+
+                <div class="action-item">
+                  <span>07</span>
+                  <p>
+                    Berkomunikasi dan berkolaborasi dengan guru, dosen, guru
+                    pamong, dan komunitas pendidikan.
+                  </p>
+                </div>
+
+                <div class="action-item">
+                  <span>08</span>
+                  <p>
+                    Menjadi guru pembelajar sepanjang hayat yang terbuka
+                    terhadap perubahan dan inovasi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="lk2" class="seminar-section alt">
+      <div class="container">
+        <div class="seminar-head">
+          <div class="label">
+            <span>Topik 2</span>
+            <b>LK 2</b>
+          </div>
+
+          <h2>Refleksi Pengalaman Belajar Semester I</h2>
+
+          <p>
+            Enam mata kuliah utama semester I saya refleksikan menggunakan pola
+            4C. Mata kuliah Literasi Kesehatan Mental ditempatkan sebagai mata
+            kuliah pendukung yang memperkuat kesiapan saya dalam memahami
+            peserta didik secara lebih utuh.
+          </p>
+        </div>
+
+        <div class="semester-banner">
+          <div class="num">I</div>
+          <div>
+            <span>FONDASI PEMBELAJARAN</span>
+            <h3>Semester I — Fondasi Pedagogik dan Pemahaman Peserta Didik</h3>
+
+            <p>
+              Pembelajaran yang saya peroleh menjadi dasar untuk memahami
+              peserta didik sebelum merancang pembelajaran.
+            </p>
+          </div>
+        </div>
+
+        <div class="semester-course-list">
+          <article class="topic-card">
+            <div class="topic-card-header">
+              <div class="topic-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">01</span>
+                <h3>Pembelajaran Berdiferensiasi</h3>
+              </div>
+            </div>
+
+            <div class="four-c-grid">
+              <div class="four-c connection">
+                <div class="letter">C</div>
+                <span>01</span>
+                <h4>Connection</h4>
+                <p>
+                  Sebelumnya saya cenderung melihat kegiatan pembelajaran
+                  sebagai satu rancangan yang dapat digunakan untuk seluruh
+                  peserta didik. Dalam pengalaman mengajar, saya mulai melihat
+                  bahwa kemampuan, minat, dan kesiapan peserta didik tidak
+                  selalu sama.
+                </p>
+              </div>
+
+              <div class="four-c challenge">
+                <div class="letter">C</div>
+                <span>02</span>
+                <h4>Challenge</h4>
+                <p>
+                  Pemahaman saya tergoyahkan ketika menyadari bahwa memberikan
+                  materi dan tugas yang sama kepada semua peserta didik belum
+                  tentu menghasilkan pengalaman belajar yang adil. Saya perlu
+                  memikirkan cara mengakomodasi perbedaan tanpa membuat
+                  pembelajaran menjadi tidak terarah.
+                </p>
+              </div>
+
+              <div class="four-c concept">
+                <div class="letter">C</div>
+                <span>03</span>
+                <h4>Concept</h4>
+                <p>
+                  Saya memahami bahwa diferensiasi merupakan upaya menyesuaikan
+                  pembelajaran berdasarkan kesiapan, minat, dan karakteristik
+                  peserta didik. Penyesuaian dapat dilakukan pada konten,
+                  proses, produk, maupun lingkungan belajar.
+                </p>
+              </div>
+
+              <div class="four-c change">
+                <div class="letter">C</div>
+                <span>04</span>
+                <h4>Change</h4>
+                <p>
+                  Saya akan lebih dahulu mengenali kondisi peserta didik,
+                  kemudian merancang variasi aktivitas, bantuan, dan tingkat
+                  tantangan. Saya juga akan menggunakan asesmen awal sebagai
+                  dasar pengambilan keputusan pembelajaran.
+                </p>
+              </div>
+            </div>
+
+            <div class="reflection-note">
+              <i class="fas fa-quote-left"></i>
+
+              <p>
+                <strong>Inti refleksi:</strong>
+                pembelajaran yang adil bukan berarti semua peserta didik
+                mendapatkan perlakuan yang sama, tetapi mendapatkan dukungan
+                yang sesuai agar memiliki kesempatan berkembang.
+              </p>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-card-header">
+              <div class="topic-icon indigo">
+                <i class="fas fa-user-group"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">02</span>
+                <h3>Pemahaman Peserta Didik dan Pembelajaran</h3>
+              </div>
+            </div>
+
+            <div class="four-c-grid">
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>01</span>
+                <h4>Connection</h4>
+                <p>
+                  Pengalaman mengajar membuat saya menyadari bahwa respons
+                  peserta didik terhadap materi, tugas, dan aktivitas kelas
+                  sangat beragam. Saya sebelumnya lebih banyak berfokus pada
+                  penyampaian materi.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>02</span>
+                <h4>Challenge</h4>
+                <p>
+                  Saya ditantang untuk melihat peserta didik bukan hanya dari
+                  hasil nilai, tetapi juga dari proses belajar, latar
+                  pengalaman, kebutuhan, motivasi, dan kondisi yang memengaruhi
+                  keterlibatan mereka.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>03</span>
+                <h4>Concept</h4>
+                <p>
+                  Saya memperoleh pemahaman bahwa karakteristik peserta didik
+                  merupakan dasar penting dalam menentukan tujuan, strategi,
+                  media, aktivitas, dan asesmen pembelajaran.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>04</span>
+                <h4>Change</h4>
+                <p>
+                  Saya akan lebih aktif melakukan observasi dan asesmen awal
+                  serta membangun komunikasi dengan peserta didik agar keputusan
+                  pembelajaran tidak hanya berdasarkan asumsi.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-card-header">
+              <div class="topic-icon purple">
+                <i class="fas fa-seedling"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">03</span>
+                <h3>Growth Mindset</h3>
+              </div>
+            </div>
+
+            <div class="four-c-grid">
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>01</span>
+                <h4>Connection</h4>
+                <p>
+                  Saya pernah melihat peserta didik merasa bahwa dirinya tidak
+                  mampu ketika menghadapi pemrograman atau materi yang dianggap
+                  sulit. Saya juga pernah merasa perlu segera memberikan jawaban
+                  ketika peserta didik mengalami kesulitan.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>02</span>
+                <h4>Challenge</h4>
+                <p>
+                  Saya ditantang untuk mengubah cara pandang bahwa kemampuan
+                  bukan sesuatu yang selalu tetap. Kesalahan dan kegagalan perlu
+                  dilihat sebagai bagian dari proses belajar.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>03</span>
+                <h4>Concept</h4>
+                <p>
+                  Growth mindset mengajarkan pentingnya keyakinan bahwa
+                  kemampuan dapat berkembang melalui usaha, strategi yang tepat,
+                  latihan, dan umpan balik. Guru perlu membangun bahasa dan
+                  budaya kelas yang mendukung proses tersebut.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>04</span>
+                <h4>Change</h4>
+                <p>
+                  Saya akan memberikan apresiasi terhadap proses, usaha,
+                  strategi, dan perkembangan peserta didik. Ketika peserta didik
+                  salah, saya akan membantu mereka menemukan penyebab dan
+                  mencoba strategi lain.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-card-header">
+              <div class="topic-icon orange">
+                <i class="fas fa-landmark"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">04</span>
+                <h3>Filosofi Pendidikan dan Pendidikan Nilai</h3>
+              </div>
+            </div>
+
+            <div class="four-c-grid">
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>01</span>
+                <h4>Connection</h4>
+                <p>
+                  Sebelumnya saya memahami guru terutama sebagai pihak yang
+                  menyampaikan pengetahuan. Pengalaman PPG membuat saya semakin
+                  melihat bahwa guru memiliki tanggung jawab dalam membentuk
+                  manusia dan nilai kehidupan.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>02</span>
+                <h4>Challenge</h4>
+                <p>
+                  Pemahaman saya ditantang untuk melihat pendidikan secara lebih
+                  luas. Keberhasilan pembelajaran tidak cukup diukur dari
+                  penguasaan materi, tetapi juga dari bagaimana peserta didik
+                  tumbuh sebagai manusia.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>03</span>
+                <h4>Concept</h4>
+                <p>
+                  Saya memahami pentingnya pendidikan yang berpihak pada peserta
+                  didik, memanusiakan manusia, serta menanamkan nilai melalui
+                  keteladanan dan pengalaman belajar, bukan hanya melalui
+                  nasihat.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>04</span>
+                <h4>Change</h4>
+                <p>
+                  Saya akan berusaha menjadi teladan dalam sikap, komunikasi,
+                  tanggung jawab, disiplin, dan penggunaan teknologi. Nilai akan
+                  saya integrasikan dalam aktivitas pembelajaran sehari-hari.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-card-header">
+              <div class="topic-icon green">
+                <i class="fas fa-brain"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">05</span>
+                <h3>Pembelajaran Mendalam dan Asesmen</h3>
+              </div>
+            </div>
+
+            <div class="four-c-grid">
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>01</span>
+                <h4>Connection</h4>
+                <p>
+                  Sebelumnya saya lebih sering memandang asesmen sebagai
+                  kegiatan untuk mengetahui nilai hasil belajar. Dalam praktik
+                  mengajar, saya menemukan bahwa nilai tugas dan ulangan juga
+                  dapat menjadi informasi untuk memperbaiki pembelajaran.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>02</span>
+                <h4>Challenge</h4>
+                <p>
+                  Saya ditantang untuk tidak hanya mengejar penyelesaian materi,
+                  tetapi memastikan peserta didik benar-benar memahami konsep,
+                  dapat menghubungkan pengetahuan, dan menggunakannya dalam
+                  situasi nyata.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>03</span>
+                <h4>Concept</h4>
+                <p>
+                  Saya memahami pembelajaran mendalam sebagai pembelajaran yang
+                  mendorong pemahaman bermakna, berpikir kritis, penerapan
+                  konsep, refleksi, dan keterhubungan dengan konteks. Asesmen
+                  menjadi bagian dari proses belajar, bukan hanya penilaian
+                  akhir.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>04</span>
+                <h4>Change</h4>
+                <p>
+                  Saya akan menggunakan asesmen diagnostik, formatif, dan
+                  sumatif secara lebih terencana. Hasil asesmen akan saya
+                  gunakan untuk remedial, pengayaan, umpan balik, dan perbaikan
+                  strategi pembelajaran.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-card-header">
+              <div class="topic-icon red">
+                <i class="fas fa-school"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">06</span>
+                <h3>Praktik Pengalaman Lapangan 1</h3>
+              </div>
+            </div>
+
+            <div class="four-c-grid">
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>01</span>
+                <h4>Connection</h4>
+                <p>
+                  PPL 1 memberikan kesempatan bagi saya untuk melihat secara
+                  langsung bagaimana lingkungan sekolah, budaya sekolah, guru,
+                  peserta didik, dan kegiatan pembelajaran berjalan dalam
+                  kondisi nyata.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>02</span>
+                <h4>Challenge</h4>
+                <p>
+                  Pengalaman lapangan menunjukkan bahwa teori yang dipelajari di
+                  kampus perlu disesuaikan dengan kondisi nyata. Saya perlu
+                  belajar mengelola kelas, berkomunikasi, mengamati peserta
+                  didik, dan menyesuaikan rencana.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>03</span>
+                <h4>Concept</h4>
+                <p>
+                  Saya memahami bahwa guru profesional membutuhkan kompetensi
+                  pedagogik, profesional, sosial, dan kepribadian yang saling
+                  terhubung. Praktik nyata menjadi ruang penting untuk menguji
+                  dan memperbaiki pemahaman tersebut.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>04</span>
+                <h4>Change</h4>
+                <p>
+                  Saya akan lebih sistematis dalam melakukan observasi, mencatat
+                  temuan, meminta umpan balik, dan melakukan refleksi setelah
+                  praktik. Saya juga akan lebih siap menyesuaikan pembelajaran
+                  dengan kondisi kelas.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-card-header">
+              <div class="topic-icon pink">
+                <i class="fas fa-heart"></i>
+              </div>
+
+              <div>
+                <span class="topic-number">07</span>
+                <h3>Literasi Kesehatan Mental</h3>
+                <small class="supporting-label"> Mata Kuliah Pendukung </small>
+              </div>
+            </div>
+
+            <div class="four-c-grid">
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>01</span>
+                <h4>Connection</h4>
+                <p>
+                  Dalam kegiatan pendidikan, saya melihat bahwa kondisi
+                  emosional dan kenyamanan peserta didik dapat memengaruhi
+                  perhatian, motivasi, dan keterlibatan dalam belajar.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>02</span>
+                <h4>Challenge</h4>
+                <p>
+                  Saya ditantang untuk tidak cepat memberi label kepada peserta
+                  didik yang pasif, tidak fokus, atau mengalami perubahan
+                  perilaku, karena ada banyak faktor yang dapat memengaruhinya.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>03</span>
+                <h4>Concept</h4>
+                <p>
+                  Saya memahami pentingnya literasi kesehatan mental, komunikasi
+                  yang aman, empati, serta kemampuan mengenali tanda bahwa
+                  peserta didik membutuhkan dukungan dan rujukan yang tepat.
+                </p>
+              </div>
+
+              <div class="four-c">
+                <div class="letter">C</div>
+                <span>04</span>
+                <h4>Change</h4>
+                <p>
+                  Saya akan membangun komunikasi yang lebih empatik, menciptakan
+                  kelas yang aman, dan tidak menghakimi. Jika menemukan kondisi
+                  yang memerlukan penanganan lebih lanjut, saya akan mengikuti
+                  mekanisme dukungan sekolah yang berlaku.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="artifact-box">
+          <div class="artifact-title">
+            <div class="artifact-icon">
+              <i class="fas fa-folder-open"></i>
+            </div>
+
+            <div>
+              <span>BUKTI PEMBELAJARAN</span>
+              <h3>Analisis Artefak Semester I</h3>
+            </div>
+          </div>
+
+          <div class="artifact-list">
+            <div class="artifact-item">
+              <i class="fas fa-file-lines"></i>
+
+              <div>
+                <strong>Catatan/refleksi perkuliahan</strong>
+                <span>
+                  Menjadi bukti proses memahami konsep pedagogik dan perubahan
+                  cara pandang setelah mengikuti perkuliahan.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-clipboard-check"></i>
+
+              <div>
+                <strong>LK/hasil tugas mata kuliah</strong>
+                <span>
+                  Menunjukkan bahwa konsep tidak hanya dipahami secara teori,
+                  tetapi diterjemahkan menjadi rancangan dan tindakan
+                  pendidikan.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-school"></i>
+
+              <div>
+                <strong>Dokumentasi PPL 1</strong>
+                <span>
+                  Menjadi bukti pengalaman nyata mengamati budaya sekolah,
+                  pembelajaran, interaksi guru dan peserta didik.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-chart-column"></i>
+
+              <div>
+                <strong>Hasil asesmen dan refleksi mengajar</strong>
+                <span>
+                  Menjadi bukti bahwa hasil belajar peserta didik dapat
+                  digunakan sebagai dasar evaluasi dan perbaikan pembelajaran.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="practice-box">
+          <div class="practice-icon">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+
+          <div>
+            <span>IMPLEMENTASI</span>
+            <h3>Kaitan Praktis Semester I</h3>
+
+            <p>
+              Konsep-konsep semester I saya gunakan sebagai fondasi untuk
+              memahami bahwa pembelajaran Informatika harus dimulai dari peserta
+              didik. Saya tidak ingin hanya bertanya “materi apa yang harus
+              selesai?”, tetapi juga “siapa peserta didik saya, apa yang sudah
+              mereka pahami, bantuan apa yang mereka perlukan, dan pengalaman
+              belajar seperti apa yang membuat mereka berkembang?”. Perubahan
+              cara berpikir ini menjadi dasar saya ketika memasuki praktik
+              pembelajaran pada semester berikutnya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lk3" class="seminar-section">
+      <div class="container">
+        <div class="seminar-head">
+          <div class="label">
+            <span>Topik 3</span>
+            <b>LK 3</b>
+          </div>
+
+          <h2>Refleksi Pengalaman Belajar Semester II</h2>
+
+          <p>
+            Pola 4C tetap digunakan. Semester II memperkuat kemampuan saya dalam
+            mengelola pembelajaran, pengembangan profesional, kepemimpinan, dan
+            pengalaman praktik mengajar.
+          </p>
+        </div>
+
+        <div class="semester-banner">
+          <div class="num">II</div>
+
+          <div>
+            <span>IMPLEMENTASI DAN PROFESIONALISME</span>
+
+            <h3>
+              Semester II — Implementasi, Profesionalisme, dan Kepemimpinan
+            </h3>
+
+            <p>
+              Fokus refleksi bergeser dari memahami konsep dasar menuju
+              penerapan dan pengembangan profesional.
+            </p>
+          </div>
+        </div>
+
+        <div class="seminar-course-grid">
+          <article class="seminar-course">
+            <div class="course-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+
+            <span class="course-number">01</span>
+            <h3>Pembelajaran Sosial Emosional</h3>
+
+            <ul>
+              <li>
+                <strong>Connection:</strong>
+                Saya melihat interaksi, emosi, dan rasa aman berpengaruh
+                terhadap kesiapan belajar peserta didik.
+              </li>
+
+              <li>
+                <strong>Challenge:</strong>
+                Saya perlu mengelola emosi diri sekaligus membantu peserta didik
+                membangun keterampilan sosial.
+              </li>
+
+              <li>
+                <strong>Concept:</strong>
+                Kesadaran diri, pengelolaan diri, kesadaran sosial, keterampilan
+                berelasi, dan pengambilan keputusan bertanggung jawab dapat
+                diintegrasikan dalam pembelajaran.
+              </li>
+
+              <li>
+                <strong>Change:</strong>
+                Saya akan membangun check-in sederhana, komunikasi empatik,
+                kolaborasi, dan refleksi kelas.
+              </li>
+            </ul>
+          </article>
+
+          <article class="seminar-course">
+            <div class="course-icon indigo">
+              <i class="fas fa-user-tie"></i>
+            </div>
+
+            <span class="course-number">02</span>
+            <h3>Pengembangan Profesional Guru dan Wawasan Berkelanjutan</h3>
+
+            <ul>
+              <li>
+                <strong>Connection:</strong>
+                Perkembangan Informatika menuntut guru untuk terus belajar.
+              </li>
+
+              <li>
+                <strong>Challenge:</strong>
+                Menjadi guru tidak berarti berhenti belajar setelah lulus PPG.
+              </li>
+
+              <li>
+                <strong>Concept:</strong>
+                Pengembangan profesional perlu dilakukan secara berkelanjutan
+                melalui refleksi, pelatihan, kolaborasi, dan berbagi praktik
+                baik.
+              </li>
+
+              <li>
+                <strong>Change:</strong>
+                Saya akan membuat kebiasaan belajar dan dokumentasi pengembangan
+                kompetensi secara berkala.
+              </li>
+            </ul>
+          </article>
+
+          <article class="seminar-course">
+            <div class="course-icon purple">
+              <i class="fas fa-brain"></i>
+            </div>
+
+            <span class="course-number">03</span>
+            <h3>Pembelajaran Mendalam dan Asesmen Lanjut</h3>
+
+            <ul>
+              <li>
+                <strong>Connection:</strong>
+                Pengalaman mengajar menunjukkan bahwa nilai tidak selalu
+                menggambarkan pemahaman secara utuh.
+              </li>
+
+              <li>
+                <strong>Challenge:</strong>
+                Saya perlu membuat asesmen yang benar-benar memberikan informasi
+                untuk memperbaiki pembelajaran.
+              </li>
+
+              <li>
+                <strong>Concept:</strong>
+                Asesmen perlu dirancang selaras dengan tujuan dan aktivitas
+                belajar serta menghasilkan umpan balik yang dapat
+                ditindaklanjuti.
+              </li>
+
+              <li>
+                <strong>Change:</strong>
+                Saya akan memperkuat asesmen formatif, rubrik, analisis hasil,
+                remedial, pengayaan, dan refleksi.
+              </li>
+            </ul>
+          </article>
+
+          <article class="seminar-course">
+            <div class="course-icon orange">
+              <i class="fas fa-users-gear"></i>
+            </div>
+
+            <span class="course-number">04</span>
+            <h3>Proyek Kepemimpinan</h3>
+
+            <ul>
+              <li>
+                <strong>Connection:</strong>
+                Saya memperoleh pengalaman mengembangkan gagasan teknologi yang
+                berangkat dari permasalahan nyata.
+              </li>
+
+              <li>
+                <strong>Challenge:</strong>
+                Ide yang baik perlu diwujudkan melalui perencanaan, pembagian
+                tugas, komunikasi, pengujian, dan evaluasi.
+              </li>
+
+              <li>
+                <strong>Concept:</strong>
+                Kepemimpinan pendidikan membutuhkan kemampuan melihat masalah,
+                menggerakkan kolaborasi, mengambil keputusan, dan menjaga
+                keberlanjutan program.
+              </li>
+
+              <li>
+                <strong>Change:</strong>
+                Saya akan lebih terstruktur dalam mengelola proyek dan mengukur
+                dampaknya.
+              </li>
+            </ul>
+          </article>
+
+          <article class="seminar-course">
+            <div class="course-icon red">
+              <i class="fas fa-microphone-lines"></i>
+            </div>
+
+            <span class="course-number">05</span>
+            <h3>Seminar</h3>
+
+            <ul>
+              <li>
+                <strong>Connection:</strong>
+                Refleksi membantu saya menyatukan pengalaman perkuliahan, PPL,
+                dan pengembangan profesional.
+              </li>
+
+              <li>
+                <strong>Challenge:</strong>
+                Saya perlu mampu menjelaskan alasan di balik setiap keputusan
+                pendidikan, bukan hanya menceritakan kegiatan.
+              </li>
+
+              <li>
+                <strong>Concept:</strong>
+                Refleksi yang baik menghubungkan pengalaman, tantangan, konsep,
+                bukti, dan perubahan yang akan dilakukan.
+              </li>
+
+              <li>
+                <strong>Change:</strong>
+                Saya akan membiasakan diri mendokumentasikan pengalaman dan
+                menjadikannya dasar perbaikan.
+              </li>
+            </ul>
+          </article>
+
+          <article class="seminar-course">
+            <div class="course-icon green">
+              <i class="fas fa-school"></i>
+            </div>
+
+            <span class="course-number">06</span>
+            <h3>Praktik Pengalaman Lapangan 2</h3>
+
+            <ul>
+              <li>
+                <strong>Connection:</strong>
+                PPL 2 memberi ruang untuk menerapkan pembelajaran yang sudah
+                dipelajari secara lebih nyata dan terarah.
+              </li>
+
+              <li>
+                <strong>Challenge:</strong>
+                Kondisi kelas tidak selalu sesuai dengan rencana sehingga guru
+                harus adaptif.
+              </li>
+
+              <li>
+                <strong>Concept:</strong>
+                Praktik mengajar membutuhkan siklus perencanaan, pelaksanaan,
+                asesmen, refleksi, dan perbaikan.
+              </li>
+
+              <li>
+                <strong>Change:</strong>
+                Saya akan menggunakan data kelas dan umpan balik untuk
+                memperbaiki pembelajaran dari satu pertemuan ke pertemuan
+                berikutnya.
+              </li>
+            </ul>
+          </article>
+
+          <article class="seminar-course">
+            <div class="course-icon pink">
+              <i class="fas fa-universal-access"></i>
+            </div>
+
+            <span class="course-number">07</span>
+            <h3>Pembelajaran Inklusif Tingkat Dasar</h3>
+            <small class="supporting-label">Mata Kuliah Pendukung</small>
+
+            <ul>
+              <li>
+                <strong>Connection:</strong>
+                Peserta didik memiliki kebutuhan dan karakteristik yang beragam.
+              </li>
+
+              <li>
+                <strong>Challenge:</strong>
+                Saya perlu memastikan pembelajaran tidak membuat peserta didik
+                tertentu tertinggal atau merasa tidak memiliki kesempatan.
+              </li>
+
+              <li>
+                <strong>Concept:</strong>
+                Pendidikan inklusif menekankan akses, partisipasi, dukungan,
+                penghargaan terhadap keberagaman, dan pembelajaran yang tidak
+                diskriminatif.
+              </li>
+
+              <li>
+                <strong>Change:</strong>
+                Saya akan memperhatikan akses terhadap materi, variasi
+                aktivitas, dukungan, dan kesempatan berpartisipasi.
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="artifact-box">
+          <div class="artifact-title">
+            <div class="artifact-icon">
+              <i class="fas fa-folder-tree"></i>
+            </div>
+
+            <div>
+              <span>BUKTI PEMBELAJARAN</span>
+              <h3>Analisis Artefak Semester II</h3>
+            </div>
+          </div>
+
+          <div class="artifact-list">
+            <div class="artifact-item">
+              <i class="fas fa-file-lines"></i>
+
+              <div>
+                <strong>Modul ajar dan perangkat pembelajaran</strong>
+                <span>
+                  Menunjukkan penerapan konsep pembelajaran, asesmen,
+                  diferensiasi, dan penyesuaian aktivitas dengan kebutuhan
+                  peserta didik.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-school"></i>
+
+              <div>
+                <strong>Dokumentasi PPL 2</strong>
+                <span>
+                  Menjadi bukti implementasi pembelajaran di kelas dan proses
+                  refleksi setelah praktik.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-display"></i>
+
+              <div>
+                <strong>Media pembelajaran Informatika</strong>
+                <span>
+                  Menunjukkan upaya menerjemahkan konsep menjadi pengalaman
+                  belajar yang lebih konkret dan interaktif.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-users-gear"></i>
+
+              <div>
+                <strong>Proyek Kepemimpinan</strong>
+                <span>
+                  Menjadi bukti kemampuan mengembangkan inovasi dari
+                  identifikasi masalah sampai rancangan solusi berbasis
+                  teknologi.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-chart-column"></i>
+
+              <div>
+                <strong>LK/refleksi dan analisis asesmen</strong>
+                <span>
+                  Menunjukkan proses evaluasi diri dan pemanfaatan data
+                  pembelajaran untuk menentukan tindak lanjut.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="practice-box">
+          <div class="practice-icon">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+
+          <div>
+            <span>IMPLEMENTASI</span>
+            <h3>Kaitan Praktis Semester II</h3>
+
+            <p>
+              Semester II membuat saya semakin memahami bahwa kompetensi guru
+              tidak berdiri sendiri. Kemampuan pedagogik, penguasaan
+              Informatika, keterampilan sosial emosional, inklusivitas,
+              kemampuan asesmen, kepemimpinan, dan kemauan belajar harus
+              berjalan bersama. Dalam praktiknya, saya ingin menggunakan data
+              dan refleksi sebagai dasar pengambilan keputusan, bukan hanya
+              mengandalkan kebiasaan atau intuisi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lk4" class="seminar-section alt">
+      <div class="container">
+        <div class="seminar-head">
+          <div class="label">
+            <span>Topik 4</span>
+            <b>LK 4</b>
+          </div>
+
+          <h2>Refleksi Pengalaman Belajar Selama Mengikuti PPG</h2>
+
+          <p>
+            Perjalanan PPG saya lihat sebagai proses perubahan dari seorang
+            pembelajar bidang Informatika menjadi calon guru yang lebih sadar
+            terhadap tanggung jawab pedagogik dan profesional.
+          </p>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-card-header">
+            <div class="topic-icon purple">
+              <i class="fas fa-road"></i>
+            </div>
+
+            <div>
+              <span class="topic-number">01</span>
+              <h3>Perjalanan Perubahan Diri</h3>
+            </div>
+          </div>
+
+          <div class="topic-card-body">
+            <p>
+              Pada awal mengikuti PPG, saya lebih banyak memandang kemampuan
+              guru dari sisi penguasaan materi dan kemampuan menyampaikan
+              materi. Setelah mengikuti berbagai mata kuliah, praktik, diskusi,
+              asesmen, dan refleksi, pandangan tersebut berkembang. Saya
+              memahami bahwa guru perlu memahami peserta didik, merancang
+              pengalaman belajar, mengelola kelas, melakukan asesmen, membangun
+              relasi, dan terus mengevaluasi praktiknya.
+            </p>
+
+            <p>
+              Pengalaman PPL menjadi bagian penting karena teori yang dipelajari
+              di kampus bertemu dengan kondisi nyata. Saya menemukan bahwa
+              peserta didik memiliki kesiapan dan respons yang berbeda. Ada
+              peserta didik yang cepat memahami materi, ada yang membutuhkan
+              contoh lebih sederhana, pendampingan, latihan tambahan, atau
+              motivasi. Pengalaman tersebut membuat saya lebih berhati-hati
+              dalam mengambil kesimpulan tentang kemampuan peserta didik.
+            </p>
+          </div>
+        </div>
+
+        <div class="four-c-grid reflection-change-grid">
+          <div class="four-c">
+            <div class="letter">1</div>
+
+            <h4>Perubahan Cara Pandang</h4>
+
+            <p>
+              Dari berfokus pada penyampaian materi menjadi berfokus pada proses
+              dan kebutuhan peserta didik.
+            </p>
+          </div>
+
+          <div class="four-c">
+            <div class="letter">2</div>
+
+            <h4>Perubahan Praktik</h4>
+
+            <p>
+              Dari mengandalkan satu pola pembelajaran menjadi lebih terbuka
+              terhadap diferensiasi, asesmen, praktik, dan proyek.
+            </p>
+          </div>
+
+          <div class="four-c">
+            <div class="letter">3</div>
+
+            <h4>Perubahan Sikap</h4>
+
+            <p>
+              Dari ingin segera memberikan jawaban menjadi lebih sabar
+              mendampingi peserta didik menemukan solusi.
+            </p>
+          </div>
+
+          <div class="four-c">
+            <div class="letter">4</div>
+
+            <h4>Perubahan Profesional</h4>
+
+            <p>
+              Dari melihat belajar sebagai kegiatan perkuliahan menjadi komitmen
+              untuk terus berkembang sebagai guru.
+            </p>
+          </div>
+        </div>
+
+        <div class="artifact-box">
+          <div class="artifact-title">
+            <div class="artifact-icon">
+              <i class="fas fa-images"></i>
+            </div>
+
+            <div>
+              <span>DOKUMENTASI</span>
+              <h3>Artefak yang Menjadi Bukti Perjalanan</h3>
+            </div>
+          </div>
+
+          <div class="artifact-list">
+            <div class="artifact-item">
+              <i class="fas fa-school"></i>
+
+              <div>
+                <strong>Dokumentasi PPL 1</strong>
+                <span>
+                  Memberikan bukti pengalaman awal berinteraksi dengan
+                  lingkungan sekolah dan kegiatan pendidikan.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-file-code"></i>
+
+              <div>
+                <strong>Modul dan media PPL 2</strong>
+                <span>
+                  Menunjukkan perkembangan kemampuan merancang pembelajaran
+                  Informatika secara lebih terstruktur.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-rotate"></i>
+
+              <div>
+                <strong>Refleksi pembelajaran dan siklus</strong>
+                <span>
+                  Menunjukkan kebiasaan mengevaluasi pembelajaran dan menentukan
+                  perbaikan.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-chart-column"></i>
+
+              <div>
+                <strong>Analisis penilaian</strong>
+                <span>
+                  Menunjukkan perubahan pemahaman bahwa data hasil belajar perlu
+                  digunakan untuk tindak lanjut.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-microchip"></i>
+
+              <div>
+                <strong>Proyek teknologi/inovasi</strong>
+                <span>
+                  Menunjukkan upaya menghubungkan kompetensi Informatika dengan
+                  permasalahan nyata dan kebutuhan pendidikan.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="practice-box">
+          <div class="practice-icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+
+          <div>
+            <span>KOMITMEN</span>
+            <h3>Komitmen Setelah PPG</h3>
+
+            <ul class="commitment-list">
+              <li>
+                <i class="fas fa-check"></i>
+                Terus memperbarui kompetensi Informatika dan pedagogik.
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Menggunakan asesmen sebagai dasar perbaikan, bukan sekadar
+                pemberian nilai.
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Membangun pembelajaran yang aktif, kontekstual, inklusif, dan
+                menyenangkan.
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Menjaga komunikasi yang empatik dengan peserta didik dan rekan
+                sejawat.
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Mendokumentasikan praktik baik dan refleksi untuk pengembangan
+                profesional.
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Berani mencoba inovasi, tetapi tetap mengevaluasi manfaatnya
+                berdasarkan kebutuhan peserta didik.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lk5" class="seminar-section">
+      <div class="container">
+        <div class="seminar-head">
+          <div class="label">
+            <span>Topik 5</span>
+            <b>LK 5</b>
+          </div>
+
+          <h2>Tahap Penyusunan Karya Inovasi Pendidikan</h2>
+
+          <p>
+            Karya inovasi pendidikan saya arahkan pada solusi yang berangkat
+            dari masalah nyata, memanfaatkan kompetensi Informatika, dapat
+            diuji, dan memiliki manfaat yang jelas bagi pembelajaran maupun
+            lingkungan sekolah.
+          </p>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-card-header">
+            <div class="topic-icon">
+              <i class="fas fa-magnifying-glass-chart"></i>
+            </div>
+
+            <div>
+              <span class="topic-number">01</span>
+              <h3>Gagasan Dasar</h3>
+            </div>
+          </div>
+
+          <div class="topic-card-body">
+            <p>
+              Tahap pertama adalah mengidentifikasi masalah yang benar-benar
+              terjadi di lingkungan pendidikan. Bagi saya, inovasi tidak harus
+              selalu berupa teknologi yang rumit. Inovasi dapat berupa perubahan
+              cara mengajar, media, sistem, maupun produk teknologi sederhana
+              selama mampu memberikan perbaikan yang terukur terhadap masalah
+              yang dihadapi.
+            </p>
+          </div>
+        </div>
+
+        <div class="innovation-wrapper">
+          <div class="innovation-line"></div>
+
+          <div class="innovation-steps">
+            <div class="innovation-step">
+              <div class="step-number">1</div>
+              <span>TAHAP 01</span>
+              <h4>Identifikasi Masalah</h4>
+
+              <p>
+                Mengamati kebutuhan sekolah/peserta didik, mengumpulkan data,
+                dan menentukan masalah prioritas.
+              </p>
+            </div>
+
+            <div class="innovation-step">
+              <div class="step-number">2</div>
+              <span>TAHAP 02</span>
+              <h4>Analisis Kebutuhan</h4>
+
+              <p>
+                Menentukan pengguna, tujuan, keterbatasan, sumber daya, dan
+                indikator keberhasilan.
+              </p>
+            </div>
+
+            <div class="innovation-step">
+              <div class="step-number">3</div>
+              <span>TAHAP 03</span>
+              <h4>Ide & Desain</h4>
+
+              <p>
+                Menyusun alternatif solusi, memilih ide paling realistis, lalu
+                membuat rancangan kerja.
+              </p>
+            </div>
+
+            <div class="innovation-step">
+              <div class="step-number">4</div>
+              <span>TAHAP 04</span>
+              <h4>Pengembangan Prototipe</h4>
+
+              <p>
+                Membuat produk awal atau sistem sederhana untuk membuktikan
+                bahwa gagasan dapat diwujudkan.
+              </p>
+            </div>
+
+            <div class="innovation-step">
+              <div class="step-number">5</div>
+              <span>TAHAP 05</span>
+              <h4>Uji Coba</h4>
+
+              <p>
+                Menguji fungsi, kemudahan penggunaan, kesesuaian dengan tujuan,
+                dan respons pengguna.
+              </p>
+            </div>
+
+            <div class="innovation-step">
+              <div class="step-number">6</div>
+              <span>TAHAP 06</span>
+              <h4>Evaluasi & Perbaikan</h4>
+
+              <p>
+                Menganalisis hasil uji, menemukan kekurangan, memperbaiki
+                desain, dan menguji kembali bila diperlukan.
+              </p>
+            </div>
+
+            <div class="innovation-step">
+              <div class="step-number">7</div>
+              <span>TAHAP 07</span>
+              <h4>Implementasi</h4>
+
+              <p>
+                Menerapkan karya pada konteks yang lebih nyata dengan prosedur
+                penggunaan dan pendampingan.
+              </p>
+            </div>
+
+            <div class="innovation-step">
+              <div class="step-number">8</div>
+              <span>TAHAP 08</span>
+              <h4>Dokumentasi & Diseminasi</h4>
+
+              <p>
+                Mendokumentasikan proses, hasil, dampak, pembelajaran, dan
+                membagikan praktik baik kepada pihak terkait.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-card innovation-project-card">
+          <div class="topic-card-header">
+            <div class="topic-icon orange">
+              <i class="fas fa-microchip"></i>
+            </div>
+
+            <div>
+              <span class="topic-number">02</span>
+              <h3>Pemilahan Sampah Berbasis ESP32</h3>
+              <small class="supporting-label">
+                Contoh Arah Karya Inovasi
+              </small>
+            </div>
+          </div>
+
+          <div class="topic-card-body">
+            <p>
+              Salah satu arah karya inovasi yang saya kembangkan adalah proyek
+              pemilahan sampah basah dan kering berbasis ESP32. Gagasan ini
+              menghubungkan Informatika, Internet of Things, kepedulian
+              lingkungan, dan pembelajaran berbasis proyek. Rancangan
+              menggunakan sensor kelembapan, dua sensor ultrasonik, servo motor,
+              serta LED indikator. Sistem diarahkan agar dapat membantu proses
+              pemilahan sekaligus memantau kapasitas tempat sampah.
+            </p>
+
+            <p>
+              Dari sisi pendidikan, proyek ini dapat digunakan sebagai konteks
+              pembelajaran Informatika karena peserta didik dapat mempelajari
+              sensor, input-proses-output, pemrograman mikrokontroler,
+              pengujian, pemecahan masalah, dan pengembangan sistem. Tahap
+              lanjutan dapat menghubungkan data perangkat dengan dashboard
+              sehingga peserta didik memahami bahwa teknologi dapat digunakan
+              untuk menyelesaikan permasalahan nyata.
+            </p>
+          </div>
+
+          <div class="reflection-note">
+            <i class="fas fa-lightbulb"></i>
+
+            <p>
+              <strong>Prinsip inovasi:</strong>
+              teknologi bukan tujuan akhir. Nilai inovasi terletak pada
+              kemampuan solusi untuk menjawab kebutuhan, mudah dikembangkan,
+              dapat diuji, dan memberikan dampak yang jelas.
+            </p>
+          </div>
+        </div>
+
+        <div class="artifact-box">
+          <div class="artifact-title">
+            <div class="artifact-icon">
+              <i class="fas fa-box-open"></i>
+            </div>
+
+            <div>
+              <span>BUKTI KARYA</span>
+              <h3>Artefak Karya Inovasi</h3>
+            </div>
+          </div>
+
+          <div class="artifact-list">
+            <div class="artifact-item">
+              <i class="fas fa-bullseye"></i>
+
+              <div>
+                <strong>Rancangan masalah dan tujuan</strong>
+                <span>
+                  Menjadi bukti bahwa karya berangkat dari kebutuhan nyata,
+                  bukan sekadar mengikuti teknologi.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-diagram-project"></i>
+
+              <div>
+                <strong>Diagram/alur sistem</strong>
+                <span>
+                  Menjelaskan hubungan input, proses, output, dan alur kerja
+                  solusi.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-code"></i>
+
+              <div>
+                <strong>Program ESP32</strong>
+                <span>
+                  Menjadi bukti penerapan algoritma dan pemrograman untuk
+                  mengendalikan perangkat.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-flask"></i>
+
+              <div>
+                <strong>Prototipe dan dokumentasi uji</strong>
+                <span>
+                  Menunjukkan proses pengembangan, pengujian, kendala, dan
+                  perbaikan produk.
+                </span>
+              </div>
+            </div>
+
+            <div class="artifact-item">
+              <i class="fas fa-chart-line"></i>
+
+              <div>
+                <strong>Rencana dashboard monitoring</strong>
+                <span>
+                  Menunjukkan pengembangan inovasi menuju pemanfaatan data
+                  secara real-time.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="practice-box innovation-final">
+          <div class="practice-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+
+          <div>
+            <span>ARAH PENGEMBANGAN</span>
+            <h3>Perubahan yang Akan Saya Lakukan</h3>
+
+            <p>
+              Ke depan, saya ingin menyusun karya inovasi secara lebih
+              sistematis dengan selalu memulai dari masalah dan kebutuhan
+              pengguna. Saya akan menetapkan indikator keberhasilan sejak awal,
+              melakukan uji coba, mengumpulkan umpan balik, dan melakukan
+              perbaikan berdasarkan data. Saya juga ingin memastikan bahwa
+              setiap teknologi yang saya gunakan memiliki tujuan pendidikan yang
+              jelas dan dapat memberikan pengalaman belajar yang bermakna bagi
+              peserta didik.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">
+          © <span id="year"></span>
+          Arjun Yuda Firwanda | E-Portofolio PPG Informatika UPI
+        </p>
+      </div>
+    </footer>
+
+    <button
+      id="scrollTopBtn"
+      type="button"
+      title="Kembali ke Atas"
+      aria-label="Kembali ke Atas"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".seminar-nav a");
+        const sections = document.querySelectorAll(".seminar-section");
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                navLinks.forEach(function (link) {
+                  link.classList.remove("active");
+                });
+
+                const activeLink = document.querySelector(
+                  '.seminar-nav a[href="#' + entry.target.id + '"]',
+                );
+
+                if (activeLink) {
+                  activeLink.classList.add("active");
+                }
+              }
+            });
+          },
+          {
+            rootMargin: "-25% 0px -60% 0px",
+            threshold: 0,
+          },
+        );
+
+        sections.forEach(function (section) {
+          observer.observe(section);
+        });
+
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            const targetId = this.getAttribute("href");
+
+            if (!targetId || !targetId.startsWith("#")) {
+              return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (!target) {
+              return;
+            }
+
+            event.preventDefault();
+            const navHeight = 82;
+            const targetPosition =
+              target.getBoundingClientRect().top + window.scrollY - navHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          });
+        });
+
+        const cards = document.querySelectorAll(
+          ".seminar-page .topic-card, " +
+            ".seminar-page .seminar-course, " +
+            ".seminar-page .four-c, " +
+            ".seminar-page .artifact-box, " +
+            ".seminar-page .practice-box, " +
+            ".seminar-page .innovation-step",
+        );
+
+        cards.forEach(function (card) {
+          const bubble = document.createElement("span");
+          bubble.className = "cursor-bubble";
+          bubble.setAttribute("aria-hidden", "true");
+          card.appendChild(bubble);
+          card.addEventListener("pointermove", function (event) {
+            const rect = card.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            card.style.setProperty("--mouse-x", x + "px");
+            card.style.setProperty("--mouse-y", y + "px");
+            card.classList.add("has-cursor-bubble");
+          });
+
+          card.addEventListener("pointerenter", function () {
+            card.classList.add("has-cursor-bubble");
+          });
+
+          card.addEventListener("pointerleave", function () {
+            card.classList.remove("has-cursor-bubble");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
