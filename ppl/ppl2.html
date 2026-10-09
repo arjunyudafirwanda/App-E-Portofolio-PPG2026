@@ -1692,6 +1692,61 @@
           font-size: 13px;
         }
       }
+
+      #video .ppl2-video-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        gap: 24px;
+        margin-inline: auto;
+        box-sizing: border-box;
+      }
+
+      #video .ppl2-video-card {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 28px;
+      }
+
+      #video .ppl2-video-card > p {
+        line-height: 1.8;
+        margin-bottom: 22px;
+      }
+
+      #video .ppl2-video-card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      #video .ppl2-resource-caption {
+        display: block;
+        margin-top: 14px;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 768px) {
+        #video .ppl2-video-card {
+          padding: 22px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #video .ppl2-video-card {
+          padding: 18px;
+        }
+
+        #video .ppl2-video-card-head {
+          align-items: flex-start;
+        }
+      }
     </style>
   </head>
 
@@ -3505,210 +3560,176 @@
 
     <section class="ppl2-section" id="video">
       <div class="container">
+        <!-- HEADER SECTION -->
         <div class="ppl2-section-head">
           <div class="number">06 · Video Praktik</div>
 
           <h2>Analisis Video Pelaksanaan Praktik Mengajar Mandiri</h2>
 
           <p>
-            Video praktik menjadi bukti autentik pelaksanaan rancangan
-            pembelajaran. Tautan video akan ditempatkan menggunakan Google Drive
-            agar dapat diakses sebagai bukti UTS dan UAS sesuai siklus yang
-            dipilih.
+            Dokumentasi video praktik mengajar mandiri menjadi bahan untuk
+            merefleksikan pelaksanaan pembelajaran, interaksi guru dan peserta
+            didik, penggunaan media, pengelolaan waktu, serta strategi
+            pendampingan selama PPL 2. Seluruh video dapat diakses melalui satu
+            tautan Google Drive.
           </p>
         </div>
 
+        <!-- SATU CARD VIDEO GOOGLE DRIVE -->
         <div class="ppl2-video-grid">
           <article class="ppl2-video-card">
             <div class="ppl2-video-card-head">
-              <h3>Siklus 1 · UTS</h3>
-              <span class="ppl2-cycle-badge"
-                ><i class="fas fa-flag-checkered"></i> UTS</span
-              >
-            </div>
-            <p>
-              Video praktik dari rancangan Siklus 1: Informatika Sekarang dan di
-              Masa Depan dengan dua pertemuan tentang perkembangan teknologi.
-            </p>
-            <a
-              href="#"
-              class="ppl2-drive-btn placeholder"
-              title="Siklus 1"
-              aria-label="Video Google Drive Siklus 1 belum ditambahkan"
-            >
-              <i class="fab fa-google-drive"></i>
-              Tambahkan Link Google Drive
-            </a>
-            <span class="ppl2-resource-caption">
-              Ganti <code>href="#"</code> dengan tautan Google Drive video
-              Siklus 1.
-            </span>
-          </article>
+              <h3>Video Praktik Mengajar Mandiri PPL 2</h3>
 
-          <article class="ppl2-video-card">
-            <div class="ppl2-video-card-head">
-              <h3>Siklus 2 · UAS</h3>
-              <span class="ppl2-cycle-badge"
-                ><i class="fas fa-layer-group"></i> UAS</span
-              >
+              <span class="ppl2-cycle-badge">
+                <i class="fas fa-video"></i>
+                PPL 2
+              </span>
             </div>
-            <p>
-              Video praktik dari rancangan Siklus 2: Pengenalan Sistem Komputer
-              dan Sensor dalam dua pertemuan.
-            </p>
-            <a
-              href="#"
-              class="ppl2-drive-btn placeholder"
-              title="Siklus 2"
-              aria-label="Video Google Drive Siklus 2 belum ditambahkan"
-            >
-              <i class="fab fa-google-drive"></i>
-              Tambahkan Link Google Drive
-            </a>
-            <span class="ppl2-resource-caption">
-              Ganti <code>href="#"</code> dengan tautan Google Drive video
-              Siklus 2.
-            </span>
-          </article>
 
-          <article class="ppl2-video-card">
-            <div class="ppl2-video-card-head">
-              <h3>Siklus 3 · UAS</h3>
-              <span class="ppl2-cycle-badge"
-                ><i class="fas fa-microchip"></i> UAS</span
-              >
-            </div>
             <p>
-              Video praktik Arduino Uno: lampu berkedip dan RGB, kemudian Serial
-              Monitor serta sensor suhu DHT22 pada pertemuan berikutnya.
+              Kumpulan dokumentasi video praktik mengajar mandiri selama PPL 2
+              yang mencakup pelaksanaan pembelajaran Informatika, penyampaian
+              materi, penggunaan media pembelajaran, kegiatan praktik, serta
+              pendampingan peserta didik. Video ini menjadi bahan refleksi untuk
+              mengevaluasi dan meningkatkan kualitas pelaksanaan pembelajaran.
             </p>
-            <a
-              href="#"
-              class="ppl2-drive-btn placeholder"
-              title="Siklus 3"
-              aria-label="Video Google Drive Siklus 3 belum ditambahkan"
-            >
-              <i class="fab fa-google-drive"></i>
-              Tambahkan Link Google Drive
-            </a>
-            <span class="ppl2-resource-caption">
-              Ganti <code>href="#"</code> dengan tautan Google Drive video
-              Siklus 3.
-            </span>
-          </article>
 
-          <article class="ppl2-video-card">
-            <div class="ppl2-video-card-head">
-              <h3>Siklus 4 · UAS</h3>
-              <span class="ppl2-cycle-badge"
-                ><i class="fas fa-microchip"></i> UAS</span
-              >
-            </div>
-            <p>
-              Video praktik Arduino Nano: lampu berkedip dan RGB, kemudian
-              Serial Monitor serta sensor suhu DHT22 pada pertemuan berikutnya.
-            </p>
             <a
-              href="#"
-              class="ppl2-drive-btn placeholder"
-              title="Siklus 4"
-              aria-label="Video Google Drive Siklus 4 belum ditambahkan"
+              href="https://drive.google.com/file/d/1pWDXS2aYaztS05l2tlHaO2nurdMEKciy/view?usp=sharing"
+              class="ppl2-drive-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Buka Video Praktik Mengajar Mandiri PPL 2"
+              aria-label="Buka kumpulan video praktik mengajar mandiri PPL 2 di Google Drive"
             >
               <i class="fab fa-google-drive"></i>
-              Tambahkan Link Google Drive
+              Buka Video di Google Drive
+              <i
+                class="fas fa-arrow-up-right-from-square"
+                style="margin-left: 6px"
+              ></i>
             </a>
+
             <span class="ppl2-resource-caption">
-              Ganti <code>href="#"</code> dengan tautan Google Drive video
-              Siklus 4.
+              Klik tombol untuk mengakses dokumentasi video praktik mengajar
+              mandiri melalui Google Drive.
             </span>
           </article>
         </div>
 
+        <!-- TIMELINE REFLEKSI PELAKSANAAN -->
         <div class="ppl2-timeline" style="margin-top: 34px">
           <div class="ppl2-timeline-item">
             <div class="ppl2-timeline-dot"></div>
+
             <h3>01. Pembukaan</h3>
+
             <p>
               Pembelajaran diarahkan untuk membangun kesiapan peserta didik,
               menghubungkan materi dengan pengetahuan sebelumnya, menyampaikan
-              tujuan, serta memberikan konteks kegiatan yang akan dilakukan.
+              tujuan pembelajaran, serta memberikan konteks kegiatan yang akan
+              dilakukan.
             </p>
           </div>
 
           <div class="ppl2-timeline-item">
             <div class="ppl2-timeline-dot"></div>
+
             <h3>02. Penyampaian Konsep</h3>
+
             <p>
-              Konsep dijelaskan secara bertahap dengan bantuan media visual.
-              Pada praktik Arduino, penjelasan diarahkan pada fungsi komponen,
-              pin, dan alasan penggunaan setiap bagian program.
+              Konsep disampaikan secara bertahap dengan bantuan media
+              pembelajaran yang relevan. Pada praktik Arduino, penjelasan
+              diarahkan pada fungsi komponen, penggunaan pin, serta hubungan
+              antara rangkaian dan kode program.
             </p>
           </div>
 
           <div class="ppl2-timeline-item">
             <div class="ppl2-timeline-dot"></div>
+
             <h3>03. Praktik dan Pendampingan</h3>
+
             <p>
-              Peserta didik diberi kesempatan mencoba. Guru memberikan arahan,
-              pertanyaan pemantik, dan pendampingan ketika peserta didik
-              menemukan kesulitan dalam simulator, program, atau pembacaan
-              sensor.
+              Peserta didik diberi kesempatan untuk mencoba dan menerapkan
+              materi yang dipelajari. Guru memberikan arahan, pertanyaan
+              pemantik, dan pendampingan ketika peserta didik mengalami
+              kesulitan dalam menggunakan simulator, menyusun program, atau
+              memahami pembacaan sensor.
             </p>
           </div>
 
           <div class="ppl2-timeline-item">
             <div class="ppl2-timeline-dot"></div>
+
             <h3>04. Refleksi Pelaksanaan</h3>
+
             <p>
-              Analisis video diarahkan pada pengelolaan waktu, pemerataan
-              pendampingan, kejelasan instruksi praktik, interaksi guru-peserta
-              didik, pemanfaatan media, dan penguatan refleksi di akhir
-              pembelajaran.
+              Refleksi difokuskan pada pengelolaan waktu, kejelasan instruksi,
+              pemerataan pendampingan, interaksi guru dan peserta didik,
+              pemanfaatan media pembelajaran, serta upaya meningkatkan
+              keterlibatan peserta didik selama kegiatan berlangsung.
             </p>
           </div>
         </div>
 
+        <!-- CATATAN REFLEKTIF -->
         <div class="ppl2-analysis">
           <h3 class="ppl2-analysis-title">
             <i class="fas fa-video"></i>
-            Catatan Reflektif dari Video
+            Catatan Reflektif Praktik Mengajar
           </h3>
 
           <div class="ppl2-analysis-grid">
+            <!-- YANG SUDAH BAIK -->
             <div class="ppl2-analysis-item">
-              <h4>Yang sudah baik</h4>
+              <h4>Yang Sudah Baik</h4>
+
               <p>
-                Pembelajaran memiliki alur yang jelas dan media praktik membantu
-                mengubah konsep menjadi pengalaman yang dapat diamati peserta
-                didik.
+                Pembelajaran dirancang dengan alur kegiatan yang jelas.
+                Penggunaan media visual, simulasi, dan praktik membantu
+                menghubungkan konsep Informatika dengan penerapannya. Variasi
+                kegiatan juga memberikan kesempatan kepada peserta didik untuk
+                terlibat dalam proses pembelajaran.
               </p>
             </div>
 
+            <!-- YANG PERLU DIPERBAIKI -->
             <div class="ppl2-analysis-item">
-              <h4>Yang perlu diperbaiki</h4>
+              <h4>Yang Perlu Diperbaiki</h4>
+
               <p>
-                Instruksi kerja perlu lebih ringkas. Waktu antara penjelasan dan
-                praktik perlu diatur agar peserta didik memiliki waktu cukup
-                untuk mencoba, melakukan debugging, dan menuntaskan tugas.
+                Instruksi kegiatan perlu disampaikan secara ringkas dan
+                bertahap. Pengaturan waktu antara penjelasan dan praktik juga
+                perlu diperhatikan agar peserta didik memiliki kesempatan untuk
+                mencoba, melakukan debugging, dan menyelesaikan tugas dengan
+                baik.
               </p>
             </div>
 
+            <!-- INSIGHT PROFESIONAL -->
             <div class="ppl2-analysis-item">
-              <h4>Insight profesional</h4>
+              <h4>Insight Profesional</h4>
+
               <p>
-                Penguasaan materi saja belum cukup. Guru perlu mampu membaca
-                respons peserta didik, mengelola ritme kelas, serta menyesuaikan
-                bantuan berdasarkan kebutuhan masing-masing peserta didik.
+                Penguasaan materi saja belum cukup. Guru perlu memahami respons
+                peserta didik, mengelola ritme kelas, membangun komunikasi yang
+                positif, serta menyesuaikan bantuan berdasarkan kesiapan dan
+                kebutuhan belajar masing-masing peserta didik.
               </p>
             </div>
 
+            <!-- TINDAK LANJUT -->
             <div class="ppl2-analysis-item">
-              <h4>Tindak lanjut dari analisis video</h4>
+              <h4>Tindak Lanjut</h4>
+
               <p>
-                Hasil pengamatan video menjadi dasar untuk memperjelas
-                instruksi, membagi waktu praktik dengan lebih terukur, dan
-                menyiapkan bantuan bertahap agar peserta didik dapat bekerja
-                lebih mandiri.
+                Hasil refleksi digunakan sebagai dasar untuk memperjelas
+                instruksi, mengatur waktu pembelajaran secara lebih terukur,
+                meningkatkan pemerataan pendampingan, serta menyiapkan bantuan
+                bertahap agar peserta didik dapat belajar dan menyelesaikan
+                tugas secara lebih mandiri.
               </p>
             </div>
           </div>
