@@ -8,24 +8,18 @@
 
     <link rel="icon" type="image/png" href="../assets/img/pages.png" />
 
-    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
-    <!-- CSS Utama Project -->
     <link rel="stylesheet" href="../css/style.css" />
 
-    <!-- =====================================================
-         CSS KHUSUS HALAMAN PPL 2
-    ====================================================== -->
     <style>
       :root {
         --ppl2-blue: #2563eb;
@@ -42,13 +36,8 @@
         scroll-behavior: smooth;
       }
 
-      /* =====================================================
-         HERO
-      ====================================================== */
-
       .ppl2-hero {
         padding: 75px 0 55px;
-
         background:
           radial-gradient(
             circle at 85% 15%,
@@ -73,26 +62,18 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-
         padding: 8px 14px;
-
         border-radius: 999px;
-
         background: rgba(37, 99, 235, 0.1);
-
         color: var(--ppl2-blue);
-
         font-size: 13px;
         font-weight: 700;
-
         margin-bottom: 18px;
       }
 
       .ppl2-hero h1 {
         margin: 0 0 16px;
-
         font-size: clamp(2rem, 4vw, 3.2rem);
-
         line-height: 1.15;
       }
 
@@ -102,47 +83,33 @@
 
       .ppl2-hero p {
         line-height: 1.8;
-
         max-width: 850px;
       }
 
       .ppl2-hero-meta {
         display: flex;
         flex-wrap: wrap;
-
         gap: 10px;
-
         margin: 22px 0 26px;
       }
 
       .ppl2-chip {
         padding: 9px 13px;
-
         border-radius: 10px;
-
         background: var(--card);
-
         border: 1px solid var(--ppl2-border);
-
         font-size: 13px;
-
         font-weight: 600;
       }
 
       .ppl2-hero-card {
         position: relative;
         overflow: hidden;
-
         background: var(--card);
-
         border-radius: 22px;
-
         padding: 28px;
-
         box-shadow: 0 15px 40px rgba(30, 64, 175, 0.12);
-
         border: 1px solid var(--ppl2-border);
-
         transition:
           transform 0.35s ease,
           box-shadow 0.35s ease,
@@ -151,19 +118,13 @@
 
       .ppl2-hero-card::before {
         content: "";
-
         position: absolute;
-
         width: 160px;
         height: 160px;
-
         top: -80px;
         right: -80px;
-
         border-radius: 50%;
-
         background: rgba(37, 99, 235, 0.06);
-
         transition:
           transform 0.5s ease,
           background 0.5s ease;
@@ -171,9 +132,7 @@
 
       .ppl2-hero-card:hover {
         transform: translateY(-7px);
-
         border-color: rgba(37, 99, 235, 0.3);
-
         box-shadow:
           0 22px 50px rgba(30, 64, 175, 0.17),
           0 5px 15px rgba(15, 23, 42, 0.05);
@@ -181,25 +140,18 @@
 
       .ppl2-hero-card:hover::before {
         transform: scale(1.4);
-
         background: rgba(37, 99, 235, 0.09);
       }
 
       .ppl2-hero-card .icon {
         width: 62px;
         height: 62px;
-
         display: grid;
         place-items: center;
-
         border-radius: 18px;
-
         background: rgba(37, 99, 235, 0.1);
-
         color: var(--ppl2-blue);
-
         font-size: 27px;
-
         margin-bottom: 18px;
       }
 
@@ -209,25 +161,15 @@
 
       .ppl2-hero-card p {
         font-size: 14px;
-
         line-height: 1.7;
       }
 
-      /* =====================================================
-         NAVIGASI PPL 2
-      ====================================================== */
-
       .ppl2-nav-wrap {
         position: sticky;
-
         top: 0;
-
         z-index: 50;
-
         background: rgba(255, 255, 255, 0.94);
-
         backdrop-filter: blur(12px);
-
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       }
 
@@ -237,37 +179,25 @@
 
       .ppl2-nav {
         display: flex;
-
         gap: 8px;
-
         overflow-x: auto;
-
         padding: 12px 0;
-
         scrollbar-width: thin;
       }
 
       .ppl2-nav a {
         white-space: nowrap;
-
         padding: 9px 13px;
-
         border-radius: 9px;
-
         font-size: 12px;
-
         font-weight: 600;
-
         text-decoration: none;
-
         color: inherit;
-
         background: rgba(100, 116, 139, 0.08);
       }
 
       .ppl2-nav a:hover {
         background: rgba(37, 99, 235, 0.12);
-
         color: var(--ppl2-blue);
       }
 
@@ -290,10 +220,6 @@
         opacity: 1;
       }
 
-      /* =====================================================
-         SECTION
-      ====================================================== */
-
       .ppl2-section {
         padding: 62px 0;
       }
@@ -304,62 +230,42 @@
 
       .ppl2-section-head {
         max-width: 850px;
-
         margin: 0 auto 30px;
-
         text-align: center;
       }
 
       .ppl2-section-head .number {
         color: var(--ppl2-blue);
-
         font-size: 13px;
-
         font-weight: 800;
-
         letter-spacing: 0.08em;
-
         text-transform: uppercase;
       }
 
       .ppl2-section-head h2 {
         margin: 7px 0 10px;
-
         font-size: clamp(1.55rem, 3vw, 2.15rem);
       }
 
       .ppl2-section-head p {
         line-height: 1.75;
-
         margin: 0;
       }
 
-      /* =====================================================
-         CARD
-      ====================================================== */
-
       .ppl2-card-grid {
         display: grid;
-
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
         gap: 20px;
       }
 
       .ppl2-card {
         position: relative;
         overflow: hidden;
-
         background: var(--card);
-
         border: 1px solid var(--ppl2-border);
-
         border-radius: 18px;
-
         padding: 23px;
-
         box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
-
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease,
@@ -367,43 +273,31 @@
           background 0.3s ease;
       }
 
-      /* Garis aksen bagian atas card */
       .ppl2-card::before {
         content: "";
-
         position: absolute;
-
         top: 0;
         left: 0;
-
         width: 100%;
         height: 3px;
-
         background: linear-gradient(
           90deg,
           var(--ppl2-blue),
           var(--ppl2-indigo)
         );
-
         transform: scaleX(0);
-
         transform-origin: left;
-
         transition: transform 0.35s ease;
       }
 
-      /* Hover utama */
       .ppl2-card:hover {
         transform: translateY(-7px);
-
         border-color: rgba(37, 99, 235, 0.35);
-
         box-shadow:
           0 18px 40px rgba(37, 99, 235, 0.13),
           0 5px 15px rgba(15, 23, 42, 0.06);
       }
 
-      /* Garis atas muncul saat hover */
       .ppl2-card:hover::before {
         transform: scaleX(1);
       }
@@ -411,19 +305,12 @@
       .ppl2-card .card-icon {
         width: 45px;
         height: 45px;
-
         display: grid;
-
         place-items: center;
-
         border-radius: 13px;
-
         background: rgba(37, 99, 235, 0.1);
-
         color: var(--ppl2-blue);
-
         margin-bottom: 15px;
-
         transition:
           transform 0.3s ease,
           background 0.3s ease,
@@ -432,9 +319,7 @@
 
       .ppl2-card:hover .card-icon {
         transform: translateY(-3px) scale(1.08);
-
         background: var(--ppl2-blue);
-
         color: #ffffff;
       }
 
@@ -446,63 +331,42 @@
       .ppl2-card p,
       .ppl2-card li {
         font-size: 14px;
-
         line-height: 1.75;
       }
 
       .ppl2-card ul {
         padding-left: 19px;
-
         margin-bottom: 0;
       }
 
-      /* =====================================================
-         ANALYSIS BOX
-      ====================================================== */
-
       .ppl2-analysis {
         margin-top: 28px;
-
         padding: 27px;
-
         border-radius: 18px;
-
         background: var(--card);
-
         border: 1px solid var(--ppl2-border);
-
         box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
       }
 
       .ppl2-analysis-title {
         display: flex;
-
         align-items: center;
-
         gap: 10px;
-
         color: var(--ppl2-blue);
-
         margin-bottom: 20px;
       }
 
       .ppl2-analysis-grid {
         display: grid;
-
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-
         gap: 16px;
       }
 
       .ppl2-analysis-item {
         padding: 18px;
-
         border-radius: 13px;
-
         background: rgba(100, 116, 139, 0.055);
-
         border: 1px solid transparent;
-
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease,
@@ -512,33 +376,22 @@
 
       .ppl2-analysis-item:hover {
         transform: translateY(-4px);
-
         border-color: rgba(37, 99, 235, 0.2);
-
         background: rgba(37, 99, 235, 0.045);
-
         box-shadow: 0 12px 25px rgba(37, 99, 235, 0.08);
       }
 
       .ppl2-analysis-item h4 {
         font-size: 14px;
-
         margin-bottom: 8px;
       }
 
       .ppl2-analysis-item p {
         margin: 0;
-
         font-size: 13px;
-
         line-height: 1.75;
-
         text-align: justify;
       }
-
-      /* =====================================================
-         EVIDENCE
-      ====================================================== */
 
       .ppl2-evidence {
         transition:
@@ -549,9 +402,7 @@
 
       .ppl2-evidence:hover {
         transform: translateY(-2px);
-
         background: rgba(37, 99, 235, 0.09);
-
         border-color: rgba(37, 99, 235, 0.4);
       }
 
@@ -564,9 +415,7 @@
 
       .ppl2-mini-btn:hover {
         opacity: 1;
-
         transform: translateY(-2px);
-
         box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
       }
 
@@ -576,23 +425,14 @@
 
       .ppl2-mini-btn {
         display: inline-flex;
-
         align-items: center;
-
         gap: 7px;
-
         padding: 9px 13px;
-
         border-radius: 9px;
-
         background: var(--ppl2-blue);
-
         color: white !important;
-
         text-decoration: none;
-
         font-size: 12px;
-
         font-weight: 700;
       }
 
@@ -600,35 +440,21 @@
         opacity: 0.9;
       }
 
-      /* =====================================================
-         FLOW
-      ====================================================== */
-
       .ppl2-flow {
         display: grid;
-
         grid-template-columns: repeat(6, 1fr);
-
         gap: 10px;
-
         margin-top: 25px;
       }
 
       .ppl2-flow-item {
         position: relative;
-
         text-align: center;
-
         padding: 18px 10px;
-
         border-radius: 15px;
-
         background: var(--card);
-
         border: 1px solid var(--ppl2-border);
-
         box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
-
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease,
@@ -638,21 +464,15 @@
 
       .ppl2-flow-item:hover {
         transform: translateY(-5px);
-
         border-color: rgba(37, 99, 235, 0.3);
-
         box-shadow: 0 14px 30px rgba(37, 99, 235, 0.1);
-
         background: rgba(37, 99, 235, 0.035);
       }
 
       .ppl2-flow-item i {
         color: var(--ppl2-blue);
-
         font-size: 20px;
-
         margin-bottom: 9px;
-
         transition:
           transform 0.3s ease,
           color 0.3s ease;
@@ -660,164 +480,107 @@
 
       .ppl2-flow-item:hover i {
         transform: scale(1.15) translateY(-2px);
-
         color: var(--ppl2-indigo);
       }
 
       .ppl2-flow-item i {
         color: var(--ppl2-blue);
-
         font-size: 20px;
-
         margin-bottom: 9px;
       }
 
       .ppl2-flow-item strong {
         display: block;
-
         font-size: 12px;
       }
 
       .ppl2-flow-item span {
         display: block;
-
         font-size: 11px;
-
         margin-top: 5px;
-
         opacity: 0.72;
       }
 
-      /* =====================================================
-         TIMELINE VIDEO
-      ====================================================== */
-
       .ppl2-timeline {
         position: relative;
-
         max-width: 900px;
-
         margin: auto;
       }
 
       .ppl2-timeline::before {
         content: "";
-
         position: absolute;
-
         left: 17px;
-
         top: 10px;
-
         bottom: 10px;
-
         width: 2px;
-
         background: rgba(37, 99, 235, 0.2);
       }
 
       .ppl2-timeline-item {
         position: relative;
-
         padding-left: 55px;
-
         margin-bottom: 28px;
       }
 
       .ppl2-timeline-dot {
         position: absolute;
-
         left: 7px;
-
         top: 5px;
-
         width: 22px;
-
         height: 22px;
-
         border-radius: 50%;
-
         background: var(--ppl2-blue);
-
         border: 5px solid var(--card);
-
         box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
       }
 
       .ppl2-timeline-item h3 {
         margin-bottom: 7px;
-
         color: var(--ppl2-blue);
       }
 
       .ppl2-timeline-item p {
         line-height: 1.75;
-
         margin: 0;
       }
 
-      /* =====================================================
-         TABLE ASESMEN
-      ====================================================== */
-
       .ppl2-assessment-table {
         width: 100%;
-
         border-collapse: collapse;
-
         background: var(--card);
-
         border-radius: 15px;
-
         overflow: hidden;
-
         box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
       }
 
       .ppl2-assessment-table th,
       .ppl2-assessment-table td {
         padding: 14px;
-
         border-bottom: 1px solid rgba(100, 116, 139, 0.13);
-
         text-align: left;
-
         vertical-align: top;
-
         font-size: 13px;
-
         line-height: 1.65;
       }
 
       .ppl2-assessment-table th {
         background: rgba(37, 99, 235, 0.08);
-
         color: var(--ppl2-blue);
       }
 
-      /* =====================================================
-         REFLECTION
-      ====================================================== */
-
       .ppl2-reflection {
         display: grid;
-
         grid-template-columns: repeat(2, 1fr);
-
         gap: 18px;
       }
 
       .ppl2-reflection-card {
         background: var(--card);
-
         border-radius: 16px;
-
         padding: 23px;
-
         border-left: 4px solid var(--ppl2-blue);
-
         box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
-
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease,
@@ -826,11 +589,9 @@
 
       .ppl2-reflection-card:hover {
         transform: translateY(-5px);
-
         box-shadow:
           0 16px 35px rgba(37, 99, 235, 0.1),
           0 5px 15px rgba(15, 23, 42, 0.05);
-
         border-left-width: 6px;
       }
 
@@ -840,25 +601,15 @@
 
       .ppl2-reflection-card p {
         margin: 0;
-
         line-height: 1.8;
-
         font-size: 14px;
-
         text-align: justify;
       }
 
-      /* =====================================================
-         QUOTE
-      ====================================================== */
-
       .ppl2-quote {
         margin-top: 28px;
-
         padding: 25px 28px;
-
         border-radius: 17px;
-
         background: linear-gradient(
           135deg,
           rgba(37, 99, 235, 0.1),
@@ -866,85 +617,56 @@
         );
 
         border: 1px solid rgba(37, 99, 235, 0.15);
-
         text-align: center;
       }
 
       .ppl2-quote i {
         color: var(--ppl2-blue);
-
         font-size: 23px;
       }
 
       .ppl2-quote p {
         max-width: 850px;
-
         margin: 12px auto 0;
-
         font-size: 17px;
-
         font-weight: 600;
-
         line-height: 1.7;
       }
 
-      /* =====================================================
-         CHECKLIST
-      ====================================================== */
-
       .ppl2-checklist {
         display: grid;
-
         gap: 11px;
       }
 
       .ppl2-check {
         display: flex;
-
         gap: 11px;
-
         align-items: flex-start;
-
         padding: 13px 15px;
-
         border-radius: 11px;
-
         background: rgba(100, 116, 139, 0.055);
       }
 
       .ppl2-check i {
         color: var(--ppl2-green);
-
         margin-top: 4px;
       }
 
       .ppl2-check span {
         font-size: 13px;
-
         line-height: 1.65;
       }
 
-      /* =====================================================
-         GALLERY LINK
-      ====================================================== */
-
       .ppl2-gallery-note {
         text-align: center;
-
         margin-top: 25px;
       }
 
       .ppl2-gallery-note a {
         display: inline-flex;
-
         align-items: center;
-
         gap: 8px;
       }
-
-      /* =====================================================
-         DARK MODE
-      ====================================================== */
 
       .dark .ppl2-analysis-item,
       .dark .ppl2-check {
@@ -954,10 +676,6 @@
       .dark .ppl2-assessment-table th {
         background: rgba(96, 165, 250, 0.12);
       }
-
-      /* =====================================================
-         RESPONSIVE
-      ====================================================== */
 
       @media (max-width: 900px) {
         .ppl2-hero-inner {
@@ -990,17 +708,10 @@
 
         .ppl2-assessment-table {
           display: block;
-
           overflow-x: auto;
-
           white-space: normal;
         }
       }
-
-      /* =====================================================
-   TEXT ALIGNMENT - PPL 2
-   Membuat seluruh paragraf analisis rata kanan-kiri
-===================================================== */
 
       .ppl2-section p,
       .ppl2-card p,
@@ -1013,21 +724,18 @@
         line-height: 1.8;
       }
 
-      /* Paragraf pada hero tetap justify */
       .ppl2-hero p {
         text-align: justify;
         text-justify: inter-word;
         line-height: 1.8;
       }
 
-      /* Judul dan heading jangan justify */
       .ppl2-section-head,
       .ppl2-section-head h2,
       .ppl2-section-head p {
         text-align: center;
       }
 
-      /* Judul card tetap rata kiri */
       .ppl2-card h3,
       .ppl2-card h4,
       .ppl2-analysis-title,
@@ -1037,25 +745,18 @@
         text-align: left;
       }
 
-      /* Tabel tetap rata kiri agar mudah dibaca */
       .ppl2-assessment-table th,
       .ppl2-assessment-table td {
         text-align: left;
       }
 
-      /* Checklist tetap rata kiri */
       .ppl2-check span {
         text-align: left;
       }
 
-      /* Quote tetap rata tengah */
       .ppl2-quote p {
         text-align: center;
       }
-
-      /* =====================================================
-   PPL 2 - EVIDENCE FILES
-===================================================== */
 
       .ppl2-evidence-header {
         display: flex;
@@ -1085,17 +786,12 @@
         display: flex;
         align-items: center;
         gap: 13px;
-
         padding: 14px 16px;
-
         text-decoration: none;
         color: inherit;
-
         border: 1px solid rgba(0, 0, 0, 0.08);
         border-radius: 12px;
-
         background: rgba(255, 255, 255, 0.65);
-
         transition:
           transform 0.2s ease,
           box-shadow 0.2s ease,
@@ -1105,38 +801,28 @@
 
       .ppl2-file-link:hover {
         transform: translateY(-2px);
-
         border-color: rgba(220, 38, 38, 0.25);
-
         background: #ffffff;
-
         box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
       }
 
       .ppl2-file-icon {
         width: 42px;
         height: 42px;
-
         flex: 0 0 42px;
-
         display: flex;
         align-items: center;
         justify-content: center;
-
         border-radius: 10px;
-
         background: rgba(220, 38, 38, 0.1);
-
         font-size: 20px;
       }
 
       .ppl2-file-info {
         min-width: 0;
-
         display: flex;
         flex-direction: column;
         gap: 4px;
-
         flex: 1;
       }
 
@@ -1153,17 +839,12 @@
       .ppl2-file-action {
         width: 30px;
         height: 30px;
-
         flex: 0 0 30px;
-
         display: flex;
         align-items: center;
         justify-content: center;
-
         border-radius: 8px;
-
         opacity: 0.55;
-
         transition:
           opacity 0.2s ease,
           transform 0.2s ease;
@@ -1173,10 +854,6 @@
         opacity: 1;
         transform: translate(2px, -2px);
       }
-
-      /* =====================================================
-   RESPONSIVE
-===================================================== */
 
       @media (max-width: 768px) {
         .ppl2-evidence-files {
@@ -1200,14 +877,825 @@
           font-size: 13px;
         }
       }
+
+      .ppl2-profile-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .ppl2-profile-item {
+        padding: 17px 18px;
+        border-radius: 14px;
+        background: var(--card);
+        border: 1px solid var(--ppl2-border);
+        box-shadow: 0 7px 20px rgba(15, 23, 42, 0.04);
+      }
+
+      .ppl2-profile-item span {
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--ppl2-blue);
+        margin-bottom: 5px;
+      }
+
+      .ppl2-profile-item strong {
+        display: block;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .ppl2-cycle-wrap {
+        margin-top: 30px;
+      }
+
+      .ppl2-cycle-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .ppl2-cycle-card {
+        position: relative;
+        overflow: hidden;
+        background: var(--card);
+        border: 1px solid var(--ppl2-border);
+        border-radius: 20px;
+        padding: 23px;
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .ppl2-cycle-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--ppl2-blue),
+          var(--ppl2-indigo)
+        );
+      }
+
+      .ppl2-cycle-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(37, 99, 235, 0.32);
+        box-shadow: 0 17px 38px rgba(37, 99, 235, 0.11);
+      }
+
+      .ppl2-cycle-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .ppl2-cycle-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 11px;
+        border-radius: 999px;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--ppl2-blue);
+        font-size: 11px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .ppl2-cycle-card h3 {
+        margin: 0 0 7px;
+        font-size: 1.18rem;
+      }
+
+      .ppl2-cycle-card > p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.75;
+      }
+
+      .ppl2-meeting-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .ppl2-meeting {
+        padding: 15px;
+        border-radius: 13px;
+        background: rgba(100, 116, 139, 0.055);
+        border: 1px solid rgba(100, 116, 139, 0.1);
+      }
+
+      .ppl2-meeting-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: var(--ppl2-blue);
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 7px;
+      }
+
+      .ppl2-meeting h4 {
+        margin: 0 0 7px;
+        font-size: 13px;
+      }
+
+      .ppl2-meeting p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.7;
+        text-align: left;
+      }
+
+      .ppl2-resource-stack {
+        display: grid;
+        gap: 9px;
+        margin-top: 16px;
+      }
+
+      .ppl2-resource-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 13px;
+        border-radius: 11px;
+        background: rgba(37, 99, 235, 0.055);
+        border: 1px solid rgba(37, 99, 235, 0.12);
+        color: inherit;
+        text-decoration: none;
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .ppl2-resource-link:hover {
+        transform: translateY(-2px);
+        background: rgba(37, 99, 235, 0.1);
+        border-color: rgba(37, 99, 235, 0.25);
+      }
+
+      .ppl2-resource-link i {
+        color: var(--ppl2-blue);
+        width: 18px;
+        text-align: center;
+      }
+
+      .ppl2-resource-link span {
+        min-width: 0;
+        font-size: 12px;
+        line-height: 1.45;
+        font-weight: 700;
+      }
+
+      .ppl2-resource-link small {
+        margin-left: auto;
+        opacity: 0.6;
+        font-size: 10px;
+        white-space: nowrap;
+      }
+
+      .ppl2-video-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 28px;
+      }
+
+      .ppl2-video-card {
+        position: relative;
+        background: var(--card);
+        border: 1px solid var(--ppl2-border);
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .ppl2-video-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(37, 99, 235, 0.3);
+        box-shadow: 0 16px 35px rgba(37, 99, 235, 0.1);
+      }
+
+      .ppl2-video-card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .ppl2-video-card h3 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .ppl2-video-card p {
+        margin: 0 0 14px;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .ppl2-drive-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 13px;
+        border-radius: 10px;
+        background: var(--ppl2-blue);
+        color: #fff !important;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 800;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          opacity 0.2s ease;
+      }
+
+      .ppl2-drive-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+        opacity: 0.92;
+      }
+
+      .ppl2-drive-btn.placeholder {
+        background: rgba(100, 116, 139, 0.12);
+        color: inherit !important;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+
+      .ppl2-utsuas-note {
+        margin: 18px 0 0;
+        padding: 15px 17px;
+        border-left: 4px solid var(--ppl2-blue);
+        border-radius: 12px;
+        background: rgba(37, 99, 235, 0.06);
+        font-size: 13px;
+        line-height: 1.75;
+      }
+
+      .ppl2-resource-caption {
+        display: block;
+        margin-top: 5px;
+        font-size: 10px;
+        opacity: 0.65;
+        font-weight: 400;
+      }
+
+      @media (max-width: 1000px) {
+        .ppl2-profile-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 900px) {
+        .ppl2-cycle-grid,
+        .ppl2-video-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .ppl2-meeting-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .ppl2-profile-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ppl2-cycle-card,
+        .ppl2-video-card {
+          padding: 18px;
+        }
+      }
+
+      .ppl2-cycle-wrap {
+        margin-top: 34px;
+      }
+
+      .ppl2-cycle-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        align-items: stretch;
+      }
+
+      .ppl2-cycle-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        height: 100%;
+        padding: 24px;
+        border-radius: 20px;
+        background: var(--card);
+        border: 1px solid var(--ppl2-border);
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .ppl2-cycle-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--ppl2-blue),
+          var(--ppl2-indigo)
+        );
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+      }
+
+      .ppl2-cycle-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(37, 99, 235, 0.35);
+        box-shadow:
+          0 18px 40px rgba(37, 99, 235, 0.13),
+          0 5px 15px rgba(15, 23, 42, 0.06);
+      }
+
+      .ppl2-cycle-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .ppl2-cycle-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 14px;
+      }
+
+      .ppl2-cycle-top > div {
+        min-width: 0;
+        flex: 1;
+      }
+
+      .ppl2-cycle-top h3 {
+        margin: 0 0 7px;
+        font-size: 18px;
+        line-height: 1.55;
+        color: inherit;
+      }
+
+      .ppl2-resource-caption {
+        display: inline-block;
+        font-size: 11px;
+        line-height: 1.5;
+        color: #64748b;
+        font-weight: 500;
+      }
+
+      .ppl2-cycle-badge {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 8px 11px;
+        border-radius: 999px;
+        background: rgba(37, 99, 235, 0.09);
+        color: var(--ppl2-blue);
+        font-size: 11px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .ppl2-cycle-card > p {
+        margin: 0 0 18px;
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: justify;
+      }
+
+      .ppl2-meeting-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .ppl2-meeting {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        border-radius: 14px;
+        background: rgba(100, 116, 139, 0.055);
+        border: 1px solid rgba(100, 116, 139, 0.12);
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          background 0.25s ease;
+      }
+
+      .ppl2-meeting:hover {
+        transform: translateY(-2px);
+        background: rgba(37, 99, 235, 0.045);
+        border-color: rgba(37, 99, 235, 0.2);
+      }
+
+      .ppl2-meeting-label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 9px;
+        color: var(--ppl2-blue);
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .ppl2-meeting-label i {
+        font-size: 11px;
+      }
+
+      .ppl2-meeting h4 {
+        margin: 0 0 8px;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .ppl2-meeting p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.75;
+        text-align: left;
+      }
+
+      .ppl2-resource-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: auto;
+        padding-top: 18px;
+      }
+
+      .ppl2-resource-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 48px;
+        padding: 11px 13px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(239, 246, 255, 0.72);
+        border: 1px solid rgba(37, 99, 235, 0.16);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease,
+          background 0.25s ease;
+      }
+
+      .ppl2-resource-link:hover {
+        transform: translateY(-2px);
+        background: rgba(239, 246, 255, 1);
+        border-color: rgba(37, 99, 235, 0.35);
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+      }
+
+      .ppl2-resource-link > i:first-child {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--ppl2-blue);
+        font-size: 14px;
+      }
+
+      .ppl2-resource-link > span {
+        min-width: 0;
+        flex: 1;
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        font-size: 12px;
+        line-height: 1.45;
+        font-weight: 800;
+      }
+
+      .ppl2-resource-link > span small {
+        font-size: 10px;
+        opacity: 0.58;
+        font-weight: 500;
+      }
+
+      .ppl2-resource-link > small {
+        flex: 0 0 auto;
+        color: var(--ppl2-blue);
+        font-size: 11px;
+        opacity: 0.65;
+        transition:
+          transform 0.2s ease,
+          opacity 0.2s ease;
+      }
+
+      .ppl2-resource-link:hover > small {
+        opacity: 1;
+        transform: translate(2px, -2px);
+      }
+
+      .ppl2-utsuas-note {
+        margin-top: 22px;
+        padding: 16px 18px;
+        border-radius: 14px;
+        background: rgba(37, 99, 235, 0.055);
+        border: 1px solid rgba(37, 99, 235, 0.14);
+        font-size: 13px;
+        line-height: 1.75;
+        text-align: justify;
+      }
+
+      .ppl2-utsuas-note strong {
+        color: var(--ppl2-blue);
+      }
+
+      .dark .ppl2-resource-link {
+        background: rgba(37, 99, 235, 0.08);
+        border-color: rgba(96, 165, 250, 0.16);
+      }
+
+      .dark .ppl2-resource-link:hover {
+        background: rgba(37, 99, 250, 0.13);
+        border-color: rgba(96, 165, 250, 0.3);
+      }
+
+      .dark .ppl2-meeting {
+        background: rgba(148, 163, 184, 0.07);
+        border-color: rgba(148, 163, 184, 0.1);
+      }
+
+      .dark .ppl2-resource-caption {
+        color: #94a3b8;
+      }
+
+      @media (max-width: 900px) {
+        .ppl2-cycle-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ppl2-cycle-card {
+          height: auto;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .ppl2-cycle-card {
+          padding: 18px;
+          border-radius: 17px;
+        }
+
+        .ppl2-cycle-top {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .ppl2-cycle-top h3 {
+          font-size: 17px;
+        }
+
+        .ppl2-meeting-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ppl2-resource-link > span {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      .ppl2-evidence-files {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        width: 100%;
+        margin-top: 20px;
+        align-items: stretch;
+      }
+
+      .ppl2-pair-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        min-width: 0;
+        padding: 22px;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 18px;
+        background: var(--card-bg, #ffffff);
+        box-shadow: 0 6px 22px rgba(15, 23, 42, 0.06);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .ppl2-pair-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(59, 130, 246, 0.35);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+      }
+
+      .ppl2-pair-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .ppl2-pair-number {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        color: #ffffff;
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+      }
+
+      .ppl2-pair-header > div {
+        min-width: 0;
+      }
+
+      .ppl2-pair-header strong {
+        display: block;
+        color: var(--text-color, #172033);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      .ppl2-pair-header p {
+        margin: 4px 0 0;
+        color: var(--muted-color, #64748b);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .ppl2-pair-items {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        margin-top: auto;
+      }
+
+      .ppl2-pair-button {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        padding: 14px;
+        border: 1px solid #e2e8f0;
+        border-radius: 13px;
+        color: #1e293b;
+        background: #f8fafc;
+        text-decoration: none;
+        transition:
+          background 0.2s ease,
+          border-color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .ppl2-pair-button:hover {
+        transform: translateX(3px);
+        text-decoration: none;
+      }
+
+      .ppl2-pair-button > i:first-child {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
+        font-size: 18px;
+      }
+
+      .ppl2-pair-button > span {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 4px;
+        min-width: 0;
+      }
+
+      .ppl2-pair-button strong {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .ppl2-pair-button small {
+        color: #64748b;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .ppl2-pair-arrow {
+        flex-shrink: 0;
+        color: #94a3b8;
+        font-size: 13px;
+      }
+
+      /* Tombol Modul Ajar */
+      .ppl2-module-button > i:first-child {
+        color: #2563eb;
+        background: #dbeafe;
+      }
+
+      .ppl2-module-button:hover {
+        border-color: #93c5fd;
+        background: #eff6ff;
+      }
+
+      /* Tombol Media Ajar */
+      .ppl2-media-button > i:first-child {
+        color: #7c3aed;
+        background: #ede9fe;
+      }
+
+      .ppl2-media-button:hover {
+        border-color: #c4b5fd;
+        background: #f5f3ff;
+      }
+
+      /* Tablet dan layar kecil */
+      @media (max-width: 768px) {
+        .ppl2-evidence-files {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .ppl2-pair-card {
+          padding: 18px;
+        }
+      }
+
+      /* Layar sangat kecil */
+      @media (max-width: 400px) {
+        .ppl2-pair-card {
+          padding: 14px;
+        }
+
+        .ppl2-pair-button {
+          gap: 9px;
+          padding: 11px;
+        }
+
+        .ppl2-pair-button > i:first-child {
+          width: 36px;
+          height: 36px;
+          font-size: 16px;
+        }
+
+        .ppl2-pair-button strong {
+          font-size: 13px;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <!-- =====================================================
-         HEADER / NAVBAR
-    ====================================================== -->
-
     <header>
       <nav class="navbar">
         <div class="logo">E-Portofolio PPG</div>
@@ -1223,7 +1711,6 @@
             </a>
           </li>
 
-          <!-- PPL -->
           <li class="dropdown">
             <a href="#"><i class="fas fa-laptop-code"></i> PPL ▾ </a>
 
@@ -1270,10 +1757,6 @@
         <button id="theme-toggle">🌙</button>
       </nav>
     </header>
-
-    <!-- =====================================================
-         HERO PPL 2
-    ====================================================== -->
 
     <section class="ppl2-hero">
       <div class="container ppl2-hero-inner">
@@ -1330,8 +1813,6 @@
           </a>
         </div>
 
-        <!-- HERO CARD -->
-
         <div class="ppl2-hero-card">
           <div class="icon">
             <i class="fas fa-chalkboard-user"></i>
@@ -1372,10 +1853,6 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         NAVIGASI PPL 2
-    ====================================================== -->
-
     <div class="ppl2-nav-wrap">
       <div class="container">
         <nav class="ppl2-nav" aria-label="Navigasi PPL 2">
@@ -1387,6 +1864,11 @@
           <a href="#rancangan">
             <i class="fas fa-pen-ruler"></i>
             <span>Rancangan</span>
+          </a>
+
+          <a href="#produk-siklus">
+            <i class="fas fa-layer-group"></i>
+            <span>Siklus 1–4</span>
           </a>
 
           <a href="#materi">
@@ -1427,10 +1909,6 @@
       </div>
     </div>
 
-    <!-- =====================================================
-         01 GAMBARAN UMUM
-    ====================================================== -->
-
     <section class="ppl2-section" id="gambaran">
       <div class="container">
         <div class="ppl2-section-head">
@@ -1446,8 +1924,6 @@
         </div>
 
         <div class="ppl2-card-grid">
-          <!-- Card 1 -->
-
           <div class="ppl2-card">
             <div class="card-icon">
               <i class="fas fa-school"></i>
@@ -1462,8 +1938,6 @@
               pemecahan masalah dan praktik teknologi.
             </p>
           </div>
-
-          <!-- Card 2 -->
 
           <div class="ppl2-card">
             <div class="card-icon">
@@ -1480,8 +1954,6 @@
             </p>
           </div>
 
-          <!-- Card 3 -->
-
           <div class="ppl2-card">
             <div class="card-icon">
               <i class="fas fa-bullseye"></i>
@@ -1496,8 +1968,6 @@
             </p>
           </div>
         </div>
-
-        <!-- FLOW -->
 
         <div class="ppl2-flow">
           <div class="ppl2-flow-item">
@@ -1551,331 +2021,897 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         02 RANCANGAN PEMBELAJARAN
-    ====================================================== -->
-
     <section class="ppl2-section alt" id="rancangan">
-      <div class="container">
-        <div class="ppl2-section-head">
-          <div class="number">02 · Produk Rancangan</div>
+      <div class="ppl2-cycle-wrap" id="micro-teaching">
+        <div
+          class="ppl2-section-head"
+          style="margin-top: 34px; margin-bottom: 24px"
+        >
+          <div class="number">02 - Micro Teaching</div>
 
-          <h2>Analisis Rancangan / Perencanaan Pembelajaran</h2>
+          <h2>Praktik Pembelajaran Traffic Light Arduino Uno</h2>
 
           <p>
-            Rancangan pembelajaran diposisikan sebagai peta kerja yang
-            menghubungkan tujuan, aktivitas, media, asesmen, dan kebutuhan
-            peserta didik.
+            Micro teaching digunakan sebagai bentuk dokumentasi dan refleksi
+            pengembangan keterampilan mengajar melalui dua konteks pembelajaran,
+            yaitu praktik pembelajaran nyata di kelas XII-3 dan praktik mengajar
+            singkat bersama rekan PPL PPG calon guru Informatika.
           </p>
         </div>
 
-        <div class="ppl2-card-grid">
-          <div class="ppl2-card">
-            <div class="card-icon">
-              <i class="fas fa-file-lines"></i>
-            </div>
+        <div class="ppl2-cycle-grid">
+          <article class="ppl2-cycle-card">
+            <div class="ppl2-cycle-top">
+              <div>
+                <h3>Micro Teaching 1 · Praktikum Traffic Light Arduino Uno</h3>
 
-            <h3>Modul Ajar</h3>
+                <span class="ppl2-resource-caption">
+                  Praktik pembelajaran di kelas XII-3 · 3 JP
+                </span>
+              </div>
 
-            <p>
-              Modul ajar digunakan sebagai pedoman utama untuk memastikan
-              kegiatan pembelajaran memiliki tujuan, langkah kegiatan, media,
-              asesmen, dan tindak lanjut yang jelas.
-            </p>
-          </div>
-
-          <div class="ppl2-card">
-            <div class="card-icon">
-              <i class="fas fa-route"></i>
-            </div>
-
-            <h3>Model & Sintaks</h3>
-
-            <p>
-              Aktivitas pembelajaran disusun agar peserta didik tidak hanya
-              menerima informasi, tetapi mengamati, mencoba, berdiskusi,
-              menyelesaikan masalah, dan menyimpulkan hasil belajar.
-            </p>
-          </div>
-
-          <div class="ppl2-card">
-            <div class="card-icon">
-              <i class="fas fa-bullseye"></i>
-            </div>
-
-            <h3>Tujuan Pembelajaran</h3>
-
-            <p>
-              Tujuan diarahkan pada keseimbangan antara pemahaman konsep dan
-              kemampuan menerapkan konsep Informatika dalam aktivitas praktik.
-            </p>
-          </div>
-        </div>
-
-        <!-- ANALISIS -->
-        <div class="ppl2-analysis">
-          <h3 class="ppl2-analysis-title">
-            <i class="fas fa-magnifying-glass-chart"></i>
-
-            Analisis Produk Rancangan
-          </h3>
-
-          <div class="ppl2-analysis-grid">
-            <div class="ppl2-analysis-item">
-              <h4>✓ Kesesuaian dengan peserta didik</h4>
-
-              <p>
-                Rancangan mempertimbangkan perbedaan kesiapan belajar peserta
-                didik. Aktivitas dibuat bertahap agar peserta didik dapat
-                mengikuti pembelajaran dari pemahaman dasar menuju penerapan.
-              </p>
-            </div>
-
-            <div class="ppl2-analysis-item">
-              <h4>✓ Keterkaitan tujuan dan aktivitas</h4>
-
-              <p>
-                Aktivitas tidak berhenti pada penjelasan konsep. Peserta didik
-                diarahkan untuk mencoba dan melihat hubungan antara konsep
-                Informatika dengan hasil yang muncul pada media praktik.
-              </p>
-            </div>
-
-            <div class="ppl2-analysis-item">
-              <h4>✓ Student-centered learning</h4>
-
-              <p>
-                Perencanaan memberi ruang kepada peserta didik untuk bertanya,
-                mencoba, berdiskusi, dan memperbaiki hasil. Guru berperan
-                sebagai fasilitator yang mengarahkan proses berpikir.
-              </p>
-            </div>
-
-            <div class="ppl2-analysis-item">
-              <h4>⚠ Tantangan</h4>
-
-              <p>
-                Aktivitas praktik membutuhkan manajemen waktu yang lebih ketat.
-                Perbedaan kecepatan belajar juga dapat menyebabkan sebagian
-                peserta didik selesai lebih cepat sementara peserta didik lain
-                masih membutuhkan pendampingan.
-              </p>
-            </div>
-
-            <div class="ppl2-analysis-item">
-              <h4>→ Perbaikan</h4>
-
-              <p>
-                Pada pelaksanaan berikutnya, instruksi kerja perlu dibuat lebih
-                ringkas dan bertahap, disertai contoh hasil yang diharapkan dan
-                latihan bertingkat untuk mengakomodasi perbedaan kemampuan.
-              </p>
-            </div>
-          </div>
-
-          <!-- BUKTI -->
-          <div class="ppl2-evidence">
-            <div class="ppl2-evidence-header">
-              <strong>
-                <i class="fas fa-paperclip"></i>
-                Bukti Produk: Modul Ajar / RPP / Perangkat Pembelajaran PPL 2
-              </strong>
-
-              <span style="font-size: 12px; opacity: 0.75">
-                Dokumen pembelajaran yang digunakan selama pelaksanaan PPL 2.
+              <span class="ppl2-cycle-badge">
+                <i class="fas fa-chalkboard-user"></i>
+                3 JP
               </span>
             </div>
 
-            <div class="ppl2-evidence-files">
-              <!-- Modul 1 -->
+            <p>
+              Praktik pembelajaran dilaksanakan di kelas XII-3 melalui kegiatan
+              praktikum Traffic Light Arduino Uno. Peserta didik tidak hanya
+              mempelajari konsep dasar Arduino, tetapi juga melakukan
+              pengamatan, mencoba rangkaian, menjalankan program, menemukan
+              hasil, dan menarik kesimpulan melalui proses pembelajaran
+              Discovery Learning.
+            </p>
+
+            <div class="ppl2-meeting-grid">
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-clock"></i>
+                  Alokasi Waktu
+                </div>
+
+                <h4>3 JP · 3 × 45 Menit</h4>
+
+                <p>
+                  Pembelajaran dilaksanakan selama 135 menit dengan tahapan
+                  pembelajaran yang disusun secara sistematis dari apersepsi,
+                  pengamatan, identifikasi masalah, praktik, analisis hasil,
+                  hingga penarikan kesimpulan.
+                </p>
+              </div>
+
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-route"></i>
+                  Model Pembelajaran
+                </div>
+
+                <h4>Discovery Learning</h4>
+
+                <p>
+                  Peserta didik diarahkan untuk menemukan konsep melalui
+                  kegiatan mengamati rangkaian Traffic Light, mencoba program
+                  Arduino, mengidentifikasi hasil simulasi, serta menganalisis
+                  hubungan antara kode program dengan nyala LED.
+                </p>
+              </div>
+            </div>
+
+            <div class="ppl2-meeting-grid" style="margin-top: 12px">
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-magnifying-glass"></i>
+                  Proses Pembelajaran
+                </div>
+
+                <h4>Stimulation &amp; Problem Statement</h4>
+
+                <p>
+                  Peserta didik mengamati simulasi Traffic Light dan diberikan
+                  pertanyaan pemantik mengenai bagaimana Arduino dapat mengatur
+                  pergantian lampu merah, kuning, dan hijau.
+                </p>
+              </div>
+
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-code"></i>
+                  Data &amp; Verification
+                </div>
+
+                <h4>Praktik dan Analisis Program</h4>
+
+                <p>
+                  Peserta didik menyusun atau menjalankan kode Arduino Uno,
+                  mengamati hasil pada simulasi, kemudian membandingkan keluaran
+                  LED dengan instruksi program dan melakukan perbaikan apabila
+                  terdapat kesalahan.
+                </p>
+              </div>
+            </div>
+
+            <div class="ppl2-analysis" style="margin-top: 18px">
+              <h3 class="ppl2-analysis-title">
+                <i class="fas fa-lightbulb"></i>
+                Hasil Pengalaman Pembelajaran
+              </h3>
+
+              <div class="ppl2-analysis-grid">
+                <div class="ppl2-analysis-item">
+                  <h4>✓ Aktivitas Peserta Didik</h4>
+
+                  <p>
+                    Peserta didik terlibat dalam pengamatan, praktik, diskusi,
+                    pengujian program, dan analisis hasil sehingga pembelajaran
+                    tidak hanya berpusat pada penjelasan guru.
+                  </p>
+                </div>
+
+                <div class="ppl2-analysis-item">
+                  <h4>✓ Konsep Menjadi Lebih Konkret</h4>
+
+                  <p>
+                    Konsep output digital, pin Arduino, urutan instruksi, dan
+                    penggunaan delay dapat diamati secara langsung melalui
+                    perubahan nyala LED pada simulasi Traffic Light.
+                  </p>
+                </div>
+
+                <div class="ppl2-analysis-item">
+                  <h4>→ Refleksi</h4>
+
+                  <p>
+                    Kegiatan praktikum memberikan pengalaman bagi saya untuk
+                    mengelola kelas, memberikan instruksi bertahap, melakukan
+                    pendampingan, dan menyesuaikan penjelasan berdasarkan
+                    respons peserta didik selama kegiatan berlangsung.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ppl2-resource-stack">
               <a
-                href="../assets/modul_ajar_ppl2/1. Modul_Ajar_SMAN12_Bandung_XII3_Informatika Sekarang dan Dimasa Depan.pdf"
+                href="viewer/modul-ajar-ppl2-microteaching1.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ppl2-file-link"
-                title="Buka Modul Ajar PPL 2 - Modul 1"
+                class="ppl2-resource-link"
+                title="Buka Modul Ajar Micro Teaching 1"
               >
-                <div class="ppl2-file-icon">
-                  <i class="fas fa-file-pdf"></i>
-                </div>
+                <i class="fas fa-file-pdf"></i>
 
-                <div class="ppl2-file-info">
-                  <strong>Modul Ajar PPL 2 — Modul 1</strong>
-                  <span>PDF · Perangkat Pembelajaran</span>
-                </div>
+                <span>
+                  Modul Ajar · Micro Teaching 1
+                  <small>Modul Sistem Komputer</small>
+                </span>
 
-                <div class="ppl2-file-action">
+                <small>
                   <i class="fas fa-arrow-up-right-from-square"></i>
-                </div>
+                </small>
               </a>
 
-              <!-- Modul 2 -->
               <a
-                href="../assets/modul_ajar_ppl2/2. Modul_Ajar_SMAN12_Bandung_XII3_Sistem Komputer.pdf"
+                href="viewer/media-ajar-ppl2-microteaching.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="ppl2-file-link"
-                title="Buka Modul Ajar PPL 2 - Modul 2"
+                class="ppl2-resource-link"
+                title="Buka Media Ajar Micro Teaching 1"
               >
-                <div class="ppl2-file-icon">
-                  <i class="fas fa-file-pdf"></i>
-                </div>
+                <i class="fas fa-book-open"></i>
 
-                <div class="ppl2-file-info">
-                  <strong>Modul Ajar PPL 2 — Modul 2</strong>
-                  <span>PDF · Perangkat Pembelajaran</span>
-                </div>
+                <span>
+                  Media Ajar · Traffic Light Arduino Uno
+                  <small>Media Sistem Komputer &amp; Arduino</small>
+                </span>
 
-                <div class="ppl2-file-action">
+                <small>
                   <i class="fas fa-arrow-up-right-from-square"></i>
-                </div>
+                </small>
+              </a>
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Tonton Video Micro Teaching 1"
+              >
+                <i class="fab fa-google-drive"></i>
+
+                <span>
+                  Video Praktik · Google Drive
+                  <small>Micro Teaching 1 · 3 JP</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
               </a>
             </div>
-          </div>
+          </article>
+
+          <article class="ppl2-cycle-card">
+            <div class="ppl2-cycle-top">
+              <div>
+                <h3>Micro Teaching 2 · Traffic Light Arduino Uno</h3>
+
+                <span class="ppl2-resource-caption">
+                  Praktik bersama rekan PPL · 15 menit
+                </span>
+              </div>
+
+              <span class="ppl2-cycle-badge">
+                <i class="fas fa-stopwatch"></i>
+                15 MENIT
+              </span>
+            </div>
+
+            <p>
+              Micro teaching dilaksanakan bersama rekan PPL PPG calon guru
+              Informatika dalam waktu 15 menit dengan materi praktikum Traffic
+              Light Arduino Uno. Kegiatan menggunakan model Direct Instruction
+              dengan penekanan pada demonstrasi, instruksi yang terstruktur, dan
+              praktik singkat menggunakan simulasi.
+            </p>
+
+            <div class="ppl2-meeting-grid">
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-clock"></i>
+                  Alokasi Waktu
+                </div>
+
+                <h4>15 Menit</h4>
+
+                <p>
+                  Pembelajaran dirancang secara ringkas dengan memusatkan
+                  kegiatan pada penyampaian tujuan, demonstrasi Traffic Light
+                  Arduino Uno, praktik terbimbing, serta pengecekan pemahaman.
+                </p>
+              </div>
+
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-person-chalkboard"></i>
+                  Model Pembelajaran
+                </div>
+
+                <h4>Direct Instruction</h4>
+
+                <p>
+                  Guru memberikan penjelasan dan demonstrasi secara langsung,
+                  kemudian mengarahkan peserta untuk mengikuti langkah praktik
+                  Traffic Light Arduino Uno secara bertahap.
+                </p>
+              </div>
+            </div>
+
+            <div class="ppl2-meeting-grid" style="margin-top: 12px">
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-play"></i>
+                  Tahap 1
+                </div>
+
+                <h4>Orientasi &amp; Demonstrasi</h4>
+
+                <p>
+                  Menyampaikan tujuan pembelajaran dan menunjukkan rangkaian
+                  serta program Traffic Light Arduino Uno melalui simulasi
+                  Wokwi.
+                </p>
+              </div>
+
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-hand-pointer"></i>
+                  Tahap 2
+                </div>
+
+                <h4>Praktik Terbimbing</h4>
+
+                <p>
+                  Peserta mengikuti langkah yang diberikan, kemudian mengamati
+                  perubahan LED merah, kuning, dan hijau sesuai instruksi
+                  program.
+                </p>
+              </div>
+            </div>
+
+            <div class="ppl2-analysis" style="margin-top: 18px">
+              <h3 class="ppl2-analysis-title">
+                <i class="fas fa-magnifying-glass-chart"></i>
+                Refleksi Micro Teaching
+              </h3>
+
+              <div class="ppl2-analysis-grid">
+                <div class="ppl2-analysis-item">
+                  <h4>✓ Kejelasan Instruksi</h4>
+
+                  <p>
+                    Durasi 15 menit menuntut instruksi yang singkat, sistematis,
+                    dan langsung mengarah pada tujuan praktik agar waktu
+                    pembelajaran dapat digunakan secara efektif.
+                  </p>
+                </div>
+
+                <div class="ppl2-analysis-item">
+                  <h4>✓ Demonstrasi Praktik</h4>
+
+                  <p>
+                    Demonstrasi langkah pembuatan Traffic Light membantu peserta
+                    memahami hubungan antara rangkaian komponen, pin Arduino,
+                    dan kode program sebelum melakukan praktik.
+                  </p>
+                </div>
+
+                <div class="ppl2-analysis-item">
+                  <h4>→ Pengembangan Keterampilan Mengajar</h4>
+
+                  <p>
+                    Micro teaching menjadi kesempatan untuk melatih kemampuan
+                    menjelaskan konsep teknis secara sederhana, mengelola waktu,
+                    memberikan demonstrasi, dan memberikan instruksi praktik
+                    secara terstruktur.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ppl2-resource-stack">
+              <a
+                href="viewer/modul-ajar-ppl2-microteaching2.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Modul Ajar Micro Teaching 2"
+              >
+                <i class="fas fa-file-pdf"></i>
+
+                <span>
+                  Modul Ajar · Micro Teaching 2
+                  <small>Modul Sistem Komputer</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+
+              <a
+                href="viewer/media-ajar-ppl2-microteaching.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Media Ajar Micro Teaching 2"
+              >
+                <i class="fas fa-book-open"></i>
+
+                <span>
+                  Media Ajar · Traffic Light Arduino Uno
+                  <small>Media Sistem Komputer &amp; Arduino</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Tonton Video Micro Teaching 2"
+              >
+                <i class="fab fa-google-drive"></i>
+
+                <span>
+                  Video Praktik · Google Drive
+                  <small>Micro Teaching 2 · 15 Menit</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="ppl2-utsuas-note">
+          <strong>
+            <i class="fas fa-circle-info"></i>
+            Keterangan Micro Teaching:
+          </strong>
+
+          Micro Teaching 1 merupakan praktik pembelajaran nyata di kelas XII-3
+          dengan alokasi waktu 3 JP menggunakan model Discovery Learning,
+          sedangkan Micro Teaching 2 merupakan praktik mengajar bersama rekan
+          PPL selama 15 menit menggunakan model Direct Instruction. Kedua
+          kegiatan menggunakan materi praktikum Traffic Light Arduino Uno dan
+          memanfaatkan Modul Ajar serta Media Ajar Sistem Komputer dan Arduino.
         </div>
       </div>
     </section>
 
-    <!-- =====================================================
-         03 MATERI
-    ====================================================== -->
+    <section class="ppl2-section" id="siklus">
+      <div class="ppl2-cycle-wrap" id="produk-siklus">
+        <div
+          class="ppl2-section-head"
+          style="margin-top: 34px; margin-bottom: 24px"
+        >
+          <div class="number">03 - Pemetaan Siklus 1–4</div>
+
+          <h2>Produk Rancangan Praktik Mengajar Mandiri</h2>
+
+          <p>
+            Setiap siklus terdiri atas dua pertemuan. Setiap kartu menampilkan
+            rancangan pembelajaran, materi pada setiap pertemuan, serta bukti
+            Modul Ajar dan Media Ajar yang digunakan. Siklus 1 menjadi produk
+            pilihan untuk UTS, sedangkan Siklus 2–4 menjadi rangkaian produk
+            untuk UAS.
+          </p>
+        </div>
+
+        <div class="ppl2-cycle-grid">
+          <article class="ppl2-cycle-card">
+            <div class="ppl2-cycle-top">
+              <div>
+                <h3>Siklus 1 · Informatika Sekarang dan di Masa Depan</h3>
+
+                <span class="ppl2-resource-caption">
+                  Produk terbaik Siklus 1 · UTS PPL 2
+                </span>
+              </div>
+
+              <span class="ppl2-cycle-badge">
+                <i class="fas fa-flag-checkered"></i>
+                IT
+              </span>
+            </div>
+
+            <p>
+              Pembelajaran berfokus pada perkembangan teknologi dan
+              keterkaitannya dengan kehidupan serta kebutuhan masa depan peserta
+              didik.
+            </p>
+
+            <div class="ppl2-meeting-grid">
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-calendar-day"></i>
+                  Pertemuan 1
+                </div>
+
+                <h4>Revolusi Industri 4.0, IoT, Big Data &amp; AI</h4>
+
+                <p>
+                  Membahas karakteristik Revolusi Industri 4.0, Internet of
+                  Things (IoT), Big Data, dan Artificial Intelligence (AI)
+                  sebagai bagian dari perkembangan Informatika.
+                </p>
+              </div>
+
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-calendar-day"></i>
+                  Pertemuan 2
+                </div>
+
+                <h4>Cloud, 5G, Blockchain, Cryptocurrency &amp; XR</h4>
+
+                <p>
+                  Membahas Cloud Computing, teknologi 5G, Blockchain &amp;
+                  Cryptocurrency, serta Extended Reality (XR) dan penerapannya
+                  secara kontekstual.
+                </p>
+              </div>
+            </div>
+
+            <div class="ppl2-resource-stack">
+              <a
+                href="viewer/modul-ajar-ppl2-siklus1.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Modul Ajar Siklus 1"
+              >
+                <i class="fas fa-file-pdf"></i>
+
+                <span>
+                  Modul Ajar · Siklus 1
+                  <small>Perencanaan lengkap</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+
+              <a
+                href="viewer/media-ajar-ppl2-siklus1.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Media Ajar Siklus 1"
+              >
+                <i class="fas fa-book-open"></i>
+
+                <span>
+                  Media Ajar · Siklus 1
+                  <small>Materi pembelajaran</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+            </div>
+          </article>
+
+          <article class="ppl2-cycle-card">
+            <div class="ppl2-cycle-top">
+              <div>
+                <h3>Siklus 2 · Pengenalan Sistem Komputer dan Sensor</h3>
+
+                <span class="ppl2-resource-caption">
+                  Produk terbaik untuk rangkaian UAS · Siklus 2
+                </span>
+              </div>
+
+              <span class="ppl2-cycle-badge">
+                <i class="fas fa-layer-group"></i>
+                IOT
+              </span>
+            </div>
+
+            <p>
+              Pembelajaran menjadi pengantar menuju praktik mikrokontroler
+              dengan menghubungkan konsep sistem komputer, komponen, dan sensor.
+            </p>
+
+            <div class="ppl2-meeting-grid">
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-calendar-day"></i>
+                  Pertemuan 1
+                </div>
+
+                <h4>Pengenalan Sistem Komputer</h4>
+
+                <p>
+                  Mengenali konsep sistem komputer, hubungan perangkat keras,
+                  perangkat lunak, serta komponen yang mendukung sistem berbasis
+                  mikrokontroler.
+                </p>
+              </div>
+
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-calendar-day"></i>
+                  Pertemuan 2
+                </div>
+
+                <h4>Pengenalan Sensor</h4>
+
+                <p>
+                  Mengenali fungsi sensor sebagai perangkat input, contoh
+                  sensor, data yang dihasilkan, serta hubungan sensor dengan
+                  sistem komputer.
+                </p>
+              </div>
+            </div>
+
+            <div class="ppl2-resource-stack">
+              <a
+                href="viewer/modul-ajar-ppl2-siklus2.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Modul Ajar Siklus 2"
+              >
+                <i class="fas fa-file-pdf"></i>
+
+                <span>
+                  Modul Ajar · Sistem Komputer
+                  <small>Digunakan pada Siklus 2</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+
+              <a
+                href="viewer/media-ajar-ppl2-siklus2.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Media Ajar Siklus 2"
+              >
+                <i class="fas fa-book-open"></i>
+
+                <span>
+                  Media Ajar · Sistem Komputer
+                  <small>Digunakan pada Siklus 2</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+            </div>
+          </article>
+
+          <article class="ppl2-cycle-card">
+            <div class="ppl2-cycle-top">
+              <div>
+                <h3>Siklus 3 · Arduino Uno Dasar dan Lanjutan</h3>
+
+                <span class="ppl2-resource-caption">
+                  Produk terbaik untuk rangkaian UAS · Siklus 3
+                </span>
+              </div>
+
+              <span class="ppl2-cycle-badge">
+                <i class="fas fa-microchip"></i>
+                IOT
+              </span>
+            </div>
+
+            <p>
+              Siklus 3 mengembangkan pemahaman peserta didik dari kontrol LED
+              sederhana menuju interaksi Arduino Uno dengan Serial Monitor dan
+              sensor suhu DHT22.
+            </p>
+
+            <div class="ppl2-meeting-grid">
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-calendar-day"></i>
+                  Pertemuan 1
+                </div>
+
+                <h4>Arduino Uno Dasar: Lampu Berkedip &amp; RGB</h4>
+
+                <p>
+                  Menulis dan menjalankan program dasar untuk lampu berkedip
+                  serta RGB sebagai latihan output digital dan pengenalan
+                  kontrol pin.
+                </p>
+              </div>
+
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-calendar-day"></i>
+                  Pertemuan 2
+                </div>
+
+                <h4>Arduino Uno Lanjutan: Serial Monitor &amp; DHT22</h4>
+
+                <p>
+                  Menggunakan Serial Monitor untuk menampilkan data dan membaca
+                  sensor suhu DHT22 untuk menghubungkan program dengan data
+                  sensor.
+                </p>
+              </div>
+            </div>
+
+            <div class="ppl2-resource-stack">
+              <a
+                href="viewer/modul-ajar-ppl2-siklus3.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Modul Ajar Siklus 3"
+              >
+                <i class="fas fa-file-pdf"></i>
+
+                <span>
+                  Modul Ajar · Arduino Uno
+                  <small>Bagian Sistem Komputer</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+
+              <a
+                href="viewer/media-ajar-ppl2-siklus3.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Media Ajar Siklus 3"
+              >
+                <i class="fas fa-book-open"></i>
+
+                <span>
+                  Media Ajar · Arduino Uno
+                  <small>Bagian Sistem Komputer</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+            </div>
+          </article>
+
+          <article class="ppl2-cycle-card">
+            <div class="ppl2-cycle-top">
+              <div>
+                <h3>Siklus 4 · Arduino Nano Dasar dan Lanjutan</h3>
+
+                <span class="ppl2-resource-caption">
+                  Produk terbaik untuk rangkaian UAS · Siklus 4
+                </span>
+              </div>
+
+              <span class="ppl2-cycle-badge">
+                <i class="fas fa-microchip"></i>
+                IOT
+              </span>
+            </div>
+
+            <p>
+              Siklus 4 menerapkan pembelajaran menggunakan Arduino Nano dari
+              pemrograman output dasar hingga pembacaan data sensor melalui
+              Serial Monitor.
+            </p>
+
+            <div class="ppl2-meeting-grid">
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-calendar-day"></i> Pertemuan 1
+                </div>
+                <h4>Sistem Keamanan Pintu menggunakan Serial Monitor</h4>
+                <p>
+                  Mempelajari penerapan Arduino Nano pada sistem keamanan pintu
+                  melalui simulasi pemrograman. Serial Monitor digunakan untuk
+                  menampilkan informasi serta status sistem.
+                </p>
+              </div>
+
+              <div class="ppl2-meeting">
+                <div class="ppl2-meeting-label">
+                  <i class="fas fa-calendar-day"></i> Pertemuan 2
+                </div>
+                <h4>Monitoring Suhu dan Kelembaban menggunakan Sensor DHT22</h4>
+                <p>
+                  Mempraktikkan sensor DHT22 Arduino Nano untuk membaca data
+                  suhu dan kelembaban yang ditampilkan melalui Serial Monitor
+                  sehingga dapat mengamati perubahan nilai sensor berbasis
+                  mikrokontroler.
+                </p>
+              </div>
+            </div>
+
+            <div class="ppl2-resource-stack">
+              <a
+                href="viewer/modul-ajar-ppl2-siklus4.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Modul Ajar Siklus 4"
+              >
+                <i class="fas fa-file-pdf"></i>
+
+                <span>
+                  Modul Ajar · Arduino Nano
+                  <small>Bagian Sistem Komputer</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+
+              <a
+                href="viewer/media-ajar-ppl2-siklus4.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ppl2-resource-link"
+                title="Buka Media Ajar Siklus 4"
+              >
+                <i class="fas fa-book-open"></i>
+
+                <span>
+                  Media Ajar · Arduino Nano
+                  <small>Bagian Sistem Komputer</small>
+                </span>
+
+                <small>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </small>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="ppl2-utsuas-note">
+          <strong>
+            <i class="fas fa-circle-info"></i>
+            Pemetaan untuk tugas PPL 2:
+          </strong>
+
+          Siklus 1 ditetapkan sebagai produk rancangan/perencanaan dan video
+          praktik yang digunakan untuk UTS. Siklus 2, Siklus 3, dan Siklus 4
+          ditampilkan sebagai rangkaian produk rancangan/perencanaan serta bukti
+          video yang digunakan untuk UAS.
+        </div>
+      </div>
+    </section>
 
     <section class="ppl2-section" id="materi">
       <div class="container">
         <div class="ppl2-section-head">
-          <div class="number">03 · Materi Pembelajaran</div>
+          <div class="number">04 · Materi Pembelajaran</div>
 
-          <h2>Materi Informatika yang Diterapkan</h2>
+          <h2>Materi yang Disusun dan Diterapkan</h2>
 
           <p>
-            Materi dipilih dengan mempertimbangkan capaian pembelajaran,
-            karakteristik peserta didik, serta peluang untuk menghubungkan
-            konsep abstrak dengan pengalaman praktik.
+            Materi PPL 2 disusun bertahap dari konteks perkembangan Informatika
+            menuju sistem komputer dan praktik mikrokontroler. Urutan tersebut
+            memungkinkan peserta didik bergerak dari pemahaman konsep menuju
+            pengalaman praktik.
           </p>
         </div>
 
         <div class="ppl2-card-grid">
-          <!-- Informatika Sekarang dan Masa Depan -->
           <div class="ppl2-card">
             <div class="card-icon">
-              <i class="fas fa-network-wired"></i>
+              <i class="fas fa-globe"></i>
             </div>
-            <h3>Informatika Sekarang & Masa Depan</h3>
+            <h3>Siklus 1 · Informatika Sekarang & Masa Depan</h3>
             <p>
-              Materi perkembangan Informatika memberikan landasan kontekstual
-              agar peserta didik memahami perubahan teknologi dan pengaruhnya
-              terhadap kehidupan. Pembahasan Revolusi Industri 4.0, Big Data,
-              Cloud Computing, 5G, AI, IoT, Blockchain, Cryptocurrency, dan
-              Extended Reality (XR) membantu peserta didik melihat keterkaitan
-              antara perkembangan teknologi dengan kebutuhan masa depan.
+              Submateri meliputi Revolusi Industri 4.0, Internet of Things
+              (IoT), Big Data, Artificial Intelligence (AI), Cloud Computing,
+              teknologi 5G, Blockchain & Cryptocurrency, serta Extended Reality
+              (XR).
             </p>
           </div>
 
-          <!-- Arduino -->
+          <div class="ppl2-card">
+            <div class="card-icon">
+              <i class="fas fa-computer"></i>
+            </div>
+            <h3>Siklus 2 · Sistem Komputer & Sensor</h3>
+            <p>
+              Peserta didik mempelajari pengenalan sistem komputer, hubungan
+              komponen, dan konsep sensor sebagai perangkat input yang
+              menghasilkan data untuk diproses oleh sistem.
+            </p>
+          </div>
+
           <div class="ppl2-card">
             <div class="card-icon">
               <i class="fas fa-microchip"></i>
             </div>
-
-            <h3>Arduino Uno</h3>
-
+            <h3>Siklus 3 · Arduino Uno</h3>
             <p>
-              Materi Arduino Uno digunakan untuk memperkenalkan konsep
-              mikrokontroler melalui pendekatan yang lebih konkret. Peserta
-              didik mempelajari bagian Arduino, fungsi pin, jenis sensor,
-              komponen pendukung, serta hubungan antara perangkat keras dan
-              program sehingga dapat memahami bagaimana instruksi digital
-              digunakan untuk mengendalikan perangkat elektronik.
+              Pertemuan dasar berfokus pada lampu berkedip dan RGB. Pertemuan
+              lanjutan berfokus pada Serial Monitor dan sensor suhu DHT22 untuk
+              membaca serta menampilkan data secara langsung.
             </p>
           </div>
 
-          <!-- Coding -->
           <div class="ppl2-card">
             <div class="card-icon">
-              <i class="fas fa-code"></i>
+              <i class="fas fa-microchip"></i>
             </div>
-
-            <h3>Pemrograman Arduino</h3>
-
+            <h3>Siklus 4 · Arduino Nano</h3>
             <p>
-              Materi pemrograman Arduino menjadi dasar untuk melatih kemampuan
-              peserta didik dalam menulis dan memahami kode program. Konsep
-              variabel, tipe data, operator, input-output, percabangan
-              <b>if</b> dan <b>else</b>, serta perulangan <b>for</b> dan
-              <b>while</b> dipelajari secara bertahap melalui program sederhana
-              yang menghasilkan keluaran yang dapat diamati.
-            </p>
-          </div>
-
-          <!-- Algoritma -->
-          <div class="ppl2-card">
-            <div class="card-icon">
-              <i class="fas fa-diagram-project"></i>
-            </div>
-
-            <h3>Berpikir Algoritmik</h3>
-
-            <p>
-              Materi berpikir algoritmik diarahkan untuk membangun kemampuan
-              peserta didik dalam menyusun langkah penyelesaian masalah secara
-              sistematis. Peserta didik belajar menghubungkan masalah dengan
-              algoritma, kondisi, instruksi, proses, dan keluaran sehingga mampu
-              memahami bahwa program merupakan implementasi dari algoritma untuk
-              menyelesaikan suatu masalah.
-            </p>
-          </div>
-
-          <!-- Jaringan Komputer -->
-          <div class="ppl2-card">
-            <div class="card-icon">
-              <i class="fas fa-route"></i>
-            </div>
-            <h3>Jaringan Komputer</h3>
-            <p>
-              Materi jaringan komputer memberikan pemahaman mengenai bagaimana
-              perangkat dapat saling terhubung dan berkomunikasi. Konsep
-              topologi jaringan dan IP address diperkuat melalui praktik
-              menggunakan Cisco Packet Tracer sehingga peserta didik dapat
-              mengamati konfigurasi dan hubungan antarperangkat secara virtual.
-            </p>
-          </div>
-
-          <!-- Dampak Sosial Informatika -->
-          <div class="ppl2-card">
-            <div class="card-icon">
-              <i class="fas fa-users-gear"></i>
-            </div>
-            <h3>Dampak Sosial Informatika</h3>
-            <p>
-              Materi dampak sosial Informatika mengembangkan kesadaran peserta
-              didik terhadap konsekuensi penggunaan teknologi dalam kehidupan
-              sehari-hari. Pembahasan etika digital, keamanan data pribadi,
-              serta informasi hoaks membantu peserta didik memahami pentingnya
-              menggunakan teknologi secara bijak, aman, kritis, dan bertanggung
-              jawab.
-            </p>
-          </div>
-
-          <!-- Simulator -->
-          <div class="ppl2-card">
-            <div class="card-icon">
-              <i class="fas fa-sim-card"></i>
-            </div>
-
-            <h3>Praktik Simulasi</h3>
-
-            <p>
-              Praktik simulasi berfungsi sebagai penghubung antara konsep teori
-              dan pengalaman langsung. Penggunaan simulator seperti Wokwi untuk
-              Arduino dan Cisco Packet Tracer untuk jaringan memungkinkan
-              peserta didik melakukan eksperimen, menguji program atau
-              konfigurasi, mengamati hasil, menemukan kesalahan, dan melakukan
-              perbaikan tanpa selalu bergantung pada perangkat fisik.
+              Pertemuan dasar berfokus pada lampu berkedip dan RGB. Pertemuan
+              lanjutan berfokus pada Serial Monitor dan sensor suhu DHT22
+              menggunakan Arduino Nano.
             </p>
           </div>
         </div>
 
-        <!-- ANALISIS MATERI -->
         <div class="ppl2-analysis">
           <h3 class="ppl2-analysis-title">
             <i class="fas fa-book-open-reader"></i>
@@ -1883,89 +2919,66 @@
           </h3>
 
           <div class="ppl2-analysis-grid">
-            <!-- Relevansi -->
             <div class="ppl2-analysis-item">
               <h4>Relevansi</h4>
-
               <p>
-                Materi Informatika yang diterapkan relevan dengan perkembangan
-                teknologi dan kebutuhan kompetensi peserta didik di era digital.
-                Pembahasan AI, IoT, Big Data, Arduino, pemrograman, jaringan
-                komputer, serta dampak sosial Informatika memberikan pengalaman
-                belajar yang menghubungkan konsep Informatika dengan teknologi
-                yang dekat dengan kehidupan sehari-hari dan kebutuhan masa
-                depan.
+                Materi Siklus 1 menghubungkan Informatika dengan perkembangan
+                teknologi yang dekat dengan kehidupan peserta didik. Materi
+                Siklus 2–4 kemudian mengarahkan peserta didik menuju pengalaman
+                yang lebih konkret melalui sistem komputer, sensor, Arduino Uno,
+                dan Arduino Nano.
               </p>
             </div>
 
-            <!-- Karakteristik Materi -->
             <div class="ppl2-analysis-item">
-              <h4>Karakteristik Materi</h4>
-
+              <h4>Urutan dan keterkaitan</h4>
               <p>
-                Materi memiliki karakteristik yang memadukan pengetahuan
-                konseptual dengan keterampilan praktik. Materi perkembangan
-                teknologi dan dampak sosial lebih banyak membutuhkan pemahaman
-                konsep serta kemampuan menganalisis, sedangkan Arduino,
-                pemrograman, algoritma, dan jaringan membutuhkan latihan,
-                eksperimen, serta kemampuan pemecahan masalah.
+                Urutan pembelajaran bergerak dari konteks perkembangan
+                teknologi, pengenalan sistem komputer dan sensor, kemudian
+                praktik mikrokontroler. Dengan demikian, peserta didik
+                memperoleh jembatan dari konsep menuju pengalaman langsung
+                melalui program dan keluaran perangkat.
               </p>
             </div>
 
-            <!-- Konkretisasi Konsep -->
             <div class="ppl2-analysis-item">
-              <h4>Konkretisasi Konsep</h4>
-
+              <h4>Konkretisasi konsep</h4>
               <p>
-                Konsep abstrak seperti algoritma, variabel, operator,
-                percabangan, dan perulangan dikonkretkan melalui praktik dan
-                simulasi. Peserta didik dapat melihat hubungan antara kode
-                program dengan keluaran LED atau perilaku komponen pada Wokwi,
-                serta mengamati hubungan antarperangkat melalui Cisco Packet
-                Tracer.
+                Konsep pemrograman dan sistem komputer dikonkretkan melalui
+                simulasi dan praktik. Peserta didik dapat mengamati perubahan
+                keluaran LED, RGB, tampilan Serial Monitor, dan data suhu DHT22
+                setelah program dijalankan.
               </p>
             </div>
 
-            <!-- Tingkat Kesulitan -->
             <div class="ppl2-analysis-item">
-              <h4>Tingkat Kesulitan</h4>
-
+              <h4>Tingkat kesulitan</h4>
               <p>
-                Tingkat kesulitan materi bersifat bertahap. Materi perkembangan
-                Informatika dan dampak sosial relatif lebih mudah dikaitkan
-                dengan pengalaman sehari-hari, sedangkan algoritma, pemrograman,
-                dan jaringan membutuhkan kemampuan berpikir logis serta latihan
-                berulang. Oleh karena itu, pembelajaran diarahkan dari konsep
-                dasar menuju praktik dan pemecahan masalah yang lebih kompleks.
+                Materi disusun bertahap. Siklus 1 lebih dominan pada pemahaman
+                konsep dan analisis, Siklus 2 membangun pemahaman sistem dan
+                sensor, sedangkan Siklus 3–4 membutuhkan latihan pemrograman,
+                ketelitian mengikuti instruksi, dan debugging.
               </p>
             </div>
 
-            <!-- Keterkaitan Antar Materi -->
             <div class="ppl2-analysis-item">
-              <h4>Keterkaitan Antar Materi</h4>
-
+              <h4>Kebutuhan pendampingan</h4>
               <p>
-                Materi tidak berdiri sendiri, tetapi saling mendukung dalam
-                membangun kompetensi Informatika. Pemahaman algoritma menjadi
-                dasar pemrograman, pemrograman diterapkan pada Arduino, jaringan
-                digunakan untuk memahami komunikasi antarperangkat, sedangkan
-                perkembangan teknologi dan dampak sosial memberikan konteks
-                mengenai manfaat serta konsekuensi penggunaan teknologi.
+                Praktik mikrokontroler membutuhkan panduan yang terstruktur
+                karena peserta didik dapat memiliki perbedaan kesiapan dalam
+                membaca kode, memahami pin, menggunakan simulator, dan
+                menafsirkan keluaran sensor.
               </p>
             </div>
 
-            <!-- Pengembangan Materi -->
             <div class="ppl2-analysis-item">
-              <h4>Pengembangan Materi</h4>
-
+              <h4>Pengembangan</h4>
               <p>
-                Pengembangan materi selanjutnya dapat dilakukan melalui kasus
-                yang lebih kontekstual dengan lingkungan peserta didik. Latihan
-                debugging, modifikasi kode, eksplorasi sensor, simulasi
-                jaringan, dan proyek sederhana berbasis masalah dapat
-                ditambahkan agar peserta didik tidak hanya mengikuti contoh,
-                tetapi mampu menerapkan, menguji, mengevaluasi, dan menghasilkan
-                solusi Informatika secara mandiri.
+                Pengembangan materi selanjutnya dapat dilakukan melalui
+                modifikasi kode, debugging, kombinasi sensor dan aktuator, serta
+                tantangan sederhana berbasis masalah agar peserta didik tidak
+                hanya mengikuti contoh tetapi juga mampu melakukan pengujian dan
+                perbaikan secara mandiri.
               </p>
             </div>
           </div>
@@ -1973,14 +2986,10 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         04 MEDIA
-    ====================================================== -->
-
     <section class="ppl2-section alt" id="media">
       <div class="container">
         <div class="ppl2-section-head">
-          <div class="number">04 · Media Pembelajaran</div>
+          <div class="number">05 · Media Pembelajaran</div>
 
           <h2>Analisis Media yang Digunakan</h2>
 
@@ -1991,9 +3000,17 @@
           </p>
         </div>
 
-        <div class="ppl2-card-grid">
-          <!-- Wokwi -->
+        <div
+          class="ppl2-utsuas-note"
+          style="margin-top: 0; margin-bottom: 24px"
+        >
+          Media pembelajaran disesuaikan dengan setiap siklus. Siklus 1
+          menggunakan media ajar berbasis visual untuk perkembangan Informatika,
+          sedangkan Siklus 2–4 memanfaatkan media Sistem Komputer/Arduino dan
+          simulator Wokwi untuk menghubungkan konsep dengan praktik.
+        </div>
 
+        <div class="ppl2-card-grid">
           <div class="ppl2-card">
             <div class="card-icon">
               <i class="fas fa-laptop-code"></i>
@@ -2007,8 +3024,6 @@
             </p>
           </div>
 
-          <!-- Arduino -->
-
           <div class="ppl2-card">
             <div class="card-icon">
               <i class="fas fa-microchip"></i>
@@ -2021,8 +3036,6 @@
               mikrokontroler dan komponen input-output.
             </p>
           </div>
-
-          <!-- Infografis -->
 
           <div class="ppl2-card">
             <div class="card-icon">
@@ -2039,7 +3052,6 @@
           </div>
         </div>
 
-        <!-- BUKTI -->
         <div class="ppl2-evidence">
           <div class="ppl2-evidence-header">
             <strong>
@@ -2053,53 +3065,383 @@
           </div>
 
           <div class="ppl2-evidence-files">
-            <!-- Media Ajar 1 -->
-            <a
-              href="../assets/media_ajar_ppl2/BAB 1 - Informatika Sekarang & Di Masa Depan.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ppl2-file-link"
-              title="Buka Media Ajar PPL 2 - Media Ajar 1"
-            >
-              <div class="ppl2-file-icon">
-                <i class="fas fa-file-pdf"></i>
+            <!-- CARD 1 -->
+            <div class="ppl2-pair-card">
+              <div class="ppl2-pair-header">
+                <span class="ppl2-pair-number">01</span>
+                <div>
+                  <strong>Perangkat Pembelajaran 1</strong>
+                  <p>Modul dan Media Ajar PPL 2</p>
+                </div>
               </div>
 
-              <div class="ppl2-file-info">
-                <strong>Media Ajar PPL 2 — Media 1</strong>
-                <span>PDF · Media Ajar</span>
+              <div class="ppl2-pair-items">
+                <a
+                  href="viewer/modul-ajar-ppl2-siklus1.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-module-button"
+                  title="Buka Modul Ajar PPL 2 - Modul 1"
+                >
+                  <i class="fas fa-book-open"></i>
+                  <span>
+                    <strong>Modul Ajar 1</strong>
+                    <small>Dokumen pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+
+                <a
+                  href="viewer/media-ajar-ppl2-1.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-media-button"
+                  title="Buka Media Ajar PPL 2 - Media 1"
+                >
+                  <i class="fas fa-photo-film"></i>
+                  <span>
+                    <strong>Media Ajar 1</strong>
+                    <small>Media pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="ppl2-pair-card">
+              <div class="ppl2-pair-header">
+                <span class="ppl2-pair-number">02</span>
+                <div>
+                  <strong>Perangkat Pembelajaran 2</strong>
+                  <p>Modul dan Media Ajar PPL 2</p>
+                </div>
               </div>
 
-              <div class="ppl2-file-action">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </div>
-            </a>
+              <div class="ppl2-pair-items">
+                <a
+                  href="viewer/modul-ajar-ppl2-siklus2.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-module-button"
+                  title="Buka Modul Ajar PPL 2 - Modul 2"
+                >
+                  <i class="fas fa-book-open"></i>
+                  <span>
+                    <strong>Modul Ajar 2</strong>
+                    <small>Dokumen pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
 
-            <!-- Media Ajar 2 -->
-            <a
-              href="../assets/media_ajar_ppl2/BAB 2 - Sistem Komputer - Arduino.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ppl2-file-link"
-              title="Buka Media Ajar PPL 2 - Media Ajar 2"
-            >
-              <div class="ppl2-file-icon">
-                <i class="fas fa-file-pdf"></i>
+                <a
+                  href="viewer/media-ajar-ppl2-2.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-media-button"
+                  title="Buka Media Ajar PPL 2 - Media 2"
+                >
+                  <i class="fas fa-photo-film"></i>
+                  <span>
+                    <strong>Media Ajar 2</strong>
+                    <small>Media pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="ppl2-pair-card">
+              <div class="ppl2-pair-header">
+                <span class="ppl2-pair-number">03</span>
+                <div>
+                  <strong>Perangkat Pembelajaran 3</strong>
+                  <p>Modul dan Media Ajar PPL 2</p>
+                </div>
               </div>
 
-              <div class="ppl2-file-info">
-                <strong>Modul Ajar PPL 2 — Media 2</strong>
-                <span>PDF · Media Ajar</span>
+              <div class="ppl2-pair-items">
+                <a
+                  href="viewer/modul-ajar-ppl2-siklus3.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-module-button"
+                  title="Buka Modul Ajar PPL 2 - Modul 3"
+                >
+                  <i class="fas fa-book-open"></i>
+                  <span>
+                    <strong>Modul Ajar 3</strong>
+                    <small>Dokumen pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+
+                <a
+                  href="viewer/media-ajar-ppl2-3.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-media-button"
+                  title="Buka Media Ajar PPL 2 - Media 3"
+                >
+                  <i class="fas fa-photo-film"></i>
+                  <span>
+                    <strong>Media Ajar 3</strong>
+                    <small>Media pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="ppl2-pair-card">
+              <div class="ppl2-pair-header">
+                <span class="ppl2-pair-number">04</span>
+                <div>
+                  <strong>Perangkat Pembelajaran 4</strong>
+                  <p>Modul dan Media Ajar PPL 2</p>
+                </div>
               </div>
 
-              <div class="ppl2-file-action">
-                <i class="fas fa-arrow-up-right-from-square"></i>
+              <div class="ppl2-pair-items">
+                <a
+                  href="viewer/modul-ajar-ppl2-siklus4.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-module-button"
+                  title="Buka Modul Ajar PPL 2 - Modul 4"
+                >
+                  <i class="fas fa-book-open"></i>
+                  <span>
+                    <strong>Modul Ajar 4</strong>
+                    <small>Dokumen pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+
+                <a
+                  href="viewer/media-ajar-ppl2-4.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-media-button"
+                  title="Buka Media Ajar PPL 2 - Media 4"
+                >
+                  <i class="fas fa-photo-film"></i>
+                  <span>
+                    <strong>Media Ajar 4</strong>
+                    <small>Media pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
               </div>
-            </a>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="ppl2-pair-card">
+              <div class="ppl2-pair-header">
+                <span class="ppl2-pair-number">05</span>
+                <div>
+                  <strong>Perangkat Pembelajaran 5</strong>
+                  <p>Modul dan Media Ajar PPL 2</p>
+                </div>
+              </div>
+
+              <div class="ppl2-pair-items">
+                <a
+                  href="../assets/modul_ajar_ppl2/Mega.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-module-button"
+                  title="Buka Modul Ajar PPL 2 - Modul 5"
+                >
+                  <i class="fas fa-book-open"></i>
+                  <span>
+                    <strong>Modul Ajar 5</strong>
+                    <small>Dokumen pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+
+                <a
+                  href="viewer/media-ajar-ppl2-5.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-media-button"
+                  title="Buka Media Ajar PPL 2 - Media 5"
+                >
+                  <i class="fas fa-photo-film"></i>
+                  <span>
+                    <strong>Media Ajar 5</strong>
+                    <small>Media pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="ppl2-pair-card">
+              <div class="ppl2-pair-header">
+                <span class="ppl2-pair-number">06</span>
+                <div>
+                  <strong>Perangkat Pembelajaran 6</strong>
+                  <p>Modul dan Media Ajar PPL 2</p>
+                </div>
+              </div>
+
+              <div class="ppl2-pair-items">
+                <a
+                  href="../assets/modul_ajar_ppl2/Berpikir.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-module-button"
+                  title="Buka Modul Ajar PPL 2 - Modul 6"
+                >
+                  <i class="fas fa-book-open"></i>
+                  <span>
+                    <strong>Modul Ajar 6</strong>
+                    <small>Dokumen pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+
+                <a
+                  href="viewer/media-ajar-ppl2-6.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-media-button"
+                  title="Buka Media Ajar PPL 2 - Media 6"
+                >
+                  <i class="fas fa-photo-film"></i>
+                  <span>
+                    <strong>Media Ajar 6</strong>
+                    <small>Media pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="ppl2-pair-card">
+              <div class="ppl2-pair-header">
+                <span class="ppl2-pair-number">07</span>
+                <div>
+                  <strong>Perangkat Pembelajaran 7</strong>
+                  <p>Modul dan Media Ajar PPL 2</p>
+                </div>
+              </div>
+
+              <div class="ppl2-pair-items">
+                <a
+                  href="../assets/modul_ajar_ppl2/Jarkom.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-module-button"
+                  title="Buka Modul Ajar PPL 2 - Modul 7"
+                >
+                  <i class="fas fa-book-open"></i>
+                  <span>
+                    <strong>Modul Ajar 7</strong>
+                    <small>Dokumen pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+
+                <a
+                  href="viewer/media-ajar-ppl2-7.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-media-button"
+                  title="Buka Media Ajar PPL 2 - Media 7"
+                >
+                  <i class="fas fa-photo-film"></i>
+                  <span>
+                    <strong>Media Ajar 7</strong>
+                    <small>Media pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="ppl2-pair-card">
+              <div class="ppl2-pair-header">
+                <span class="ppl2-pair-number">08</span>
+                <div>
+                  <strong>Perangkat Pembelajaran 8</strong>
+                  <p>Modul dan Media Ajar PPL 2</p>
+                </div>
+              </div>
+
+              <div class="ppl2-pair-items">
+                <a
+                  href="../assets/modul_ajar_ppl2/Dampak.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-module-button"
+                  title="Buka Modul Ajar PPL 2 - Modul 8"
+                >
+                  <i class="fas fa-book-open"></i>
+                  <span>
+                    <strong>Modul Ajar 8</strong>
+                    <small>Dokumen pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+
+                <a
+                  href="viewer/media-ajar-ppl2-8.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ppl2-pair-button ppl2-media-button"
+                  title="Buka Media Ajar PPL 2 - Media 8"
+                >
+                  <i class="fas fa-photo-film"></i>
+                  <span>
+                    <strong>Media Ajar 8</strong>
+                    <small>Media pembelajaran</small>
+                  </span>
+                  <i
+                    class="fas fa-arrow-up-right-from-square ppl2-pair-arrow"
+                  ></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- ANALISIS MEDIA -->
 
         <div class="ppl2-analysis">
           <h3 class="ppl2-analysis-title">
@@ -2151,8 +3493,6 @@
           </div>
         </div>
 
-        <!-- GALERI -->
-
         <div class="ppl2-gallery-note">
           <a href="../galeri/galeri-ppl2.html" class="btn btn-media">
             <i class="fas fa-images"></i>
@@ -2163,32 +3503,131 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         05 VIDEO PRAKTIK
-    ====================================================== -->
-
     <section class="ppl2-section" id="video">
       <div class="container">
         <div class="ppl2-section-head">
-          <div class="number">05 · Video Praktik</div>
+          <div class="number">06 · Video Praktik</div>
 
           <h2>Analisis Video Pelaksanaan Praktik Mengajar Mandiri</h2>
 
           <p>
-            Video digunakan sebagai bukti autentik untuk melakukan refleksi
-            terhadap pembukaan, kegiatan inti, interaksi, pengelolaan kelas,
-            pemanfaatan media, dan penutupan pembelajaran.
+            Video praktik menjadi bukti autentik pelaksanaan rancangan
+            pembelajaran. Tautan video akan ditempatkan menggunakan Google Drive
+            agar dapat diakses sebagai bukti UTS dan UAS sesuai siklus yang
+            dipilih.
           </p>
         </div>
 
-        <div class="ppl2-timeline">
-          <!-- 1 -->
+        <div class="ppl2-video-grid">
+          <article class="ppl2-video-card">
+            <div class="ppl2-video-card-head">
+              <h3>Siklus 1 · UTS</h3>
+              <span class="ppl2-cycle-badge"
+                ><i class="fas fa-flag-checkered"></i> UTS</span
+              >
+            </div>
+            <p>
+              Video praktik dari rancangan Siklus 1: Informatika Sekarang dan di
+              Masa Depan dengan dua pertemuan tentang perkembangan teknologi.
+            </p>
+            <a
+              href="#"
+              class="ppl2-drive-btn placeholder"
+              title="Ganti href dengan link Google Drive video Siklus 1"
+              aria-label="Video Google Drive Siklus 1 belum ditambahkan"
+            >
+              <i class="fab fa-google-drive"></i>
+              Tambahkan Link Google Drive
+            </a>
+            <span class="ppl2-resource-caption">
+              Ganti <code>href="#"</code> dengan tautan Google Drive video
+              Siklus 1.
+            </span>
+          </article>
 
+          <article class="ppl2-video-card">
+            <div class="ppl2-video-card-head">
+              <h3>Siklus 2 · UAS</h3>
+              <span class="ppl2-cycle-badge"
+                ><i class="fas fa-layer-group"></i> UAS</span
+              >
+            </div>
+            <p>
+              Video praktik dari rancangan Siklus 2: Pengenalan Sistem Komputer
+              dan Sensor dalam dua pertemuan.
+            </p>
+            <a
+              href="#"
+              class="ppl2-drive-btn placeholder"
+              title="Ganti href dengan link Google Drive video Siklus 2"
+              aria-label="Video Google Drive Siklus 2 belum ditambahkan"
+            >
+              <i class="fab fa-google-drive"></i>
+              Tambahkan Link Google Drive
+            </a>
+            <span class="ppl2-resource-caption">
+              Ganti <code>href="#"</code> dengan tautan Google Drive video
+              Siklus 2.
+            </span>
+          </article>
+
+          <article class="ppl2-video-card">
+            <div class="ppl2-video-card-head">
+              <h3>Siklus 3 · UAS</h3>
+              <span class="ppl2-cycle-badge"
+                ><i class="fas fa-microchip"></i> UAS</span
+              >
+            </div>
+            <p>
+              Video praktik Arduino Uno: lampu berkedip dan RGB, kemudian Serial
+              Monitor serta sensor suhu DHT22 pada pertemuan berikutnya.
+            </p>
+            <a
+              href="#"
+              class="ppl2-drive-btn placeholder"
+              title="Ganti href dengan link Google Drive video Siklus 3"
+              aria-label="Video Google Drive Siklus 3 belum ditambahkan"
+            >
+              <i class="fab fa-google-drive"></i>
+              Tambahkan Link Google Drive
+            </a>
+            <span class="ppl2-resource-caption">
+              Ganti <code>href="#"</code> dengan tautan Google Drive video
+              Siklus 3.
+            </span>
+          </article>
+
+          <article class="ppl2-video-card">
+            <div class="ppl2-video-card-head">
+              <h3>Siklus 4 · UAS</h3>
+              <span class="ppl2-cycle-badge"
+                ><i class="fas fa-microchip"></i> UAS</span
+              >
+            </div>
+            <p>
+              Video praktik Arduino Nano: lampu berkedip dan RGB, kemudian
+              Serial Monitor serta sensor suhu DHT22 pada pertemuan berikutnya.
+            </p>
+            <a
+              href="#"
+              class="ppl2-drive-btn placeholder"
+              title="Ganti href dengan link Google Drive video Siklus 4"
+              aria-label="Video Google Drive Siklus 4 belum ditambahkan"
+            >
+              <i class="fab fa-google-drive"></i>
+              Tambahkan Link Google Drive
+            </a>
+            <span class="ppl2-resource-caption">
+              Ganti <code>href="#"</code> dengan tautan Google Drive video
+              Siklus 4.
+            </span>
+          </article>
+        </div>
+
+        <div class="ppl2-timeline" style="margin-top: 34px">
           <div class="ppl2-timeline-item">
             <div class="ppl2-timeline-dot"></div>
-
             <h3>01. Pembukaan</h3>
-
             <p>
               Pembelajaran diarahkan untuk membangun kesiapan peserta didik,
               menghubungkan materi dengan pengetahuan sebelumnya, menyampaikan
@@ -2196,115 +3635,91 @@
             </p>
           </div>
 
-          <!-- 2 -->
-
           <div class="ppl2-timeline-item">
             <div class="ppl2-timeline-dot"></div>
-
             <h3>02. Penyampaian Konsep</h3>
-
             <p>
               Konsep dijelaskan secara bertahap dengan bantuan media visual.
-              Penjelasan diarahkan pada alasan penggunaan setiap bagian program,
-              bukan hanya pada penulisan kode.
+              Pada praktik Arduino, penjelasan diarahkan pada fungsi komponen,
+              pin, dan alasan penggunaan setiap bagian program.
             </p>
           </div>
 
-          <!-- 3 -->
-
           <div class="ppl2-timeline-item">
             <div class="ppl2-timeline-dot"></div>
-
             <h3>03. Praktik dan Pendampingan</h3>
-
             <p>
-              Peserta didik diberi kesempatan mencoba. Guru berkeliling,
-              memberikan arahan, mengajukan pertanyaan pemantik, dan membantu
-              ketika peserta didik menemukan kesulitan.
+              Peserta didik diberi kesempatan mencoba. Guru memberikan arahan,
+              pertanyaan pemantik, dan pendampingan ketika peserta didik
+              menemukan kesulitan dalam simulator, program, atau pembacaan
+              sensor.
             </p>
           </div>
 
-          <!-- 4 -->
-
           <div class="ppl2-timeline-item">
             <div class="ppl2-timeline-dot"></div>
-
             <h3>04. Refleksi Pelaksanaan</h3>
-
             <p>
-              Dari pengamatan terhadap video, aspek yang perlu diperbaiki
-              terutama adalah pengelolaan waktu, pemerataan pendampingan,
-              kejelasan instruksi praktik, dan penguatan refleksi di akhir.
+              Analisis video diarahkan pada pengelolaan waktu, pemerataan
+              pendampingan, kejelasan instruksi praktik, interaksi guru-peserta
+              didik, pemanfaatan media, dan penguatan refleksi di akhir
+              pembelajaran.
             </p>
           </div>
         </div>
 
-        <!-- ANALISIS VIDEO -->
-
         <div class="ppl2-analysis">
           <h3 class="ppl2-analysis-title">
             <i class="fas fa-video"></i>
-
             Catatan Reflektif dari Video
           </h3>
 
           <div class="ppl2-analysis-grid">
             <div class="ppl2-analysis-item">
               <h4>Yang sudah baik</h4>
-
               <p>
                 Pembelajaran memiliki alur yang jelas dan media praktik membantu
-                mengubah konsep pemrograman menjadi pengalaman yang dapat
-                diamati peserta didik.
+                mengubah konsep menjadi pengalaman yang dapat diamati peserta
+                didik.
               </p>
             </div>
 
             <div class="ppl2-analysis-item">
               <h4>Yang perlu diperbaiki</h4>
-
               <p>
                 Instruksi kerja perlu lebih ringkas. Waktu antara penjelasan dan
                 praktik perlu diatur agar peserta didik memiliki waktu cukup
-                untuk mencoba dan melakukan debugging.
+                untuk mencoba, melakukan debugging, dan menuntaskan tugas.
               </p>
             </div>
 
             <div class="ppl2-analysis-item">
               <h4>Insight profesional</h4>
-
               <p>
                 Penguasaan materi saja belum cukup. Guru perlu mampu membaca
                 respons peserta didik, mengelola ritme kelas, serta menyesuaikan
                 bantuan berdasarkan kebutuhan masing-masing peserta didik.
               </p>
             </div>
-          </div>
 
-          <!-- VIDEO EVIDENCE -->
-
-          <div class="ppl2-evidence">
-            <strong>
-              <i class="fas fa-video"></i>
-
-              Bukti video praktik mengajar mandiri
-            </strong>
-
-            <span style="font-size: 12px; opacity: 0.75">
-              Tambahkan file/link video PPL 2 pada bagian ini.
-            </span>
+            <div class="ppl2-analysis-item">
+              <h4>Tindak lanjut dari analisis video</h4>
+              <p>
+                Hasil pengamatan video menjadi dasar untuk memperjelas
+                instruksi, membagi waktu praktik dengan lebih terukur, dan
+                menyiapkan bantuan bertahap agar peserta didik dapat bekerja
+                lebih mandiri.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =====================================================
-         06 KEGIATAN NONMENGAJAR
-    ====================================================== -->
-
     <section class="ppl2-section alt" id="nonmengajar">
       <div class="container">
         <div class="ppl2-section-head">
-          <div class="number">06 · Kegiatan Nonmengajar</div>
+          <div class="number">07 · Kegiatan Nonmengajar</div>
 
           <h2>Kontribusi di Lingkungan Sekolah</h2>
 
@@ -2318,8 +3733,6 @@
         </div>
 
         <div class="ppl2-card-grid">
-          <!-- Piket -->
-
           <div class="ppl2-card">
             <div class="card-icon">
               <i class="fas fa-user-clock"></i>
@@ -2334,7 +3747,6 @@
             </p>
           </div>
 
-          <!-- Piket Lobby -->
           <div class="ppl2-card">
             <div class="card-icon"><i class="fas fa-door-open"></i></div>
             <h3>Piket Lobby</h3>
@@ -2344,7 +3756,7 @@
               guru, maupun warga sekolah yang membutuhkan bantuan.
             </p>
           </div>
-          <!-- Piket Perpustakaan -->
+
           <div class="ppl2-card">
             <div class="card-icon"><i class="fas fa-book-open"></i></div>
             <h3>Piket Perpustakaan</h3>
@@ -2354,7 +3766,7 @@
               didik yang memanfaatkan fasilitas perpustakaan.
             </p>
           </div>
-          <!-- Backup Kelas Kosong -->
+
           <div class="ppl2-card">
             <div class="card-icon"><i class="fas fa-chalkboard-user"></i></div>
             <h3>Backup Kelas Kosong</h3>
@@ -2368,7 +3780,6 @@
           </div>
         </div>
 
-        <!-- ANALISIS -->
         <div class="ppl2-analysis">
           <h3 class="ppl2-analysis-title">
             <i class="fas fa-person-circle-check"></i>
@@ -2376,7 +3787,6 @@
           </h3>
 
           <div class="ppl2-analysis-grid">
-            <!-- Kompetensi Sosial -->
             <div class="ppl2-analysis-item">
               <h4>Kompetensi Sosial</h4>
 
@@ -2390,7 +3800,6 @@
               </p>
             </div>
 
-            <!-- Kompetensi Kepribadian -->
             <div class="ppl2-analysis-item">
               <h4>Kompetensi Kepribadian</h4>
 
@@ -2402,7 +3811,6 @@
               </p>
             </div>
 
-            <!-- Adaptasi & Manajemen Kelas -->
             <div class="ppl2-analysis-item">
               <h4>Adaptasi & Manajemen Kelas</h4>
 
@@ -2415,7 +3823,6 @@
               </p>
             </div>
 
-            <!-- Kolaborasi -->
             <div class="ppl2-analysis-item">
               <h4>Kolaborasi</h4>
 
@@ -2428,7 +3835,6 @@
               </p>
             </div>
 
-            <!-- Refleksi -->
             <div class="ppl2-analysis-item">
               <h4>Refleksi</h4>
 
@@ -2441,7 +3847,6 @@
               </p>
             </div>
 
-            <!-- Pengembangan -->
             <div class="ppl2-analysis-item">
               <h4>Pengembangan Profesional</h4>
 
@@ -2459,14 +3864,10 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         07 ASESMEN
-    ====================================================== -->
-
     <section class="ppl2-section" id="asesmen">
       <div class="container">
         <div class="ppl2-section-head">
-          <div class="number">07 · Instrumen Penilaian</div>
+          <div class="number">08 · Instrumen Penilaian</div>
 
           <h2>Asesmen sebagai Bagian dari Proses Belajar</h2>
 
@@ -2476,8 +3877,6 @@
             peserta didik serta menentukan tindak lanjut.
           </p>
         </div>
-
-        <!-- TABLE -->
 
         <table class="ppl2-assessment-table">
           <thead>
@@ -2493,8 +3892,6 @@
           </thead>
 
           <tbody>
-            <!-- KEAKTIFAN -->
-
             <tr>
               <td>
                 <b> Poin Keaktifan </b>
@@ -2512,8 +3909,6 @@
               </td>
             </tr>
 
-            <!-- KUIS -->
-
             <tr>
               <td>
                 <b> Kuis </b>
@@ -2529,8 +3924,6 @@
               </td>
             </tr>
 
-            <!-- LKPD -->
-
             <tr>
               <td>
                 <b> LKPD </b>
@@ -2545,8 +3938,6 @@
                 mengikuti instruksi, dan melakukan analisis.
               </td>
             </tr>
-
-            <!-- ULANGAN -->
 
             <tr>
               <td>
@@ -2564,8 +3955,6 @@
             </tr>
           </tbody>
         </table>
-
-        <!-- ANALISIS ASESMEN -->
 
         <div class="ppl2-analysis">
           <h3 class="ppl2-analysis-title">
@@ -2608,28 +3997,102 @@
           </div>
 
           <div class="ppl2-evidence">
-            <strong>
-              <i class="fas fa-file-signature"></i>
+            <div class="ppl2-evidence-header">
+              <strong>
+                <i class="fas fa-file-signature"></i>
+                Bukti instrumen penilaian PPL 2
+              </strong>
 
-              Bukti instrumen: Kuis · LKPD · Rubrik · Ulangan Harian
-            </strong>
+              <span style="font-size: 12px; opacity: 0.75">
+                Tambahkan tautan file asli yang digunakan dalam pelaksanaan
+                setelah dokumen asesmen ditempatkan pada folder aset
+                E-Portfolio.
+              </span>
+            </div>
 
-            <span style="font-size: 12px; opacity: 0.75">
-              Tambahkan tautan dokumen asesmen PPL 2 setelah file tersedia.
-            </span>
+            <div class="ppl2-evidence-files">
+              <a
+                href="#"
+                class="ppl2-file-link"
+                title="Ganti dengan link instrumen poin keaktifan"
+              >
+                <div class="ppl2-file-icon"><i class="fas fa-star"></i></div>
+                <div class="ppl2-file-info">
+                  <strong>Poin Keaktifan</strong>
+                  <span>Ganti link dengan instrumen asli</span>
+                </div>
+                <div class="ppl2-file-action"><i class="fas fa-link"></i></div>
+              </a>
+
+              <a
+                href="#"
+                class="ppl2-file-link"
+                title="Ganti dengan link instrumen kuis"
+              >
+                <div class="ppl2-file-icon">
+                  <i class="fas fa-list-check"></i>
+                </div>
+                <div class="ppl2-file-info">
+                  <strong>Kuis</strong>
+                  <span>Ganti link dengan instrumen asli</span>
+                </div>
+                <div class="ppl2-file-action"><i class="fas fa-link"></i></div>
+              </a>
+
+              <a
+                href="#"
+                class="ppl2-file-link"
+                title="Ganti dengan link instrumen LKPD"
+              >
+                <div class="ppl2-file-icon">
+                  <i class="fas fa-file-lines"></i>
+                </div>
+                <div class="ppl2-file-info">
+                  <strong>LKPD</strong>
+                  <span>Ganti link dengan instrumen asli</span>
+                </div>
+                <div class="ppl2-file-action"><i class="fas fa-link"></i></div>
+              </a>
+
+              <a
+                href="#"
+                class="ppl2-file-link"
+                title="Ganti dengan link rubrik penilaian"
+              >
+                <div class="ppl2-file-icon">
+                  <i class="fas fa-table-list"></i>
+                </div>
+                <div class="ppl2-file-info">
+                  <strong>Rubrik Penilaian</strong>
+                  <span>Ganti link dengan instrumen asli</span>
+                </div>
+                <div class="ppl2-file-action"><i class="fas fa-link"></i></div>
+              </a>
+
+              <a
+                href="#"
+                class="ppl2-file-link"
+                title="Ganti dengan link ulangan harian"
+              >
+                <div class="ppl2-file-icon">
+                  <i class="fas fa-file-pen"></i>
+                </div>
+                <div class="ppl2-file-info">
+                  <strong>Ulangan Harian</strong>
+                  <span>Ganti link dengan instrumen asli</span>
+                </div>
+                <div class="ppl2-file-action"><i class="fas fa-link"></i></div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =====================================================
-         08 REFLEKSI DIRI
-    ====================================================== -->
-
     <section class="ppl2-section alt" id="refleksi">
       <div class="container">
         <div class="ppl2-section-head">
-          <div class="number">08 · Refleksi Diri</div>
+          <div class="number">09 · Refleksi Diri</div>
 
           <h2>Apa yang Saya Pelajari dari PPL 2?</h2>
 
@@ -2641,8 +4104,6 @@
         </div>
 
         <div class="ppl2-reflection">
-          <!-- SEBELUM -->
-
           <div class="ppl2-reflection-card">
             <h3>
               <i class="fas fa-lightbulb"></i>
@@ -2657,8 +4118,6 @@
               mengantisipasi variasi kebutuhan peserta didik.
             </p>
           </div>
-
-          <!-- SAAT -->
 
           <div class="ppl2-reflection-card">
             <h3>
@@ -2675,8 +4134,6 @@
             </p>
           </div>
 
-          <!-- PEMBELAJARAN -->
-
           <div class="ppl2-reflection-card">
             <h3>
               <i class="fas fa-brain"></i>
@@ -2691,8 +4148,6 @@
               secara terpadu.
             </p>
           </div>
-
-          <!-- PERBAIKAN -->
 
           <div class="ppl2-reflection-card">
             <h3>
@@ -2709,8 +4164,6 @@
           </div>
         </div>
 
-        <!-- QUOTE -->
-
         <div class="ppl2-quote">
           <i class="fas fa-quote-left"></i>
 
@@ -2720,17 +4173,24 @@
             menilai, merefleksikan, dan terus memperbaiki pembelajaran.”
           </p>
         </div>
+
+        <div class="ppl2-utsuas-note">
+          <strong
+            ><i class="fas fa-arrow-right"></i> Perubahan setelah
+            refleksi:</strong
+          >
+          hasil refleksi digunakan untuk memperbaiki pengelolaan waktu praktik,
+          memperjelas instruksi, meningkatkan pemerataan pendampingan, dan
+          menyesuaikan tindak lanjut berdasarkan hasil asesmen pada pembelajaran
+          berikutnya.
+        </div>
       </div>
     </section>
-
-    <!-- =====================================================
-         09 TINDAK LANJUT
-    ====================================================== -->
 
     <section class="ppl2-section" id="tindak-lanjut">
       <div class="container">
         <div class="ppl2-section-head">
-          <div class="number">09 · Rencana Tindak Lanjut</div>
+          <div class="number">10 · Rencana Tindak Lanjut</div>
 
           <h2>Dari Refleksi Menuju Perbaikan</h2>
 
@@ -2741,8 +4201,6 @@
         </div>
 
         <div class="ppl2-card-grid">
-          <!-- Waktu -->
-
           <div class="ppl2-card">
             <div class="card-icon">
               <i class="fas fa-clock"></i>
@@ -2755,8 +4213,6 @@
               presentasi hasil, dan refleksi secara lebih terukur.
             </p>
           </div>
-
-          <!-- Instruksi -->
 
           <div class="ppl2-card">
             <div class="card-icon">
@@ -2771,8 +4227,6 @@
             </p>
           </div>
 
-          <!-- Diferensiasi -->
-
           <div class="ppl2-card">
             <div class="card-icon">
               <i class="fas fa-layer-group"></i>
@@ -2785,8 +4239,6 @@
               sesuai kesiapan peserta didik.
             </p>
           </div>
-
-          <!-- Asesmen -->
 
           <div class="ppl2-card">
             <div class="card-icon">
@@ -2802,8 +4254,6 @@
           </div>
         </div>
 
-        <!-- SIKLUS -->
-
         <div class="ppl2-analysis">
           <h3 class="ppl2-analysis-title">
             <i class="fas fa-rotate"></i>
@@ -2812,8 +4262,6 @@
           </h3>
 
           <div class="ppl2-flow">
-            <!-- Praktik -->
-
             <div class="ppl2-flow-item">
               <i class="fas fa-person-chalkboard"></i>
 
@@ -2821,8 +4269,6 @@
 
               <span> Melaksanakan pembelajaran </span>
             </div>
-
-            <!-- Observasi -->
 
             <div class="ppl2-flow-item">
               <i class="fas fa-eye"></i>
@@ -2832,8 +4278,6 @@
               <span> Mengumpulkan bukti </span>
             </div>
 
-            <!-- Analisis -->
-
             <div class="ppl2-flow-item">
               <i class="fas fa-chart-simple"></i>
 
@@ -2841,8 +4285,6 @@
 
               <span> Membaca hasil </span>
             </div>
-
-            <!-- Refleksi -->
 
             <div class="ppl2-flow-item">
               <i class="fas fa-comments"></i>
@@ -2852,8 +4294,6 @@
               <span> Menemukan pembelajaran </span>
             </div>
 
-            <!-- Perbaikan -->
-
             <div class="ppl2-flow-item">
               <i class="fas fa-wrench"></i>
 
@@ -2861,8 +4301,6 @@
 
               <span> Menyusun strategi baru </span>
             </div>
-
-            <!-- Praktik baru -->
 
             <div class="ppl2-flow-item">
               <i class="fas fa-arrow-rotate-right"></i>
@@ -2876,10 +4314,6 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
     <footer class="footer">
       <div class="container">
         <p class="copyright">
@@ -2891,17 +4325,9 @@
       </div>
     </footer>
 
-    <!-- =====================================================
-         SCROLL TOP
-    ====================================================== -->
-
     <button id="scrollTopBtn" title="Kembali ke Atas">
       <i class="fas fa-chevron-up"></i>
     </button>
-
-    <!-- =====================================================
-         JAVASCRIPT PROJECT
-    ====================================================== -->
 
     <script src="../js/script.js"></script>
   </body>
