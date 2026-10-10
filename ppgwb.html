@@ -1,0 +1,2224 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta
+      name="description"
+      content="Portofolio Profesional dan Peta Karier Guru Berdampak SDGs - Mata Kuliah Pengembangan Profesionalitas Guru dan Wawasan Keberlanjutan."
+    />
+    <title>PPGWB · Guru Berdampak SDGs | E-Portofolio PPG</title>
+    <link rel="icon" type="image/png" href="assets/img/pages.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      :root {
+        --ppgwb-blue: #2563eb;
+        --ppgwb-indigo: #4f46e5;
+        --ppgwb-green: #059669;
+        --ppgwb-teal: #0f766e;
+        --ppgwb-border: rgba(37, 99, 235, 0.15);
+        --ppgwb-soft: rgba(37, 99, 235, 0.055);
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .ppgwb-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 72px 0 58px;
+        background:
+          radial-gradient(
+            circle at 85% 15%,
+            rgba(52, 211, 153, 0.17),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 8% 95%,
+            rgba(96, 165, 250, 0.15),
+            transparent 32%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.09),
+            rgba(79, 70, 229, 0.055)
+          );
+      }
+      .ppgwb-hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.75fr);
+        gap: 34px;
+        align-items: center;
+      }
+      .ppgwb-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 8px 13px;
+        border-radius: 999px;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--ppgwb-blue);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.035em;
+        margin-bottom: 17px;
+      }
+      .ppgwb-hero h1 {
+        margin: 0 0 16px;
+        font-size: clamp(2rem, 4.2vw, 3.25rem);
+        line-height: 1.16;
+        letter-spacing: -0.035em;
+      }
+      .ppgwb-hero h1 span {
+        color: var(--ppgwb-blue);
+      }
+      .ppgwb-hero-copy {
+        max-width: 840px;
+        line-height: 1.85;
+        text-align: justify;
+        margin: 0 0 20px;
+      }
+      .ppgwb-chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin: 20px 0 26px;
+      }
+      .ppgwb-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 12px;
+        border-radius: 10px;
+        background: var(--card, #fff);
+        border: 1px solid var(--ppgwb-border);
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .ppgwb-hero-panel {
+        background: var(--card, #fff);
+        border: 1px solid var(--ppgwb-border);
+        border-radius: 22px;
+        padding: 25px;
+        box-shadow: 0 16px 42px rgba(30, 64, 175, 0.1);
+      }
+      .ppgwb-hero-panel-icon {
+        width: 58px;
+        height: 58px;
+        display: grid;
+        place-items: center;
+        border-radius: 17px;
+        background: rgba(5, 150, 105, 0.11);
+        color: var(--ppgwb-green);
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+      .ppgwb-hero-panel h2 {
+        font-size: 19px;
+        margin: 0 0 9px;
+      }
+      .ppgwb-hero-panel p {
+        font-size: 13px;
+        line-height: 1.8;
+        margin: 0;
+        text-align: justify;
+      }
+      .ppgwb-sdg-pills {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 17px;
+      }
+      .ppgwb-sdg-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 9px;
+        border-radius: 9px;
+        background: rgba(5, 150, 105, 0.09);
+        color: var(--ppgwb-teal);
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .ppgwb-subnav-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      }
+      .dark .ppgwb-subnav-wrap {
+        background: rgba(15, 23, 42, 0.94);
+      }
+      .ppgwb-subnav {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 11px 0;
+        scrollbar-width: thin;
+      }
+      .ppgwb-subnav a {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        white-space: nowrap;
+        padding: 9px 12px;
+        border-radius: 9px;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(100, 116, 139, 0.08);
+        font-size: 12px;
+        font-weight: 650;
+      }
+      .ppgwb-subnav a:hover {
+        color: var(--ppgwb-blue);
+        background: rgba(37, 99, 235, 0.11);
+      }
+      .ppgwb-section {
+        padding: 58px 0;
+      }
+      .ppgwb-section.alt {
+        background: rgba(37, 99, 235, 0.035);
+      }
+      .ppgwb-section-head {
+        max-width: 900px;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+      .ppgwb-section-head .number {
+        color: var(--ppgwb-blue);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+      .ppgwb-section-head h2 {
+        margin: 7px 0 10px;
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        line-height: 1.3;
+      }
+      .ppgwb-section-head p {
+        line-height: 1.8;
+        margin: 0;
+        text-align: center;
+      }
+      .ppgwb-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        align-items: stretch;
+      }
+      .ppgwb-card {
+        min-width: 0;
+        background: var(--card, #fff);
+        border: 1px solid var(--ppgwb-border);
+        border-radius: 17px;
+        padding: 22px;
+        box-shadow: 0 8px 23px rgba(15, 23, 42, 0.045);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .ppgwb-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(37, 99, 235, 0.32);
+        box-shadow: 0 14px 30px rgba(37, 99, 235, 0.085);
+      }
+      .ppgwb-card h3 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+      .ppgwb-card h4 {
+        margin: 0 0 7px;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .ppgwb-card p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.8;
+        text-align: justify;
+      }
+      .ppgwb-card-icon {
+        display: grid;
+        place-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 13px;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--ppgwb-blue);
+        font-size: 19px;
+        margin-bottom: 14px;
+      }
+      .ppgwb-profile-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .ppgwb-profile-item {
+        padding: 15px 16px;
+        border-radius: 13px;
+        background: var(--card, #fff);
+        border: 1px solid var(--ppgwb-border);
+      }
+      .ppgwb-profile-item span {
+        display: block;
+        color: var(--ppgwb-blue);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-size: 10px;
+        font-weight: 800;
+        margin-bottom: 5px;
+      }
+      .ppgwb-profile-item strong {
+        display: block;
+        font-size: 12px;
+        line-height: 1.65;
+      }
+      .ppgwb-content-panel {
+        padding: 25px;
+        border-radius: 18px;
+        background: var(--card, #fff);
+        border: 1px solid var(--ppgwb-border);
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+        margin-top: 20px;
+      }
+      .ppgwb-content-panel h3 {
+        margin: 0 0 12px;
+        font-size: 17px;
+      }
+      .ppgwb-content-panel p {
+        font-size: 13px;
+        line-height: 1.85;
+        text-align: justify;
+      }
+      .ppgwb-content-panel p:last-child {
+        margin-bottom: 0;
+      }
+      .ppgwb-sdg-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .ppgwb-sdg {
+        padding: 17px;
+        border-radius: 14px;
+        border: 1px solid var(--ppgwb-border);
+        background: rgba(37, 99, 235, 0.035);
+      }
+      .ppgwb-sdg .sdg-no {
+        font-size: 11px;
+        color: var(--ppgwb-blue);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .ppgwb-sdg h4 {
+        margin: 7px 0;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .ppgwb-sdg p {
+        font-size: 11px;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .ppgwb-activity-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .ppgwb-activity {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+      .ppgwb-activity-top {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        margin-bottom: 12px;
+      }
+      .ppgwb-activity-top .ppgwb-card-icon {
+        flex: 0 0 45px;
+        margin: 0;
+      }
+      .ppgwb-tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin: 12px 0;
+      }
+      .ppgwb-tag {
+        display: inline-flex;
+        padding: 5px 8px;
+        border-radius: 7px;
+        background: rgba(5, 150, 105, 0.09);
+        color: var(--ppgwb-teal);
+        font-size: 10px;
+        font-weight: 750;
+      }
+      .ppgwb-evidence-note {
+        margin-top: auto;
+        padding-top: 14px;
+        font-size: 11px;
+        line-height: 1.7;
+        color: #64748b;
+      }
+      .ppgwb-evidence-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        padding-top: 13px;
+        margin-top: auto;
+      }
+      .ppgwb-evidence-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        text-decoration: none;
+        padding: 9px 11px;
+        border-radius: 9px;
+        border: 1px solid rgba(37, 99, 235, 0.18);
+        background: rgba(37, 99, 235, 0.06);
+        color: var(--ppgwb-blue);
+        font-size: 11px;
+        font-weight: 750;
+      }
+      .ppgwb-evidence-btn:hover {
+        background: rgba(37, 99, 235, 0.12);
+      }
+      .ppgwb-table-wrap {
+        overflow-x: auto;
+        border-radius: 15px;
+        border: 1px solid var(--ppgwb-border);
+        background: var(--card, #fff);
+      }
+      .ppgwb-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 760px;
+      }
+      .ppgwb-table th,
+      .ppgwb-table td {
+        text-align: left;
+        vertical-align: top;
+        padding: 14px 15px;
+        border-bottom: 1px solid rgba(100, 116, 139, 0.14);
+        font-size: 12px;
+        line-height: 1.75;
+      }
+      .ppgwb-table th {
+        background: rgba(37, 99, 235, 0.08);
+        color: var(--ppgwb-blue);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.035em;
+      }
+      .ppgwb-table tr:last-child td {
+        border-bottom: 0;
+      }
+      .ppgwb-year {
+        display: inline-flex;
+        padding: 6px 9px;
+        border-radius: 8px;
+        background: rgba(37, 99, 235, 0.09);
+        color: var(--ppgwb-blue);
+        font-weight: 800;
+        white-space: nowrap;
+      }
+      .ppgwb-program-top {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 18px;
+        align-items: stretch;
+        margin-bottom: 18px;
+      }
+      .ppgwb-program-highlight {
+        padding: 23px;
+        border-radius: 17px;
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.1),
+          rgba(5, 150, 105, 0.075)
+        );
+        border: 1px solid var(--ppgwb-border);
+      }
+      .ppgwb-program-highlight h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .ppgwb-program-highlight p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.8;
+        text-align: justify;
+      }
+      .ppgwb-program-meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .ppgwb-meta-item {
+        padding: 14px;
+        border-radius: 13px;
+        background: var(--card, #fff);
+        border: 1px solid var(--ppgwb-border);
+      }
+      .ppgwb-meta-item span {
+        display: block;
+        color: var(--ppgwb-blue);
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 5px;
+      }
+      .ppgwb-meta-item strong {
+        display: block;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      .ppgwb-timeline {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .ppgwb-phase {
+        position: relative;
+        padding: 17px;
+        border-radius: 14px;
+        background: var(--card, #fff);
+        border: 1px solid var(--ppgwb-border);
+      }
+      .ppgwb-phase-number {
+        display: inline-grid;
+        place-items: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 9px;
+        background: var(--ppgwb-blue);
+        color: white;
+        font-size: 11px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      .ppgwb-phase h4 {
+        margin: 0 0 8px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .ppgwb-phase p {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.75;
+      }
+      .ppgwb-checklist {
+        display: grid;
+        gap: 10px;
+      }
+      .ppgwb-check {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 12px 14px;
+        border-radius: 11px;
+        background: rgba(100, 116, 139, 0.055);
+        font-size: 12px;
+        line-height: 1.75;
+      }
+      .ppgwb-check i {
+        color: var(--ppgwb-green);
+        margin-top: 4px;
+      }
+      .ppgwb-reflection-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+      }
+      .ppgwb-reflection {
+        border-left: 4px solid var(--ppgwb-blue);
+      }
+      .ppgwb-reflection .question {
+        color: var(--ppgwb-blue);
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1.7;
+        margin-bottom: 8px;
+      }
+      .ppgwb-reflection p {
+        margin: 0;
+      }
+      .ppgwb-quote {
+        padding: 26px;
+        margin-top: 22px;
+        border-radius: 17px;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.09),
+          rgba(5, 150, 105, 0.075)
+        );
+        border: 1px solid var(--ppgwb-border);
+      }
+      .ppgwb-quote i {
+        color: var(--ppgwb-blue);
+        font-size: 24px;
+      }
+      .ppgwb-quote p {
+        max-width: 850px;
+        margin: 12px auto 0;
+        font-size: 15px;
+        font-weight: 650;
+        line-height: 1.85;
+      }
+      .ppgwb-footer {
+        padding: 27px 0;
+        border-top: 1px solid var(--ppgwb-border);
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.8;
+        opacity: 0.8;
+      }
+      .dark .ppgwb-card,
+      .dark .ppgwb-profile-item,
+      .dark .ppgwb-content-panel,
+      .dark .ppgwb-meta-item,
+      .dark .ppgwb-phase,
+      .dark .ppgwb-hero-panel {
+        background: var(--card, #0f172a);
+      }
+      .dark .ppgwb-table th {
+        background: rgba(96, 165, 250, 0.12);
+      }
+      .dark .ppgwb-evidence-note {
+        color: #94a3b8;
+      }
+      .dark .ppgwb-subnav a {
+        background: rgba(148, 163, 184, 0.09);
+      }
+      @media (max-width: 1000px) {
+        .ppgwb-hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .ppgwb-profile-grid,
+        .ppgwb-sdg-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .ppgwb-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .ppgwb-timeline {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 760px) {
+        .ppgwb-section {
+          padding: 43px 0;
+        }
+        .ppgwb-activity-grid,
+        .ppgwb-program-top,
+        .ppgwb-reflection-grid {
+          grid-template-columns: 1fr;
+        }
+        .ppgwb-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 520px) {
+        .ppgwb-hero {
+          padding: 48px 0 38px;
+        }
+        .ppgwb-profile-grid,
+        .ppgwb-sdg-grid,
+        .ppgwb-program-meta,
+        .ppgwb-timeline {
+          grid-template-columns: 1fr;
+        }
+        .ppgwb-card,
+        .ppgwb-content-panel,
+        .ppgwb-hero-panel {
+          padding: 18px;
+        }
+        .ppgwb-hero h1 {
+          font-size: 2rem;
+        }
+      }
+      @media print {
+        .navbar,
+        .ppgwb-subnav-wrap,
+        #theme-toggle,
+        .ppgwb-evidence-btn {
+          display: none !important;
+        }
+        .ppgwb-hero,
+        .ppgwb-section,
+        .ppgwb-section.alt {
+          padding: 20px 0;
+          background: #fff !important;
+        }
+        .ppgwb-card,
+        .ppgwb-content-panel,
+        .ppgwb-hero-panel,
+        .ppgwb-profile-item {
+          box-shadow: none;
+          break-inside: avoid;
+        }
+        body {
+          color: #111 !important;
+          background: #fff !important;
+        }
+        a {
+          color: #111 !important;
+        }
+      }
+
+      :root {
+        --ppgwb-hover-ease: cubic-bezier(0.22, 1, 0.36, 1);
+        --ppgwb-hover-duration: 400ms;
+        --ppgwb-hover-border: rgba(37, 99, 235, 0.32);
+        --ppgwb-hover-shadow:
+          0 12px 28px rgba(37, 99, 235, 0.09),
+          0 3px 10px rgba(15, 23, 42, 0.035);
+      }
+
+      .ppgwb-card,
+      .ppgwb-hero-panel,
+      .ppgwb-profile-item,
+      .ppgwb-sdg,
+      .ppgwb-meta-item,
+      .ppgwb-phase,
+      .ppgwb-program-highlight,
+      .ppgwb-check,
+      .ppgwb-quote,
+      .ppgwb-evidence-btn,
+      .ppgwb-card-icon,
+      .ppgwb-hero-panel-icon,
+      .ppgwb-phase-number {
+        transition:
+          transform var(--ppgwb-hover-duration) var(--ppgwb-hover-ease),
+          box-shadow var(--ppgwb-hover-duration) var(--ppgwb-hover-ease),
+          border-color var(--ppgwb-hover-duration) var(--ppgwb-hover-ease),
+          background-color var(--ppgwb-hover-duration) var(--ppgwb-hover-ease),
+          color var(--ppgwb-hover-duration) var(--ppgwb-hover-ease);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .ppgwb-card:hover,
+        .ppgwb-profile-item:hover,
+        .ppgwb-sdg:hover,
+        .ppgwb-meta-item:hover,
+        .ppgwb-phase:hover,
+        .ppgwb-program-highlight:hover,
+        .ppgwb-check:hover {
+          transform: translate3d(0, -4px, 0);
+          box-shadow: var(--ppgwb-hover-shadow);
+          border-color: var(--ppgwb-hover-border);
+        }
+
+        .ppgwb-hero-panel:hover {
+          transform: translate3d(0, -3px, 0);
+          box-shadow:
+            0 17px 38px rgba(30, 64, 175, 0.1),
+            0 4px 12px rgba(15, 23, 42, 0.035);
+          border-color: var(--ppgwb-hover-border);
+        }
+
+        .ppgwb-card:hover .ppgwb-card-icon {
+          transform: translate3d(0, -2px, 0) scale(1.04);
+          background-color: var(--ppgwb-blue);
+          color: #ffffff;
+        }
+
+        .ppgwb-hero-panel:hover .ppgwb-hero-panel-icon {
+          transform: translate3d(0, -2px, 0) scale(1.04);
+        }
+
+        .ppgwb-phase:hover .ppgwb-phase-number {
+          transform: scale(1.06);
+          box-shadow: 0 4px 10px rgba(37, 99, 235, 0.16);
+        }
+
+        .ppgwb-evidence-btn:hover {
+          transform: translate3d(0, -2px, 0);
+          box-shadow: 0 5px 12px rgba(37, 99, 235, 0.1);
+          background-color: rgba(37, 99, 235, 0.12);
+          border-color: rgba(37, 99, 235, 0.28);
+        }
+      }
+
+      .ppgwb-content-panel,
+      .ppgwb-table-wrap {
+        transition:
+          box-shadow 350ms var(--ppgwb-hover-ease),
+          border-color 350ms var(--ppgwb-hover-ease);
+      }
+
+      .ppgwb-evidence-btn:focus-visible,
+      .ppgwb-subnav a:focus-visible {
+        outline: 3px solid rgba(37, 99, 235, 0.5);
+        outline-offset: 3px;
+      }
+
+      .dark .ppgwb-card:hover,
+      .dark .ppgwb-profile-item:hover,
+      .dark .ppgwb-sdg:hover,
+      .dark .ppgwb-meta-item:hover,
+      .dark .ppgwb-phase:hover,
+      .dark .ppgwb-program-highlight:hover,
+      .dark .ppgwb-check:hover,
+      .dark .ppgwb-hero-panel:hover {
+        border-color: rgba(96, 165, 250, 0.4);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ppgwb-card,
+        .ppgwb-hero-panel,
+        .ppgwb-profile-item,
+        .ppgwb-sdg,
+        .ppgwb-meta-item,
+        .ppgwb-phase,
+        .ppgwb-program-highlight,
+        .ppgwb-check,
+        .ppgwb-quote,
+        .ppgwb-content-panel,
+        .ppgwb-table-wrap,
+        .ppgwb-evidence-btn,
+        .ppgwb-card-icon,
+        .ppgwb-hero-panel-icon,
+        .ppgwb-phase-number {
+          transition: none !important;
+        }
+      }
+
+      .ppgwb-photo-evidence {
+        margin-top: auto;
+        padding-top: 18px;
+      }
+
+      .ppgwb-photo-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+        color: var(--ppgwb-blue);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .ppgwb-photo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .ppgwb-photo-item {
+        min-width: 0;
+        margin: 0;
+      }
+
+      .ppgwb-photo-link {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        border-radius: 12px;
+        border: 1px solid var(--ppgwb-border);
+        background: rgba(100, 116, 139, 0.08);
+      }
+
+      .ppgwb-photo-link img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+          filter 400ms ease;
+      }
+
+      .ppgwb-photo-link::after {
+        content: "\f00e";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: #ffffff;
+        font-size: 22px;
+        background: rgba(15, 23, 42, 0.25);
+        opacity: 0;
+        transition: opacity 300ms ease;
+      }
+
+      .ppgwb-photo-caption {
+        display: block;
+        margin-top: 7px;
+        color: #64748b;
+        font-size: 10px;
+        line-height: 1.6;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .ppgwb-photo-link:hover img {
+          transform: scale(1.055);
+          filter: brightness(0.9);
+        }
+
+        .ppgwb-photo-link:hover::after {
+          opacity: 1;
+        }
+      }
+
+      .dark .ppgwb-photo-caption {
+        color: #94a3b8;
+      }
+
+      .dark .ppgwb-photo-link {
+        border-color: rgba(96, 165, 250, 0.2);
+      }
+
+      @media (max-width: 420px) {
+        .ppgwb-photo-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ppgwb-photo-link {
+          aspect-ratio: 16 / 10;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ppgwb-photo-link img,
+        .ppgwb-photo-link::after {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">E-Portofolio PPG</div>
+
+        <ul class="menu">
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+          </li>
+          <li>
+            <a href="tentang.html"
+              ><i class="fas fa-user-friends"></i>Tentang</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#"> <i class="fas fa-laptop-code"></i> PPL ▾ </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="ppl/ppl1.html"
+                  ><i class="fas fa-code-branch"></i> PPL 1</a
+                >
+              </li>
+              <li>
+                <a href="ppl/ppl2.html"
+                  ><i class="fas fa-code-branch"></i> PPL 2</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="seminar.html">
+              <i class="fas fa-graduation-cap"></i> Seminar
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="ppgwb.html"
+              class="active"
+              title="Pengembangan Profesionalitas Guru dan Wawasan Keberlanjutan"
+            >
+              <i class="fas fa-leaf"></i> PPGWB
+            </a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"> <i class="fas fa-images"></i> Galeri ▾ </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="galeri/galeri-ppl1.html"
+                  ><i class="fas fa-image"></i> PPL 1</a
+                >
+              </li>
+              <li>
+                <a href="galeri/galeri-ppl2.html"
+                  ><i class="fas fa-image"></i> PPL 2</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <button id="theme-toggle">🌙</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="ppgwb-hero">
+        <div class="container ppgwb-hero-grid">
+          <div>
+            <div class="ppgwb-eyebrow">
+              <i class="fas fa-seedling"></i> MATA KULIAH PPGWB
+            </div>
+            <h1>
+              Portofolio Profesional dan
+              <span>Peta Karier Guru Berdampak SDGs</span>
+            </h1>
+            <p class="ppgwb-hero-copy">
+              Halaman ini mendokumentasikan perjalanan pengembangan profesional
+              saya sebagai calon guru Informatika, refleksi kontribusi terhadap
+              Tujuan Pembangunan Berkelanjutan (SDGs), bukti aksi yang relevan,
+              serta rencana pengembangan kompetensi dan program sekolah untuk
+              lima tahun ke depan. Keberlanjutan dipahami sebagai bagian dari
+              pembelajaran yang inklusif, relevan, bertanggung jawab, dan
+              memberi manfaat nyata bagi peserta didik serta lingkungan.
+            </p>
+            <div class="ppgwb-chip-row">
+              <span class="ppgwb-chip"
+                ><i class="fas fa-user-graduate"></i> Arjun Yuda Firwanda</span
+              >
+              <span class="ppgwb-chip"
+                ><i class="fas fa-university"></i> Universitas Pendidikan
+                Indonesia</span
+              >
+              <span class="ppgwb-chip"
+                ><i class="fas fa-school"></i> PPL: SMA Negeri 12 Bandung</span
+              >
+              <span class="ppgwb-chip"
+                ><i class="fas fa-laptop-code"></i> Informatika</span
+              >
+            </div>
+            <a href="#profil" class="btn"
+              ><i class="fas fa-arrow-down"></i> Jelajahi Portofolio</a
+            >
+          </div>
+          <aside class="ppgwb-hero-panel">
+            <div class="ppgwb-hero-panel-icon">
+              <i class="fas fa-earth-asia"></i>
+            </div>
+            <h2>Guru Informatika yang Berdampak</h2>
+            <p>
+              Saya ingin mengembangkan pembelajaran Informatika yang tidak
+              berhenti pada keterampilan menggunakan teknologi. Peserta didik
+              juga perlu belajar memecahkan masalah, bekerja sama, menjaga etika
+              digital, serta merancang solusi teknologi yang memperhatikan
+              kebutuhan manusia dan kelestarian lingkungan.
+            </p>
+            <div class="ppgwb-sdg-pills">
+              <span class="ppgwb-sdg-pill">SDG 4 · Pendidikan</span>
+              <span class="ppgwb-sdg-pill">SDG 9 · Inovasi</span>
+              <span class="ppgwb-sdg-pill">SDG 12 · Konsumsi</span>
+              <span class="ppgwb-sdg-pill">SDG 13 · Iklim</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <div class="ppgwb-subnav-wrap">
+        <div class="container">
+          <nav class="ppgwb-subnav" aria-label="Navigasi PPGWB">
+            <a href="#profil"><i class="fas fa-user"></i> Profil</a>
+            <a href="#refleksi-sdgs"
+              ><i class="fas fa-earth-asia"></i> Refleksi SDGs</a
+            >
+            <a href="#portofolio-aksi"
+              ><i class="fas fa-folder-open"></i> Portofolio Aksi</a
+            >
+            <a href="#peta-karier"><i class="fas fa-route"></i> Peta Karier</a>
+            <a href="#rencana-aksi"
+              ><i class="fas fa-calendar-check"></i> Rencana Aksi</a
+            >
+            <a href="#refleksi-akhir"
+              ><i class="fas fa-comments"></i> Refleksi Akhir</a
+            >
+          </nav>
+        </div>
+      </div>
+
+      <section class="ppgwb-section" id="profil">
+        <div class="container">
+          <div class="ppgwb-section-head">
+            <div class="number">A · Profil Profesional</div>
+            <h2>Profil Profesional Berwawasan Keberlanjutan</h2>
+            <p>
+              Identitas, keahlian, minat, dan visi profesional sebagai calon
+              guru Informatika yang mendukung pendidikan berkualitas dan
+              pembangunan berkelanjutan.
+            </p>
+          </div>
+
+          <div class="ppgwb-profile-grid">
+            <div class="ppgwb-profile-item">
+              <span>Nama</span><strong>Arjun Yuda Firwanda, S.Tr.Kom.</strong>
+            </div>
+            <div class="ppgwb-profile-item">
+              <span>NIM</span><strong>2530809</strong>
+            </div>
+            <div class="ppgwb-profile-item">
+              <span>Program</span><strong>PPG Calon Guru · Informatika</strong>
+            </div>
+            <div class="ppgwb-profile-item">
+              <span>Universitas</span
+              ><strong>Universitas Pendidikan Indonesia</strong>
+            </div>
+            <div class="ppgwb-profile-item">
+              <span>Konteks Praktik</span><strong>SMA Negeri 12 Bandung</strong>
+            </div>
+            <div class="ppgwb-profile-item">
+              <span>Tahun Praktik</span
+              ><strong>Tahun Pelajaran 2026/2027</strong>
+            </div>
+            <div class="ppgwb-profile-item">
+              <span>Bidang Keahlian</span
+              ><strong>Informatika, pemrograman, Arduino, IoT</strong>
+            </div>
+            <div class="ppgwb-profile-item">
+              <span>Fokus Keberlanjutan</span
+              ><strong>Literasi digital dan teknologi untuk lingkungan</strong>
+            </div>
+          </div>
+
+          <div class="ppgwb-grid">
+            <article class="ppgwb-card">
+              <div class="ppgwb-card-icon"><i class="fas fa-code"></i></div>
+              <h3>Bidang Keahlian</h3>
+              <p>
+                Bidang yang saya kembangkan meliputi pembelajaran Informatika,
+                dasar pemrograman, berpikir komputasional, sistem komputer,
+                pemanfaatan Arduino Uno dan Nano, penggunaan sensor, simulasi
+                Wokwi, serta pengembangan media dan aplikasi pembelajaran
+                digital. Saya juga tertarik pada penggunaan data dan sistem
+                digital untuk membantu penyelesaian persoalan di lingkungan
+                sekolah.
+              </p>
+            </article>
+            <article class="ppgwb-card">
+              <div class="ppgwb-card-icon"><i class="fas fa-compass"></i></div>
+              <h3>Minat Profesional</h3>
+              <p>
+                Minat profesional saya adalah pembelajaran berbasis proyek,
+                pembelajaran berdiferensiasi, asesmen yang membantu perbaikan
+                belajar, Internet of Things (IoT), literasi digital, dan
+                pengembangan solusi teknologi sederhana untuk kebutuhan sekolah.
+                Minat tersebut ingin saya hubungkan dengan Education for
+                Sustainable Development (ESD) agar teknologi digunakan secara
+                kritis dan bertanggung jawab.
+              </p>
+            </article>
+            <article class="ppgwb-card">
+              <div class="ppgwb-card-icon"><i class="fas fa-seedling"></i></div>
+              <h3>Visi Pribadi</h3>
+              <p>
+                Saya ingin menjadi guru Informatika yang adaptif, reflektif,
+                inklusif, dan mampu mendampingi peserta didik menjadi pemecah
+                masalah. Saya berupaya menghadirkan pembelajaran yang
+                menghubungkan pengetahuan digital dengan kepedulian sosial dan
+                lingkungan, sehingga peserta didik tidak hanya mahir menggunakan
+                teknologi, tetapi juga mampu mempertimbangkan dampak dari solusi
+                yang mereka buat.
+              </p>
+            </article>
+          </div>
+
+          <div class="ppgwb-content-panel">
+            <h3>
+              <i
+                class="fas fa-bullseye"
+                style="color: var(--ppgwb-blue); margin-right: 8px"
+              ></i
+              >SDGs yang Relevan dengan Bidang Informatika
+            </h3>
+            <p>
+              SDGs yang paling relevan dengan pengembangan profesional saya
+              adalah SDG 4 sebagai landasan pendidikan, SDG 9 melalui inovasi
+              dan teknologi, SDG 12 melalui kebiasaan konsumsi dan pengelolaan
+              sampah yang bertanggung jawab, serta SDG 13 melalui pembentukan
+              kesadaran terhadap persoalan lingkungan. Keterkaitan ini merupakan
+              arah kontribusi yang ingin diperkuat melalui pembelajaran dan
+              proyek; hasil dampaknya perlu dinilai dengan bukti dan pengukuran
+              yang sesuai.
+            </p>
+            <div class="ppgwb-sdg-grid">
+              <div class="ppgwb-sdg">
+                <div class="sdg-no">SDG 4</div>
+                <h4>Pendidikan Berkualitas</h4>
+                <p>
+                  Mengembangkan pembelajaran yang relevan, inklusif, aktif, dan
+                  membantu semua peserta didik membangun kompetensi digital.
+                </p>
+              </div>
+              <div class="ppgwb-sdg">
+                <div class="sdg-no">SDG 9</div>
+                <h4>Industri, Inovasi, dan Infrastruktur</h4>
+                <p>
+                  Mengajak peserta didik menggunakan pemrograman, sensor, IoT,
+                  dan pemecahan masalah untuk membuat solusi teknologi.
+                </p>
+              </div>
+              <div class="ppgwb-sdg">
+                <div class="sdg-no">SDG 12</div>
+                <h4>Konsumsi dan Produksi Bertanggung Jawab</h4>
+                <p>
+                  Menguatkan literasi pengurangan sampah dan pemilahan yang
+                  dapat didukung dengan prototipe teknologi.
+                </p>
+              </div>
+              <div class="ppgwb-sdg">
+                <div class="sdg-no">SDG 13</div>
+                <h4>Penanganan Perubahan Iklim</h4>
+                <p>
+                  Membangun kesadaran bahwa kebiasaan sehari-hari dan keputusan
+                  teknologi perlu mempertimbangkan dampak lingkungan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ppgwb-section alt" id="refleksi-sdgs">
+        <div class="container">
+          <div class="ppgwb-section-head">
+            <div class="number">B · Refleksi Kontribusi</div>
+            <h2>Refleksi Kontribusi terhadap SDGs</h2>
+            <p>
+              Pengalaman yang telah dilakukan atau dikembangkan ditinjau dari
+              kaitannya dengan SDGs, kegiatan yang dilakukan, dan dampak yang
+              dapat diidentifikasi atau masih perlu diuji.
+            </p>
+          </div>
+
+          <div class="ppgwb-activity-grid">
+            <article class="ppgwb-card ppgwb-activity">
+              <div class="ppgwb-activity-top">
+                <div class="ppgwb-card-icon">
+                  <i class="fas fa-microchip"></i>
+                </div>
+                <div>
+                  <h3>Pembelajaran Informatika Berbasis Praktik</h3>
+                  <p>
+                    Dalam konteks PPL di SMA Negeri 12 Bandung, saya menyiapkan
+                    dan melaksanakan pembelajaran Informatika dengan materi
+                    sistem komputer, Arduino, sensor, pemrograman, serta
+                    simulasi digital seperti Wokwi.
+                  </p>
+                </div>
+              </div>
+              <div class="ppgwb-tag-row">
+                <span class="ppgwb-tag">SDG 4</span
+                ><span class="ppgwb-tag">SDG 9</span>
+              </div>
+              <h4>Bentuk kegiatan</h4>
+              <p>
+                Menghubungkan konsep dengan praktik, mengajak peserta didik
+                mengamati keluaran program, mencoba rangkaian, berdiskusi, dan
+                memperbaiki kesalahan dengan arahan guru.
+              </p>
+              <h4 style="margin-top: 12px">Dampak / refleksi</h4>
+              <p>
+                Kegiatan memberi kesempatan bagi peserta didik untuk memahami
+                hubungan perangkat keras dan program secara konkret.
+                Keberhasilan jangka panjang perlu ditinjau dari hasil kerja,
+                keterlibatan, dan asesmen peserta didik.
+              </p>
+            </article>
+
+            <article class="ppgwb-card ppgwb-activity">
+              <div class="ppgwb-activity-top">
+                <div class="ppgwb-card-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div>
+                  <h3>Digitalisasi Pengelolaan Sarana Prasarana</h3>
+                  <p>
+                    Saya turut berkontribusi dalam pengembangan SIMSAPRAS
+                    sebagai upaya memanfaatkan sistem digital untuk membantu
+                    pengelolaan informasi sarana dan prasarana sekolah.
+                  </p>
+                </div>
+              </div>
+              <div class="ppgwb-tag-row">
+                <span class="ppgwb-tag">SDG 4</span
+                ><span class="ppgwb-tag">SDG 9</span
+                ><span class="ppgwb-tag">SDG 16</span>
+              </div>
+              <h4>Bentuk kegiatan</h4>
+              <p>
+                Mendukung pengembangan sistem informasi yang membantu pencatatan
+                dan pengelolaan data secara lebih terstruktur, sehingga
+                informasi dapat lebih mudah ditelusuri oleh pengguna yang
+                berwenang.
+              </p>
+              <h4 style="margin-top: 12px">Dampak / refleksi</h4>
+              <p>
+                Digitalisasi berpotensi membantu efisiensi administrasi dan
+                ketersediaan informasi. Dampak operasionalnya perlu dibuktikan
+                melalui dokumentasi penggunaan, evaluasi pengguna, dan
+                perbandingan proses sebelum serta sesudah sistem diterapkan.
+              </p>
+            </article>
+
+            <article class="ppgwb-card ppgwb-activity">
+              <div class="ppgwb-activity-top">
+                <div class="ppgwb-card-icon">
+                  <i class="fas fa-recycle"></i>
+                </div>
+                <div>
+                  <h3>Proyek Pemilah Sampah Basah dan Kering</h3>
+                  <p>
+                    Saya mengembangkan proyek prototipe pemilahan sampah
+                    berbasis ESP32 dengan sensor, servo, serta gagasan
+                    pemantauan kapasitas tempat sampah melalui dashboard
+                    digital.
+                  </p>
+                </div>
+              </div>
+              <div class="ppgwb-tag-row">
+                <span class="ppgwb-tag">SDG 9</span
+                ><span class="ppgwb-tag">SDG 12</span
+                ><span class="ppgwb-tag">SDG 13</span>
+              </div>
+              <h4>Bentuk kegiatan</h4>
+              <p>
+                Merancang rangkaian sensor, mekanisme pemilahan, indikator
+                kondisi tempat sampah, dan pemantauan kapasitas sebagai
+                prototipe teknologi yang dapat digunakan dalam kegiatan edukasi
+                lingkungan.
+              </p>
+              <h4 style="margin-top: 12px">Dampak / refleksi</h4>
+              <p>
+                Proyek ini dapat menjadi konteks belajar tentang IoT sekaligus
+                pengelolaan sampah. Karena dampak lapangan perlu diuji, tahap
+                selanjutnya adalah mengukur ketepatan pemilahan, keandalan alat,
+                serta perubahan perilaku pengguna.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ppgwb-section" id="portofolio-aksi">
+        <div class="container">
+          <div class="ppgwb-section-head">
+            <div class="number">C · Bukti Portofolio</div>
+
+            <h2>Portofolio Aksi SDGs</h2>
+
+            <p>
+              Empat contoh kegiatan dan pengembangan yang relevan dengan
+              keberlanjutan. Setiap kegiatan dilengkapi dokumentasi visual
+              berupa foto kegiatan, prototipe, atau tangkapan layar aplikasi
+              sebagai bukti pendukung kontribusi terhadap Tujuan Pembangunan
+              Berkelanjutan (SDGs).
+            </p>
+          </div>
+
+          <div class="ppgwb-activity-grid">
+            <article class="ppgwb-card ppgwb-activity">
+              <div class="ppgwb-activity-top">
+                <div class="ppgwb-card-icon">
+                  <i class="fas fa-chalkboard-user"></i>
+                </div>
+
+                <div>
+                  <h3>1. Praktik Pembelajaran Sistem Komputer dan Arduino</h3>
+
+                  <p>
+                    Perencanaan dan pelaksanaan pembelajaran yang menghubungkan
+                    konsep Informatika dengan praktik mikrokontroler dan sensor
+                    dalam konteks Praktik Pengalaman Lapangan (PPL) 2 di SMA
+                    Negeri 12 Bandung.
+                  </p>
+                </div>
+              </div>
+
+              <div class="ppgwb-tag-row">
+                <span class="ppgwb-tag">SDG 4</span>
+                <span class="ppgwb-tag">SDG 9</span>
+              </div>
+
+              <p>
+                <strong>Kontribusi:</strong>
+                memberikan pengalaman belajar berbasis praktik serta melatih
+                kemampuan pemecahan masalah dan pemahaman hubungan antara kode
+                program dengan keluaran perangkat. Peserta didik memperoleh
+                kesempatan untuk mengamati, mencoba, menguji, dan memperbaiki
+                program melalui kegiatan pembelajaran Informatika.
+              </p>
+
+              <div class="ppgwb-photo-evidence">
+                <div class="ppgwb-photo-title">
+                  <i class="fas fa-images"></i>
+                  Bukti Foto Kegiatan
+                </div>
+
+                <div class="ppgwb-photo-grid">
+                  <figure class="ppgwb-photo-item">
+                    <a
+                      class="ppgwb-photo-link"
+                      href="assets/img/ppgwb/arduino-1.jpg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Lihat foto praktik pembelajaran Arduino"
+                    >
+                      <img
+                        src="assets/img/ppgwb/arduino-1.jpg"
+                        alt="Dokumentasi praktik pembelajaran Informatika di kelas"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <figcaption class="ppgwb-photo-caption">
+                      Praktik pembelajaran Informatika di kelas.
+                    </figcaption>
+                  </figure>
+
+                  <figure class="ppgwb-photo-item">
+                    <a
+                      class="ppgwb-photo-link"
+                      href="assets/img/ppgwb/arduino-2.jpg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Lihat dokumentasi praktikum Arduino"
+                    >
+                      <img
+                        src="assets/img/ppgwb/arduino-2.jpg"
+                        alt="Dokumentasi praktikum sistem komputer dan Arduino"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <figcaption class="ppgwb-photo-caption">
+                      Aktivitas praktikum sistem komputer dan Arduino.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </article>
+
+            <article class="ppgwb-card ppgwb-activity">
+              <div class="ppgwb-activity-top">
+                <div class="ppgwb-card-icon">
+                  <i class="fas fa-laptop-file"></i>
+                </div>
+
+                <div>
+                  <h3>2. Kontribusi pada Digitalisasi SIMSAPRAS</h3>
+
+                  <p>
+                    Kontribusi dalam pengembangan SIMSAPRAS sebagai sistem
+                    informasi untuk mendukung pengelolaan sarana dan prasarana
+                    sekolah secara lebih terstruktur melalui pemanfaatan
+                    teknologi digital.
+                  </p>
+                </div>
+              </div>
+
+              <div class="ppgwb-tag-row">
+                <span class="ppgwb-tag">SDG 9</span>
+                <span class="ppgwb-tag">SDG 16</span>
+              </div>
+
+              <p>
+                <strong>Kontribusi:</strong>
+                mendukung pemanfaatan sistem digital untuk membantu pencatatan,
+                pengelolaan, dan penelusuran informasi sarana prasarana sekolah.
+                Pengembangan ini menunjukkan penerapan kompetensi Informatika
+                untuk membantu kebutuhan administrasi dan pengelolaan informasi
+                di lingkungan pendidikan.
+              </p>
+
+              <div class="ppgwb-photo-evidence">
+                <div class="ppgwb-photo-title">
+                  <i class="fas fa-images"></i>
+                  Bukti Foto dan Tangkapan Layar
+                </div>
+
+                <div class="ppgwb-photo-grid">
+                  <figure class="ppgwb-photo-item">
+                    <a
+                      class="ppgwb-photo-link"
+                      href="assets/img/ppgwb/simsapras-1.jpg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Lihat dokumentasi aplikasi SIMSAPRAS"
+                    >
+                      <img
+                        src="assets/img/ppgwb/simsapras-1.jpg"
+                        alt="Tangkapan layar aplikasi SIMSAPRAS"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <figcaption class="ppgwb-photo-caption">
+                      Tampilan aplikasi SIMSAPRAS.
+                    </figcaption>
+                  </figure>
+
+                  <figure class="ppgwb-photo-item">
+                    <a
+                      class="ppgwb-photo-link"
+                      href="assets/img/ppgwb/simsapras-2.jpg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Lihat dokumentasi fitur SIMSAPRAS"
+                    >
+                      <img
+                        src="assets/img/ppgwb/simsapras-2.jpg"
+                        alt="Tangkapan layar fitur pengelolaan sarana prasarana"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <figcaption class="ppgwb-photo-caption">
+                      Dokumentasi fitur pengelolaan sarana prasarana.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </article>
+
+            <article class="ppgwb-card ppgwb-activity">
+              <div class="ppgwb-activity-top">
+                <div class="ppgwb-card-icon">
+                  <i class="fas fa-recycle"></i>
+                </div>
+
+                <div>
+                  <h3>3. Prototipe Pemilah Sampah Berbasis ESP32</h3>
+
+                  <p>
+                    Pengembangan prototipe pemilahan sampah basah dan kering
+                    berbasis ESP32 dengan memanfaatkan sensor, aktuator servo,
+                    indikator, dan gagasan pemantauan kapasitas tempat sampah
+                    melalui dashboard digital.
+                  </p>
+                </div>
+              </div>
+
+              <div class="ppgwb-tag-row">
+                <span class="ppgwb-tag">SDG 9</span>
+                <span class="ppgwb-tag">SDG 12</span>
+                <span class="ppgwb-tag">SDG 13</span>
+              </div>
+
+              <p>
+                <strong>Kontribusi:</strong>
+                menjadikan persoalan sampah sebagai konteks pembelajaran nyata
+                untuk mengembangkan keterampilan IoT, elektronika, pemrograman,
+                dan pemecahan masalah. Proyek ini juga menjadi sarana untuk
+                menghubungkan inovasi teknologi dengan edukasi pemilahan sampah
+                dan kepedulian terhadap lingkungan.
+              </p>
+
+              <div class="ppgwb-photo-evidence">
+                <div class="ppgwb-photo-title">
+                  <i class="fas fa-images"></i>
+                  Bukti Foto Prototipe
+                </div>
+
+                <div class="ppgwb-photo-grid">
+                  <figure class="ppgwb-photo-item">
+                    <a
+                      class="ppgwb-photo-link"
+                      href="assets/img/ppgwb/pemilah-sampah-1.jpg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Lihat foto prototipe pemilah sampah"
+                    >
+                      <img
+                        src="assets/img/ppgwb/pemilah-sampah-1.jpg"
+                        alt="Dokumentasi prototipe pemilah sampah basah dan kering berbasis ESP32"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <figcaption class="ppgwb-photo-caption">
+                      Dokumentasi prototipe pemilah sampah.
+                    </figcaption>
+                  </figure>
+
+                  <figure class="ppgwb-photo-item">
+                    <a
+                      class="ppgwb-photo-link"
+                      href="assets/img/ppgwb/pemilah-sampah-2.jpg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Lihat foto rangkaian prototipe"
+                    >
+                      <img
+                        src="assets/img/ppgwb/pemilah-sampah-2.jpg"
+                        alt="Dokumentasi rangkaian sensor dan komponen elektronik"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <figcaption class="ppgwb-photo-caption">
+                      Rangkaian sensor dan komponen elektronik.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="ppgwb-content-panel">
+            <h3>
+              <i
+                class="fas fa-clipboard-check"
+                style="color: var(--ppgwb-blue); margin-right: 8px"
+              ></i>
+              Prinsip Dokumentasi Bukti
+            </h3>
+
+            <p>
+              Setiap aksi perlu disertai bukti autentik berupa foto kegiatan,
+              dokumentasi prototipe, atau tangkapan layar aplikasi yang
+              benar-benar sesuai dengan kegiatan yang dilakukan. Untuk proyek
+              yang masih dikembangkan, statusnya harus ditulis sebagai proses
+              pengembangan dan bukan sebagai program yang telah terbukti
+              berhasil. Bukti visual digunakan untuk mendukung deskripsi
+              kontribusi, sedangkan hasil dan dampak kegiatan tetap perlu
+              dievaluasi berdasarkan data yang relevan. Hindari menampilkan data
+              pribadi peserta didik dan pastikan dokumentasi yang dipublikasikan
+              memiliki izin yang sesuai.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ppgwb-section alt" id="peta-karier">
+        <div class="container">
+          <div class="ppgwb-section-head">
+            <div class="number">D · Peta Karier 5 Tahun</div>
+            <h2>Peta Karier Profesional Berdampak</h2>
+            <p>
+              Peta karier 2026–2031 dirancang bertahap: memperkuat kompetensi,
+              menerapkan inovasi, mengevaluasi dampak, membangun jejaring, lalu
+              berbagi praktik baik dengan komunitas yang lebih luas.
+            </p>
+          </div>
+
+          <div class="ppgwb-table-wrap">
+            <table class="ppgwb-table">
+              <thead>
+                <tr>
+                  <th>Periode</th>
+                  <th>Kompetensi & CPD</th>
+                  <th>Jejaring Profesional</th>
+                  <th>Inovasi & Kontribusi</th>
+                  <th>Target Dampak</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="ppgwb-year">Tahun 1<br />2026–2027</span>
+                  </td>
+                  <td>
+                    Memperkuat pembelajaran berdiferensiasi, asesmen formatif,
+                    manajemen kelas, IoT dasar, dan penyusunan perangkat ajar.
+                    Mengikuti pelatihan/webinar relevan dan melakukan refleksi
+                    berkala.
+                  </td>
+                  <td>
+                    Guru pamong, dosen pembimbing, komunitas guru Informatika,
+                    serta rekan PPG.
+                  </td>
+                  <td>
+                    Menyempurnakan modul praktikum Arduino dan merancang uji
+                    coba awal program edukasi pemilahan sampah berbasis
+                    teknologi.
+                  </td>
+                  <td>
+                    Tersedia perangkat ajar terdokumentasi, rubrik praktik,
+                    serta data awal keterlibatan dan pemahaman peserta didik.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="ppgwb-year">Tahun 2<br />2027–2028</span>
+                  </td>
+                  <td>
+                    Meningkatkan kompetensi pengembangan proyek, literasi data,
+                    keamanan digital, dan asesmen berbasis kinerja melalui CPD
+                    terstruktur.
+                  </td>
+                  <td>
+                    MGMP Informatika, komunitas belajar sekolah, komunitas
+                    teknologi pendidikan, dan mitra lingkungan setempat.
+                  </td>
+                  <td>
+                    Menyelenggarakan lokakarya mini untuk peserta didik dan
+                    menyusun panduan proyek Informatika yang terkait SDGs.
+                  </td>
+                  <td>
+                    Minimal satu panduan proyek diperbaiki berdasarkan umpan
+                    balik guru dan peserta didik; kegiatan terdokumentasi.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="ppgwb-year">Tahun 3<br />2028–2029</span>
+                  </td>
+                  <td>
+                    Mengembangkan keterampilan penelitian tindakan kelas,
+                    evaluasi program, penulisan ilmiah, dan presentasi praktik
+                    baik.
+                  </td>
+                  <td>
+                    MGMP, forum guru, perguruan tinggi, dan komunitas pendidikan
+                    berkelanjutan.
+                  </td>
+                  <td>
+                    Melakukan evaluasi terencana terhadap pembelajaran proyek
+                    atau program pemilahan sampah dan menyusun laporan berbasis
+                    data.
+                  </td>
+                  <td>
+                    Tersedia laporan evaluasi yang menunjukkan capaian,
+                    keterbatasan, dan rekomendasi pengembangan program.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="ppgwb-year">Tahun 4<br />2029–2030</span>
+                  </td>
+                  <td>
+                    Meningkatkan kemampuan mentoring, desain pembelajaran lintas
+                    disiplin, manajemen proyek, dan kolaborasi
+                    sekolah-masyarakat.
+                  </td>
+                  <td>
+                    Kolaborasi guru lintas mata pelajaran, komunitas sekolah,
+                    mitra pengelolaan sampah, dan jejaring inovasi pembelajaran.
+                  </td>
+                  <td>
+                    Mengembangkan proyek lintas disiplin yang mengintegrasikan
+                    Informatika, sains, dan kepedulian lingkungan, sesuai
+                    kesiapan sekolah.
+                  </td>
+                  <td>
+                    Minimal satu kolaborasi lintas disiplin dilaksanakan dan
+                    dievaluasi bersama mitra terkait.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="ppgwb-year">Tahun 5<br />2030–2031</span>
+                  </td>
+                  <td>
+                    Memantapkan kepemimpinan pembelajaran, diseminasi hasil,
+                    evaluasi dampak, dan pembinaan komunitas belajar.
+                  </td>
+                  <td>
+                    MGMP tingkat lebih luas, komunitas praktisi, perguruan
+                    tinggi, dan mitra masyarakat.
+                  </td>
+                  <td>
+                    Membagikan modul, laporan evaluasi, atau praktik baik yang
+                    telah ditinjau serta mendampingi guru lain yang berminat
+                    mengadopsinya.
+                  </td>
+                  <td>
+                    Praktik baik terdokumentasi dan dibagikan; replikasi
+                    dilakukan bila bukti manfaat dan kesiapan sumber daya
+                    mendukung.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="ppgwb-content-panel">
+            <h3>
+              <i
+                class="fas fa-arrows-spin"
+                style="color: var(--ppgwb-blue); margin-right: 8px"
+              ></i
+              >Siklus Pengembangan Profesional Berkelanjutan
+            </h3>
+            <div class="ppgwb-grid">
+              <div>
+                <h4>1. Belajar</h4>
+                <p>
+                  Mengikuti CPD yang sesuai kebutuhan dan mengevaluasi
+                  kompetensi yang masih perlu diperkuat.
+                </p>
+              </div>
+              <div>
+                <h4>2. Menerapkan</h4>
+                <p>
+                  Menguji strategi atau inovasi dalam skala realistis, dengan
+                  memperhatikan keselamatan, aksesibilitas, dan konteks sekolah.
+                </p>
+              </div>
+              <div>
+                <h4>3. Mengevaluasi dan Berbagi</h4>
+                <p>
+                  Mengumpulkan bukti, meminta umpan balik, memperbaiki praktik,
+                  dan berbagi hasil secara bertanggung jawab.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ppgwb-section" id="rencana-aksi">
+        <div class="container">
+          <div class="ppgwb-section-head">
+            <div class="number">E · Program Satu Tahun</div>
+            <h2>Rencana Aksi SDGs di Sekolah</h2>
+            <p>
+              Program dirancang sebagai rencana yang dapat dipilotkan dan
+              disesuaikan dengan izin sekolah, ketersediaan perangkat, dukungan
+              warga sekolah, serta hasil pemetaan awal.
+            </p>
+          </div>
+
+          <div class="ppgwb-program-top">
+            <div class="ppgwb-program-highlight">
+              <div class="ppgwb-eyebrow">
+                <i class="fas fa-recycle"></i> Program Aksi 2026/2027
+              </div>
+              <h3>
+                Informatika Peduli Lingkungan: Edukasi Pemilahan Sampah Basah
+                dan Kering Berbasis IoT
+              </h3>
+              <p>
+                Program menggabungkan literasi SDGs, pembelajaran Informatika
+                berbasis proyek, perancangan prototipe ESP32, dan pembiasaan
+                pemilahan sampah. Teknologi diposisikan sebagai alat bantu
+                edukasi dan pemantauan, bukan pengganti sistem pengelolaan
+                sampah sekolah yang sudah berlaku.
+              </p>
+            </div>
+            <div class="ppgwb-program-meta">
+              <div class="ppgwb-meta-item">
+                <span>SDGs</span><strong>SDG 4, 9, 12, dan 13</strong>
+              </div>
+              <div class="ppgwb-meta-item">
+                <span>Durasi</span><strong>Satu tahun ajaran</strong>
+              </div>
+              <div class="ppgwb-meta-item">
+                <span>Sasaran</span
+                ><strong
+                  >Peserta didik, guru pendamping, dan petugas kebersihan
+                  terkait</strong
+                >
+              </div>
+              <div class="ppgwb-meta-item">
+                <span>Pelaksanaan</span
+                ><strong
+                  >Pilot terbatas sesuai izin dan sumber daya sekolah</strong
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="ppgwb-content-panel">
+            <h3>Tujuan Program</h3>
+            <div class="ppgwb-checklist">
+              <div class="ppgwb-check">
+                <i class="fas fa-check-circle"></i
+                ><span
+                  >Meningkatkan pemahaman peserta didik tentang SDGs, jenis
+                  sampah, dan pentingnya pemilahan yang bertanggung jawab.</span
+                >
+              </div>
+              <div class="ppgwb-check">
+                <i class="fas fa-check-circle"></i
+                ><span
+                  >Melatih keterampilan Informatika melalui sensor,
+                  mikrokontroler, pemrograman, pencatatan data, dan pengujian
+                  prototipe.</span
+                >
+              </div>
+              <div class="ppgwb-check">
+                <i class="fas fa-check-circle"></i
+                ><span
+                  >Menguji apakah prototipe dan pendampingan dapat membantu
+                  kebiasaan pemilahan sampah di area percontohan sekolah.</span
+                >
+              </div>
+              <div class="ppgwb-check">
+                <i class="fas fa-check-circle"></i
+                ><span
+                  >Membentuk kerja sama antara peserta didik, guru, dan petugas
+                  sekolah dengan menjaga keamanan alat, kebersihan, serta
+                  prosedur pengelolaan sampah yang berlaku.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="ppgwb-content-panel">
+            <h3>Rangkaian Kegiatan Selama 12 Bulan</h3>
+            <div class="ppgwb-timeline">
+              <article class="ppgwb-phase">
+                <div class="ppgwb-phase-number">01</div>
+                <h4>Bulan 1–2 · Pemetaan Awal</h4>
+                <p>
+                  Mengidentifikasi kondisi sampah dan kebiasaan pemilahan,
+                  berdiskusi dengan pihak sekolah, menyusun tim, serta mengambil
+                  data awal sederhana.
+                </p>
+              </article>
+              <article class="ppgwb-phase">
+                <div class="ppgwb-phase-number">02</div>
+                <h4>Bulan 3–4 · Literasi SDGs</h4>
+                <p>
+                  Melaksanakan pembelajaran tentang SDGs dan pengelolaan sampah;
+                  menyusun kriteria alat, aturan keselamatan, serta desain
+                  prototipe.
+                </p>
+              </article>
+              <article class="ppgwb-phase">
+                <div class="ppgwb-phase-number">03</div>
+                <h4>Bulan 5–6 · Pembuatan Prototipe</h4>
+                <p>
+                  Membuat dan menguji rangkaian sensor, aktuator, mekanisme
+                  pemilahan, dan indikator kapasitas; mencatat kendala dan
+                  revisi.
+                </p>
+              </article>
+              <article class="ppgwb-phase">
+                <div class="ppgwb-phase-number">04</div>
+                <h4>Bulan 7 · Uji Fungsi</h4>
+                <p>
+                  Menguji ketepatan pemilahan, konsistensi pembacaan sensor,
+                  keselamatan, serta kemudahan penggunaan sebelum pilot.
+                </p>
+              </article>
+              <article class="ppgwb-phase">
+                <div class="ppgwb-phase-number">05</div>
+                <h4>Bulan 8–9 · Pilot Terbatas</h4>
+                <p>
+                  Melakukan uji coba di titik yang disetujui sekolah dengan
+                  pendampingan, pemantauan, dan prosedur pengosongan sampah yang
+                  aman.
+                </p>
+              </article>
+              <article class="ppgwb-phase">
+                <div class="ppgwb-phase-number">06</div>
+                <h4>Bulan 10 · Kampanye</h4>
+                <p>
+                  Mengembangkan poster atau infografis, menyampaikan pesan
+                  pemilahan, dan melibatkan kelas atau komunitas sekolah
+                  terkait.
+                </p>
+              </article>
+              <article class="ppgwb-phase">
+                <div class="ppgwb-phase-number">07</div>
+                <h4>Bulan 11 · Evaluasi</h4>
+                <p>
+                  Membandingkan data awal dan akhir, meninjau tanggapan
+                  pengguna, serta mengidentifikasi keberhasilan, keterbatasan,
+                  dan risiko.
+                </p>
+              </article>
+              <article class="ppgwb-phase">
+                <div class="ppgwb-phase-number">08</div>
+                <h4>Bulan 12 · Pelaporan</h4>
+                <p>
+                  Menyusun laporan, mempresentasikan hasil, mengarsipkan bukti,
+                  dan merumuskan rekomendasi apakah program layak diperbaiki
+                  atau diperluas.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="ppgwb-content-panel">
+            <h3>Indikator Keberhasilan dan Cara Mengukurnya</h3>
+            <div class="ppgwb-table-wrap">
+              <table class="ppgwb-table">
+                <thead>
+                  <tr>
+                    <th>Indikator</th>
+                    <th>Target Awal</th>
+                    <th>Bukti / Cara Ukur</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Pelaksanaan pembelajaran SDGs dan pengelolaan sampah
+                    </td>
+                    <td>Minimal 2 sesi edukasi</td>
+                    <td>
+                      Modul, daftar hadir, foto kegiatan, dan lembar refleksi.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Prototipe teknologi</td>
+                    <td>Minimal 1 prototipe diuji dan didokumentasikan</td>
+                    <td>
+                      Diagram rangkaian, kode program, catatan pengujian, dan
+                      video demonstrasi.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Pemahaman peserta didik</td>
+                    <td>
+                      Minimal 80% peserta yang mengikuti evaluasi menunjukkan
+                      peningkatan skor atau mencapai kriteria yang ditetapkan
+                    </td>
+                    <td>
+                      Perbandingan asesmen awal dan akhir dengan instrumen yang
+                      sama atau setara.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Praktik pemilahan di titik pilot</td>
+                    <td>
+                      Target awal minimal 70% sampel yang diamati sesuai
+                      kategori setelah masa pembiasaan
+                    </td>
+                    <td>
+                      Observasi terjadwal dengan kriteria pemilahan yang jelas;
+                      bandingkan dengan data awal.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Pelaporan dan tindak lanjut</td>
+                    <td>1 laporan evaluasi serta rekomendasi</td>
+                    <td>
+                      Laporan ringkas berisi data, keterbatasan, umpan balik,
+                      dan rencana perbaikan.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top: 13px">
+              Target di atas merupakan sasaran perencanaan, bukan hasil yang
+              sudah tercapai. Target dapat disesuaikan setelah pemetaan awal dan
+              konsultasi dengan sekolah. Jika pengukuran menunjukkan hasil belum
+              memenuhi target, hasil tersebut tetap dilaporkan secara transparan
+              sebagai bahan perbaikan.
+            </p>
+          </div>
+
+          <div class="ppgwb-content-panel">
+            <h3>Dampak yang Diharapkan</h3>
+            <div class="ppgwb-grid">
+              <div>
+                <h4>
+                  <i
+                    class="fas fa-user-graduate"
+                    style="color: var(--ppgwb-blue)"
+                  ></i>
+                  Bagi Peserta Didik
+                </h4>
+                <p>
+                  Memperkuat literasi SDGs, pemecahan masalah, kerja sama,
+                  pemrograman, dan tanggung jawab dalam menjaga lingkungan.
+                </p>
+              </div>
+              <div>
+                <h4>
+                  <i class="fas fa-school" style="color: var(--ppgwb-blue)"></i>
+                  Bagi Sekolah
+                </h4>
+                <p>
+                  Mendapatkan contoh proyek pembelajaran kontekstual dan data
+                  awal untuk memperbaiki edukasi serta praktik pemilahan sampah.
+                </p>
+              </div>
+              <div>
+                <h4>
+                  <i class="fas fa-leaf" style="color: var(--ppgwb-blue)"></i>
+                  Bagi Lingkungan
+                </h4>
+                <p>
+                  Mendorong pemilahan lebih konsisten pada area percontohan dan
+                  meningkatkan perhatian terhadap pengurangan sampah, dengan
+                  dampak yang dievaluasi berdasarkan hasil pengamatan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ppgwb-section alt" id="refleksi-akhir">
+        <div class="container">
+          <div class="ppgwb-section-head">
+            <div class="number">Refleksi Penutup</div>
+            <h2>Komitmen Pengembangan Diri dan Dampak</h2>
+            <p>
+              Refleksi berikut menjadi penghubung antara pengalaman, rencana
+              CPD, dan komitmen kontribusi profesional pada lima tahun
+              mendatang.
+            </p>
+          </div>
+
+          <div class="ppgwb-reflection-grid">
+            <article class="ppgwb-card ppgwb-reflection">
+              <div class="question">
+                1. SDGs mana yang paling relevan dengan bidang pendidikan yang
+                saya tekuni? Mengapa?
+              </div>
+              <p>
+                SDG 4 paling mendasar karena berkaitan langsung dengan tanggung
+                jawab guru dalam menghadirkan pendidikan yang berkualitas dan
+                mendukung perkembangan semua peserta didik. Dalam bidang
+                Informatika, SDG 9 juga relevan karena pembelajaran dapat
+                mengembangkan kreativitas dan pemecahan masalah melalui
+                teknologi. SDG 12 dan SDG 13 menjadi konteks penting ketika
+                teknologi digunakan untuk membahas sampah, penggunaan sumber
+                daya, dan kepedulian terhadap lingkungan.
+              </p>
+            </article>
+            <article class="ppgwb-card ppgwb-reflection">
+              <div class="question">
+                2. Bagaimana CPD dapat meningkatkan kontribusi saya terhadap
+                SDGs?
+              </div>
+              <p>
+                CPD membantu saya memperbarui pengetahuan, memperbaiki strategi
+                pembelajaran, serta mempelajari cara mengevaluasi dampak
+                program. Pelatihan asesmen formatif, pembelajaran
+                berdiferensiasi, IoT, keamanan digital, dan ESD perlu saya
+                terapkan melalui perencanaan, uji coba, refleksi, dan
+                pengumpulan bukti. Dengan demikian, CPD tidak hanya menjadi
+                kegiatan sertifikasi, tetapi mengarah pada perubahan praktik
+                yang dapat ditinjau.
+              </p>
+            </article>
+            <article class="ppgwb-card ppgwb-reflection">
+              <div class="question">
+                3. Dampak apa yang ingin saya berikan dalam lima tahun
+                mendatang?
+              </div>
+              <p>
+                Saya ingin peserta didik lebih percaya diri menggunakan
+                teknologi untuk memecahkan masalah, terbiasa berpikir kritis dan
+                bekerja sama, serta memahami dampak sosial dan lingkungan dari
+                solusi yang mereka buat. Bagi sekolah, saya ingin menghasilkan
+                perangkat ajar dan proyek yang dapat digunakan kembali. Bagi
+                masyarakat dan lingkungan, saya berharap proyek yang teruji
+                dapat dibagikan dan dikembangkan bersama mitra, tanpa mengklaim
+                dampak sebelum ada evaluasi.
+              </p>
+            </article>
+            <article class="ppgwb-card ppgwb-reflection">
+              <div class="question">
+                4. Perubahan apa yang perlu saya lakukan agar lebih
+                berkontribusi pada pembangunan berkelanjutan?
+              </div>
+              <p>
+                Saya perlu lebih konsisten mendasarkan keputusan pembelajaran
+                pada kebutuhan peserta didik dan data, menyusun indikator hasil
+                sejak awal, menghemat penggunaan sumber daya, memastikan
+                teknologi aman dan inklusif, serta mengevaluasi hasil dengan
+                jujur. Saya juga perlu membangun kolaborasi dengan guru lain dan
+                warga sekolah agar program keberlanjutan tidak hanya bergantung
+                pada satu orang.
+              </p>
+            </article>
+            <article class="ppgwb-card ppgwb-reflection">
+              <div class="question">
+                5. Kompetensi apa yang paling penting untuk dikembangkan agar
+                tetap relevan di masa depan?
+              </div>
+              <p>
+                Kompetensi yang perlu diperkuat mencakup pedagogi adaptif,
+                asesmen berbasis bukti, literasi data dan AI, pemrograman serta
+                IoT, keamanan dan etika digital, komunikasi, kolaborasi, dan
+                kemampuan merancang proyek lintas disiplin. Saya juga perlu
+                meningkatkan kemampuan penelitian dan refleksi agar inovasi yang
+                dipilih benar-benar menjawab kebutuhan sekolah.
+              </p>
+            </article>
+            <article class="ppgwb-card ppgwb-reflection">
+              <div class="question">
+                6. Bagaimana jejaring profesional dapat memperluas kualitas
+                pembelajaran dan dampak sosial?
+              </div>
+              <p>
+                Jejaring dengan MGMP Informatika, komunitas belajar, perguruan
+                tinggi, sesama guru, serta mitra lingkungan dapat menjadi ruang
+                untuk bertukar perangkat ajar, mendapatkan umpan balik, berbagi
+                sumber daya, dan menguji solusi bersama. Kolaborasi dapat
+                menghindari pekerjaan yang terpisah-pisah dan membantu program
+                berlanjut ketika terjadi pergantian tugas atau personel.
+              </p>
+            </article>
+            <article class="ppgwb-card ppgwb-reflection">
+              <div class="question">
+                7. Kontribusi apa yang ingin saya berikan bagi pengembangan
+                pendidikan dalam lima tahun mendatang?
+              </div>
+              <p>
+                Saya ingin menghasilkan portofolio pembelajaran Informatika yang
+                terdokumentasi, menyusun modul praktik berbasis masalah nyata,
+                menjalankan program SDGs skala sekolah yang dapat dievaluasi,
+                dan membagikan praktik baik melalui komunitas guru. Saya akan
+                mengutamakan dampak yang dapat dibuktikan, kesesuaian dengan
+                konteks sekolah, serta keberlanjutan program setelah masa uji
+                coba.
+              </p>
+            </article>
+          </div>
+
+          <div class="ppgwb-quote">
+            <i class="fas fa-quote-left"></i>
+            <p>
+              Guru berdampak bukan hanya mengajarkan teknologi, tetapi
+              mendampingi peserta didik menggunakan pengetahuan dan teknologi
+              secara kritis, inklusif, etis, dan bertanggung jawab untuk
+              memperbaiki kehidupan bersama.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">
+          © <span id="year"></span> Arjun Yuda Firwanda | E-Portofolio PPG
+          Informatika UPI
+        </p>
+      </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Kembali ke Atas">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
